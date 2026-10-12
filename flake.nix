@@ -105,28 +105,6 @@
           check-wasm = self.packages.${system}.wasm;
         };
 
-        # devShells.wasm = pkgs.mkShell {
-        #   WASI_SDK_PATH = wasiSDK;
-        #   inputsFrom = [
-        #     (wasmGHC.shellFor {
-        #       packages = ps: [wasmWuffsHS];
-        #       nativeBuildInputs = [
-        #         pkgs.cabal-install
-        #         pkgs.hs-bindgen-cli
-        #         pkgs.hsBindgenHook
-        #         pkgs.pkg-config
-        #         pkgs.wasmtime
-        #         wasmPkgs.clang
-        #         wasmPkgs.cabal-install
-        #         wasmTest
-        #         wasmPkgs.cmake
-        #       ];
-        #       buildInputs = [
-        #         # libheif-wasi
-        #       ];
-        #     })
-        #   ];
-        # };
         devShells.default = pkgs.mkShell {
           WASI_SDK_PATH = wasiSDK;
           inputsFrom = [
@@ -136,7 +114,7 @@
                 pkgs.cabal-install
                 pkgs.hs-bindgen-cli
                 pkgs.hsBindgenHook
-                pkgs.pkg-config
+                # pkgs.pkg-config
                 pkgs.wasmtime
                 wasmPkgs.clang
                 wasmPkgs.cabal-install
@@ -160,7 +138,7 @@
                 # Connect `hs-bindgen` to the Clang toolchain and `libheif`.
                 # Fixes [Error] [Libclang] [clang] unable to resolve #include <libheif/heif.h>:
                 pkgs.hsBindgenHook
-                # pkgs.pkg-config
+                pkgs.pkg-config
               ];
               buildInputs = [];
             })
