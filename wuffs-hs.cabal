@@ -1,4 +1,4 @@
-cabal-version:   3.0
+cabal-version:   3.12
 name:            wuffs-hs
 version:         0.1.0.0
 synopsis:        Bindings for wuffs, the safe image codec
@@ -50,6 +50,9 @@ library
     Codec.Wuffs.Bindings.Generated.Global
     Codec.Wuffs.Bindings.Generated.Safe
     Codec.Wuffs.Bindings.Generated.Unsafe
+    Paths_wuffs_hs
+
+  autogen-modules:   Paths_wuffs_hs
 
   -- other-extensions:
   build-depends:
@@ -71,15 +74,16 @@ library
   default-language:  GHC2024
 
 test-suite wuffs-hs-test
-  import:           shared-properties
-  default-language: GHC2024
+  import:            shared-properties
+  default-language:  GHC2024
 
   -- other-modules:
   -- other-extensions:
-  type:             exitcode-stdio-1.0
-  hs-source-dirs:   test
-  main-is:          Main.hs
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  main-is:           Main.hs
   build-depends:
     , base
     , wuffs-hs
+
   pkgconfig-depends: wuffs

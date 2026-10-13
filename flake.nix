@@ -167,7 +167,6 @@
             WUFFS_WASI_LIB = "${wuffsWASM}/lib";
           };
           inputsFrom = [
-            # Thanks to this we can use hls. IMPORTANT: must be before the wasm shellFor
             (ghc.shellFor {
               packages = ps: [wuffsHS];
               nativeBuildInputs = with ghc; [

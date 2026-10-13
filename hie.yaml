@@ -1,0 +1,16 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:wuffs-hs"
+
+    - path: "./src-native"
+      component: "lib:wuffs-hs"
+
+    - path: "./src-wasm"
+      component: "lib:wuffs-hs"
+
+    - path: "./src-native"
+      component: "lib:wuffs-hs"
+
+    - path: "./test"
+      component: "wuffs-hs:test:wuffs-hs-test"
