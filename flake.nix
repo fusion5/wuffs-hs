@@ -82,7 +82,7 @@
           CABAL_TARGET="$1"
           [[ -z "$CABAL_TARGET" ]] && { echo "Usage: $BIN_NAME <cabal-test-target>"; exit 1; }
 
-          wasm32-wasi-cabal build "$CABAL_TARGET" || exit 1
+          ${wasmCabal}/bin/wasm-cabal build "$CABAL_TARGET" || exit 1
           WASM_FILE=$(wasm32-wasi-cabal list-bin -v0 "$CABAL_TARGET")
 
           ${pkgs.wasmtime}/bin/wasmtime --dir=. --dir=/tmp::/tmp "$WASM_FILE"
