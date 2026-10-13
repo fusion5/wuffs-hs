@@ -1,18 +1,24 @@
-module Codec.Wuffs (readImageWithMetadata, decodeImageWithMetadata) where
+module Codec.Wuffs
+  ( readImageWithMetadata,
+    decodeImageWithMetadata,
+    wuffsVersion,
+  )
+where
 
 import Codec.Picture hiding (decodeImageWithMetadata, readImageWithMetadata)
+import Codec.Wuffs.Bindings.Generated qualified as C
 import Codec.Wuffs.Bindings.Generated.Safe qualified as C
+import Control.Exception
 import Data.ByteString qualified as BS
 import Data.ByteString.Unsafe qualified as BSU (unsafeUseAsCStringLen)
 import Data.Map qualified as M
 import Data.Word
 import Foreign qualified
-import HsBindgen.Runtime.LibC qualified as Bindgen
--- import HsBindgen.Runtime.Prelude qualified as Bindgen
--- import HsBindgen.Runtime.PtrConst qualified as Bindgen
+import Foreign.C.ConstPtr (ConstPtr (..))
+-- import HsBindgen.Runtime.LibC qualified as Bindgen
+-- import HsBindgen.Runtime.Prelude
 import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
-import Control.Exception
 
 newtype Metadata = Metadata
   { metadataBlocks :: M.Map Word32 MetadataBlock
@@ -37,9 +43,15 @@ withDecoder allocate = bracket allocate Foreign.free
 
 decodeImageWithMetadata :: BS.ByteString -> IO (Either String (DynamicImage, Metadata))
 decodeImageWithMetadata bs = BSU.unsafeUseAsCStringLen bs $ \(cStrPtr, len) -> do
-  let ptrWord8 = Foreign.castPtr cStrPtr :: Bindgen.Ptr Word8
-      cLen = fromIntegral len :: Bindgen.CSize
-      closed = 1 :: Bindgen.CBool -- 1 = True (we have the complete image buffer)
-  ioBuf <- C.wuffs_base__ptr_u8__reader ptrWord8 cLen closed
+  ioBuf <- C.wuffs_base__ptr_u8__reader (Foreign.castPtr cStrPtr) (fromIntegral len) 1
   withDecoder C.wuffs_png__decoder__alloc $ \decoderPtr -> do
-    error "TODO: initialize decoder and decode image config"
+    nullImgCfg <- C.wuffs_base__null_image_config
+    Bindgen.with nullImgCfg $ \imgCfgPtr -> do
+      Bindgen.with ioBuf $ \ioBufPtr -> do
+        status <- C.wuffs_png__decoder__decode_image_config decoderPtr imgCfgPtr ioBufPtr
+        isErr <- Bindgen.with status $ \statusPtr ->
+          C.wuffs_base__status__is_error (ConstPtr statusPtr)
+        error $ "isErr = " <> show isErr
+
+wuffsVersion :: IO BS.ByteString
+wuffsVersion = pure C.wUFFS_VERSION_STRING
