@@ -26,12 +26,6 @@
         # WASM STUFF
         wasiSDK = inputs.nix-wasm.inputs.ghc-wasm-meta.packages.${system}.wasi-sdk;
 
-        hsBindgenRepo = wasmPkgs.fetchFromGitHub {
-          owner = "well-typed";
-          repo = "hs-bindgen";
-          rev = "0ef05fd1895e569c01bf9aa2236f9ce137a00205";
-          sha256 = "sha256-BZJJoj3bmJTHkQ6s908S5puC9/uNpRe9RKUfEN0XZN8=";
-        };
         wasmPkgs = inputs.nix-wasm.legacyPackages.${system};
         wasmGHC = wasmPkgs.haskell.packages.ghc914.extend (
           hfinal: hprev: let
@@ -64,7 +58,7 @@
 
             # Fetch hs-bindgen-runtime directly from Hackage
             hs-bindgen-runtime =
-              hfinal.callCabal2nix "hs-bindgen-runtime" "${hsBindgenRepo}/hs-bindgen-runtime" {};
+              hfinal.callCabal2nix "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
           }
         );
         wasmWuffsHS =
@@ -91,7 +85,7 @@
 
             # Fetch hs-bindgen-runtime from another repo as it's not on hackage yet
             hs-bindgen-runtime =
-              hfinal.callCabal2nix "hs-bindgen-runtime" "${hsBindgenRepo}/hs-bindgen-runtime" {};
+              hfinal.callCabal2nix "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
           }
         );
       in {
@@ -117,10 +111,11 @@
                 cabal-install
                 cabal-fmt
                 pkgs.hs-bindgen-cli
-                # Connect `hs-bindgen` to the Clang toolchain and `libheif`.
-                # Fixes [Error] [Libclang] [clang] unable to resolve #include <libheif/heif.h>:
+                # Connect `hs-bindgen` to the Clang toolchain and `wuffs`.
+                # Fixes [Error] [Libclang] [clang] unable to resolve #include <....h>:
                 pkgs.hsBindgenHook
                 pkgs.pkg-config # IMPORTANT: must be only in the native shell
+                pkgs.wuffs
               ];
               buildInputs = [];
             })
@@ -132,6 +127,7 @@
                 pkgs.hsBindgenHook
                 # pkgs.pkg-config
                 pkgs.wasmtime
+                wasmPkgs.wuffs
                 wasmPkgs.clang
                 wasmPkgs.cabal-install
                 wasmTest
@@ -142,6 +138,9 @@
               ];
             })
           ];
+          # packages = with pkgs; [
+          #   wuffs
+          # ];
         };
       };
     };
