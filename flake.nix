@@ -74,7 +74,9 @@
           fi
           COMMAND="$1"
           shift
-          wasm32-wasi-cabal "$COMMAND" --project-file=./cabal.wasm.project "$@"
+          wasm32-wasi-cabal "$COMMAND" \
+            --extra-lib-dirs="$WUFFS_WASI_LIB" \
+            --extra-include-dirs="$WUFFS_WASI_INCLUDE" "$@"
         '';
         wasmTest = pkgs.writeShellScriptBin "wasm-test" ''
           CABAL_TARGET="$1"
@@ -86,21 +88,6 @@
           ${pkgs.wasmtime}/bin/wasmtime --dir=. --dir=/tmp::/tmp "$WASM_FILE"
         '';
 
-        ### NON WASM
-        wuffsHS = ghc.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {};
-        ghc = pkgs.haskell.packages.ghc912.extend (
-          hfinal: hprev: {
-            c-expr-runtime = hfinal.callHackageDirect {
-              pkg = "c-expr-runtime";
-              ver = "0.1.0.0";
-              sha256 = "sha256-/Yt7KsrF96ce0FA7Rnl2sn/uWQ4p2C55mIHjAzwlzbQ=";
-            } {};
-
-            # Fetch hs-bindgen-runtime from another repo as it's not on hackage yet
-            hs-bindgen-runtime =
-              hfinal.callCabal2nix "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
-          }
-        );
         wuffsWASMTraced = builtins.trace "wuffsWASM store path: ${wuffsWASM.outPath}" wuffsWASM;
         wuffsWASM = wasmPkgs.stdenv.mkDerivation {
           pname = "wuffs-wasi";
@@ -113,7 +100,6 @@
             wasiSDK
             # wasmPkgs.cmake
             wasmPkgs.pkg-config
-            pkgs.which
           ];
           buildPhase = ''
             runHook preBuild
@@ -143,6 +129,26 @@
           '';
           dontFixup = true;
         };
+
+        ### NON WASM
+        wuffsHS = ghc.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {
+          wuffs = pkgs.wuffs.dev;
+        };
+        ghc = pkgs.haskell.packages.ghc912.extend (
+          hfinal: hprev: {
+            c-expr-runtime = hfinal.callHackageDirect {
+              pkg = "c-expr-runtime";
+              ver = "0.1.0.0";
+              sha256 = "sha256-/Yt7KsrF96ce0FA7Rnl2sn/uWQ4p2C55mIHjAzwlzbQ=";
+            } {};
+
+            # Fetch hs-bindgen-runtime from another repo as it's not on hackage yet
+            hs-bindgen-runtime =
+              hfinal.callCabal2nix
+              "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {
+              };
+          }
+        );
       in {
         packages = {
           default = wuffsHS;
@@ -157,7 +163,8 @@
         devShells.default = pkgs.mkShell {
           env = {
             WASI_SDK_PATH = wasiSDK;
-            WUFFS_WASI_INCLUDE = "${wuffsWASMTraced}/include";
+            WUFFS_WASI_INCLUDE = "${wuffsWASM}/include";
+            WUFFS_WASI_LIB = "${wuffsWASM}/lib";
           };
           inputsFrom = [
             # Thanks to this we can use hls. IMPORTANT: must be before the wasm shellFor
@@ -183,12 +190,13 @@
                 pkgs.cabal-install
                 pkgs.hs-bindgen-cli
                 pkgs.hsBindgenHook
-                pkgs.pkg-config
                 pkgs.wasmtime
-                # wasmPkgs.clang # IMPORTANT: must not be present otherwise cabal picks it up and cabal test doesn't work anymore
                 wasmPkgs.cabal-install
                 wasmTest
                 wasmCabal
+                # IMPORTANT: must not be present otherwise cabal picks it up and cabal test doesn't work anymore
+                # wasmPkgs.clang
+                # pkgs.pkg-config
                 # wasmPkgs.cmake
               ];
               buildInputs = [

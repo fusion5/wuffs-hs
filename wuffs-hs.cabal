@@ -61,6 +61,13 @@ library
 
   pkgconfig-depends: wuffs
   hs-source-dirs:    src src-native
+
+  if arch(wasm32)
+    hs-source-dirs: src-wasm
+
+  else
+    hs-source-dirs: src-native
+
   default-language:  GHC2024
 
 test-suite wuffs-hs-test
@@ -75,3 +82,4 @@ test-suite wuffs-hs-test
   build-depends:
     , base
     , wuffs-hs
+  pkgconfig-depends: wuffs
