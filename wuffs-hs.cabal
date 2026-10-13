@@ -42,8 +42,8 @@ common shared-properties
     -Wno-pattern-namespace-specifier -Wno-unrecognised-warning-flags
 
 library
-  import:           shared-properties
-  exposed-modules:  Codec.Wuffs
+  import:            shared-properties
+  exposed-modules:   Codec.Wuffs
   other-modules:
     Codec.Wuffs.Bindings.Generated
     Codec.Wuffs.Bindings.Generated.FunPtr
@@ -53,14 +53,15 @@ library
 
   -- other-extensions:
   build-depends:
-    , base        ^>=4.21.1.0
+    , base
+    , bytestring
+    , containers
     , hs-bindgen-runtime
     , JuicyPixels
-    , containers
-    , bytestring
 
-  hs-source-dirs:   src src-native
-  default-language: GHC2024
+  pkgconfig-depends: wuffs
+  hs-source-dirs:    src src-native
+  default-language:  GHC2024
 
 test-suite wuffs-hs-test
   import:           shared-properties
@@ -72,5 +73,5 @@ test-suite wuffs-hs-test
   hs-source-dirs:   test
   main-is:          Main.hs
   build-depends:
-    , base      ^>=4.21.1.0
+    , base
     , wuffs-hs

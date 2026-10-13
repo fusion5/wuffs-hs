@@ -58,11 +58,24 @@
 
             # Fetch hs-bindgen-runtime directly from Hackage
             hs-bindgen-runtime =
-              hfinal.callCabal2nix "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
+              hfinal.callCabal2nix
+              "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
           }
         );
-        wasmWuffsHS =
-          wasmGHC.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {};
+        wasmWuffsHS = wasmGHC.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {
+          wuffs = wuffsWASM;
+        };
+        wasmCabal = pkgs.writeShellScriptBin "wasm-cabal" ''
+          if [ $# -eq 0 ]; then
+              echo "Error: No cabal command provided."
+              echo "Usage: wasm-cabal <command> [args...]"
+              echo "Example: wasm-cabal build my-app-frontend"
+              exit 1
+          fi
+          COMMAND="$1"
+          shift
+          wasm32-wasi-cabal "$COMMAND" --project-file=./cabal.wasm.project "$@"
+        '';
         wasmTest = pkgs.writeShellScriptBin "wasm-test" ''
           CABAL_TARGET="$1"
           [[ -z "$CABAL_TARGET" ]] && { echo "Usage: $BIN_NAME <cabal-test-target>"; exit 1; }
@@ -88,6 +101,48 @@
               hfinal.callCabal2nix "hs-bindgen-runtime" "${inputs.hs-bindgen}/hs-bindgen-runtime" {};
           }
         );
+        wuffsWASMTraced = builtins.trace "wuffsWASM store path: ${wuffsWASM.outPath}" wuffsWASM;
+        wuffsWASM = wasmPkgs.stdenv.mkDerivation {
+          pname = "wuffs-wasi";
+          meta = {
+            platforms = ["wasm32-unknown-wasi" "wasm32-wasi"];
+          };
+          version = pkgs.wuffs.version;
+          src = pkgs.wuffs.src;
+          nativeBuildInputs = [
+            wasiSDK
+            # wasmPkgs.cmake
+            wasmPkgs.pkg-config
+            pkgs.which
+          ];
+          buildPhase = ''
+            runHook preBuild
+
+            # Find the single-file C release file
+            WUFFS_C=$(ls release/c/wuffs-v*.c | head -n 1)
+
+            # Compile the WASI object file with implementation defined
+            $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
+
+            # Archive into static library
+            $AR rcs libwuffs.a wuffs.o
+
+            runHook postBuild
+          '';
+
+          installPhase = ''
+            runHook preInstall
+
+            # Create the wuffs/ subdirectory under include
+            mkdir -p $out/lib $out/include/wuffs
+
+            cp libwuffs.a $out/lib/
+            cp release/c/wuffs-v*.c $out/include/wuffs/
+
+            runHook postInstall
+          '';
+          dontFixup = true;
+        };
       in {
         packages = {
           default = wuffsHS;
@@ -100,7 +155,10 @@
         };
 
         devShells.default = pkgs.mkShell {
-          WASI_SDK_PATH = wasiSDK;
+          env = {
+            WASI_SDK_PATH = wasiSDK;
+            WUFFS_WASI_INCLUDE = "${wuffsWASMTraced}/include";
+          };
           inputsFrom = [
             # Thanks to this we can use hls. IMPORTANT: must be before the wasm shellFor
             (ghc.shellFor {
@@ -125,16 +183,18 @@
                 pkgs.cabal-install
                 pkgs.hs-bindgen-cli
                 pkgs.hsBindgenHook
-                # pkgs.pkg-config
+                pkgs.pkg-config
                 pkgs.wasmtime
-                wasmPkgs.wuffs
-                wasmPkgs.clang
+                # wasmPkgs.clang # IMPORTANT: must not be present otherwise cabal picks it up and cabal test doesn't work anymore
                 wasmPkgs.cabal-install
                 wasmTest
-                wasmPkgs.cmake
+                wasmCabal
+                # wasmPkgs.cmake
               ];
               buildInputs = [
-                # libheif-wasi
+                wuffsWASMTraced
+                # wasmPkgs.wuffs
+                # TODO: add wuffs-wasi?
               ];
             })
           ];
