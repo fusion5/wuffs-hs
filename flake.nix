@@ -108,6 +108,22 @@
         devShells.default = pkgs.mkShell {
           WASI_SDK_PATH = wasiSDK;
           inputsFrom = [
+            # Thanks to this we can use hls. IMPORTANT: must be before the wasm shellFor
+            (ghc.shellFor {
+              packages = ps: [wuffsHS];
+              nativeBuildInputs = with ghc; [
+                haskell-language-server
+                implicit-hie
+                cabal-install
+                cabal-fmt
+                pkgs.hs-bindgen-cli
+                # Connect `hs-bindgen` to the Clang toolchain and `libheif`.
+                # Fixes [Error] [Libclang] [clang] unable to resolve #include <libheif/heif.h>:
+                pkgs.hsBindgenHook
+                pkgs.pkg-config # IMPORTANT: must be only in the native shell
+              ];
+              buildInputs = [];
+            })
             (wasmGHC.shellFor {
               packages = ps: [wasmWuffsHS];
               nativeBuildInputs = [
@@ -124,23 +140,6 @@
               buildInputs = [
                 # libheif-wasi
               ];
-            })
-
-            # Thanks to this we can use hls
-            (ghc.shellFor {
-              packages = ps: [wuffsHS];
-              nativeBuildInputs = with ghc; [
-                haskell-language-server
-                implicit-hie
-                cabal-install
-                cabal-fmt
-                pkgs.hs-bindgen-cli
-                # Connect `hs-bindgen` to the Clang toolchain and `libheif`.
-                # Fixes [Error] [Libclang] [clang] unable to resolve #include <libheif/heif.h>:
-                pkgs.hsBindgenHook
-                pkgs.pkg-config
-              ];
-              buildInputs = [];
             })
           ];
         };
