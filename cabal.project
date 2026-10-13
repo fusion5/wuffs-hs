@@ -1,7 +1,2 @@
 packages:
   .
-
-package wuffs-hs
-  shared: False
-  static: True
-  executable-dynamic: False

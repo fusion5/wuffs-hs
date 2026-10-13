@@ -75,6 +75,7 @@
           COMMAND="$1"
           shift
           wasm32-wasi-cabal "$COMMAND" \
+            --project-file=./cabal.wasm.project \
             --extra-lib-dirs="$WUFFS_WASI_LIB" \
             --extra-include-dirs="$WUFFS_WASI_INCLUDE" "$@"
         '';
