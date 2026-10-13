@@ -50,9 +50,12 @@ library
     Codec.Wuffs.Bindings.Generated.Global
     Codec.Wuffs.Bindings.Generated.Safe
     Codec.Wuffs.Bindings.Generated.Unsafe
+    PackageInfo_wuffs_hs
     Paths_wuffs_hs
 
-  autogen-modules:   Paths_wuffs_hs
+  autogen-modules:
+    Paths_wuffs_hs
+    PackageInfo_wuffs_hs
 
   -- other-extensions:
   build-depends:
@@ -63,7 +66,7 @@ library
     , JuicyPixels
 
   pkgconfig-depends: wuffs
-  hs-source-dirs:    src src-native
+  hs-source-dirs:    src
 
   if arch(wasm32)
     hs-source-dirs: src-wasm
@@ -76,8 +79,14 @@ library
 test-suite wuffs-hs-test
   import:            shared-properties
   default-language:  GHC2024
+  other-modules:
+    PackageInfo_wuffs_hs
+    Paths_wuffs_hs
 
-  -- other-modules:
+  autogen-modules:
+    Paths_wuffs_hs
+    PackageInfo_wuffs_hs
+
   -- other-extensions:
   type:              exitcode-stdio-1.0
   hs-source-dirs:    test

@@ -6,8 +6,8 @@ cradle:
     - path: "./src-native"
       component: "lib:wuffs-hs"
 
-    - path: "./src-wasm"
-      component: "lib:wuffs-hs"
+    # - path: "./src-wasm"
+    #   component: "lib:wuffs-hs"
 
     - path: "./src-native"
       component: "lib:wuffs-hs"

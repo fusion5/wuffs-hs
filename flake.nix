@@ -180,9 +180,9 @@
                 # Fixes [Error] [Libclang] [clang] unable to resolve #include <....h>:
                 pkgs.hsBindgenHook
                 pkgs.pkg-config # IMPORTANT: must be only in the native shell
-                pkgs.wuffs
+                # pkgs.wuffs
               ];
-              buildInputs = [];
+              buildInputs = [pkgs.wuffs];
             })
             (wasmGHC.shellFor {
               packages = ps: [wasmWuffsHS];
@@ -206,9 +206,10 @@
               ];
             })
           ];
-          # packages = with pkgs; [
-          #   wuffs
-          # ];
+          # make hls happy about missing .so files since
+          shellHook = ''
+            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [pkgs.wuffs]}:$LD_LIBRARY_PATH
+          '';
         };
       };
     };
