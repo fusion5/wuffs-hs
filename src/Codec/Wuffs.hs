@@ -213,7 +213,7 @@ decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
         withT metaIOBuffer $ \metaIOBufferPtr -> do
           withT nullMoreInfo $ \moreInfoPtr -> do
             let exhaustTellMeMore = do
-                  liftIO $ print @String "wuffs_png__decoder__tell_me_more"
+                  -- liftIO $ print @String "wuffs_png__decoder__tell_me_more"
                   (_isNote, isSuspension) <-
                     checkWuffsStatus PNGImageTellMeMoreError $
                       C.wuffs_png__decoder__tell_me_more
@@ -221,9 +221,32 @@ decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
                         metaIOBufferPtr
                         moreInfoPtr
                         imageBufferPtr
-                  when isSuspension exhaustTellMeMore -- Loop again, preserving buffer state!
-            exhaustTellMeMore
 
+                  when isSuspension $ do
+                    -- 1. Check if this suspension was for raw passthrough
+                    range <- liftIO $ C.wuffs_base__more_information__metadata_raw_passthrough__range (ConstPtr moreInfoPtr)
+                    let minIdx = C.wuffs_base__range_ie_u64_min_incl range
+                        maxIdx = C.wuffs_base__range_ie_u64_max_excl range
+
+                    -- 2. If it is passthrough, we MUST advance the stream's read index!
+                    when (minIdx < maxIdx) $ do
+                      buf <- liftIO $ Foreign.peek imageBufferPtr
+                      let meta = C.wuffs_base__io_buffer_meta buf
+                          -- Advance ri by the length of the chunk we just bypassed
+                          newMeta =
+                            meta
+                              { C.wuffs_base__io_buffer_meta_ri =
+                                  C.wuffs_base__io_buffer_meta_ri meta + fromIntegral (maxIdx - minIdx)
+                              }
+                          newBuf =
+                            buf
+                              { C.wuffs_base__io_buffer_meta = newMeta
+                              }
+                      liftIO $ Foreign.poke imageBufferPtr newBuf
+
+                    exhaustTellMeMore
+
+            exhaustTellMeMore
             range <- liftIO $ C.wuffs_base__more_information__metadata_raw_passthrough__range (ConstPtr moreInfoPtr)
             let minIdx = fromIntegral $ C.wuffs_base__range_ie_u64_min_incl range
                 maxIdx = fromIntegral $ C.wuffs_base__range_ie_u64_max_excl range
