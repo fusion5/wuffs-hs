@@ -6,6 +6,7 @@ module Codec.Wuffs
 where
 
 import Codec.Picture hiding (decodeImageWithMetadata, readImageWithMetadata)
+import Codec.Picture.Metadata qualified as Meta
 import Codec.Wuffs.Bindings.Generated qualified as C
 import Codec.Wuffs.Bindings.Generated.Safe qualified as C
 import Control.Exception
@@ -14,7 +15,6 @@ import Control.Monad.IO.Class
 import Control.Monad.Trans.Except
 import Data.ByteString qualified as BS
 import Data.ByteString.Unsafe qualified as BSU (unsafeUseAsCStringLen)
-import Data.Map qualified as M
 import Data.Vector.Storable qualified as VS
 import Data.Vector.Storable.Mutable qualified as MVS
 import Data.Word
@@ -24,32 +24,19 @@ import Foreign.C.String qualified as Foreign
 import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
 
-newtype Metadata = Metadata
-  { metadataBlocks :: M.Map Word32 MetadataBlock
-  }
-  deriving (Show, Eq)
-
-data MetadataBlock = MetadataBlock
-  { metadataBlockType :: MetadataType,
-    metadataBlockContentType :: String,
-    metadataBlockData :: BS.ByteString
-  }
-  deriving (Show, Eq)
-
-data MetadataType = Exif | Mime | OtherMetadataType String
-  deriving (Show, Eq)
-
 data WuffsError
   = PNGDecodeError String
   | PNGFrameDecodeError String
+  | PNGImageConfigDecodeError String
+  | PNGImageTellMeMoreError String
   deriving (Show)
 
 type Err a = ExceptT WuffsError IO a
 
-readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Metadata))
+readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Meta.Metadatas))
 readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
 
-readImageWithMetadataT :: FilePath -> Err (DynamicImage, Metadata)
+readImageWithMetadataT :: FilePath -> Err (DynamicImage, Meta.Metadatas)
 readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeImageWithMetadataT
 
 liftWith :: ((a -> IO (Either WuffsError b)) -> IO (Either WuffsError b)) -> (a -> Err b) -> Err b
@@ -91,16 +78,23 @@ withIoBufferFromByteString bs action =
 withIoBufferFromByteStringT :: BS.ByteString -> (C.Wuffs_base__io_buffer -> Err a) -> Err a
 withIoBufferFromByteStringT bs = liftWith (withIoBufferFromByteString bs)
 
-withWorkBufferT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
-withWorkBufferT getRange = liftWith (withWorkBuffer getRange)
+withWorkBufferRangeT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
+withWorkBufferRangeT getRange = liftWith (withWorkBufferRange getRange)
 
 -- | Dynamically allocates the required Wuffs work buffer for a specific decoder.
-withWorkBuffer :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
-withWorkBuffer getRange action = do
+withWorkBufferRange :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
+withWorkBufferRange getRange action = do
   workbufRange <- getRange
   let maxWorkbuf = fromIntegral (C.wuffs_base__range_ii_u64_max_incl workbufRange)
-  Foreign.allocaBytes maxWorkbuf $ \workBufRaw -> do
-    sliceWork <- C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral maxWorkbuf)
+  withWorkBuffer maxWorkbuf action
+
+withWorkBufferT :: Int -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
+withWorkBufferT size = liftWith (withWorkBuffer size)
+
+withWorkBuffer :: Int -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
+withWorkBuffer size action = do
+  Foreign.allocaBytes size $ \workBufRaw -> do
+    sliceWork <- C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral size)
     action sliceWork
 
 withT :: (Bindgen.Storable a) => a -> (Bindgen.Ptr a -> Err b) -> Err b
@@ -131,19 +125,18 @@ withRgbaPixelBuffer pixCfgPtr width height rawPixels action = do
     action pixBufPtr
 
 -- TODO: Implement streaming version as well.
-decodeImageWithMetadata :: BS.ByteString -> IO (Either WuffsError (DynamicImage, Metadata))
+decodeImageWithMetadata :: BS.ByteString -> IO (Either WuffsError (DynamicImage, Meta.Metadatas))
 decodeImageWithMetadata imageBytes = runExceptT $ decodeImageWithMetadataT imageBytes
 
-decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Metadata)
-decodeImageWithMetadataT bs =
-  withIoBufferFromByteStringT bs $ \ioBuf ->
+decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Meta.Metadatas)
+decodeImageWithMetadataT imageFileBS =
+  withIoBufferFromByteStringT imageFileBS $ \imageFileBuffer ->
     withDecoderT C.wuffs_png__decoder__alloc $ \decoderPtr -> do
       nullImgCfg <- liftIO C.wuffs_base__null_image_config
-      withT nullImgCfg $ \imgCfgPtr -> do
-        withT ioBuf $ \ioBufferPtr -> do
-          checkWuffsStatus PNGDecodeError $
-            C.wuffs_png__decoder__decode_image_config decoderPtr imgCfgPtr ioBufferPtr
-          let pixelConfigPtr = Foreign.castPtr imgCfgPtr
+      withT nullImgCfg $ \imageConfigPtr -> do
+        withT imageFileBuffer $ \imageFileBufferPtr -> do
+          metadata <- decodeConfigAndMetadata imageFileBS decoderPtr imageConfigPtr imageFileBufferPtr
+          let pixelConfigPtr = Foreign.castPtr imageConfigPtr
           width <-
             fromIntegral
               <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
@@ -154,18 +147,119 @@ decodeImageWithMetadataT bs =
           mutableVector <- MVS.new capacity
           withMVSUnsafeT mutableVector $ \rawPixels ->
             withRgbaPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
-              withWorkBufferT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
+              withWorkBufferRangeT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
                 \sliceWork -> do
                   checkWuffsStatus PNGFrameDecodeError $
                     C.wuffs_png__decoder__decode_frame
                       decoderPtr
                       pixelBufferPtr
-                      ioBufferPtr
+                      imageFileBufferPtr
                       0
                       sliceWork
                       Foreign.nullPtr
                   frozenVector <- VS.unsafeFreeze mutableVector
-                  pure (ImageRGBA8 (Image width height frozenVector), error "TODO: Metadata")
+                  pure (ImageRGBA8 (Image width height frozenVector), metadata)
+
+decodeConfigAndMetadata ::
+  BS.ByteString ->
+  Bindgen.Ptr C.Wuffs_png__decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Err Meta.Metadatas
+decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
+  -- Opt-in to specific metadata chunks (silencing the unused-bind warnings)
+  void . liftIO $ C.wuffs_png__decoder__set_report_metadata decoderPtr (fromIntegral C.wUFFS_BASE__FOURCC__ICCP) 1
+  void . liftIO $ C.wuffs_png__decoder__set_report_metadata decoderPtr (fromIntegral C.wUFFS_BASE__FOURCC__XMP) 1
+  void . liftIO $ C.wuffs_png__decoder__set_report_metadata decoderPtr (fromIntegral C.wUFFS_BASE__FOURCC__EXIF) 1
+
+  readConfigLoop Meta.empty
+  where
+    -- The main recursive yield loop
+    readConfigLoop accMeta = do
+      status <- liftIO $ C.wuffs_png__decoder__decode_image_config decoderPtr configPtr imageBufferPtr
+      checkWuffsStatus PNGImageConfigDecodeError $ pure status
+
+      isNote <- liftIO $ Bindgen.with status checkNote
+      if isNote /= 0
+        then do
+          newMeta <- extractChunk' accMeta
+          readConfigLoop newMeta
+        else
+          pure accMeta
+
+    checkNote sPtr = C.wuffs_base__status__is_note (ConstPtr sPtr)
+
+    -- A buffer to decompress some metadata information
+    _extractChunk :: Meta.Metadatas -> Err Meta.Metadatas
+    _extractChunk accMeta = do
+      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+      withT nullMoreInfo $ \moreInfoPtr -> do
+        -- Instead of calling tell_me_more which requires complex coroutine handshaking,
+        -- we query the metadata range directly from the decoder's current note state.
+        fourcc <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+        range <- liftIO $ C.wuffs_base__more_information__metadata_raw_passthrough__range (ConstPtr moreInfoPtr)
+
+        let minIdx = fromIntegral $ C.wuffs_base__range_ie_u64_min_incl range
+            maxIdx = fromIntegral $ C.wuffs_base__range_ie_u64_max_excl range
+
+            -- Slice directly from the source ByteString safely
+            chunkBytes = BS.take (maxIdx - minIdx) (BS.drop minIdx imageBytes)
+
+        pure $
+          case fourcc of
+            _
+              | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__ICCP ->
+                  -- Note: If it's compressed, you can decompress chunkBytes with zlib here if needed,
+                  -- or store it directly as raw profile data.
+                  Meta.insert Meta.ColorSpace (Meta.ICCProfile chunkBytes) accMeta
+              | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__EXIF ->
+                  error "EXIF encountered!"
+              | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__XMP ->
+                  error "XMP encountered!"
+            _ | otherwise -> accMeta
+
+    -- Queries Wuffs for the metadata location, slices the original ByteString, and wraps it for
+    -- JuicyPixels
+    metaBufSize = 256 * 1024
+    extractChunk' :: Meta.Metadatas -> Err Meta.Metadatas
+    extractChunk' accMeta =
+      withWorkBufferT metaBufSize $ \metaSlice -> do
+        liftIO $ print $ "extractChunk" <> show accMeta
+        nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+        let slicePtr = Foreign.castPtr (C.wuffs_base__slice_u8_ptr metaSlice)
+            sliceLen = C.wuffs_base__slice_u8_len metaSlice
+        metaIOBuffer <- liftIO $ C.wuffs_base__ptr_u8__writer slicePtr sliceLen
+        withT metaIOBuffer $ \metaIOBufferPtr -> do
+          withT nullMoreInfo $ \moreInfoPtr -> do
+            telMeMoreResult <-
+              liftIO $
+                C.wuffs_png__decoder__tell_me_more
+                  decoderPtr
+                  metaIOBufferPtr
+                  moreInfoPtr
+                  imageBufferPtr
+            checkWuffsStatus PNGImageTellMeMoreError $ pure telMeMoreResult
+            fourcc <-
+              liftIO $
+                C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+            range <-
+              liftIO $
+                C.wuffs_base__more_information__metadata_raw_passthrough__range (ConstPtr moreInfoPtr)
+
+            let minIdx = fromIntegral $ C.wuffs_base__range_ie_u64_min_incl range
+                maxIdx = fromIntegral $ C.wuffs_base__range_ie_u64_max_excl range
+                chunkBytes = BS.take (maxIdx - minIdx) (BS.drop minIdx imageBytes)
+
+            pure $
+              case fourcc of
+                _
+                  | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__ICCP ->
+                      Meta.insert Meta.ColorSpace (Meta.ICCProfile chunkBytes) accMeta
+                  | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__EXIF ->
+                      error "EXIF encountered!"
+                  | fourcc == fromIntegral C.wUFFS_BASE__FOURCC__XMP ->
+                      error "XMP encountered!"
+                _ | otherwise -> accMeta
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING
