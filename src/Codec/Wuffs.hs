@@ -230,14 +230,14 @@ decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
 
             metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
 
-            -- 4. Extract bytes cleanly depending on compression
+            -- Extract bytes cleanly depending on compression
             finalBytes <-
               if minIdx < maxIdx
                 then
-                  -- Uncompressed (EXIF): Zero-copy slice from original file
+                  -- Uncompressed (ICCP): Zero-copy slice from original file
                   pure $ BS.take (maxIdx - minIdx) (BS.drop minIdx imageBytes)
                 else do
-                  -- Compressed (ICCP): Read the decompressed payload from the Wuffs buffer
+                  -- Compressed (EXIF): Read the decompressed payload from the Wuffs buffer
                   len <- liftIO $ C.wuffs_base__io_buffer__reader_length (ConstPtr metaIOBufferPtr)
                   if len > 0
                     then do
