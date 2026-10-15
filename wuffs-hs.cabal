@@ -64,6 +64,7 @@ library
     , containers
     , hs-bindgen-runtime
     , JuicyPixels
+    , transformers
     , vector
 
   pkgconfig-depends: wuffs

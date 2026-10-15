@@ -9,6 +9,8 @@ import Codec.Picture hiding (decodeImageWithMetadata, readImageWithMetadata)
 import Codec.Wuffs.Bindings.Generated qualified as C
 import Codec.Wuffs.Bindings.Generated.Safe qualified as C
 import Control.Exception
+import Control.Monad.IO.Class
+import Control.Monad.Trans.Except
 import Data.ByteString qualified as BS
 import Data.ByteString.Unsafe qualified as BSU (unsafeUseAsCStringLen)
 import Data.Map qualified as M
@@ -36,11 +38,33 @@ data MetadataBlock = MetadataBlock
 data MetadataType = Exif | Mime | OtherMetadataType String
   deriving (Show, Eq)
 
-readImageWithMetadata :: FilePath -> IO (Either String (DynamicImage, Metadata))
-readImageWithMetadata filePath = BS.readFile filePath >>= decodeImageWithMetadata
+data WuffsError
+  = PNGDecodeError String
+  | FrameDecodeError String
 
-withDecoder :: IO (Bindgen.Ptr a) -> (Bindgen.Ptr a -> IO b) -> IO b
-withDecoder allocate = bracket allocate Foreign.free
+type Err a = ExceptT WuffsError IO a
+
+readImageWithMetadata :: FilePath -> Err (DynamicImage, Metadata)
+readImageWithMetadata filePath = liftIO (BS.readFile filePath) >>= decodeImageWithMetadata
+
+liftWith :: ((a -> IO (Either WuffsError b)) -> IO (Either WuffsError b)) -> (a -> Err b) -> Err b
+liftWith bracketFn action = ExceptT $ bracketFn (runExceptT . action)
+
+withDecoderT :: IO (Bindgen.Ptr a) -> (Bindgen.Ptr a -> Err b) -> Err b
+withDecoderT allocate = liftWith (bracket allocate Foreign.free)
+
+withMVSUnsafeT :: (Bindgen.Storable a) => MVS.IOVector a -> (Bindgen.Ptr a -> Err b) -> Err b
+withMVSUnsafeT mutableVector = liftWith (MVS.unsafeWith mutableVector)
+
+withRgbaPixelBufferT ::
+  Bindgen.Ptr C.Wuffs_base__pixel_config ->
+  Int ->
+  Int ->
+  Bindgen.Ptr Word8 ->
+  (Bindgen.Ptr C.Wuffs_base__pixel_buffer -> Err b) ->
+  Err b
+withRgbaPixelBufferT pixelConfigurationPtr width height rawPixels =
+  liftWith (withRgbaPixelBuffer pixelConfigurationPtr width height rawPixels)
 
 -- | Evaluates a Wuffs status. Returns Right () on success, or Left "error message" on failure.
 checkWuffsStatus :: IO C.Wuffs_base__status -> IO (Either String ())
@@ -61,6 +85,12 @@ withIoBufferFromByteString bs action =
     ioBuf <- C.wuffs_base__ptr_u8__reader (Foreign.castPtr cStrPtr) (fromIntegral len) 1
     action ioBuf
 
+withIoBufferFromByteStringT :: BS.ByteString -> (C.Wuffs_base__io_buffer -> Err a) -> Err a
+withIoBufferFromByteStringT bs = liftWith (withIoBufferFromByteString bs)
+
+withWorkBufferT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
+withWorkBufferT getRange = liftWith (withWorkBuffer getRange)
+
 -- | Dynamically allocates the required Wuffs work buffer for a specific decoder.
 withWorkBuffer :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
 withWorkBuffer getRange action = do
@@ -69,6 +99,9 @@ withWorkBuffer getRange action = do
   Foreign.allocaBytes maxWorkbuf $ \workBufRaw -> do
     sliceWork <- C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral maxWorkbuf)
     action sliceWork
+
+withT :: (Bindgen.Storable a) => a -> (Bindgen.Ptr a -> Err b) -> Err b
+withT ptr = liftWith (Bindgen.with ptr)
 
 -- | Configures a generic Wuffs pixel_buffer to point at our Haskell Storable Vector memory,
 -- forcing the decoder to output 32-bit RGBA.
@@ -94,40 +127,42 @@ withRgbaPixelBuffer pixCfgPtr width height rawPixels action = do
     _ <- C.wuffs_base__pixel_buffer__set_from_slice pixBufPtr (ConstPtr pixCfgPtr) slice
     action pixBufPtr
 
--- | TODO: Implement ExceptT
 -- TODO: Implement streaming version as well.
-decodeImageWithMetadata :: BS.ByteString -> IO (Either String (DynamicImage, Metadata))
+decodeImageWithMetadata :: BS.ByteString -> Err (DynamicImage, Metadata)
 decodeImageWithMetadata bs =
-  withIoBufferFromByteString bs $ \ioBuf ->
-    withDecoder C.wuffs_png__decoder__alloc $ \decoderPtr -> do
-      nullImgCfg <- C.wuffs_base__null_image_config
-      Bindgen.with nullImgCfg $ \imgCfgPtr -> do
-        Bindgen.with ioBuf $ \ioBufPtr -> do
+  withIoBufferFromByteStringT bs $ \ioBuf ->
+    withDecoderT C.wuffs_png__decoder__alloc $ \decoderPtr -> do
+      nullImgCfg <- liftIO C.wuffs_base__null_image_config
+      withT nullImgCfg $ \imgCfgPtr -> do
+        withT ioBuf $ \ioBufPtr -> do
           cfgRes <-
-            checkWuffsStatus $
-              C.wuffs_png__decoder__decode_image_config decoderPtr imgCfgPtr ioBufPtr
+            liftIO $
+              checkWuffsStatus $
+                C.wuffs_png__decoder__decode_image_config decoderPtr imgCfgPtr ioBufPtr
           case cfgRes of
-            Left err -> pure $ Left ("Config decode failed: " <> err)
+            Left err -> throwE $ PNGDecodeError err
             Right () -> do
               let pixCfgPtr = Foreign.castPtr imgCfgPtr
-              w <- C.wuffs_base__pixel_config__width (ConstPtr pixCfgPtr)
-              h <- C.wuffs_base__pixel_config__height (ConstPtr pixCfgPtr)
+              w <- liftIO $ C.wuffs_base__pixel_config__width (ConstPtr pixCfgPtr)
+              h <- liftIO $ C.wuffs_base__pixel_config__height (ConstPtr pixCfgPtr)
 
               let width = fromIntegral w :: Int
                   height = fromIntegral h :: Int
                   capacity = width * height * 4
               mVec <- MVS.new capacity
-              MVS.unsafeWith mVec $ \rawPixels ->
-                withRgbaPixelBuffer pixCfgPtr width height rawPixels $ \pixBufPtr ->
-                  withWorkBuffer (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $ \sliceWork -> do
-                    frameRes <-
-                      checkWuffsStatus $
-                        C.wuffs_png__decoder__decode_frame decoderPtr pixBufPtr ioBufPtr 0 sliceWork Foreign.nullPtr
-                    case frameRes of
-                      Left err -> pure $ Left ("Frame decode failed: " <> err)
-                      Right () -> do
-                        frozenVec <- VS.unsafeFreeze mVec
-                        pure $ Right (ImageRGBA8 (Image width height frozenVec), error "TODO: Metadata")
+              withMVSUnsafeT mVec $ \rawPixels ->
+                withRgbaPixelBufferT pixCfgPtr width height rawPixels $ \pixBufPtr ->
+                  withWorkBufferT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
+                    \sliceWork -> do
+                      frameRes <-
+                        liftIO $
+                          checkWuffsStatus $
+                            C.wuffs_png__decoder__decode_frame decoderPtr pixBufPtr ioBufPtr 0 sliceWork Foreign.nullPtr
+                      case frameRes of
+                        Left err -> throwE $ FrameDecodeError err
+                        Right () -> do
+                          frozenVec <- VS.unsafeFreeze mVec
+                          pure (ImageRGBA8 (Image width height frozenVec), error "TODO: Metadata")
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING
