@@ -10,6 +10,7 @@ import Codec.Wuffs
 import System.Directory (doesFileExist)
 import Test.Hspec
 import Prelude
+import Control.Exception
 
 main :: IO ()
 main = hspec spec
@@ -33,6 +34,16 @@ spec = describe "wuffs-hs" $ do
       doesFileExist sampleFile >>= (`shouldBe` True)
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
-        Right decoded -> putStrLn $ describeImage $ fst decoded
-        Left err -> print $ show err
-      pure ()
+        Right decoded -> do
+          putStrLn $ describeImage $ fst decoded
+          print $ snd decoded
+        Left err -> throw err
+    it "Can decode a png file with EXIF metadata" $ do
+      let sampleFile = "samples/liquid-crystal-phase-transition.png"
+      doesFileExist sampleFile >>= (`shouldBe` True)
+      decodedEither <- readImageWithMetadata sampleFile
+      case decodedEither of
+        Right decoded -> do
+          putStrLn $ describeImage $ fst decoded
+          print $ snd decoded
+        Left err -> throw err

@@ -31,6 +31,8 @@ data WuffsError
   | PNGImageTellMeMoreError String
   deriving (Show)
 
+instance Exception WuffsError
+
 type Err a = ExceptT WuffsError IO a
 
 readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Meta.Metadatas))
