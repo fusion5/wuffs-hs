@@ -29,8 +29,8 @@ spec = describe "wuffs-hs" $ do
     it "The linked library version is non empty" $ do
       x <- wuffsVersion
       x `shouldNotBe` ""
-    it "Can decode a png file" $ do
-      let sampleFile = "samples/demo.png"
+    it "Can decode a transparent png file" $ do
+      let sampleFile = "samples/demo-transparent.png"
       doesFileExist sampleFile >>= (`shouldBe` True)
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
@@ -40,6 +40,15 @@ spec = describe "wuffs-hs" $ do
         Left err -> throw err
     it "Can decode a png file with EXIF metadata" $ do
       let sampleFile = "samples/liquid-crystal-phase-transition.png"
+      doesFileExist sampleFile >>= (`shouldBe` True)
+      decodedEither <- readImageWithMetadata sampleFile
+      case decodedEither of
+        Right decoded -> do
+          putStrLn $ describeImage $ fst decoded
+          print $ snd decoded
+        Left err -> throw err
+    it "Can decode a jpeg file" $ do
+      let sampleFile = "samples/test.jpg"
       doesFileExist sampleFile >>= (`shouldBe` True)
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
