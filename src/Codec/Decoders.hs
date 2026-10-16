@@ -1,6 +1,6 @@
 module Codec.Decoders
   ( Decoder,
-    getDecoderByImageType,
+    withDecoderByImageType,
     workbufferLength,
     decodeFrame,
     setReportMetadata,
@@ -12,9 +12,10 @@ where
 import Codec.Types
 import Codec.Wuffs.Bindings.Generated qualified as C
 import Codec.Wuffs.Bindings.Generated.Safe qualified as C
-import Control.Monad.IO.Class
+import Control.Exception
 import Control.Monad.Trans.Except
 import Data.Word
+import Foreign qualified
 import Foreign.C.ConstPtr (ConstPtr (..))
 import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
@@ -87,33 +88,35 @@ data Decoder
   = DecoderPNG (Bindgen.Ptr C.Wuffs_png__decoder) (AbstractDecoder C.Wuffs_png__decoder)
   | DecoderWEBP (Bindgen.Ptr C.Wuffs_webp__decoder) (AbstractDecoder C.Wuffs_webp__decoder)
 
--- FIXME: decode should get deallocated. This needs to become a with function
-getDecoderByImageType :: Bindgen.Int32 -> Err Decoder
-getDecoderByImageType fourcc
-  | fromIntegral fourcc == C.wUFFS_BASE__FOURCC__PNG = do
-      decoder <- liftIO C.wuffs_png__decoder__alloc
-      pure $
-        DecoderPNG
-          decoder
-          ( AbstractDecoder
-              { adWorkbufferLength = C.wuffs_png__decoder__workbuf_len,
-                adDecodeFrame = C.wuffs_png__decoder__decode_frame,
-                adSetReportMetadata = C.wuffs_png__decoder__set_report_metadata,
-                adDecodeImageConfig = C.wuffs_png__decoder__decode_image_config,
-                adTellMeMore = C.wuffs_png__decoder__tell_me_more
-              }
-          )
-  | fromIntegral fourcc == C.wUFFS_BASE__FOURCC__WEBP = do
-      decoder <- liftIO C.wuffs_webp__decoder__alloc
-      pure $
-        DecoderWEBP
-          decoder
-          ( AbstractDecoder
-              { adWorkbufferLength = C.wuffs_webp__decoder__workbuf_len,
-                adDecodeFrame = C.wuffs_webp__decoder__decode_frame,
-                adSetReportMetadata = C.wuffs_webp__decoder__set_report_metadata,
-                adDecodeImageConfig = C.wuffs_webp__decoder__decode_image_config,
-                adTellMeMore = C.wuffs_webp__decoder__tell_me_more
-              }
-          )
+withDecoderT :: IO (Bindgen.Ptr a) -> (Bindgen.Ptr a -> Err b) -> Err b
+withDecoderT allocate = liftWith $ bracket allocate Foreign.free
+
+withDecoderByImageType :: Bindgen.Int32 -> (Decoder -> Err a) -> Err a
+withDecoderByImageType fourcc action
+  | fromIntegral fourcc == C.wUFFS_BASE__FOURCC__PNG =
+      withDecoderT C.wuffs_png__decoder__alloc $ \decoder ->
+        action $
+          DecoderPNG
+            decoder
+            ( AbstractDecoder
+                { adWorkbufferLength = C.wuffs_png__decoder__workbuf_len,
+                  adDecodeFrame = C.wuffs_png__decoder__decode_frame,
+                  adSetReportMetadata = C.wuffs_png__decoder__set_report_metadata,
+                  adDecodeImageConfig = C.wuffs_png__decoder__decode_image_config,
+                  adTellMeMore = C.wuffs_png__decoder__tell_me_more
+                }
+            )
+  | fromIntegral fourcc == C.wUFFS_BASE__FOURCC__WEBP =
+      withDecoderT C.wuffs_webp__decoder__alloc $ \decoder ->
+        action $
+          DecoderWEBP
+            decoder
+            ( AbstractDecoder
+                { adWorkbufferLength = C.wuffs_webp__decoder__workbuf_len,
+                  adDecodeFrame = C.wuffs_webp__decoder__decode_frame,
+                  adSetReportMetadata = C.wuffs_webp__decoder__set_report_metadata,
+                  adDecodeImageConfig = C.wuffs_webp__decoder__decode_image_config,
+                  adTellMeMore = C.wuffs_webp__decoder__tell_me_more
+                }
+            )
   | otherwise = throwE $ UnsupportedImageType fourcc

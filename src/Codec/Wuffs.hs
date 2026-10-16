@@ -31,9 +31,6 @@ readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
 readImageWithMetadataT :: FilePath -> Err (DynamicImage, Meta.Metadatas)
 readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeImageWithMetadataT
 
-liftWith :: ((a -> IO (Either WuffsError b)) -> IO (Either WuffsError b)) -> (a -> Err b) -> Err b
-liftWith bracketFn action = ExceptT $ bracketFn (runExceptT . action)
-
 withMVSUnsafeT :: (Bindgen.Storable a) => MVS.IOVector a -> (Bindgen.Ptr a -> Err b) -> Err b
 withMVSUnsafeT mutableVector = liftWith (MVS.unsafeWith mutableVector)
 
@@ -152,7 +149,7 @@ decodeImageWithMetadataT imageFileBS =
           withRGBAPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
             withEmptySliceFromRangeT (workbufferLength decoder) $
               \sliceWork -> do
-                -- TODO: add PNG sample with more frames
+                -- TODO: add image sample that contains more frames
                 -- TODO: exhaust frames?
                 (_isNote, _isSuspension) <-
                   checkWuffsStatus PNGFrameDecodeError $

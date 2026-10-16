@@ -1,4 +1,4 @@
-module Codec.Types (Err, WuffsError (..)) where
+module Codec.Types (Err, WuffsError (..), liftWith) where
 
 import Control.Exception
 import Control.Monad.Trans.Except
@@ -17,3 +17,6 @@ data WuffsError
 instance Exception WuffsError
 
 type Err a = ExceptT WuffsError IO a
+
+liftWith :: ((a -> IO (Either WuffsError b)) -> IO (Either WuffsError b)) -> (a -> Err b) -> Err b
+liftWith bracketFn action = ExceptT $ bracketFn (runExceptT . action)
