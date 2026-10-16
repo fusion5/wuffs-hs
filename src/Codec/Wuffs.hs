@@ -29,6 +29,7 @@ data WuffsError
   | PNGFrameDecodeError String
   | PNGImageConfigDecodeError String
   | PNGImageTellMeMoreError String
+  | TryingToAdvanceAfterBuffer
   deriving (Show)
 
 instance Exception WuffsError
@@ -76,14 +77,14 @@ checkWuffsStatus mkError getStatus = do
   pure (isNote /= 0, isSuspension /= 0)
 
 -- | Creates a Wuffs io_buffer directly from a Haskell ByteString.
-withIoBufferFromByteString :: BS.ByteString -> (C.Wuffs_base__io_buffer -> IO a) -> IO a
-withIoBufferFromByteString bs action =
+withIOBufferFromByteString :: BS.ByteString -> (C.Wuffs_base__io_buffer -> IO a) -> IO a
+withIOBufferFromByteString bs action =
   BSU.unsafeUseAsCStringLen bs $ \(cStrPtr, len) -> do
     ioBuf <- C.wuffs_base__ptr_u8__reader (Foreign.castPtr cStrPtr) (fromIntegral len) 1
     action ioBuf
 
-withIoBufferFromByteStringT :: BS.ByteString -> (C.Wuffs_base__io_buffer -> Err a) -> Err a
-withIoBufferFromByteStringT bs = liftWith (withIoBufferFromByteString bs)
+withIOBufferFromByteStringT :: BS.ByteString -> (C.Wuffs_base__io_buffer -> Err a) -> Err a
+withIOBufferFromByteStringT bs = liftWith $ withIOBufferFromByteString bs
 
 withWorkBufferRangeT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
 withWorkBufferRangeT getRange = liftWith (withWorkBufferRange getRange)
@@ -137,19 +138,17 @@ decodeImageWithMetadata imageBytes = runExceptT $ decodeImageWithMetadataT image
 
 decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Meta.Metadatas)
 decodeImageWithMetadataT imageFileBS =
-  withIoBufferFromByteStringT imageFileBS $ \imageFileBuffer ->
+  withIOBufferFromByteStringT imageFileBS $ \imageFileBuffer ->
     withDecoderT C.wuffs_png__decoder__alloc $ \decoderPtr -> do
       nullImgCfg <- liftIO C.wuffs_base__null_image_config
       withT nullImgCfg $ \imageConfigPtr -> do
         withT imageFileBuffer $ \imageFileBufferPtr -> do
-          metadata <- decodeConfigAndMetadata imageFileBS decoderPtr imageConfigPtr imageFileBufferPtr
+          metadata <- decodeConfigAndMetadata decoderPtr imageConfigPtr imageFileBufferPtr
           let pixelConfigPtr = Foreign.castPtr imageConfigPtr
           width <-
-            fromIntegral
-              <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
+            fromIntegral <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
           height <-
-            fromIntegral
-              <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
+            fromIntegral <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
           let capacity = width * height * 4
           mutableVector <- MVS.new capacity
           withMVSUnsafeT mutableVector $ \rawPixels ->
@@ -169,13 +168,29 @@ decodeImageWithMetadataT imageFileBS =
                   frozenVector <- VS.unsafeFreeze mutableVector
                   pure (ImageRGBA8 (Image width height frozenVector), metadata)
 
--- | Helper: Safely advances the Wuffs IO buffer read index (ri)
-advanceReaderIndex :: Bindgen.Ptr C.Wuffs_base__io_buffer -> Int -> Err ()
-advanceReaderIndex bufPtr offset = liftIO $ do
-  buf <- Foreign.peek bufPtr
-  let meta = C.wuffs_base__io_buffer_meta buf
-      newRi = C.wuffs_base__io_buffer_meta_ri meta + fromIntegral offset
-  Foreign.poke bufPtr (buf {C.wuffs_base__io_buffer_meta = meta {C.wuffs_base__io_buffer_meta_ri = newRi}})
+-- | Helper: Safely advances the Wuffs IO buffer read index (ri), and returns
+-- the bytes that were read.
+readAndAdvance :: Bindgen.Ptr C.Wuffs_base__io_buffer -> Int -> Err Bindgen.ByteString
+readAndAdvance ioBufferPtr offset = do
+  ioBuffer <- liftIO $ Foreign.peek ioBufferPtr
+  availableBytes <- liftIO $ C.wuffs_base__io_buffer__reader_length (ConstPtr ioBufferPtr)
+  when (offset > fromIntegral availableBytes) $ throwE TryingToAdvanceAfterBuffer
+
+  let meta = C.wuffs_base__io_buffer_meta ioBuffer
+      newReadIndex = C.wuffs_base__io_buffer_meta_ri meta + fromIntegral offset
+  -- Read the value from the buffer into a ByteString and return it.
+  readerBuffer <- liftIO $ C.wuffs_base__io_buffer__reader_pointer (ConstPtr ioBufferPtr)
+  -- Number of unread bytes available to be read from the buffer, meta.wi - meta.ri
+  result <- liftIO $ BS.packCStringLen (Foreign.castPtr readerBuffer, offset)
+  liftIO $
+    Foreign.poke ioBufferPtr $
+      ioBuffer
+        { C.wuffs_base__io_buffer_meta =
+            meta
+              { C.wuffs_base__io_buffer_meta_ri = newReadIndex
+              }
+        }
+  pure result
 
 -- | Helper: Extracts the passthrough range from the more_information struct
 getPassthroughRange :: Bindgen.Ptr C.Wuffs_base__more_information -> Err (Int, Int)
@@ -198,12 +213,11 @@ readIOBuffer bufPtr = liftIO $ do
 
 -- | Note: https://github.com/google/wuffs/blob/main/doc/std/image-decoders-call-sequence.md
 decodeConfigAndMetadata ::
-  BS.ByteString ->
   Bindgen.Ptr C.Wuffs_png__decoder ->
   Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Err Meta.Metadatas
-decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
+decodeConfigAndMetadata decoderPtr configPtr imageBufferPtr = do
   void $
     liftIO $
       traverse
@@ -226,7 +240,7 @@ decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
     extractChunk accMeta =
       withWorkBufferT (256 * 1024) $ \metaSlice -> do
         nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
-        let slicePtr = Foreign.castPtr (C.wuffs_base__slice_u8_ptr metaSlice)
+        let slicePtr = C.wuffs_base__slice_u8_ptr metaSlice
             sliceLen = C.wuffs_base__slice_u8_len metaSlice
 
         metaIOBuffer <- liftIO $ C.wuffs_base__ptr_u8__writer slicePtr sliceLen
@@ -244,8 +258,7 @@ decodeConfigAndMetadata imageBytes decoderPtr configPtr imageBufferPtr = do
                   newAccumulatedBytes <-
                     if chunkSize > 0
                       then do
-                        let chunkBytes = BS.take chunkSize (BS.drop minIdx imageBytes)
-                        advanceReaderIndex imageBufferPtr chunkSize
+                        chunkBytes <- readAndAdvance imageBufferPtr chunkSize
                         pure (accumulatedBytes <> chunkBytes)
                       else pure accumulatedBytes
                   if isSuspension
