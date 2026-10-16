@@ -77,9 +77,6 @@ withEmptySliceFromRange getRange action = do
   let maxWorkbuf = fromIntegral (C.wuffs_base__range_ii_u64_max_incl workbufRange)
   withEmptySlice maxWorkbuf action
 
--- withSliceT :: Int -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
--- withSliceT size = liftWith (withSlice size)
-
 withEmptySlice :: Int -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
 withEmptySlice size action =
   Foreign.allocaBytes size $ \workBufRaw -> do
@@ -166,26 +163,22 @@ decodeImageWithMetadataT imageFileBS =
 -- | Helper: Safely advances the Wuffs IO buffer read index (ri), and returns
 -- the bytes that were read.
 readAndAdvance :: Bindgen.Ptr C.Wuffs_base__io_buffer -> Int -> Err Bindgen.ByteString
-readAndAdvance ioBufferPtr offset = do
+readAndAdvance ioBufferPtr bytesToRead = do
   ioBuffer <- liftIO $ Foreign.peek ioBufferPtr
   availableBytes <- liftIO $ C.wuffs_base__io_buffer__reader_length (ConstPtr ioBufferPtr)
-  when (offset > fromIntegral availableBytes) $ throwE TryingToAdvanceAfterBuffer
+  when (bytesToRead > fromIntegral availableBytes) $ throwE TryingToAdvanceAfterBuffer
 
   let meta = C.wuffs_base__io_buffer_meta ioBuffer
-      newReadIndex = C.wuffs_base__io_buffer_meta_ri meta + fromIntegral offset
+      newReadIndex = C.wuffs_base__io_buffer_meta_ri meta + fromIntegral bytesToRead
   -- Read the value from the buffer into a ByteString and return it.
   readerBuffer <- liftIO $ C.wuffs_base__io_buffer__reader_pointer (ConstPtr ioBufferPtr)
   -- Number of unread bytes available to be read from the buffer, meta.wi - meta.ri
-  result <- liftIO $ BS.packCStringLen (Foreign.castPtr readerBuffer, offset)
   liftIO $
     Foreign.poke ioBufferPtr $
       ioBuffer
-        { C.wuffs_base__io_buffer_meta =
-            meta
-              { C.wuffs_base__io_buffer_meta_ri = newReadIndex
-              }
+        { C.wuffs_base__io_buffer_meta = meta {C.wuffs_base__io_buffer_meta_ri = newReadIndex}
         }
-  pure result
+  liftIO $ BS.packCStringLen (Foreign.castPtr readerBuffer, bytesToRead)
 
 -- | Helper: Extracts the passthrough range from the more_information struct
 getPassthroughRange :: Bindgen.Ptr C.Wuffs_base__more_information -> Err (Int, Int)
