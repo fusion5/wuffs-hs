@@ -100,7 +100,7 @@ withWorkBufferT :: Int -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
 withWorkBufferT size = liftWith (withWorkBuffer size)
 
 withWorkBuffer :: Int -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
-withWorkBuffer size action = do
+withWorkBuffer size action =
   Foreign.allocaBytes size $ \workBufRaw -> do
     sliceWork <- C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral size)
     action sliceWork
@@ -204,12 +204,9 @@ getPassthroughRange moreInfoPtr = liftIO $ do
 -- | Helper: Reads decompressed bytes from a Wuffs IO Buffer
 readIOBuffer :: Bindgen.Ptr C.Wuffs_base__io_buffer -> Err BS.ByteString
 readIOBuffer bufPtr = liftIO $ do
-  len <- C.wuffs_base__io_buffer__reader_length (ConstPtr bufPtr)
-  if len > 0
-    then do
-      ptr <- C.wuffs_base__io_buffer__reader_pointer (ConstPtr bufPtr)
-      BS.packCStringLen (Foreign.castPtr ptr, fromIntegral len)
-    else pure BS.empty
+  bufferLength <- C.wuffs_base__io_buffer__reader_length (ConstPtr bufPtr)
+  pointer <- C.wuffs_base__io_buffer__reader_pointer (ConstPtr bufPtr)
+  BS.packCStringLen (Foreign.castPtr pointer, fromIntegral bufferLength)
 
 -- | Note: https://github.com/google/wuffs/blob/main/doc/std/image-decoders-call-sequence.md
 decodeConfigAndMetadata ::
@@ -238,23 +235,30 @@ decodeConfigAndMetadata decoderPtr configPtr imageBufferPtr = do
 
     extractChunk :: Meta.Metadatas -> Err Meta.Metadatas
     extractChunk accMeta =
-      withWorkBufferT (256 * 1024) $ \metaSlice -> do
+      withWorkBufferT (256 * 1024) $ \metadataSlice -> do
         nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
-        let slicePtr = C.wuffs_base__slice_u8_ptr metaSlice
-            sliceLen = C.wuffs_base__slice_u8_len metaSlice
-
-        metaIOBuffer <- liftIO $ C.wuffs_base__ptr_u8__writer slicePtr sliceLen
-
-        withT metaIOBuffer $ \metaIOBufferPtr -> do
+        metadataIOBuffer <-
+          liftIO $
+            C.wuffs_base__ptr_u8__writer
+              (C.wuffs_base__slice_u8_ptr metadataSlice)
+              (C.wuffs_base__slice_u8_len metadataSlice)
+        withT metadataIOBuffer $ \metadataIOBufferPtr -> do
           withT nullMoreInfo $ \moreInfoPtr -> do
             -- Exhaust the coroutine and accumulate zero-copy bytes
             let exhaustTellMeMore accumulatedBytes = do
                   (_isNote, isSuspension) <-
                     checkWuffsStatus PNGImageTellMeMoreError $
-                      C.wuffs_png__decoder__tell_me_more decoderPtr metaIOBufferPtr moreInfoPtr imageBufferPtr
-
-                  (minIdx, maxIdx) <- getPassthroughRange moreInfoPtr
-                  let chunkSize = maxIdx - minIdx
+                      C.wuffs_png__decoder__tell_me_more
+                        decoderPtr
+                        metadataIOBufferPtr
+                        moreInfoPtr
+                        imageBufferPtr
+                  -- Wuffs tells us that the uncompressed data lies in the originial image data,
+                  -- between minIndex and maxIndex. If the data is compressed, then the two are
+                  -- equal, exhaustTellMeMore returns empty, and wuffs decompresses the data in
+                  -- metadataIOBufferPtr.
+                  (minIndex, maxIndex) <- getPassthroughRange moreInfoPtr
+                  let chunkSize = maxIndex - minIndex
                   newAccumulatedBytes <-
                     if chunkSize > 0
                       then do
@@ -265,13 +269,13 @@ decodeConfigAndMetadata decoderPtr configPtr imageBufferPtr = do
                     then exhaustTellMeMore newAccumulatedBytes
                     else pure newAccumulatedBytes
 
-            passthroughBytes <- exhaustTellMeMore BS.empty
+            uncompressedMetadata <- exhaustTellMeMore BS.empty
             metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
             -- If passthrough is empty, it was a compressed chunk. Read the Wuffs buffer.
             finalBytes <-
-              if BS.null passthroughBytes
-                then readIOBuffer metaIOBufferPtr
-                else pure passthroughBytes
+              if BS.null uncompressedMetadata
+                then readIOBuffer metadataIOBufferPtr
+                else pure uncompressedMetadata
             pure $ case metadataType of
               _
                 | metadataType == fourccICCP ->
