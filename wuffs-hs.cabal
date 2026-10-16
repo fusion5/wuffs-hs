@@ -35,7 +35,7 @@ common shared-properties
     TypeApplications
 
   ghc-options:
-    -Wall -Wcompat -Widentities -Wincomplete-record-updates
+    -Werr -Wall -Wcompat -Widentities -Wincomplete-record-updates
     -Wincomplete-uni-patterns -Wmissing-export-lists
     -Wmissing-home-modules -Wno-orphans -Wpartial-fields
     -Wredundant-constraints -Wunused-packages
@@ -45,6 +45,8 @@ library
   import:            shared-properties
   exposed-modules:   Codec.Wuffs
   other-modules:
+    Codec.Decoders
+    Codec.Types
     Codec.Wuffs.Bindings.Generated
     Codec.Wuffs.Bindings.Generated.FunPtr
     Codec.Wuffs.Bindings.Generated.Global
@@ -61,12 +63,12 @@ library
   build-depends:
     , base
     , bytestring
-    -- , containers
     , hs-bindgen-runtime
     , JuicyPixels
     , transformers
     , vector
 
+  -- , containers
   pkgconfig-depends: wuffs
   hs-source-dirs:    src
 
@@ -95,11 +97,11 @@ test-suite wuffs-hs-test
   main-is:           Main.hs
   build-depends:
     , base
-    -- , bytestring
     , directory    >=1.3.9   && <2
     , hspec        >=2.11.17 && <2.12
     , JuicyPixels
-    -- , temporary    >=1.3     && <2
     , wuffs-hs
 
+  -- , bytestring
+  -- , temporary    >=1.3     && <2
   pkgconfig-depends: wuffs
