@@ -31,16 +31,19 @@ decodeFrame ::
 decodeFrame (DecoderPNG decoder AbstractDecoder {..}) = adDecodeFrame decoder
 decodeFrame (DecoderWEBP decoder AbstractDecoder {..}) = adDecodeFrame decoder
 decodeFrame (DecoderJPEG decoder AbstractDecoder {..}) = adDecodeFrame decoder
+decodeFrame (DecoderGIF decoder AbstractDecoder {..}) = adDecodeFrame decoder
 
 workbufferLength :: Decoder -> IO C.Wuffs_base__range_ii_u64
 workbufferLength (DecoderPNG decoder AbstractDecoder {..}) = adWorkbufferLength $ ConstPtr decoder
 workbufferLength (DecoderWEBP decoder AbstractDecoder {..}) = adWorkbufferLength $ ConstPtr decoder
 workbufferLength (DecoderJPEG decoder AbstractDecoder {..}) = adWorkbufferLength $ ConstPtr decoder
+workbufferLength (DecoderGIF decoder AbstractDecoder {..}) = adWorkbufferLength $ ConstPtr decoder
 
 setReportMetadata :: Decoder -> Word32 -> Bindgen.CBool -> IO C.Wuffs_base__empty_struct
 setReportMetadata (DecoderPNG decoder AbstractDecoder {..}) = adSetReportMetadata decoder
 setReportMetadata (DecoderWEBP decoder AbstractDecoder {..}) = adSetReportMetadata decoder
 setReportMetadata (DecoderJPEG decoder AbstractDecoder {..}) = adSetReportMetadata decoder
+setReportMetadata (DecoderGIF decoder AbstractDecoder {..}) = adSetReportMetadata decoder
 
 decodeImageConfig ::
   Decoder ->
@@ -50,6 +53,7 @@ decodeImageConfig ::
 decodeImageConfig (DecoderPNG decoder AbstractDecoder {..}) = adDecodeImageConfig decoder
 decodeImageConfig (DecoderWEBP decoder AbstractDecoder {..}) = adDecodeImageConfig decoder
 decodeImageConfig (DecoderJPEG decoder AbstractDecoder {..}) = adDecodeImageConfig decoder
+decodeImageConfig (DecoderGIF decoder AbstractDecoder {..}) = adDecodeImageConfig decoder
 
 tellMeMore ::
   Decoder ->
@@ -60,6 +64,7 @@ tellMeMore ::
 tellMeMore (DecoderPNG decoder AbstractDecoder {..}) = adTellMeMore decoder
 tellMeMore (DecoderWEBP decoder AbstractDecoder {..}) = adTellMeMore decoder
 tellMeMore (DecoderJPEG decoder AbstractDecoder {..}) = adTellMeMore decoder
+tellMeMore (DecoderGIF decoder AbstractDecoder {..}) = adTellMeMore decoder
 
 data AbstractDecoder a = AbstractDecoder
   { adWorkbufferLength :: ConstPtr a -> IO C.Wuffs_base__range_ii_u64,
@@ -93,6 +98,7 @@ data Decoder
   = DecoderPNG (Bindgen.Ptr C.Wuffs_png__decoder) (AbstractDecoder C.Wuffs_png__decoder)
   | DecoderWEBP (Bindgen.Ptr C.Wuffs_webp__decoder) (AbstractDecoder C.Wuffs_webp__decoder)
   | DecoderJPEG (Bindgen.Ptr C.Wuffs_jpeg__decoder) (AbstractDecoder C.Wuffs_jpeg__decoder)
+  | DecoderGIF (Bindgen.Ptr C.Wuffs_gif__decoder) (AbstractDecoder C.Wuffs_gif__decoder)
 
 withDecoderT :: IO (Bindgen.Ptr a) -> (Bindgen.Ptr a -> Err b) -> Err b
 withDecoderT allocate = liftWith $ bracket allocate Foreign.free
