@@ -6,10 +6,10 @@ import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
 
 data WuffsError
-  = PNGDecodeError String
-  | PNGFrameDecodeError String
-  | PNGImageConfigDecodeError String
-  | PNGImageTellMeMoreError String
+  = FrameDecodeError String
+  | ImageConfigDecodeError String
+  | ImageTellMeMoreError String
+  | PixelBufferSetFromSliceError String
   | TryingToAdvanceAfterBuffer
   | UnsupportedImageType Bindgen.Int32
   deriving (Show)

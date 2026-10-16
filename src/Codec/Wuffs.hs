@@ -34,16 +34,6 @@ readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeImageW
 withMVSUnsafeT :: (Bindgen.Storable a) => MVS.IOVector a -> (Bindgen.Ptr a -> Err b) -> Err b
 withMVSUnsafeT mutableVector = liftWith (MVS.unsafeWith mutableVector)
 
-withRGBAPixelBufferT ::
-  Bindgen.Ptr C.Wuffs_base__pixel_config ->
-  Int ->
-  Int ->
-  Bindgen.Ptr Word8 ->
-  (Bindgen.Ptr C.Wuffs_base__pixel_buffer -> Err b) ->
-  Err b
-withRGBAPixelBufferT pixelConfigurationPtr width height rawPixels =
-  liftWith (withRGBAPixelBuffer pixelConfigurationPtr width height rawPixels)
-
 -- | Evaluates a Wuffs status. Returns Right () on success, or Left "error message" on failure.
 checkWuffsStatus :: (String -> WuffsError) -> IO C.Wuffs_base__status -> Err (Bool, Bool)
 checkWuffsStatus mkError getStatus = do
@@ -91,26 +81,29 @@ withT ptr = liftWith (Bindgen.with ptr)
 
 -- | Configures a generic Wuffs pixel_buffer to point at our Haskell Storable Vector memory,
 -- forcing the decoder to output 32-bit RGBA.
-withRGBAPixelBuffer ::
+withRGBAPixelBufferT ::
   Bindgen.Ptr C.Wuffs_base__pixel_config ->
   Int ->
   Int ->
   Bindgen.Ptr Word8 ->
-  (Bindgen.Ptr C.Wuffs_base__pixel_buffer -> IO a) ->
-  IO a
-withRGBAPixelBuffer pixCfgPtr width height rawPixels action = do
-  nullPixBuf <- C.wuffs_base__null_pixel_buffer
-  Bindgen.with nullPixBuf $ \pixBufPtr -> do
+  (Bindgen.Ptr C.Wuffs_base__pixel_buffer -> Err a) ->
+  Err a
+withRGBAPixelBufferT pixCfgPtr width height rawPixels action = do
+  nullPixBuf <- liftIO C.wuffs_base__null_pixel_buffer
+  withT nullPixBuf $ \pixBufPtr -> do
     let rgbaFormat = C.wUFFS_BASE__PIXEL_FORMAT__RGBA_NONPREMUL
         capacity = width * height * 4
-    C.wuffs_base__pixel_config__set
-      pixCfgPtr
-      (fromIntegral rgbaFormat)
-      0
-      (fromIntegral width)
-      (fromIntegral height)
-    slice <- C.wuffs_base__make_slice_u8 rawPixels (fromIntegral capacity)
-    _ <- C.wuffs_base__pixel_buffer__set_from_slice pixBufPtr (ConstPtr pixCfgPtr) slice
+    liftIO $
+      C.wuffs_base__pixel_config__set
+        pixCfgPtr
+        (fromIntegral rgbaFormat)
+        0
+        (fromIntegral width)
+        (fromIntegral height)
+    slice <- liftIO $ C.wuffs_base__make_slice_u8 rawPixels (fromIntegral capacity)
+    _ <-
+      checkWuffsStatus PixelBufferSetFromSliceError $
+        C.wuffs_base__pixel_buffer__set_from_slice pixBufPtr (ConstPtr pixCfgPtr) slice
     action pixBufPtr
 
 -- TODO: Implement streaming version as well.
@@ -149,7 +142,7 @@ decodeImageWithMetadataT imageFileBS =
                   -- TODO: add image sample that contains more frames
                   -- TODO: exhaust frames?
                   (_isNote, _isSuspension) <-
-                    checkWuffsStatus PNGFrameDecodeError $
+                    checkWuffsStatus FrameDecodeError $
                       decodeFrame
                         decoder
                         pixelBufferPtr
@@ -214,7 +207,7 @@ decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
 
     readConfigLoop accMeta = do
       status <- liftIO $ decodeImageConfig decoder configPtr imageBufferPtr
-      (isNote, _isSuspension) <- checkWuffsStatus PNGImageConfigDecodeError $ pure status
+      (isNote, _isSuspension) <- checkWuffsStatus ImageConfigDecodeError $ pure status
       if isNote
         then extractMetadataChunk accMeta >>= readConfigLoop
         else pure accMeta
@@ -251,7 +244,7 @@ decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
 
     exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr accumulatedBytes = do
       (_isNote, isSuspension) <-
-        checkWuffsStatus PNGImageTellMeMoreError $
+        checkWuffsStatus ImageTellMeMoreError $
           tellMeMore decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr
       -- liftIO (print $ unwords ["is note", show isNote, "is suspension", show isSuspension])
       -- Wuffs indicates where the uncompressed data lies in the originial image data,
