@@ -76,7 +76,7 @@ checkWuffsStatus mkError getStatus = do
     throwE $ mkError errorMessage
   pure (isNote /= 0, isSuspension /= 0)
 
--- | Creates a Wuffs io_buffer directly from a Haskell ByteString.
+-- | Creates a Wuffs io_buffer reader directly from a Haskell ByteString.
 withIOBufferFromByteString :: BS.ByteString -> (C.Wuffs_base__io_buffer -> IO a) -> IO a
 withIOBufferFromByteString bs action =
   BSU.unsafeUseAsCStringLen bs $ \(cStrPtr, len) -> do
@@ -144,7 +144,7 @@ decodeImageWithMetadataT imageFileBS =
   withIOBufferFromByteStringT imageFileBS $ \imageFileBuffer ->
     withDecoderT C.wuffs_png__decoder__alloc $ \decoderPtr -> do
       nullImgCfg <- liftIO C.wuffs_base__null_image_config
-      withT nullImgCfg $ \imageConfigPtr -> do
+      withT nullImgCfg $ \imageConfigPtr ->
         withT imageFileBuffer $ \imageFileBufferPtr -> do
           metadata <- decodeConfigAndMetadata decoderPtr imageConfigPtr imageFileBufferPtr
           let pixelConfigPtr = Foreign.castPtr imageConfigPtr
@@ -152,14 +152,15 @@ decodeImageWithMetadataT imageFileBS =
             fromIntegral <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
           height <-
             fromIntegral <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
-          let capacity = width * height * 4
-          mutableVector <- MVS.new capacity
+          let vectorSize = width * height * 4
+          mutableVector <- MVS.new vectorSize
           withMVSUnsafeT mutableVector $ \rawPixels ->
             withRgbaPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
               withSliceFromRangeT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
                 \sliceWork -> do
+                  -- TODO: add PNG sample with more frames
                   -- TODO: exhaust frames?
-                  _ <-
+                  (_isNote, _isSuspension) <-
                     checkWuffsStatus PNGFrameDecodeError $
                       C.wuffs_png__decoder__decode_frame
                         decoderPtr
@@ -169,7 +170,7 @@ decodeImageWithMetadataT imageFileBS =
                         sliceWork
                         Foreign.nullPtr
                   frozenVector <- VS.unsafeFreeze mutableVector
-                  pure (ImageRGBA8 (Image width height frozenVector), metadata)
+                  pure (ImageRGBA8 $ Image width height frozenVector, metadata)
 
 -- | Helper: Safely advances the Wuffs IO buffer read index (ri), and returns
 -- the bytes that were read.
