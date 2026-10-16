@@ -86,24 +86,27 @@ withIOBufferFromByteString bs action =
 withIOBufferFromByteStringT :: BS.ByteString -> (C.Wuffs_base__io_buffer -> Err a) -> Err a
 withIOBufferFromByteStringT bs = liftWith $ withIOBufferFromByteString bs
 
-withWorkBufferRangeT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
-withWorkBufferRangeT getRange = liftWith (withWorkBufferRange getRange)
+withSliceFromRangeT :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
+withSliceFromRangeT getRange = liftWith (withSliceFromRange getRange)
 
 -- | Dynamically allocates the required Wuffs work buffer for a specific decoder.
-withWorkBufferRange :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
-withWorkBufferRange getRange action = do
+withSliceFromRange :: IO C.Wuffs_base__range_ii_u64 -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
+withSliceFromRange getRange action = do
   workbufRange <- getRange
   let maxWorkbuf = fromIntegral (C.wuffs_base__range_ii_u64_max_incl workbufRange)
-  withWorkBuffer maxWorkbuf action
+  withSlice maxWorkbuf action
 
-withWorkBufferT :: Int -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
-withWorkBufferT size = liftWith (withWorkBuffer size)
+-- withSliceT :: Int -> (C.Wuffs_base__slice_u8 -> Err b) -> Err b
+-- withSliceT size = liftWith (withSlice size)
 
-withWorkBuffer :: Int -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
-withWorkBuffer size action =
+withSlice :: Int -> (C.Wuffs_base__slice_u8 -> IO a) -> IO a
+withSlice size action =
   Foreign.allocaBytes size $ \workBufRaw -> do
     sliceWork <- C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral size)
     action sliceWork
+
+allocaBytesT :: Int -> (Bindgen.Ptr Word8 -> Err b) -> Err b
+allocaBytesT size = liftWith (Foreign.allocaBytes size)
 
 withT :: (Bindgen.Storable a) => a -> (Bindgen.Ptr a -> Err b) -> Err b
 withT ptr = liftWith (Bindgen.with ptr)
@@ -153,7 +156,7 @@ decodeImageWithMetadataT imageFileBS =
           mutableVector <- MVS.new capacity
           withMVSUnsafeT mutableVector $ \rawPixels ->
             withRgbaPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
-              withWorkBufferRangeT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
+              withSliceFromRangeT (C.wuffs_png__decoder__workbuf_len (ConstPtr decoderPtr)) $
                 \sliceWork -> do
                   -- TODO: exhaust frames?
                   _ <-
@@ -230,63 +233,63 @@ decodeConfigAndMetadata decoderPtr configPtr imageBufferPtr = do
       status <- liftIO $ C.wuffs_png__decoder__decode_image_config decoderPtr configPtr imageBufferPtr
       (isNote, _isSuspension) <- checkWuffsStatus PNGImageConfigDecodeError $ pure status
       if isNote
-        then extractChunk accMeta >>= readConfigLoop
+        then extractMetadataChunk accMeta >>= readConfigLoop
         else pure accMeta
 
-    extractChunk :: Meta.Metadatas -> Err Meta.Metadatas
-    extractChunk accMeta =
-      withWorkBufferT (256 * 1024) $ \metadataSlice -> do
-        nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
-        metadataIOBuffer <-
-          liftIO $
-            C.wuffs_base__ptr_u8__writer
-              (C.wuffs_base__slice_u8_ptr metadataSlice)
-              (C.wuffs_base__slice_u8_len metadataSlice)
-        withT metadataIOBuffer $ \metadataIOBufferPtr -> do
-          withT nullMoreInfo $ \moreInfoPtr -> do
-            -- Exhaust the coroutine and accumulate zero-copy bytes
-            let exhaustTellMeMore accumulatedBytes = do
-                  (_isNote, isSuspension) <-
-                    checkWuffsStatus PNGImageTellMeMoreError $
-                      C.wuffs_png__decoder__tell_me_more
-                        decoderPtr
-                        metadataIOBufferPtr
-                        moreInfoPtr
-                        imageBufferPtr
-                  -- Wuffs tells us that the uncompressed data lies in the originial image data,
-                  -- between minIndex and maxIndex. If the data is compressed, then the two are
-                  -- equal, exhaustTellMeMore returns empty, and wuffs decompresses the data in
-                  -- metadataIOBufferPtr.
-                  (minIndex, maxIndex) <- getPassthroughRange moreInfoPtr
-                  let chunkSize = maxIndex - minIndex
-                  newAccumulatedBytes <-
-                    if chunkSize > 0
-                      then do
-                        chunkBytes <- readAndAdvance imageBufferPtr chunkSize
-                        pure (accumulatedBytes <> chunkBytes)
-                      else pure accumulatedBytes
-                  if isSuspension
-                    then exhaustTellMeMore newAccumulatedBytes
-                    else pure newAccumulatedBytes
+    metadataBufferBytes = 256 * 1024
 
-            uncompressedMetadata <- exhaustTellMeMore BS.empty
-            metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
-            -- If passthrough is empty, it was a compressed chunk. Read the Wuffs buffer.
-            finalBytes <-
-              if BS.null uncompressedMetadata
-                then readIOBuffer metadataIOBufferPtr
-                else pure uncompressedMetadata
-            pure $ case metadataType of
-              _
-                | metadataType == fourccICCP ->
-                    Meta.insert Meta.ColorSpace (Meta.ICCProfile finalBytes) accMeta
-              _
-                | metadataType == fourccEXIF ->
-                    Meta.insert (Meta.Unknown "EXIF") (Meta.String $ show finalBytes) accMeta
-              _
-                | metadataType == fourccXMP ->
-                    Meta.insert (Meta.Unknown "XMP") (Meta.String $ show finalBytes) accMeta
-              _ -> accMeta
+    extractMetadataChunk :: Meta.Metadatas -> Err Meta.Metadatas
+    extractMetadataChunk accMeta = allocaBytesT metadataBufferBytes $ \metadataBuffer -> do
+      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+      metadataIOBuffer <-
+        liftIO $ C.wuffs_base__ptr_u8__writer metadataBuffer (fromIntegral metadataBufferBytes)
+      withT metadataIOBuffer $ \metadataIOBufferPtr ->
+        withT nullMoreInfo $ \moreInfoPtr -> do
+          uncompressedMetadata <- exhaustTellMeMore metadataIOBufferPtr moreInfoPtr BS.empty
+          metadataType <-
+            liftIO $
+              C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+          -- If uncompressedMetadata is empty, it was a compressed chunk. Read the Wuffs buffer.
+          finalMetadataBytes <-
+            if BS.null uncompressedMetadata
+              then readIOBuffer metadataIOBufferPtr
+              else pure uncompressedMetadata
+          pure $ case metadataType of
+            _
+              | metadataType == fourccICCP ->
+                  Meta.insert Meta.ColorSpace (Meta.ICCProfile finalMetadataBytes) accMeta
+            _
+              | metadataType == fourccEXIF ->
+                  Meta.insert (Meta.Unknown "EXIF") (Meta.String $ show finalMetadataBytes) accMeta
+            _
+              | metadataType == fourccXMP ->
+                  Meta.insert (Meta.Unknown "XMP") (Meta.String $ show finalMetadataBytes) accMeta
+            _ -> accMeta
+
+    exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr accumulatedBytes = do
+      (_isNote, isSuspension) <-
+        checkWuffsStatus PNGImageTellMeMoreError $
+          C.wuffs_png__decoder__tell_me_more
+            decoderPtr
+            metadataCompressedIOBufferPtr
+            moreInfoPtr
+            imageBufferPtr
+      -- liftIO (print $ unwords ["is note", show isNote, "is suspension", show isSuspension])
+      -- Wuffs indicates where the uncompressed data lies in the originial image data,
+      -- between minIndex and maxIndex. If the data is compressed, then the two are
+      -- equal, exhaustTellMeMore returns empty, and wuffs decompresses the data in
+      -- metadataIOBufferPtr.
+      (metadataStartIndex, metadataEndIndex) <- getPassthroughRange moreInfoPtr
+      let chunkSize = metadataEndIndex - metadataStartIndex
+      newAccumulatedBytes <-
+        if chunkSize > 0
+          then do
+            chunkBytes <- readAndAdvance imageBufferPtr chunkSize
+            pure $ accumulatedBytes <> chunkBytes
+          else pure accumulatedBytes
+      if isSuspension
+        then exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr newAccumulatedBytes
+        else pure newAccumulatedBytes
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING
