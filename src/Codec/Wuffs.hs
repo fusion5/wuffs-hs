@@ -133,35 +133,35 @@ decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Meta.Metadatas)
 decodeImageWithMetadataT imageFileBS =
   withIOBufferFromByteStringT imageFileBS $ \imageFileBuffer -> do
     imageType <- guessImageType imageFileBuffer
-    decoder <- getDecoderByImageType imageType
-    nullImgCfg <- liftIO C.wuffs_base__null_image_config
-    withT nullImgCfg $ \imageConfigPtr ->
-      withT imageFileBuffer $ \imageFileBufferPtr -> do
-        metadata <- decodeConfigAndMetadata decoder imageConfigPtr imageFileBufferPtr
-        let pixelConfigPtr = Foreign.castPtr imageConfigPtr
-        width <-
-          fromIntegral <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
-        height <-
-          fromIntegral <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
-        let vectorSize = width * height * 4
-        mutableVector <- MVS.new vectorSize
-        withMVSUnsafeT mutableVector $ \rawPixels ->
-          withRGBAPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
-            withEmptySliceFromRangeT (workbufferLength decoder) $
-              \sliceWork -> do
-                -- TODO: add image sample that contains more frames
-                -- TODO: exhaust frames?
-                (_isNote, _isSuspension) <-
-                  checkWuffsStatus PNGFrameDecodeError $
-                    decodeFrame
-                      decoder
-                      pixelBufferPtr
-                      imageFileBufferPtr
-                      0
-                      sliceWork
-                      Foreign.nullPtr
-                frozenVector <- VS.unsafeFreeze mutableVector
-                pure (ImageRGBA8 $ Image width height frozenVector, metadata)
+    withDecoderByImageType imageType $ \decoder -> do
+      nullImgCfg <- liftIO C.wuffs_base__null_image_config
+      withT nullImgCfg $ \imageConfigPtr ->
+        withT imageFileBuffer $ \imageFileBufferPtr -> do
+          metadata <- decodeConfigAndMetadata decoder imageConfigPtr imageFileBufferPtr
+          let pixelConfigPtr = Foreign.castPtr imageConfigPtr
+          width <-
+            fromIntegral <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
+          height <-
+            fromIntegral <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
+          let vectorSize = width * height * 4
+          mutableVector <- MVS.new vectorSize
+          withMVSUnsafeT mutableVector $ \rawPixels ->
+            withRGBAPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
+              withEmptySliceFromRangeT (workbufferLength decoder) $
+                \sliceWork -> do
+                  -- TODO: add image sample that contains more frames
+                  -- TODO: exhaust frames?
+                  (_isNote, _isSuspension) <-
+                    checkWuffsStatus PNGFrameDecodeError $
+                      decodeFrame
+                        decoder
+                        pixelBufferPtr
+                        imageFileBufferPtr
+                        0
+                        sliceWork
+                        Foreign.nullPtr
+                  frozenVector <- VS.unsafeFreeze mutableVector
+                  pure (ImageRGBA8 $ Image width height frozenVector, metadata)
 
 -- | Helper: Safely advances the Wuffs IO buffer read index (ri), and returns
 -- the bytes that were read.
@@ -212,9 +212,7 @@ decodeConfigAndMetadata ::
 decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
   void $
     liftIO $
-      traverse
-        (\fourcc -> setReportMetadata decoder fourcc 1)
-        [fourccICCP, fourccXMP, fourccEXIF]
+      traverse (\fourcc -> setReportMetadata decoder fourcc 1) [fourccICCP, fourccXMP, fourccEXIF]
   readConfigLoop Meta.empty
   where
     fourccICCP = fromIntegral C.wUFFS_BASE__FOURCC__ICCP
