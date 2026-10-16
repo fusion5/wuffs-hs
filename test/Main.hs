@@ -56,6 +56,15 @@ spec = describe "wuffs-hs" $ do
           putStrLn $ describeImage $ fst decoded
           print $ snd decoded
         Left err -> throw err
+    it "Can decode an animated gif file" $ do
+      let sampleFile = "samples/sample-animated.gif"
+      doesFileExist sampleFile >>= (`shouldBe` True)
+      decodedEither <- readImageWithMetadata sampleFile
+      case decodedEither of
+        Right decoded -> do
+          putStrLn $ describeImage $ fst decoded
+          print $ snd decoded
+        Left err -> throw err
     it "Can decode a webp file" $ do
       let sampleFile = "samples/lego.webp"
       doesFileExist sampleFile >>= (`shouldBe` True)

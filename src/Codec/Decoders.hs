@@ -144,4 +144,17 @@ withDecoderByImageType fourcc action
                   adTellMeMore = C.wuffs_jpeg__decoder__tell_me_more
                 }
             )
+  | fromIntegral fourcc == C.wUFFS_BASE__FOURCC__GIF =
+      withDecoderT C.wuffs_gif__decoder__alloc $ \decoder ->
+        action $
+          DecoderGIF
+            decoder
+            ( AbstractDecoder
+                { adWorkbufferLength = C.wuffs_gif__decoder__workbuf_len,
+                  adDecodeFrame = C.wuffs_gif__decoder__decode_frame,
+                  adSetReportMetadata = C.wuffs_gif__decoder__set_report_metadata,
+                  adDecodeImageConfig = C.wuffs_gif__decoder__decode_image_config,
+                  adTellMeMore = C.wuffs_gif__decoder__tell_me_more
+                }
+            )
   | otherwise = throwE $ UnsupportedImageType fourcc
