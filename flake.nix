@@ -142,7 +142,7 @@
         };
 
         checks = {
-          check-default = self.packages.${system}.default;
+          check-default = self.packages.${system}.default; # runs test suite by default
           check-wasm = self.packages.${system}.wasm;
         };
 
@@ -162,9 +162,7 @@
             wasmTest
             wasmCabal
             wasmPkgs.pkg-config
-            # pkgs.clang # for generate-bindings.hs
             wasiSDK
-            # wasmPkgs.cmake
           ];
           buildInputs = [
             wuffsWASM
