@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-: "${WASI_SDK_PATH:?Error: WASI_SDK_PATH is not set or empty. Please run this script from the wasm nix shell}"
-
 case "$1" in
   "wasm" | "native")
     echo "Target set to: $1"
@@ -22,6 +20,7 @@ module_flags=(
 )
 
 if [[ "$1" == "wasm" ]]; then
+    : "${WASI_SDK_PATH:?Error: WASI_SDK_PATH is not set or empty. Please run this script from the wasm nix shell}"
     module_flags+=(
         --clang-option="--target=wasm32-wasi" # required
         --clang-option="-isystem"
