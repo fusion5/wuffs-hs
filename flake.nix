@@ -18,6 +18,7 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = nixpkgs.lib.systems.flakeExposed;
       perSystem = {system, ...}: let
+        hl = pkgs.haskell.lib.compose;
         pkgs = import inputs.nixpkgs {
           inherit system;
           overlays = [hs-bindgen.overlays.default];
@@ -120,7 +121,11 @@
       in {
         packages = {
           default = wuffsHS;
-          wasm = wasmWuffsHS;
+          wasm = wasmPkgs.lib.pipe wasmWuffsHS [
+            # hl.enableStaticLibraries
+            hl.disableSharedLibraries
+            hl.disableSharedExecutables
+          ];
         };
 
         checks = {
