@@ -90,46 +90,56 @@
         '';
 
         wuffsWASMTraced = builtins.trace "wuffsWASM store path: ${wuffsWASM.outPath}" wuffsWASM;
-        wuffsWASM = wasmPkgs.stdenv.mkDerivation {
-          pname = "wuffs-wasi";
-          meta = {
-            platforms = ["wasm32-unknown-wasi" "wasm32-wasi"];
+        wuffsWASM = let
+          version = "0.4.0-alpha.10";
+          libFile = "wuffs-unsupported-snapshot.c";
+        in
+          wasmPkgs.stdenv.mkDerivation {
+            pname = "wuffs-wasi";
+            meta = {
+              platforms = ["wasm32-unknown-wasi" "wasm32-wasi"];
+            };
+            inherit version;
+            src = pkgs.fetchFromGitHub {
+              owner = "google";
+              repo = "wuffs";
+              tag = "v" + version;
+              hash = "sha256-b7O2mGrn2AChVVnmfiTyG1OGUJnETFSU3wK5AlCNja0=";
+            };
+            nativeBuildInputs = [
+              wasiSDK
+              # wasmPkgs.cmake
+              wasmPkgs.pkg-config
+            ];
+            buildPhase = ''
+              runHook preBuild
+
+              ls -lah release/c/
+              # Find the single-file C release file
+              WUFFS_C="release/c/${libFile}"
+
+              # Compile the WASI object file with implementation defined
+              $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
+
+              # Archive into static library
+              $AR rcs libwuffs.a wuffs.o
+
+              runHook postBuild
+            '';
+
+            installPhase = ''
+              runHook preInstall
+
+              # Create the wuffs/ subdirectory under include
+              mkdir -p "$out/lib" "$out/include/wuffs"
+
+              cp libwuffs.a "$out/lib/"
+              cp release/c/${libFile} "$out/include/wuffs/"
+
+              runHook postInstall
+            '';
+            dontFixup = true;
           };
-          version = pkgs.wuffs.version;
-          src = pkgs.wuffs.src;
-          nativeBuildInputs = [
-            wasiSDK
-            # wasmPkgs.cmake
-            wasmPkgs.pkg-config
-          ];
-          buildPhase = ''
-            runHook preBuild
-
-            # Find the single-file C release file
-            WUFFS_C="release/c/wuffs-v0.4.c"
-
-            # Compile the WASI object file with implementation defined
-            $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
-
-            # Archive into static library
-            $AR rcs libwuffs.a wuffs.o
-
-            runHook postBuild
-          '';
-
-          installPhase = ''
-            runHook preInstall
-
-            # Create the wuffs/ subdirectory under include
-            mkdir -p "$out/lib" "$out/include/wuffs"
-
-            cp libwuffs.a "$out/lib/"
-            cp release/c/wuffs-v0.4.c "$out/include/wuffs/"
-
-            runHook postInstall
-          '';
-          dontFixup = true;
-        };
 
         ### NON WASM
         wuffsHS = ghc.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {

@@ -78,7 +78,6 @@ module Codec.Wuffs.Bindings.Generated.Global
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_deflate__error__truncated_input
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_etc2__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_etc2__error__truncated_input
-    , Codec.Wuffs.Bindings.Generated.Global.wuffs_etc2__error__unsupported_etc2_file
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gif__error__bad_lzw_code
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gif__error__bad_extension_label
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gif__error__bad_frame_size
@@ -92,6 +91,8 @@ module Codec.Wuffs.Bindings.Generated.Global
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gzip__error__bad_encoding_flags
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gzip__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_gzip__error__truncated_input
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_handsum__error__bad_header
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_handsum__error__truncated_input
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_jpeg__error__bad_dht_marker
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_jpeg__error__bad_dqt_marker
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_jpeg__error__bad_dri_marker
@@ -142,9 +143,10 @@ module Codec.Wuffs.Bindings.Generated.Global
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_netpbm__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_netpbm__error__truncated_input
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_netpbm__error__unsupported_netpbm_file
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_nie__error__bad_frame
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_nie__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_nie__error__truncated_input
-    , Codec.Wuffs.Bindings.Generated.Global.wuffs_nie__error__unsupported_nie_file
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_nie__error__unsupported_restart_frame_index
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_zlib__note__dictionary_required
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_zlib__error__bad_checksum
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_zlib__error__bad_compression_method
@@ -172,6 +174,12 @@ module Codec.Wuffs.Bindings.Generated.Global
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_targa__error__unsupported_targa_file
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_thumbhash__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_thumbhash__error__truncated_input
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__bad_quirk_source_length
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__bad_header
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__missing_quirk_source_length
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__truncated_input
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__unsupported_quirk_source_length
+    , Codec.Wuffs.Bindings.Generated.Global.wuffs_vp8__error__unsupported_vp8_file
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_wbmp__error__bad_header
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_wbmp__error__truncated_input
     , Codec.Wuffs.Bindings.Generated.Global.wuffs_webp__error__bad_huffman_code_over_subscribed
@@ -211,7 +219,7 @@ import qualified HsBindgen.Runtime.Support.CAPI
 import Prelude (IO, fmap)
 
 $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unlines
-  [ "#include <wuffs/wuffs-v0.4.c>"
+  [ "#include <wuffs/wuffs-unsupported-snapshot.c>"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__note__i_o_redirect */"
   , "__attribute__ ((const))"
   , "char const (*hs_bindgen_334f4059689fd195 (void))[]"
@@ -650,12 +658,6 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_etc2__error__truncated_input;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_etc2__error__unsupported_etc2_file */"
-  , "__attribute__ ((const))"
-  , "char const (*hs_bindgen_093360ed3bc944c3 (void))[]"
-  , "{"
-  , "  return &wuffs_etc2__error__unsupported_etc2_file;"
-  , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_gif__error__bad_lzw_code */"
   , "__attribute__ ((const))"
   , "char const (*hs_bindgen_9d2faf79f787a4c1 (void))[]"
@@ -733,6 +735,18 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "char const (*hs_bindgen_7645447e1429cc34 (void))[]"
   , "{"
   , "  return &wuffs_gzip__error__truncated_input;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__bad_header */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_9fc94b0ed8bc5cd2 (void))[]"
+  , "{"
+  , "  return &wuffs_handsum__error__bad_header;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__truncated_input */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_fda6245877528feb (void))[]"
+  , "{"
+  , "  return &wuffs_handsum__error__truncated_input;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_jpeg__error__bad_dht_marker */"
   , "__attribute__ ((const))"
@@ -1034,6 +1048,12 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_netpbm__error__unsupported_netpbm_file;"
   , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__bad_frame */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_ec6b2a26005e4322 (void))[]"
+  , "{"
+  , "  return &wuffs_nie__error__bad_frame;"
+  , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__bad_header */"
   , "__attribute__ ((const))"
   , "char const (*hs_bindgen_5b789fc55d82da90 (void))[]"
@@ -1046,11 +1066,11 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_nie__error__truncated_input;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_nie_file */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_restart_frame_index */"
   , "__attribute__ ((const))"
-  , "char const (*hs_bindgen_37bac8e70d746baa (void))[]"
+  , "char const (*hs_bindgen_bc305e1e0a99846a (void))[]"
   , "{"
-  , "  return &wuffs_nie__error__unsupported_nie_file;"
+  , "  return &wuffs_nie__error__unsupported_restart_frame_index;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_zlib__note__dictionary_required */"
   , "__attribute__ ((const))"
@@ -1213,6 +1233,42 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "char const (*hs_bindgen_2c46afcac967a005 (void))[]"
   , "{"
   , "  return &wuffs_thumbhash__error__truncated_input;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_quirk_source_length */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_05d6f47c4de64a99 (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__bad_quirk_source_length;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_header */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_709ee7bbd4f7f503 (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__bad_header;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__missing_quirk_source_length */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_61b4b2648d2a80e5 (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__missing_quirk_source_length;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__truncated_input */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_dc8a0f9ff97ce221 (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__truncated_input;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_quirk_source_length */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_ba24c2135631c9be (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__unsupported_quirk_source_length;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_vp8_file */"
+  , "__attribute__ ((const))"
+  , "char const (*hs_bindgen_037a4492c9684e59 (void))[]"
+  , "{"
+  , "  return &wuffs_vp8__error__unsupported_vp8_file;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_wbmp__error__bad_header */"
   , "__attribute__ ((const))"
@@ -1390,9 +1446,9 @@ hs_bindgen_334f4059689fd195 =
 {-# NOINLINE wuffs_base__note__i_o_redirect #-}
 {-| __C declaration:__ @wuffs_base__note__i_o_redirect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 597:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 587:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__note__i_o_redirect :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__note__i_o_redirect =
@@ -1410,9 +1466,9 @@ hs_bindgen_99a0dde74fce47c6 =
 {-# NOINLINE wuffs_base__note__end_of_data #-}
 {-| __C declaration:__ @wuffs_base__note__end_of_data@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 598:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 588:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__note__end_of_data :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__note__end_of_data =
@@ -1430,9 +1486,9 @@ hs_bindgen_b0558c6dedcad9cb =
 {-# NOINLINE wuffs_base__note__metadata_reported #-}
 {-| __C declaration:__ @wuffs_base__note__metadata_reported@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 599:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 589:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__note__metadata_reported :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__note__metadata_reported =
@@ -1450,9 +1506,9 @@ hs_bindgen_a16eefe1a7b46422 =
 {-# NOINLINE wuffs_base__suspension__even_more_information #-}
 {-| __C declaration:__ @wuffs_base__suspension__even_more_information@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 600:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 590:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__even_more_information :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__even_more_information =
@@ -1470,9 +1526,9 @@ hs_bindgen_6cd80aec427b1b87 =
 {-# NOINLINE wuffs_base__suspension__mispositioned_read #-}
 {-| __C declaration:__ @wuffs_base__suspension__mispositioned_read@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 601:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 591:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__mispositioned_read :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__mispositioned_read =
@@ -1490,9 +1546,9 @@ hs_bindgen_7b9a8d6e7df1b08a =
 {-# NOINLINE wuffs_base__suspension__mispositioned_write #-}
 {-| __C declaration:__ @wuffs_base__suspension__mispositioned_write@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 602:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 592:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__mispositioned_write :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__mispositioned_write =
@@ -1510,9 +1566,9 @@ hs_bindgen_a9667ad5571e3eef =
 {-# NOINLINE wuffs_base__suspension__short_read #-}
 {-| __C declaration:__ @wuffs_base__suspension__short_read@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 603:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 593:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__short_read :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__short_read =
@@ -1530,9 +1586,9 @@ hs_bindgen_da2d0407595dc4a2 =
 {-# NOINLINE wuffs_base__suspension__short_workbuf #-}
 {-| __C declaration:__ @wuffs_base__suspension__short_workbuf@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 604:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 594:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__short_workbuf :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__short_workbuf =
@@ -1550,9 +1606,9 @@ hs_bindgen_b8e79970eb716666 =
 {-# NOINLINE wuffs_base__suspension__short_write #-}
 {-| __C declaration:__ @wuffs_base__suspension__short_write@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 605:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 595:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__suspension__short_write :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__suspension__short_write =
@@ -1570,9 +1626,9 @@ hs_bindgen_a6ab0c711c0fc60a =
 {-# NOINLINE wuffs_base__error__bad_i_o_position #-}
 {-| __C declaration:__ @wuffs_base__error__bad_i_o_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 606:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 596:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_i_o_position :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_i_o_position =
@@ -1590,9 +1646,9 @@ hs_bindgen_50cc800729a8914b =
 {-# NOINLINE wuffs_base__error__bad_argument_length_too_short #-}
 {-| __C declaration:__ @wuffs_base__error__bad_argument_length_too_short@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 607:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 597:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_argument_length_too_short :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_argument_length_too_short =
@@ -1610,9 +1666,9 @@ hs_bindgen_67b1d550df69c215 =
 {-# NOINLINE wuffs_base__error__bad_argument #-}
 {-| __C declaration:__ @wuffs_base__error__bad_argument@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 608:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 598:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_argument :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_argument =
@@ -1630,9 +1686,9 @@ hs_bindgen_dd0309321468e51e =
 {-# NOINLINE wuffs_base__error__bad_call_sequence #-}
 {-| __C declaration:__ @wuffs_base__error__bad_call_sequence@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 609:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 599:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_call_sequence :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_call_sequence =
@@ -1650,9 +1706,9 @@ hs_bindgen_3298622abc817b9f =
 {-# NOINLINE wuffs_base__error__bad_data #-}
 {-| __C declaration:__ @wuffs_base__error__bad_data@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 610:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 600:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_data :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_data =
@@ -1670,9 +1726,9 @@ hs_bindgen_e28112f5055454e5 =
 {-# NOINLINE wuffs_base__error__bad_receiver #-}
 {-| __C declaration:__ @wuffs_base__error__bad_receiver@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 611:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 601:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_receiver :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_receiver =
@@ -1690,9 +1746,9 @@ hs_bindgen_33a54aa9e3c6e2b0 =
 {-# NOINLINE wuffs_base__error__bad_restart #-}
 {-| __C declaration:__ @wuffs_base__error__bad_restart@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 612:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 602:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_restart :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_restart =
@@ -1710,9 +1766,9 @@ hs_bindgen_83436b56fe6558bb =
 {-# NOINLINE wuffs_base__error__bad_sizeof_receiver #-}
 {-| __C declaration:__ @wuffs_base__error__bad_sizeof_receiver@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 613:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 603:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_sizeof_receiver :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_sizeof_receiver =
@@ -1730,9 +1786,9 @@ hs_bindgen_3fe62a785438ac34 =
 {-# NOINLINE wuffs_base__error__bad_vtable #-}
 {-| __C declaration:__ @wuffs_base__error__bad_vtable@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 614:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 604:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_vtable :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_vtable =
@@ -1750,9 +1806,9 @@ hs_bindgen_e4bcc81899c5345f =
 {-# NOINLINE wuffs_base__error__bad_workbuf_length #-}
 {-| __C declaration:__ @wuffs_base__error__bad_workbuf_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 615:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 605:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_workbuf_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_workbuf_length =
@@ -1770,9 +1826,9 @@ hs_bindgen_7e8cf4580587d0e2 =
 {-# NOINLINE wuffs_base__error__bad_wuffs_version #-}
 {-| __C declaration:__ @wuffs_base__error__bad_wuffs_version@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 616:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 606:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__bad_wuffs_version :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__bad_wuffs_version =
@@ -1790,9 +1846,9 @@ hs_bindgen_f271e815a2ac86fd =
 {-# NOINLINE wuffs_base__error__cannot_return_a_suspension #-}
 {-| __C declaration:__ @wuffs_base__error__cannot_return_a_suspension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 617:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 607:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__cannot_return_a_suspension :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__cannot_return_a_suspension =
@@ -1810,9 +1866,9 @@ hs_bindgen_72dcc9bb63e35dc0 =
 {-# NOINLINE wuffs_base__error__disabled_by_wuffs_config_dst_pixel_format_enable_allowlist #-}
 {-| __C declaration:__ @wuffs_base__error__disabled_by_wuffs_config_dst_pixel_format_enable_allowlist@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 618:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 608:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__disabled_by_wuffs_config_dst_pixel_format_enable_allowlist :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__disabled_by_wuffs_config_dst_pixel_format_enable_allowlist =
@@ -1830,9 +1886,9 @@ hs_bindgen_8013130bbe7bf2fa =
 {-# NOINLINE wuffs_base__error__disabled_by_previous_error #-}
 {-| __C declaration:__ @wuffs_base__error__disabled_by_previous_error@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 619:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 609:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__disabled_by_previous_error :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__disabled_by_previous_error =
@@ -1850,9 +1906,9 @@ hs_bindgen_4083aa98ea710f39 =
 {-# NOINLINE wuffs_base__error__initialize_falsely_claimed_already_zeroed #-}
 {-| __C declaration:__ @wuffs_base__error__initialize_falsely_claimed_already_zeroed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 620:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 610:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__initialize_falsely_claimed_already_zeroed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__initialize_falsely_claimed_already_zeroed =
@@ -1870,9 +1926,9 @@ hs_bindgen_6de21b09c6c53e03 =
 {-# NOINLINE wuffs_base__error__initialize_not_called #-}
 {-| __C declaration:__ @wuffs_base__error__initialize_not_called@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 621:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 611:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__initialize_not_called :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__initialize_not_called =
@@ -1890,9 +1946,9 @@ hs_bindgen_2f4e7939d533c393 =
 {-# NOINLINE wuffs_base__error__insufficient_history #-}
 {-| __C declaration:__ @wuffs_base__error__insufficient_history@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 622:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 612:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__insufficient_history :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__insufficient_history =
@@ -1910,9 +1966,9 @@ hs_bindgen_6f1d2be9932349b8 =
 {-# NOINLINE wuffs_base__error__interleaved_coroutine_calls #-}
 {-| __C declaration:__ @wuffs_base__error__interleaved_coroutine_calls@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 623:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 613:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__interleaved_coroutine_calls :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__interleaved_coroutine_calls =
@@ -1930,9 +1986,9 @@ hs_bindgen_bf461c2c5d23bb5f =
 {-# NOINLINE wuffs_base__error__no_more_information #-}
 {-| __C declaration:__ @wuffs_base__error__no_more_information@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 624:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 614:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__no_more_information :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__no_more_information =
@@ -1950,9 +2006,9 @@ hs_bindgen_889a41506a483c8f =
 {-# NOINLINE wuffs_base__error__not_enough_data #-}
 {-| __C declaration:__ @wuffs_base__error__not_enough_data@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 625:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 615:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__not_enough_data :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__not_enough_data =
@@ -1970,9 +2026,9 @@ hs_bindgen_b2eda981611e23e4 =
 {-# NOINLINE wuffs_base__error__out_of_bounds #-}
 {-| __C declaration:__ @wuffs_base__error__out_of_bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 626:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 616:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__out_of_bounds :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__out_of_bounds =
@@ -1990,9 +2046,9 @@ hs_bindgen_f13ce6a3fa120fa2 =
 {-# NOINLINE wuffs_base__error__unsupported_image_dimension #-}
 {-| __C declaration:__ @wuffs_base__error__unsupported_image_dimension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 627:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 617:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__unsupported_image_dimension :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__unsupported_image_dimension =
@@ -2010,9 +2066,9 @@ hs_bindgen_410c71688a0df1bf =
 {-# NOINLINE wuffs_base__error__unsupported_method #-}
 {-| __C declaration:__ @wuffs_base__error__unsupported_method@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 628:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 618:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__unsupported_method :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__unsupported_method =
@@ -2030,9 +2086,9 @@ hs_bindgen_8c73812f7ae593e4 =
 {-# NOINLINE wuffs_base__error__unsupported_option #-}
 {-| __C declaration:__ @wuffs_base__error__unsupported_option@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 629:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 619:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__unsupported_option :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__unsupported_option =
@@ -2050,9 +2106,9 @@ hs_bindgen_b9ce4192e55bb035 =
 {-# NOINLINE wuffs_base__error__unsupported_pixel_swizzler_option #-}
 {-| __C declaration:__ @wuffs_base__error__unsupported_pixel_swizzler_option@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 630:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 620:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__unsupported_pixel_swizzler_option :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__unsupported_pixel_swizzler_option =
@@ -2070,9 +2126,9 @@ hs_bindgen_0044822060de025f =
 {-# NOINLINE wuffs_base__error__too_much_data #-}
 {-| __C declaration:__ @wuffs_base__error__too_much_data@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 631:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 621:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__error__too_much_data :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__error__too_much_data =
@@ -2090,9 +2146,9 @@ hs_bindgen_1f369f59a331543b =
 {-# NOINLINE hs_bindgen_c9d61cc4d2aafbc9 #-}
 {-| __C declaration:__ @wuffs_private_impl__pixel_format__bits_per_channel@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4508:23@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4950:23@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 
     __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_wuffs_private_impl__pixel_format__bits_per_channel@
 -}
@@ -2117,9 +2173,9 @@ hs_bindgen_b84ba599ca442a27 =
 {-# NOINLINE wuffs_base__hasher_u32__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6360:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6881:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__hasher_u32__vtable_name =
@@ -2137,9 +2193,9 @@ hs_bindgen_a421f79fa0df89c8 =
 {-# NOINLINE wuffs_base__hasher_u64__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6467:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6988:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__hasher_u64__vtable_name =
@@ -2157,9 +2213,9 @@ hs_bindgen_3803d08e698429ff =
 {-# NOINLINE wuffs_base__hasher_bitvec256__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6574:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7095:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__hasher_bitvec256__vtable_name =
@@ -2177,9 +2233,9 @@ hs_bindgen_5c648dad26c6d376 =
 {-# NOINLINE wuffs_base__image_decoder__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6681:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7202:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__image_decoder__vtable_name =
@@ -2197,9 +2253,9 @@ hs_bindgen_0fde96da33661efa =
 {-# NOINLINE wuffs_base__io_transformer__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6930:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7451:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__io_transformer__vtable_name =
@@ -2217,9 +2273,9 @@ hs_bindgen_569e17bd13768bef =
 {-# NOINLINE wuffs_base__token_decoder__vtable_name #-}
 {-| __C declaration:__ @wuffs_base__token_decoder__vtable_name@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7039:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7560:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__vtable_name :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_base__token_decoder__vtable_name =
@@ -2237,9 +2293,9 @@ hs_bindgen_6735b9025a077fc6 =
 {-# NOINLINE wuffs_bmp__error__bad_header #-}
 {-| __C declaration:__ @wuffs_bmp__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7366:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7887:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bmp__error__bad_header =
@@ -2257,9 +2313,9 @@ hs_bindgen_ffc9c055df6f01cd =
 {-# NOINLINE wuffs_bmp__error__bad_rle_compression #-}
 {-| __C declaration:__ @wuffs_bmp__error__bad_rle_compression@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7367:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7888:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__error__bad_rle_compression :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bmp__error__bad_rle_compression =
@@ -2277,9 +2333,9 @@ hs_bindgen_3aba09369b3ab912 =
 {-# NOINLINE wuffs_bmp__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_bmp__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7368:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7889:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bmp__error__truncated_input =
@@ -2297,9 +2353,9 @@ hs_bindgen_877e6dcb98b461b1 =
 {-# NOINLINE wuffs_bmp__error__unsupported_bmp_file #-}
 {-| __C declaration:__ @wuffs_bmp__error__unsupported_bmp_file@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7369:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7890:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__error__unsupported_bmp_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bmp__error__unsupported_bmp_file =
@@ -2317,9 +2373,9 @@ hs_bindgen_291dc6677bcc25cf =
 {-# NOINLINE wuffs_bzip2__error__bad_huffman_code_over_subscribed #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_huffman_code_over_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7747:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8268:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_huffman_code_over_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_huffman_code_over_subscribed =
@@ -2337,9 +2393,9 @@ hs_bindgen_4bad25f5447916c3 =
 {-# NOINLINE wuffs_bzip2__error__bad_huffman_code_under_subscribed #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_huffman_code_under_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7748:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8269:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_huffman_code_under_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_huffman_code_under_subscribed =
@@ -2357,9 +2413,9 @@ hs_bindgen_544365d9cc1f1280 =
 {-# NOINLINE wuffs_bzip2__error__bad_block_header #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_block_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7749:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8270:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_block_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_block_header =
@@ -2377,9 +2433,9 @@ hs_bindgen_4718926ec7d80ab6 =
 {-# NOINLINE wuffs_bzip2__error__bad_block_length #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_block_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7750:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8271:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_block_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_block_length =
@@ -2397,9 +2453,9 @@ hs_bindgen_2fdb0edbc6d920f3 =
 {-# NOINLINE wuffs_bzip2__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7751:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8272:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_checksum =
@@ -2417,9 +2473,9 @@ hs_bindgen_f56977bcab751326 =
 {-# NOINLINE wuffs_bzip2__error__bad_header #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7752:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8273:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_header =
@@ -2437,9 +2493,9 @@ hs_bindgen_f9ade419489d479c =
 {-# NOINLINE wuffs_bzip2__error__bad_number_of_sections #-}
 {-| __C declaration:__ @wuffs_bzip2__error__bad_number_of_sections@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7753:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8274:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__bad_number_of_sections :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__bad_number_of_sections =
@@ -2457,9 +2513,9 @@ hs_bindgen_e06193b25a5d9fee =
 {-# NOINLINE wuffs_bzip2__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_bzip2__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7754:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8275:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__truncated_input =
@@ -2477,9 +2533,9 @@ hs_bindgen_5532cc5e47c47cdb =
 {-# NOINLINE wuffs_bzip2__error__unsupported_block_randomization #-}
 {-| __C declaration:__ @wuffs_bzip2__error__unsupported_block_randomization@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7755:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8276:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__error__unsupported_block_randomization :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_bzip2__error__unsupported_block_randomization =
@@ -2497,9 +2553,9 @@ hs_bindgen_2828b834bd4b0acb =
 {-# NOINLINE wuffs_cbor__error__bad_input #-}
 {-| __C declaration:__ @wuffs_cbor__error__bad_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8044:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8565:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__error__bad_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_cbor__error__bad_input =
@@ -2517,9 +2573,9 @@ hs_bindgen_d96279d660804766 =
 {-# NOINLINE wuffs_cbor__error__unsupported_recursion_depth #-}
 {-| __C declaration:__ @wuffs_cbor__error__unsupported_recursion_depth@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8045:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8566:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__error__unsupported_recursion_depth :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_cbor__error__unsupported_recursion_depth =
@@ -2537,9 +2593,9 @@ hs_bindgen_914cef069acdd44d =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_code_over_subscribed #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_code_over_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8730:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9251:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_code_over_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_code_over_subscribed =
@@ -2557,9 +2613,9 @@ hs_bindgen_4d4c7f70fa36681a =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_code_under_subscribed #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_code_under_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8731:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9252:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_code_under_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_code_under_subscribed =
@@ -2577,9 +2633,9 @@ hs_bindgen_ee88304006ac8c84 =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_code_length_count #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_code_length_count@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8732:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9253:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_code_length_count :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_code_length_count =
@@ -2597,9 +2653,9 @@ hs_bindgen_2e1a332fa9b0a83c =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_code_length_repetition #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_code_length_repetition@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8733:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9254:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_code_length_repetition :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_code_length_repetition =
@@ -2617,9 +2673,9 @@ hs_bindgen_f854d0be012e4d97 =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_code #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8734:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9255:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_code =
@@ -2637,9 +2693,9 @@ hs_bindgen_ebe8eabf61c611e7 =
 {-# NOINLINE wuffs_deflate__error__bad_huffman_minimum_code_length #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_huffman_minimum_code_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8735:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9256:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_huffman_minimum_code_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_huffman_minimum_code_length =
@@ -2657,9 +2713,9 @@ hs_bindgen_47bbc4cce847fc50 =
 {-# NOINLINE wuffs_deflate__error__bad_block #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_block@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8736:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9257:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_block :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_block =
@@ -2677,9 +2733,9 @@ hs_bindgen_762c79f8fe59da61 =
 {-# NOINLINE wuffs_deflate__error__bad_distance #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_distance@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8737:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9258:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_distance :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_distance =
@@ -2697,9 +2753,9 @@ hs_bindgen_c61d0514376a4548 =
 {-# NOINLINE wuffs_deflate__error__bad_distance_code_count #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_distance_code_count@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8738:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9259:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_distance_code_count :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_distance_code_count =
@@ -2717,9 +2773,9 @@ hs_bindgen_08da60c7e5609654 =
 {-# NOINLINE wuffs_deflate__error__bad_literal_length_code_count #-}
 {-| __C declaration:__ @wuffs_deflate__error__bad_literal_length_code_count@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8739:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9260:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__bad_literal_length_code_count :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__bad_literal_length_code_count =
@@ -2737,9 +2793,9 @@ hs_bindgen_c2597141c0d35ecd =
 {-# NOINLINE wuffs_deflate__error__inconsistent_stored_block_length #-}
 {-| __C declaration:__ @wuffs_deflate__error__inconsistent_stored_block_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8740:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9261:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__inconsistent_stored_block_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__inconsistent_stored_block_length =
@@ -2757,9 +2813,9 @@ hs_bindgen_f92978eff0d367c1 =
 {-# NOINLINE wuffs_deflate__error__missing_end_of_block_code #-}
 {-| __C declaration:__ @wuffs_deflate__error__missing_end_of_block_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8741:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9262:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__missing_end_of_block_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__missing_end_of_block_code =
@@ -2777,9 +2833,9 @@ hs_bindgen_f33082857ce35a04 =
 {-# NOINLINE wuffs_deflate__error__no_huffman_codes #-}
 {-| __C declaration:__ @wuffs_deflate__error__no_huffman_codes@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8742:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9263:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__no_huffman_codes :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__no_huffman_codes =
@@ -2797,9 +2853,9 @@ hs_bindgen_c30437d0bd70cfbf =
 {-# NOINLINE wuffs_deflate__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_deflate__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8743:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9264:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_deflate__error__truncated_input =
@@ -2817,9 +2873,9 @@ hs_bindgen_4405b2044e8f8d05 =
 {-# NOINLINE wuffs_etc2__error__bad_header #-}
 {-| __C declaration:__ @wuffs_etc2__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9034:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9555:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_etc2__error__bad_header =
@@ -2837,33 +2893,13 @@ hs_bindgen_c7a7ae0c8efe2536 =
 {-# NOINLINE wuffs_etc2__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_etc2__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9035:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9556:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_etc2__error__truncated_input =
   BG.unsafePerformIO hs_bindgen_c7a7ae0c8efe2536
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_etc2__error__unsupported_etc2_file@
-foreign import ccall unsafe "hs_bindgen_093360ed3bc944c3" hs_bindgen_093360ed3bc944c3_base ::
-     IO (BG.Ptr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_etc2__error__unsupported_etc2_file@
-hs_bindgen_093360ed3bc944c3 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
-hs_bindgen_093360ed3bc944c3 =
-  fmap BG.fromFFIType hs_bindgen_093360ed3bc944c3_base
-
-{-# NOINLINE wuffs_etc2__error__unsupported_etc2_file #-}
-{-| __C declaration:__ @wuffs_etc2__error__unsupported_etc2_file@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9036:19@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_etc2__error__unsupported_etc2_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
-wuffs_etc2__error__unsupported_etc2_file =
-  BG.unsafePerformIO hs_bindgen_093360ed3bc944c3
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_gif__error__bad_lzw_code@
 foreign import ccall unsafe "hs_bindgen_9d2faf79f787a4c1" hs_bindgen_9d2faf79f787a4c1_base ::
@@ -2877,9 +2913,9 @@ hs_bindgen_9d2faf79f787a4c1 =
 {-# NOINLINE wuffs_gif__error__bad_lzw_code #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_lzw_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9400:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9921:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_lzw_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_lzw_code =
@@ -2897,9 +2933,9 @@ hs_bindgen_ff7fee8283253d4d =
 {-# NOINLINE wuffs_gif__error__bad_extension_label #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_extension_label@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9401:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9922:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_extension_label :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_extension_label =
@@ -2917,9 +2953,9 @@ hs_bindgen_e1d73f5e11788d4f =
 {-# NOINLINE wuffs_gif__error__bad_frame_size #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_frame_size@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9402:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9923:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_frame_size :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_frame_size =
@@ -2937,9 +2973,9 @@ hs_bindgen_87b450c404ad5b61 =
 {-# NOINLINE wuffs_gif__error__bad_graphic_control #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_graphic_control@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9403:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9924:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_graphic_control :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_graphic_control =
@@ -2957,9 +2993,9 @@ hs_bindgen_8a4f4353c63bd6f9 =
 {-# NOINLINE wuffs_gif__error__bad_header #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9404:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9925:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_header =
@@ -2977,9 +3013,9 @@ hs_bindgen_ee15538ca3134dca =
 {-# NOINLINE wuffs_gif__error__bad_literal_width #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_literal_width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9405:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9926:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_literal_width :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_literal_width =
@@ -2997,9 +3033,9 @@ hs_bindgen_1806373bedc3df33 =
 {-# NOINLINE wuffs_gif__error__bad_palette #-}
 {-| __C declaration:__ @wuffs_gif__error__bad_palette@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9406:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9927:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__bad_palette :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__bad_palette =
@@ -3017,9 +3053,9 @@ hs_bindgen_ebda1a394d1507fb =
 {-# NOINLINE wuffs_gif__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_gif__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9407:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9928:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gif__error__truncated_input =
@@ -3037,9 +3073,9 @@ hs_bindgen_f912a9fd2d0afb27 =
 {-# NOINLINE wuffs_gzip__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_gzip__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9870:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10391:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gzip__error__bad_checksum =
@@ -3057,9 +3093,9 @@ hs_bindgen_2f999336d6e0d17c =
 {-# NOINLINE wuffs_gzip__error__bad_compression_method #-}
 {-| __C declaration:__ @wuffs_gzip__error__bad_compression_method@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9871:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10392:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__error__bad_compression_method :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gzip__error__bad_compression_method =
@@ -3077,9 +3113,9 @@ hs_bindgen_0b06a78d47edd2b6 =
 {-# NOINLINE wuffs_gzip__error__bad_encoding_flags #-}
 {-| __C declaration:__ @wuffs_gzip__error__bad_encoding_flags@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9872:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10393:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__error__bad_encoding_flags :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gzip__error__bad_encoding_flags =
@@ -3097,9 +3133,9 @@ hs_bindgen_8328cbbdc2b4a6c0 =
 {-# NOINLINE wuffs_gzip__error__bad_header #-}
 {-| __C declaration:__ @wuffs_gzip__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9873:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10394:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gzip__error__bad_header =
@@ -3117,13 +3153,53 @@ hs_bindgen_7645447e1429cc34 =
 {-# NOINLINE wuffs_gzip__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_gzip__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9874:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10395:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_gzip__error__truncated_input =
   BG.unsafePerformIO hs_bindgen_7645447e1429cc34
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__bad_header@
+foreign import ccall unsafe "hs_bindgen_9fc94b0ed8bc5cd2" hs_bindgen_9fc94b0ed8bc5cd2_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__bad_header@
+hs_bindgen_9fc94b0ed8bc5cd2 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_9fc94b0ed8bc5cd2 =
+  fmap BG.fromFFIType hs_bindgen_9fc94b0ed8bc5cd2_base
+
+{-# NOINLINE wuffs_handsum__error__bad_header #-}
+{-| __C declaration:__ @wuffs_handsum__error__bad_header@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10636:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_handsum__error__bad_header =
+  BG.unsafePerformIO hs_bindgen_9fc94b0ed8bc5cd2
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__truncated_input@
+foreign import ccall unsafe "hs_bindgen_fda6245877528feb" hs_bindgen_fda6245877528feb_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__error__truncated_input@
+hs_bindgen_fda6245877528feb :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_fda6245877528feb =
+  fmap BG.fromFFIType hs_bindgen_fda6245877528feb_base
+
+{-# NOINLINE wuffs_handsum__error__truncated_input #-}
+{-| __C declaration:__ @wuffs_handsum__error__truncated_input@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10637:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_handsum__error__truncated_input =
+  BG.unsafePerformIO hs_bindgen_fda6245877528feb
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_jpeg__error__bad_dht_marker@
 foreign import ccall unsafe "hs_bindgen_de985da2bc3e8e84" hs_bindgen_de985da2bc3e8e84_base ::
@@ -3137,9 +3213,9 @@ hs_bindgen_de985da2bc3e8e84 =
 {-# NOINLINE wuffs_jpeg__error__bad_dht_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_dht_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10115:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10992:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_dht_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_dht_marker =
@@ -3157,9 +3233,9 @@ hs_bindgen_dde0d2f3f1bfa7b6 =
 {-# NOINLINE wuffs_jpeg__error__bad_dqt_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_dqt_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10116:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10993:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_dqt_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_dqt_marker =
@@ -3177,9 +3253,9 @@ hs_bindgen_4f8d5b12b287ced2 =
 {-# NOINLINE wuffs_jpeg__error__bad_dri_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_dri_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10117:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10994:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_dri_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_dri_marker =
@@ -3197,9 +3273,9 @@ hs_bindgen_8b00f86fee6cea5e =
 {-# NOINLINE wuffs_jpeg__error__bad_sof_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_sof_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10118:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10995:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_sof_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_sof_marker =
@@ -3217,9 +3293,9 @@ hs_bindgen_e41c05ba33e1d11d =
 {-# NOINLINE wuffs_jpeg__error__bad_sos_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_sos_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10119:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10996:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_sos_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_sos_marker =
@@ -3237,9 +3313,9 @@ hs_bindgen_92920b093e92ec40 =
 {-# NOINLINE wuffs_jpeg__error__bad_header #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10120:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10997:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_header =
@@ -3257,9 +3333,9 @@ hs_bindgen_3845f3115351c76d =
 {-# NOINLINE wuffs_jpeg__error__bad_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10121:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10998:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_marker =
@@ -3277,9 +3353,9 @@ hs_bindgen_8b255daf3f2edaa5 =
 {-# NOINLINE wuffs_jpeg__error__bad_scan_count #-}
 {-| __C declaration:__ @wuffs_jpeg__error__bad_scan_count@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10122:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10999:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__bad_scan_count :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__bad_scan_count =
@@ -3297,9 +3373,9 @@ hs_bindgen_ef198f12f24726c3 =
 {-# NOINLINE wuffs_jpeg__error__missing_huffman_table #-}
 {-| __C declaration:__ @wuffs_jpeg__error__missing_huffman_table@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10123:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11000:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__missing_huffman_table :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__missing_huffman_table =
@@ -3317,9 +3393,9 @@ hs_bindgen_91fe4f9178b1c872 =
 {-# NOINLINE wuffs_jpeg__error__missing_quantization_table #-}
 {-| __C declaration:__ @wuffs_jpeg__error__missing_quantization_table@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10124:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11001:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__missing_quantization_table :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__missing_quantization_table =
@@ -3337,9 +3413,9 @@ hs_bindgen_72ecd045dcb5c7eb =
 {-# NOINLINE wuffs_jpeg__error__rejected_progressive_jpeg #-}
 {-| __C declaration:__ @wuffs_jpeg__error__rejected_progressive_jpeg@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10125:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11002:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__rejected_progressive_jpeg :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__rejected_progressive_jpeg =
@@ -3357,9 +3433,9 @@ hs_bindgen_66ea2a7e67479d1b =
 {-# NOINLINE wuffs_jpeg__error__short_sos_bitstream #-}
 {-| __C declaration:__ @wuffs_jpeg__error__short_sos_bitstream@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10126:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11003:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__short_sos_bitstream :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__short_sos_bitstream =
@@ -3377,9 +3453,9 @@ hs_bindgen_5f217b4aa4a9547a =
 {-# NOINLINE wuffs_jpeg__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_jpeg__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10127:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11004:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__truncated_input =
@@ -3397,9 +3473,9 @@ hs_bindgen_d1c83c8c9c704781 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_arithmetic_coding #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_arithmetic_coding@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10128:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11005:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_arithmetic_coding :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_arithmetic_coding =
@@ -3417,9 +3493,9 @@ hs_bindgen_6687d06bba6ae71f =
 {-# NOINLINE wuffs_jpeg__error__unsupported_color_model #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_color_model@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10129:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11006:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_color_model :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_color_model =
@@ -3437,9 +3513,9 @@ hs_bindgen_49f05c027284ff37 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_fractional_sampling #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_fractional_sampling@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10130:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11007:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_fractional_sampling :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_fractional_sampling =
@@ -3457,9 +3533,9 @@ hs_bindgen_f3626575658cd9b4 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_hierarchical_coding #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_hierarchical_coding@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10131:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11008:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_hierarchical_coding :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_hierarchical_coding =
@@ -3477,9 +3553,9 @@ hs_bindgen_faed2b53194c1e8b =
 {-# NOINLINE wuffs_jpeg__error__unsupported_implicit_height #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_implicit_height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10132:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11009:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_implicit_height :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_implicit_height =
@@ -3497,9 +3573,9 @@ hs_bindgen_2bf950c9a6d5d599 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_lossless_coding #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_lossless_coding@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10133:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11010:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_lossless_coding :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_lossless_coding =
@@ -3517,9 +3593,9 @@ hs_bindgen_2f3b3264da97676d =
 {-# NOINLINE wuffs_jpeg__error__unsupported_marker #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_marker@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10134:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11011:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_marker :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_marker =
@@ -3537,9 +3613,9 @@ hs_bindgen_a1b1c54bbf1abd02 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_precision_12_bits #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_precision_12_bits@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10135:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11012:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_precision_12_bits :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_precision_12_bits =
@@ -3557,9 +3633,9 @@ hs_bindgen_050b2db2ed09f38c =
 {-# NOINLINE wuffs_jpeg__error__unsupported_precision_16_bits #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_precision_16_bits@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10136:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11013:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_precision_16_bits :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_precision_16_bits =
@@ -3577,9 +3653,9 @@ hs_bindgen_45f46e2b4d257e99 =
 {-# NOINLINE wuffs_jpeg__error__unsupported_precision #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_precision@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10137:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11014:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_precision :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_precision =
@@ -3597,9 +3673,9 @@ hs_bindgen_4c569fda519b451e =
 {-# NOINLINE wuffs_jpeg__error__unsupported_scan_count #-}
 {-| __C declaration:__ @wuffs_jpeg__error__unsupported_scan_count@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10138:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11015:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__error__unsupported_scan_count :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_jpeg__error__unsupported_scan_count =
@@ -3617,9 +3693,9 @@ hs_bindgen_61bcbb1f9083f8c2 =
 {-# NOINLINE wuffs_json__error__bad_c0_control_code #-}
 {-| __C declaration:__ @wuffs_json__error__bad_c0_control_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10623:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11500:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_c0_control_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_c0_control_code =
@@ -3637,9 +3713,9 @@ hs_bindgen_d471236ec7860af5 =
 {-# NOINLINE wuffs_json__error__bad_utf_8 #-}
 {-| __C declaration:__ @wuffs_json__error__bad_utf_8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10624:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11501:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_utf_8 :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_utf_8 =
@@ -3657,9 +3733,9 @@ hs_bindgen_ff1487645a57f189 =
 {-# NOINLINE wuffs_json__error__bad_backslash_escape #-}
 {-| __C declaration:__ @wuffs_json__error__bad_backslash_escape@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10625:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11502:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_backslash_escape :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_backslash_escape =
@@ -3677,9 +3753,9 @@ hs_bindgen_05ce2b499f370f70 =
 {-# NOINLINE wuffs_json__error__bad_input #-}
 {-| __C declaration:__ @wuffs_json__error__bad_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10626:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11503:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_input =
@@ -3697,9 +3773,9 @@ hs_bindgen_e33b4f740db7b7a9 =
 {-# NOINLINE wuffs_json__error__bad_new_line_in_a_string #-}
 {-| __C declaration:__ @wuffs_json__error__bad_new_line_in_a_string@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10627:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11504:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_new_line_in_a_string :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_new_line_in_a_string =
@@ -3717,9 +3793,9 @@ hs_bindgen_bc72818f3aef61b2 =
 {-# NOINLINE wuffs_json__error__bad_quirk_combination #-}
 {-| __C declaration:__ @wuffs_json__error__bad_quirk_combination@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10628:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11505:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__bad_quirk_combination :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__bad_quirk_combination =
@@ -3737,9 +3813,9 @@ hs_bindgen_816ae60068df0c4f =
 {-# NOINLINE wuffs_json__error__unsupported_number_length #-}
 {-| __C declaration:__ @wuffs_json__error__unsupported_number_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10629:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11506:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__unsupported_number_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__unsupported_number_length =
@@ -3757,9 +3833,9 @@ hs_bindgen_b22376f118498aba =
 {-# NOINLINE wuffs_json__error__unsupported_recursion_depth #-}
 {-| __C declaration:__ @wuffs_json__error__unsupported_recursion_depth@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10630:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11507:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__error__unsupported_recursion_depth :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_json__error__unsupported_recursion_depth =
@@ -3777,9 +3853,9 @@ hs_bindgen_94d133c031b006a8 =
 {-# NOINLINE wuffs_lzma__error__bad_lzma2_header #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_lzma2_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10910:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11787:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_lzma2_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_lzma2_header =
@@ -3797,9 +3873,9 @@ hs_bindgen_3c59587f502e2080 =
 {-# NOINLINE wuffs_lzma__error__bad_bitstream_trailer #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_bitstream_trailer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10911:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11788:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_bitstream_trailer :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_bitstream_trailer =
@@ -3817,9 +3893,9 @@ hs_bindgen_fb1a4313e0c872b6 =
 {-# NOINLINE wuffs_lzma__error__bad_code #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10912:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11789:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_code =
@@ -3837,9 +3913,9 @@ hs_bindgen_5ea6702c9cce35a7 =
 {-# NOINLINE wuffs_lzma__error__bad_decoded_length #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_decoded_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10913:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11790:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_decoded_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_decoded_length =
@@ -3857,9 +3933,9 @@ hs_bindgen_5fccf31fdd434751 =
 {-# NOINLINE wuffs_lzma__error__bad_distance #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_distance@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10914:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11791:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_distance :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_distance =
@@ -3877,9 +3953,9 @@ hs_bindgen_27d4ce73f816576b =
 {-# NOINLINE wuffs_lzma__error__bad_header #-}
 {-| __C declaration:__ @wuffs_lzma__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10915:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11792:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__bad_header =
@@ -3897,9 +3973,9 @@ hs_bindgen_18087d002c13676e =
 {-# NOINLINE wuffs_lzma__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_lzma__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10916:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11793:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__truncated_input =
@@ -3917,9 +3993,9 @@ hs_bindgen_0c08b011435b6b4c =
 {-# NOINLINE wuffs_lzma__error__unsupported_decoded_length #-}
 {-| __C declaration:__ @wuffs_lzma__error__unsupported_decoded_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10917:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11794:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__unsupported_decoded_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__unsupported_decoded_length =
@@ -3937,9 +4013,9 @@ hs_bindgen_74321fd64856af76 =
 {-# NOINLINE wuffs_lzma__error__unsupported_properties #-}
 {-| __C declaration:__ @wuffs_lzma__error__unsupported_properties@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10918:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11795:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__error__unsupported_properties :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzma__error__unsupported_properties =
@@ -3957,9 +4033,9 @@ hs_bindgen_1af351f9a045d92a =
 {-# NOINLINE wuffs_lzip__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_lzip__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11236:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12113:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzip__error__bad_checksum =
@@ -3977,9 +4053,9 @@ hs_bindgen_bd437753547e3dc4 =
 {-# NOINLINE wuffs_lzip__error__bad_footer #-}
 {-| __C declaration:__ @wuffs_lzip__error__bad_footer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11237:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12114:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__error__bad_footer :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzip__error__bad_footer =
@@ -3997,9 +4073,9 @@ hs_bindgen_27d75fadb1a1a811 =
 {-# NOINLINE wuffs_lzip__error__bad_header #-}
 {-| __C declaration:__ @wuffs_lzip__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11238:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12115:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzip__error__bad_header =
@@ -4017,9 +4093,9 @@ hs_bindgen_fe6890987e2dfbeb =
 {-# NOINLINE wuffs_lzip__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_lzip__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11239:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12116:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzip__error__truncated_input =
@@ -4037,9 +4113,9 @@ hs_bindgen_51f9cb031b59405f =
 {-# NOINLINE wuffs_lzw__error__bad_code #-}
 {-| __C declaration:__ @wuffs_lzw__error__bad_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11478:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12355:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__error__bad_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzw__error__bad_code =
@@ -4057,9 +4133,9 @@ hs_bindgen_f0818320ecf21279 =
 {-# NOINLINE wuffs_lzw__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_lzw__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11479:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12356:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_lzw__error__truncated_input =
@@ -4077,9 +4153,9 @@ hs_bindgen_98f82710a8c4c52a =
 {-# NOINLINE wuffs_netpbm__error__bad_header #-}
 {-| __C declaration:__ @wuffs_netpbm__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11737:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12614:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_netpbm__error__bad_header =
@@ -4097,9 +4173,9 @@ hs_bindgen_5e98ce32f722c33e =
 {-# NOINLINE wuffs_netpbm__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_netpbm__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11738:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12615:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_netpbm__error__truncated_input =
@@ -4117,13 +4193,33 @@ hs_bindgen_c487329b882454e3 =
 {-# NOINLINE wuffs_netpbm__error__unsupported_netpbm_file #-}
 {-| __C declaration:__ @wuffs_netpbm__error__unsupported_netpbm_file@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11739:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12616:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__error__unsupported_netpbm_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_netpbm__error__unsupported_netpbm_file =
   BG.unsafePerformIO hs_bindgen_c487329b882454e3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__bad_frame@
+foreign import ccall unsafe "hs_bindgen_ec6b2a26005e4322" hs_bindgen_ec6b2a26005e4322_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__bad_frame@
+hs_bindgen_ec6b2a26005e4322 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_ec6b2a26005e4322 =
+  fmap BG.fromFFIType hs_bindgen_ec6b2a26005e4322_base
+
+{-# NOINLINE wuffs_nie__error__bad_frame #-}
+{-| __C declaration:__ @wuffs_nie__error__bad_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12964:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_nie__error__bad_frame :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_nie__error__bad_frame =
+  BG.unsafePerformIO hs_bindgen_ec6b2a26005e4322
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__bad_header@
 foreign import ccall unsafe "hs_bindgen_5b789fc55d82da90" hs_bindgen_5b789fc55d82da90_base ::
@@ -4137,9 +4233,9 @@ hs_bindgen_5b789fc55d82da90 =
 {-# NOINLINE wuffs_nie__error__bad_header #-}
 {-| __C declaration:__ @wuffs_nie__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12083:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12965:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_nie__error__bad_header =
@@ -4157,33 +4253,33 @@ hs_bindgen_71cdbfabd559b244 =
 {-# NOINLINE wuffs_nie__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_nie__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12084:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12966:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_nie__error__truncated_input =
   BG.unsafePerformIO hs_bindgen_71cdbfabd559b244
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_nie_file@
-foreign import ccall unsafe "hs_bindgen_37bac8e70d746baa" hs_bindgen_37bac8e70d746baa_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_restart_frame_index@
+foreign import ccall unsafe "hs_bindgen_bc305e1e0a99846a" hs_bindgen_bc305e1e0a99846a_base ::
      IO (BG.Ptr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_nie_file@
-hs_bindgen_37bac8e70d746baa :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
-hs_bindgen_37bac8e70d746baa =
-  fmap BG.fromFFIType hs_bindgen_37bac8e70d746baa_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_nie__error__unsupported_restart_frame_index@
+hs_bindgen_bc305e1e0a99846a :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_bc305e1e0a99846a =
+  fmap BG.fromFFIType hs_bindgen_bc305e1e0a99846a_base
 
-{-# NOINLINE wuffs_nie__error__unsupported_nie_file #-}
-{-| __C declaration:__ @wuffs_nie__error__unsupported_nie_file@
+{-# NOINLINE wuffs_nie__error__unsupported_restart_frame_index #-}
+{-| __C declaration:__ @wuffs_nie__error__unsupported_restart_frame_index@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12085:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12967:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_nie__error__unsupported_nie_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
-wuffs_nie__error__unsupported_nie_file =
-  BG.unsafePerformIO hs_bindgen_37bac8e70d746baa
+wuffs_nie__error__unsupported_restart_frame_index :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_nie__error__unsupported_restart_frame_index =
+  BG.unsafePerformIO hs_bindgen_bc305e1e0a99846a
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_zlib__note__dictionary_required@
 foreign import ccall unsafe "hs_bindgen_94df86635b63918f" hs_bindgen_94df86635b63918f_base ::
@@ -4197,9 +4293,9 @@ hs_bindgen_94df86635b63918f =
 {-# NOINLINE wuffs_zlib__note__dictionary_required #-}
 {-| __C declaration:__ @wuffs_zlib__note__dictionary_required@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12433:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13330:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__note__dictionary_required :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__note__dictionary_required =
@@ -4217,9 +4313,9 @@ hs_bindgen_76f0357fc5f53f64 =
 {-# NOINLINE wuffs_zlib__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_zlib__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12434:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13331:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__bad_checksum =
@@ -4237,9 +4333,9 @@ hs_bindgen_f233f815d89bce69 =
 {-# NOINLINE wuffs_zlib__error__bad_compression_method #-}
 {-| __C declaration:__ @wuffs_zlib__error__bad_compression_method@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12435:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13332:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__bad_compression_method :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__bad_compression_method =
@@ -4257,9 +4353,9 @@ hs_bindgen_dc523c3c094ddc34 =
 {-# NOINLINE wuffs_zlib__error__bad_compression_window_size #-}
 {-| __C declaration:__ @wuffs_zlib__error__bad_compression_window_size@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12436:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13333:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__bad_compression_window_size :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__bad_compression_window_size =
@@ -4277,9 +4373,9 @@ hs_bindgen_46fc4e1071b784dd =
 {-# NOINLINE wuffs_zlib__error__bad_parity_check #-}
 {-| __C declaration:__ @wuffs_zlib__error__bad_parity_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12437:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13334:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__bad_parity_check :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__bad_parity_check =
@@ -4297,9 +4393,9 @@ hs_bindgen_25e2354a38325563 =
 {-# NOINLINE wuffs_zlib__error__incorrect_dictionary #-}
 {-| __C declaration:__ @wuffs_zlib__error__incorrect_dictionary@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12438:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13335:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__incorrect_dictionary :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__incorrect_dictionary =
@@ -4317,9 +4413,9 @@ hs_bindgen_851fe2bfb47b9dde =
 {-# NOINLINE wuffs_zlib__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_zlib__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12439:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13336:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_zlib__error__truncated_input =
@@ -4337,9 +4433,9 @@ hs_bindgen_e02dd98137049a8b =
 {-# NOINLINE wuffs_png__error__bad_animation_sequence_number #-}
 {-| __C declaration:__ @wuffs_png__error__bad_animation_sequence_number@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12709:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13606:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_animation_sequence_number :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_animation_sequence_number =
@@ -4357,9 +4453,9 @@ hs_bindgen_49f84a009b605cb8 =
 {-# NOINLINE wuffs_png__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_png__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12710:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13607:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_checksum =
@@ -4377,9 +4473,9 @@ hs_bindgen_6e824a39f04d2c35 =
 {-# NOINLINE wuffs_png__error__bad_chunk #-}
 {-| __C declaration:__ @wuffs_png__error__bad_chunk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12711:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13608:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_chunk :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_chunk =
@@ -4397,9 +4493,9 @@ hs_bindgen_8bc5ec9d23d5dfe7 =
 {-# NOINLINE wuffs_png__error__bad_filter #-}
 {-| __C declaration:__ @wuffs_png__error__bad_filter@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12712:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13609:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_filter :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_filter =
@@ -4417,9 +4513,9 @@ hs_bindgen_281ba0be9e759325 =
 {-# NOINLINE wuffs_png__error__bad_header #-}
 {-| __C declaration:__ @wuffs_png__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12713:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13610:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_header =
@@ -4437,9 +4533,9 @@ hs_bindgen_8f189d0bc484b7bf =
 {-# NOINLINE wuffs_png__error__bad_text_chunk_not_latin_1 #-}
 {-| __C declaration:__ @wuffs_png__error__bad_text_chunk_not_latin_1@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12714:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13611:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__bad_text_chunk_not_latin_1 :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__bad_text_chunk_not_latin_1 =
@@ -4457,9 +4553,9 @@ hs_bindgen_62bf75f7bd45e3aa =
 {-# NOINLINE wuffs_png__error__missing_palette #-}
 {-| __C declaration:__ @wuffs_png__error__missing_palette@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12715:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13612:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__missing_palette :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__missing_palette =
@@ -4477,9 +4573,9 @@ hs_bindgen_755cfff84784efeb =
 {-# NOINLINE wuffs_png__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_png__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12716:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13613:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__truncated_input =
@@ -4497,9 +4593,9 @@ hs_bindgen_5c854914e2012939 =
 {-# NOINLINE wuffs_png__error__unsupported_cgbi_extension #-}
 {-| __C declaration:__ @wuffs_png__error__unsupported_cgbi_extension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12717:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13614:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__unsupported_cgbi_extension :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__unsupported_cgbi_extension =
@@ -4517,9 +4613,9 @@ hs_bindgen_81ab464f763d808c =
 {-# NOINLINE wuffs_png__error__unsupported_png_compression_method #-}
 {-| __C declaration:__ @wuffs_png__error__unsupported_png_compression_method@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12718:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13615:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__unsupported_png_compression_method :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__unsupported_png_compression_method =
@@ -4537,9 +4633,9 @@ hs_bindgen_93eebd8ee8e6ae67 =
 {-# NOINLINE wuffs_png__error__unsupported_png_file #-}
 {-| __C declaration:__ @wuffs_png__error__unsupported_png_file@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12719:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13616:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__error__unsupported_png_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_png__error__unsupported_png_file =
@@ -4557,9 +4653,9 @@ hs_bindgen_f75c02ab4e03d4b2 =
 {-# NOINLINE wuffs_qoi__error__bad_footer #-}
 {-| __C declaration:__ @wuffs_qoi__error__bad_footer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13212:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14109:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__error__bad_footer :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_qoi__error__bad_footer =
@@ -4577,9 +4673,9 @@ hs_bindgen_786a4ef80f6ee2ed =
 {-# NOINLINE wuffs_qoi__error__bad_header #-}
 {-| __C declaration:__ @wuffs_qoi__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13213:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14110:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_qoi__error__bad_header =
@@ -4597,9 +4693,9 @@ hs_bindgen_80460865e2376097 =
 {-# NOINLINE wuffs_qoi__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_qoi__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13214:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14111:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_qoi__error__truncated_input =
@@ -4617,9 +4713,9 @@ hs_bindgen_e32f6364890f5f02 =
 {-# NOINLINE wuffs_targa__error__bad_header #-}
 {-| __C declaration:__ @wuffs_targa__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13808:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14705:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_targa__error__bad_header =
@@ -4637,9 +4733,9 @@ hs_bindgen_42848077c419328c =
 {-# NOINLINE wuffs_targa__error__bad_run_length_encoding #-}
 {-| __C declaration:__ @wuffs_targa__error__bad_run_length_encoding@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13809:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14706:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__error__bad_run_length_encoding :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_targa__error__bad_run_length_encoding =
@@ -4657,9 +4753,9 @@ hs_bindgen_ed562bc47495ac18 =
 {-# NOINLINE wuffs_targa__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_targa__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13810:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14707:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_targa__error__truncated_input =
@@ -4677,9 +4773,9 @@ hs_bindgen_88e19f2e919d2b02 =
 {-# NOINLINE wuffs_targa__error__unsupported_targa_file #-}
 {-| __C declaration:__ @wuffs_targa__error__unsupported_targa_file@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13811:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14708:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__error__unsupported_targa_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_targa__error__unsupported_targa_file =
@@ -4697,9 +4793,9 @@ hs_bindgen_0ce032eb542eb03c =
 {-# NOINLINE wuffs_thumbhash__error__bad_header #-}
 {-| __C declaration:__ @wuffs_thumbhash__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14185:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15082:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_thumbhash__error__bad_header =
@@ -4717,13 +4813,133 @@ hs_bindgen_2c46afcac967a005 =
 {-# NOINLINE wuffs_thumbhash__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_thumbhash__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14186:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15083:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_thumbhash__error__truncated_input =
   BG.unsafePerformIO hs_bindgen_2c46afcac967a005
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_quirk_source_length@
+foreign import ccall unsafe "hs_bindgen_05d6f47c4de64a99" hs_bindgen_05d6f47c4de64a99_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_quirk_source_length@
+hs_bindgen_05d6f47c4de64a99 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_05d6f47c4de64a99 =
+  fmap BG.fromFFIType hs_bindgen_05d6f47c4de64a99_base
+
+{-# NOINLINE wuffs_vp8__error__bad_quirk_source_length #-}
+{-| __C declaration:__ @wuffs_vp8__error__bad_quirk_source_length@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15459:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__bad_quirk_source_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__bad_quirk_source_length =
+  BG.unsafePerformIO hs_bindgen_05d6f47c4de64a99
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_header@
+foreign import ccall unsafe "hs_bindgen_709ee7bbd4f7f503" hs_bindgen_709ee7bbd4f7f503_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__bad_header@
+hs_bindgen_709ee7bbd4f7f503 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_709ee7bbd4f7f503 =
+  fmap BG.fromFFIType hs_bindgen_709ee7bbd4f7f503_base
+
+{-# NOINLINE wuffs_vp8__error__bad_header #-}
+{-| __C declaration:__ @wuffs_vp8__error__bad_header@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15460:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__bad_header =
+  BG.unsafePerformIO hs_bindgen_709ee7bbd4f7f503
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__missing_quirk_source_length@
+foreign import ccall unsafe "hs_bindgen_61b4b2648d2a80e5" hs_bindgen_61b4b2648d2a80e5_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__missing_quirk_source_length@
+hs_bindgen_61b4b2648d2a80e5 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_61b4b2648d2a80e5 =
+  fmap BG.fromFFIType hs_bindgen_61b4b2648d2a80e5_base
+
+{-# NOINLINE wuffs_vp8__error__missing_quirk_source_length #-}
+{-| __C declaration:__ @wuffs_vp8__error__missing_quirk_source_length@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15461:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__missing_quirk_source_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__missing_quirk_source_length =
+  BG.unsafePerformIO hs_bindgen_61b4b2648d2a80e5
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__truncated_input@
+foreign import ccall unsafe "hs_bindgen_dc8a0f9ff97ce221" hs_bindgen_dc8a0f9ff97ce221_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__truncated_input@
+hs_bindgen_dc8a0f9ff97ce221 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_dc8a0f9ff97ce221 =
+  fmap BG.fromFFIType hs_bindgen_dc8a0f9ff97ce221_base
+
+{-# NOINLINE wuffs_vp8__error__truncated_input #-}
+{-| __C declaration:__ @wuffs_vp8__error__truncated_input@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15462:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__truncated_input =
+  BG.unsafePerformIO hs_bindgen_dc8a0f9ff97ce221
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_quirk_source_length@
+foreign import ccall unsafe "hs_bindgen_ba24c2135631c9be" hs_bindgen_ba24c2135631c9be_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_quirk_source_length@
+hs_bindgen_ba24c2135631c9be :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_ba24c2135631c9be =
+  fmap BG.fromFFIType hs_bindgen_ba24c2135631c9be_base
+
+{-# NOINLINE wuffs_vp8__error__unsupported_quirk_source_length #-}
+{-| __C declaration:__ @wuffs_vp8__error__unsupported_quirk_source_length@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15463:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__unsupported_quirk_source_length :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__unsupported_quirk_source_length =
+  BG.unsafePerformIO hs_bindgen_ba24c2135631c9be
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_vp8_file@
+foreign import ccall unsafe "hs_bindgen_037a4492c9684e59" hs_bindgen_037a4492c9684e59_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__error__unsupported_vp8_file@
+hs_bindgen_037a4492c9684e59 :: IO (PtrConst.PtrConst (IA.IncompleteArray BG.CChar))
+hs_bindgen_037a4492c9684e59 =
+  fmap BG.fromFFIType hs_bindgen_037a4492c9684e59_base
+
+{-# NOINLINE wuffs_vp8__error__unsupported_vp8_file #-}
+{-| __C declaration:__ @wuffs_vp8__error__unsupported_vp8_file@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15464:19@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__error__unsupported_vp8_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
+wuffs_vp8__error__unsupported_vp8_file =
+  BG.unsafePerformIO hs_bindgen_037a4492c9684e59
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_wbmp__error__bad_header@
 foreign import ccall unsafe "hs_bindgen_a830c732ca382ee4" hs_bindgen_a830c732ca382ee4_base ::
@@ -4737,9 +4953,9 @@ hs_bindgen_a830c732ca382ee4 =
 {-# NOINLINE wuffs_wbmp__error__bad_header #-}
 {-| __C declaration:__ @wuffs_wbmp__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14696:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15862:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_wbmp__error__bad_header =
@@ -4757,9 +4973,9 @@ hs_bindgen_7472af83e71a8288 =
 {-# NOINLINE wuffs_wbmp__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_wbmp__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14697:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15863:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_wbmp__error__truncated_input =
@@ -4777,9 +4993,9 @@ hs_bindgen_32fa00af94eb731d =
 {-# NOINLINE wuffs_webp__error__bad_huffman_code_over_subscribed #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_huffman_code_over_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15051:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16217:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_huffman_code_over_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_huffman_code_over_subscribed =
@@ -4797,9 +5013,9 @@ hs_bindgen_97d8d7a8f9f8ea68 =
 {-# NOINLINE wuffs_webp__error__bad_huffman_code_under_subscribed #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_huffman_code_under_subscribed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15052:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16218:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_huffman_code_under_subscribed :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_huffman_code_under_subscribed =
@@ -4817,9 +5033,9 @@ hs_bindgen_0fe9fc7f829357b2 =
 {-# NOINLINE wuffs_webp__error__bad_huffman_code #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_huffman_code@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15053:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16219:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_huffman_code :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_huffman_code =
@@ -4837,9 +5053,9 @@ hs_bindgen_5a49a0a9a5d80609 =
 {-# NOINLINE wuffs_webp__error__bad_back_reference #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_back_reference@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15054:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16220:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_back_reference :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_back_reference =
@@ -4857,9 +5073,9 @@ hs_bindgen_e0bfd210aff39bf4 =
 {-# NOINLINE wuffs_webp__error__bad_color_cache #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_color_cache@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15055:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16221:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_color_cache :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_color_cache =
@@ -4877,9 +5093,9 @@ hs_bindgen_4647d7dee373ef90 =
 {-# NOINLINE wuffs_webp__error__bad_header #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15056:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16222:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_header =
@@ -4897,9 +5113,9 @@ hs_bindgen_ecf0012f971eb3fb =
 {-# NOINLINE wuffs_webp__error__bad_transform #-}
 {-| __C declaration:__ @wuffs_webp__error__bad_transform@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15057:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16223:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__bad_transform :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__bad_transform =
@@ -4917,9 +5133,9 @@ hs_bindgen_9e84dee3f104a0ff =
 {-# NOINLINE wuffs_webp__error__short_chunk #-}
 {-| __C declaration:__ @wuffs_webp__error__short_chunk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15058:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16224:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__short_chunk :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__short_chunk =
@@ -4937,9 +5153,9 @@ hs_bindgen_fa31044547748624 =
 {-# NOINLINE wuffs_webp__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_webp__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15059:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16225:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__truncated_input =
@@ -4957,9 +5173,9 @@ hs_bindgen_4737eb0cc06fb4c2 =
 {-# NOINLINE wuffs_webp__error__unsupported_number_of_huffman_groups #-}
 {-| __C declaration:__ @wuffs_webp__error__unsupported_number_of_huffman_groups@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15060:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16226:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__unsupported_number_of_huffman_groups :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__unsupported_number_of_huffman_groups =
@@ -4977,9 +5193,9 @@ hs_bindgen_c56d6cf59733c5ce =
 {-# NOINLINE wuffs_webp__error__unsupported_transform_after_color_indexing_transform #-}
 {-| __C declaration:__ @wuffs_webp__error__unsupported_transform_after_color_indexing_transform@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15061:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16227:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__unsupported_transform_after_color_indexing_transform :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__unsupported_transform_after_color_indexing_transform =
@@ -4997,9 +5213,9 @@ hs_bindgen_01b3fd272a86a9f5 =
 {-# NOINLINE wuffs_webp__error__unsupported_webp_file #-}
 {-| __C declaration:__ @wuffs_webp__error__unsupported_webp_file@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15062:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16228:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__error__unsupported_webp_file :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_webp__error__unsupported_webp_file =
@@ -5017,9 +5233,9 @@ hs_bindgen_5474ca94d0805efa =
 {-# NOINLINE wuffs_xz__error__bad_bcj_offset #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_bcj_offset@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15956:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17124:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_bcj_offset :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_bcj_offset =
@@ -5037,9 +5253,9 @@ hs_bindgen_9733934f23578a01 =
 {-# NOINLINE wuffs_xz__error__bad_block_header #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_block_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15957:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17125:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_block_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_block_header =
@@ -5057,9 +5273,9 @@ hs_bindgen_5e2de6d4078a1c7d =
 {-# NOINLINE wuffs_xz__error__bad_checksum #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_checksum@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15958:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17126:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_checksum :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_checksum =
@@ -5077,9 +5293,9 @@ hs_bindgen_d01bbe76156bbcf5 =
 {-# NOINLINE wuffs_xz__error__bad_filter #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_filter@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15959:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17127:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_filter :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_filter =
@@ -5097,9 +5313,9 @@ hs_bindgen_f67827fc437f323e =
 {-# NOINLINE wuffs_xz__error__bad_footer #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_footer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15960:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17128:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_footer :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_footer =
@@ -5117,9 +5333,9 @@ hs_bindgen_5513fddb09055a38 =
 {-# NOINLINE wuffs_xz__error__bad_header #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_header@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15961:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17129:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_header :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_header =
@@ -5137,9 +5353,9 @@ hs_bindgen_84e410fc1d06f166 =
 {-# NOINLINE wuffs_xz__error__bad_header_concatenated_stream #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_header_concatenated_stream@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15962:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17130:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_header_concatenated_stream :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_header_concatenated_stream =
@@ -5157,9 +5373,9 @@ hs_bindgen_5e6a370732ecfa96 =
 {-# NOINLINE wuffs_xz__error__bad_index #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_index@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15963:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17131:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_index :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_index =
@@ -5177,9 +5393,9 @@ hs_bindgen_6f633fd05ab69f62 =
 {-# NOINLINE wuffs_xz__error__bad_padding #-}
 {-| __C declaration:__ @wuffs_xz__error__bad_padding@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15964:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17132:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__bad_padding :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__bad_padding =
@@ -5197,9 +5413,9 @@ hs_bindgen_06769c009d33eb46 =
 {-# NOINLINE wuffs_xz__error__truncated_input #-}
 {-| __C declaration:__ @wuffs_xz__error__truncated_input@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15965:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17133:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__truncated_input :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__truncated_input =
@@ -5217,9 +5433,9 @@ hs_bindgen_1c2d38dbcf5b302e =
 {-# NOINLINE wuffs_xz__error__unsupported_checksum_algorithm #-}
 {-| __C declaration:__ @wuffs_xz__error__unsupported_checksum_algorithm@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15966:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17134:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__unsupported_checksum_algorithm :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__unsupported_checksum_algorithm =
@@ -5237,9 +5453,9 @@ hs_bindgen_5782e833cc09ca2b =
 {-# NOINLINE wuffs_xz__error__unsupported_filter #-}
 {-| __C declaration:__ @wuffs_xz__error__unsupported_filter@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15967:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17135:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__unsupported_filter :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__unsupported_filter =
@@ -5257,9 +5473,9 @@ hs_bindgen_02a992604823c35b =
 {-# NOINLINE wuffs_xz__error__unsupported_filter_combination #-}
 {-| __C declaration:__ @wuffs_xz__error__unsupported_filter_combination@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15968:19@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17136:19@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__error__unsupported_filter_combination :: PtrConst.PtrConst (IA.IncompleteArray BG.CChar)
 wuffs_xz__error__unsupported_filter_combination =

@@ -23,7 +23,7 @@ module_flags=(
 
 if [[ "$1" == "wasm" ]]; then
     module_flags+=(
-        --clang-option="--target=wasm32-wasi"
+        --clang-option="--target=wasm32-wasi" # required
         --clang-option="-isystem"
         --clang-option="$WASI_SDK_PATH/share/wasi-sysroot/include/wasm32-wasi"
         -I "$WUFFS_WASI_INCLUDE"
@@ -33,19 +33,11 @@ fi
 # We only generate bindings for a sub-set of all parsed/reified declarations.
 # These flags configure the selection step.
 select_flags=(
-    --select-by-header-path wuffs-v0.4.c
-    # --select-by-decl-name '^heif_' 
+    --select-by-header-path wuffs-unsupported-snapshot.c
     # Select transitive dependencies.
     --enable-program-slicing
     # De-select deprecated declarations.
     --select-except-deprecated
-    # We could manually de-select some declarations. 
-    # --select-except-by-decl-name 'pcap_open'
-    # --select-except-by-decl-name 'pcap_createsrcstr'
-    # --select-except-by-decl-name 'pcap_parsesrcstr'
-    # --select-except-by-decl-name 'pcap_findalldevs_ex'
-    # --select-except-by-decl-name 'pcap_setsampling'
-    # --select-except-by-decl-name 'pcap_remoteact'
 )
 
 # Increase the verbosity of `hs-bindgen` to learn something about its internals.
@@ -54,7 +46,7 @@ select_flags=(
 debug_flags=(
     # -v2
     # # Run `hs-bindgen` with log level "Info".
-    # -v3
+    -v3
     # # Run `hs-bindgen` with log level "Debug".
     # -v4
 )
@@ -63,4 +55,4 @@ hs-bindgen-cli preprocess \
       "${module_flags[@]}" \
       "${select_flags[@]}" \
       "${debug_flags[@]}" \
-      "wuffs/wuffs-v0.4.c"
+      "wuffs/wuffs-unsupported-snapshot.c"
