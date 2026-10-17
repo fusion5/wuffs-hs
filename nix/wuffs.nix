@@ -21,16 +21,15 @@
   '';
 in
   pkgs.stdenv.mkDerivation {
-    pname = "wuffs-wasi";
+    pname =
+      if isWASM
+      then "wuffs-wasi"
+      else "wuffs";
     meta = {
-      platforms = [
-        "wasm32-unknown-wasi"
-        "wasm32-wasi"
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
+      platforms =
+        if isWASM
+        then ["wasm32-unknown-wasi" "wasm32-wasi"]
+        else pkgs.lib.platforms.all;
     };
     version = wuffsVersion;
     src = pkgs.fetchFromGitHub {

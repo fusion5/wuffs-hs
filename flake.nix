@@ -23,8 +23,6 @@
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
-        "wasm32-unknown-wasi"
-        "wasm32-wasi"
         "x86_64-linux"
         "aarch64-linux"
         "x86_64-darwin"
@@ -90,12 +88,12 @@
           shift
           wasm32-wasi-cabal "$COMMAND" \
             --project-file=./cabal.wasm.project \
-            --extra-lib-dirs="$WUFFS_WASI_LIB" \
-            --extra-include-dirs="$WUFFS_WASI_INCLUDE" "$@"
+            --extra-lib-dirs="${wuffsWASM}/lib" \
+            --extra-include-dirs="${wuffsWASM}/include" "$@"
         '';
         wasmTest = pkgs.writeShellScriptBin "wasm-test" ''
           CABAL_TARGET="$1"
-          [[ -z "$CABAL_TARGET" ]] && { echo "Usage: $BIN_NAME <cabal-test-target>"; exit 1; }
+          [[ -z "$CABAL_TARGET" ]] && { echo "Usage: $0 <cabal-test-target>"; exit 1; }
 
           ${wasmCabal}/bin/wasm-cabal build "$CABAL_TARGET" || exit 1
           WASM_FILE=$(wasm32-wasi-cabal list-bin -v0 "$CABAL_TARGET")
