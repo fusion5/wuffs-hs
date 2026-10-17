@@ -8346,7 +8346,7 @@ hs_bindgen_a753dcef7b974f4e =
 {-# NOINLINE wuffs_base__count_leading_zeroes_u64 #-}
 {-| __C declaration:__ @wuffs_base__count_leading_zeroes_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1328:1@
+    __defined at:__ @wuffs\/wuffs-v0.4.c 1336:1@
 
     __exported by:__ @wuffs\/wuffs-v0.4.c@
 -}

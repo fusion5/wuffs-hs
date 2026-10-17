@@ -695,9 +695,9 @@ data Wuffs_base__vtable = Wuffs_base__vtable
 
 instance Marshal.StaticSize Wuffs_base__vtable where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__vtable where
 
@@ -783,7 +783,7 @@ instance HasCField.HasCField Wuffs_base__vtable "wuffs_base__vtable_function_poi
   type CFieldType Wuffs_base__vtable "wuffs_base__vtable_function_pointers" =
     PtrConst.PtrConst BG.Void
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__status__struct@
 
@@ -804,9 +804,9 @@ data Wuffs_base__status = Wuffs_base__status
 
 instance Marshal.StaticSize Wuffs_base__status where
 
-  staticSizeOf = \_ -> (8 :: Int)
+  staticSizeOf = \_ -> (4 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__status where
 
@@ -6456,9 +6456,9 @@ data Wuffs_base__pixel_swizzler__struct_private_impl = Wuffs_base__pixel_swizzle
 
 instance Marshal.StaticSize Wuffs_base__pixel_swizzler__struct_private_impl where
 
-  staticSizeOf = \_ -> (24 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__pixel_swizzler__struct_private_impl where
 
@@ -6554,7 +6554,7 @@ instance HasCField.HasCField Wuffs_base__pixel_swizzler__struct_private_impl "wu
   type CFieldType Wuffs_base__pixel_swizzler__struct_private_impl "wuffs_base__pixel_swizzler__struct_private_impl_transparent_black_func" =
     Wuffs_base__pixel_swizzler__transparent_black_func
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @dst_pixfmt_bytes_per_pixel@
 
@@ -6587,7 +6587,7 @@ instance HasCField.HasCField Wuffs_base__pixel_swizzler__struct_private_impl "wu
   type CFieldType Wuffs_base__pixel_swizzler__struct_private_impl "wuffs_base__pixel_swizzler__struct_private_impl_dst_pixfmt_bytes_per_pixel" =
     HsBindgen.Runtime.LibC.Word32
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @src_pixfmt_bytes_per_pixel@
 
@@ -6620,7 +6620,7 @@ instance HasCField.HasCField Wuffs_base__pixel_swizzler__struct_private_impl "wu
   type CFieldType Wuffs_base__pixel_swizzler__struct_private_impl "wuffs_base__pixel_swizzler__struct_private_impl_src_pixfmt_bytes_per_pixel" =
     HsBindgen.Runtime.LibC.Word32
 
-  offset# = \_ -> \_ -> 20
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__pixel_swizzler__struct@
 
@@ -6641,9 +6641,9 @@ data Wuffs_base__pixel_swizzler = Wuffs_base__pixel_swizzler
 
 instance Marshal.StaticSize Wuffs_base__pixel_swizzler where
 
-  staticSizeOf = \_ -> (24 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__pixel_swizzler where
 
@@ -7277,9 +7277,9 @@ data Wuffs_base__hasher_u32__func_ptrs = Wuffs_base__hasher_u32__func_ptrs
 
 instance Marshal.StaticSize Wuffs_base__hasher_u32__func_ptrs where
 
-  staticSizeOf = \_ -> (40 :: Int)
+  staticSizeOf = \_ -> (20 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__hasher_u32__func_ptrs where
 
@@ -7380,7 +7380,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hasher_u32__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @set_quirk@
 
@@ -7414,7 +7414,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hasher_u32__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @update@
 
@@ -7448,7 +7448,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hasher_u32__func_ptrs_update" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @update_u32@
 
@@ -7482,7 +7482,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u32__func_ptrs "wuffs_base__hasher_u32__func_ptrs_update_u32" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word32)
 
-  offset# = \_ -> \_ -> 32
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__hasher_u32__struct@
 
@@ -7539,9 +7539,9 @@ data Wuffs_base__hasher_u64__func_ptrs = Wuffs_base__hasher_u64__func_ptrs
 
 instance Marshal.StaticSize Wuffs_base__hasher_u64__func_ptrs where
 
-  staticSizeOf = \_ -> (40 :: Int)
+  staticSizeOf = \_ -> (20 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__hasher_u64__func_ptrs where
 
@@ -7642,7 +7642,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hasher_u64__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @set_quirk@
 
@@ -7676,7 +7676,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hasher_u64__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @update@
 
@@ -7710,7 +7710,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hasher_u64__func_ptrs_update" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @update_u64@
 
@@ -7744,7 +7744,7 @@ instance HasCField.HasCField Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hash
   type CFieldType Wuffs_base__hasher_u64__func_ptrs "wuffs_base__hasher_u64__func_ptrs_update_u64" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 32
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__hasher_u64__struct@
 
@@ -7801,9 +7801,9 @@ data Wuffs_base__hasher_bitvec256__func_ptrs = Wuffs_base__hasher_bitvec256__fun
 
 instance Marshal.StaticSize Wuffs_base__hasher_bitvec256__func_ptrs where
 
-  staticSizeOf = \_ -> (40 :: Int)
+  staticSizeOf = \_ -> (20 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__hasher_bitvec256__func_ptrs where
 
@@ -7904,7 +7904,7 @@ instance HasCField.HasCField Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base
   type CFieldType Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base__hasher_bitvec256__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @set_quirk@
 
@@ -7938,7 +7938,7 @@ instance HasCField.HasCField Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base
   type CFieldType Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base__hasher_bitvec256__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @update@
 
@@ -7972,7 +7972,7 @@ instance HasCField.HasCField Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base
   type CFieldType Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base__hasher_bitvec256__func_ptrs_update" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @update_bitvec256@
 
@@ -8006,7 +8006,7 @@ instance HasCField.HasCField Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base
   type CFieldType Wuffs_base__hasher_bitvec256__func_ptrs "wuffs_base__hasher_bitvec256__func_ptrs_update_bitvec256" =
     BG.FunPtr (BG.Ptr BG.Void -> Wuffs_base__slice_u8 -> IO Wuffs_base__bitvec256)
 
-  offset# = \_ -> \_ -> 32
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__hasher_bitvec256__struct@
 
@@ -8119,9 +8119,9 @@ data Wuffs_base__image_decoder__func_ptrs = Wuffs_base__image_decoder__func_ptrs
 
 instance Marshal.StaticSize Wuffs_base__image_decoder__func_ptrs where
 
-  staticSizeOf = \_ -> (104 :: Int)
+  staticSizeOf = \_ -> (52 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__image_decoder__func_ptrs where
 
@@ -8262,7 +8262,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_decode_frame_config" =
     BG.FunPtr (BG.Ptr BG.Void -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @decode_image_config@
 
@@ -8304,7 +8304,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_decode_image_config" =
     BG.FunPtr (BG.Ptr BG.Void -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @frame_dirty_rect@
 
@@ -8346,7 +8346,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_frame_dirty_rect" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO Wuffs_base__rect_ie_u32)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @get_quirk@
 
@@ -8388,7 +8388,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 32
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @num_animation_loops@
 
@@ -8430,7 +8430,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_num_animation_loops" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO HsBindgen.Runtime.LibC.Word32)
 
-  offset# = \_ -> \_ -> 40
+  offset# = \_ -> \_ -> 20
 
 {-| __C declaration:__ @num_decoded_frame_configs@
 
@@ -8472,7 +8472,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_num_decoded_frame_configs" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 48
+  offset# = \_ -> \_ -> 24
 
 {-| __C declaration:__ @num_decoded_frames@
 
@@ -8514,7 +8514,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_num_decoded_frames" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 56
+  offset# = \_ -> \_ -> 28
 
 {-| __C declaration:__ @restart_frame@
 
@@ -8556,7 +8556,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_restart_frame" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 64
+  offset# = \_ -> \_ -> 32
 
 {-| __C declaration:__ @set_quirk@
 
@@ -8598,7 +8598,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 72
+  offset# = \_ -> \_ -> 36
 
 {-| __C declaration:__ @set_report_metadata@
 
@@ -8640,7 +8640,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_set_report_metadata" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 
-  offset# = \_ -> \_ -> 80
+  offset# = \_ -> \_ -> 40
 
 {-| __C declaration:__ @tell_me_more@
 
@@ -8682,7 +8682,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_tell_me_more" =
     BG.FunPtr (BG.Ptr BG.Void -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 88
+  offset# = \_ -> \_ -> 44
 
 {-| __C declaration:__ @workbuf_len@
 
@@ -8724,7 +8724,7 @@ instance HasCField.HasCField Wuffs_base__image_decoder__func_ptrs "wuffs_base__i
   type CFieldType Wuffs_base__image_decoder__func_ptrs "wuffs_base__image_decoder__func_ptrs_workbuf_len" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO Wuffs_base__range_ii_u64)
 
-  offset# = \_ -> \_ -> 96
+  offset# = \_ -> \_ -> 48
 
 {-| __C declaration:__ @struct wuffs_base__image_decoder__struct@
 
@@ -8781,9 +8781,9 @@ data Wuffs_base__io_transformer__func_ptrs = Wuffs_base__io_transformer__func_pt
 
 instance Marshal.StaticSize Wuffs_base__io_transformer__func_ptrs where
 
-  staticSizeOf = \_ -> (40 :: Int)
+  staticSizeOf = \_ -> (20 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__io_transformer__func_ptrs where
 
@@ -8884,7 +8884,7 @@ instance HasCField.HasCField Wuffs_base__io_transformer__func_ptrs "wuffs_base__
   type CFieldType Wuffs_base__io_transformer__func_ptrs "wuffs_base__io_transformer__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @set_quirk@
 
@@ -8918,7 +8918,7 @@ instance HasCField.HasCField Wuffs_base__io_transformer__func_ptrs "wuffs_base__
   type CFieldType Wuffs_base__io_transformer__func_ptrs "wuffs_base__io_transformer__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @transform_io@
 
@@ -8952,7 +8952,7 @@ instance HasCField.HasCField Wuffs_base__io_transformer__func_ptrs "wuffs_base__
   type CFieldType Wuffs_base__io_transformer__func_ptrs "wuffs_base__io_transformer__func_ptrs_transform_io" =
     BG.FunPtr (BG.Ptr BG.Void -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @workbuf_len@
 
@@ -8986,7 +8986,7 @@ instance HasCField.HasCField Wuffs_base__io_transformer__func_ptrs "wuffs_base__
   type CFieldType Wuffs_base__io_transformer__func_ptrs "wuffs_base__io_transformer__func_ptrs_workbuf_len" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO Wuffs_base__range_ii_u64)
 
-  offset# = \_ -> \_ -> 32
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__io_transformer__struct@
 
@@ -9036,9 +9036,9 @@ data Wuffs_base__token_decoder__func_ptrs = Wuffs_base__token_decoder__func_ptrs
 
 instance Marshal.StaticSize Wuffs_base__token_decoder__func_ptrs where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__token_decoder__func_ptrs where
 
@@ -9134,7 +9134,7 @@ instance HasCField.HasCField Wuffs_base__token_decoder__func_ptrs "wuffs_base__t
   type CFieldType Wuffs_base__token_decoder__func_ptrs "wuffs_base__token_decoder__func_ptrs_get_quirk" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @set_quirk@
 
@@ -9167,7 +9167,7 @@ instance HasCField.HasCField Wuffs_base__token_decoder__func_ptrs "wuffs_base__t
   type CFieldType Wuffs_base__token_decoder__func_ptrs "wuffs_base__token_decoder__func_ptrs_set_quirk" =
     BG.FunPtr (BG.Ptr BG.Void -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @workbuf_len@
 
@@ -9200,7 +9200,7 @@ instance HasCField.HasCField Wuffs_base__token_decoder__func_ptrs "wuffs_base__t
   type CFieldType Wuffs_base__token_decoder__func_ptrs "wuffs_base__token_decoder__func_ptrs_workbuf_len" =
     BG.FunPtr (PtrConst.PtrConst BG.Void -> IO Wuffs_base__range_ii_u64)
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__token_decoder__struct@
 
@@ -10234,9 +10234,9 @@ data Wuffs_base__transform__output = Wuffs_base__transform__output
 
 instance Marshal.StaticSize Wuffs_base__transform__output where
 
-  staticSizeOf = \_ -> (24 :: Int)
+  staticSizeOf = \_ -> (12 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__transform__output where
 
@@ -10327,7 +10327,7 @@ instance HasCField.HasCField Wuffs_base__transform__output "wuffs_base__transfor
   type CFieldType Wuffs_base__transform__output "wuffs_base__transform__output_num_dst" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @num_src@
 
@@ -10359,7 +10359,7 @@ instance HasCField.HasCField Wuffs_base__transform__output "wuffs_base__transfor
   type CFieldType Wuffs_base__transform__output "wuffs_base__transform__output_num_src" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @struct wuffs_base__slice_u8@
 
@@ -10387,9 +10387,9 @@ data Wuffs_base__slice_u8 = Wuffs_base__slice_u8
 
 instance Marshal.StaticSize Wuffs_base__slice_u8 where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__slice_u8 where
 
@@ -10473,7 +10473,7 @@ instance HasCField.HasCField Wuffs_base__slice_u8 "wuffs_base__slice_u8_len" whe
   type CFieldType Wuffs_base__slice_u8 "wuffs_base__slice_u8_len" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__slice_u16@
 
@@ -10501,9 +10501,9 @@ data Wuffs_base__slice_u16 = Wuffs_base__slice_u16
 
 instance Marshal.StaticSize Wuffs_base__slice_u16 where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__slice_u16 where
 
@@ -10587,7 +10587,7 @@ instance HasCField.HasCField Wuffs_base__slice_u16 "wuffs_base__slice_u16_len" w
   type CFieldType Wuffs_base__slice_u16 "wuffs_base__slice_u16_len" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__slice_u32@
 
@@ -10615,9 +10615,9 @@ data Wuffs_base__slice_u32 = Wuffs_base__slice_u32
 
 instance Marshal.StaticSize Wuffs_base__slice_u32 where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__slice_u32 where
 
@@ -10701,7 +10701,7 @@ instance HasCField.HasCField Wuffs_base__slice_u32 "wuffs_base__slice_u32_len" w
   type CFieldType Wuffs_base__slice_u32 "wuffs_base__slice_u32_len" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__slice_u64@
 
@@ -10729,9 +10729,9 @@ data Wuffs_base__slice_u64 = Wuffs_base__slice_u64
 
 instance Marshal.StaticSize Wuffs_base__slice_u64 where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__slice_u64 where
 
@@ -10815,7 +10815,7 @@ instance HasCField.HasCField Wuffs_base__slice_u64 "wuffs_base__slice_u64_len" w
   type CFieldType Wuffs_base__slice_u64 "wuffs_base__slice_u64_len" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__table_u8@
 
@@ -10857,9 +10857,9 @@ data Wuffs_base__table_u8 = Wuffs_base__table_u8
 
 instance Marshal.StaticSize Wuffs_base__table_u8 where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__table_u8 where
 
@@ -10955,7 +10955,7 @@ instance HasCField.HasCField Wuffs_base__table_u8 "wuffs_base__table_u8_width" w
   type CFieldType Wuffs_base__table_u8 "wuffs_base__table_u8_width" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @height@
 
@@ -10988,7 +10988,7 @@ instance HasCField.HasCField Wuffs_base__table_u8 "wuffs_base__table_u8_height" 
   type CFieldType Wuffs_base__table_u8 "wuffs_base__table_u8_height" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @stride@
 
@@ -11021,7 +11021,7 @@ instance HasCField.HasCField Wuffs_base__table_u8 "wuffs_base__table_u8_stride" 
   type CFieldType Wuffs_base__table_u8 "wuffs_base__table_u8_stride" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__table_u16@
 
@@ -11063,9 +11063,9 @@ data Wuffs_base__table_u16 = Wuffs_base__table_u16
 
 instance Marshal.StaticSize Wuffs_base__table_u16 where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__table_u16 where
 
@@ -11161,7 +11161,7 @@ instance HasCField.HasCField Wuffs_base__table_u16 "wuffs_base__table_u16_width"
   type CFieldType Wuffs_base__table_u16 "wuffs_base__table_u16_width" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @height@
 
@@ -11194,7 +11194,7 @@ instance HasCField.HasCField Wuffs_base__table_u16 "wuffs_base__table_u16_height
   type CFieldType Wuffs_base__table_u16 "wuffs_base__table_u16_height" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @stride@
 
@@ -11227,7 +11227,7 @@ instance HasCField.HasCField Wuffs_base__table_u16 "wuffs_base__table_u16_stride
   type CFieldType Wuffs_base__table_u16 "wuffs_base__table_u16_stride" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__table_u32@
 
@@ -11269,9 +11269,9 @@ data Wuffs_base__table_u32 = Wuffs_base__table_u32
 
 instance Marshal.StaticSize Wuffs_base__table_u32 where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__table_u32 where
 
@@ -11367,7 +11367,7 @@ instance HasCField.HasCField Wuffs_base__table_u32 "wuffs_base__table_u32_width"
   type CFieldType Wuffs_base__table_u32 "wuffs_base__table_u32_width" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @height@
 
@@ -11400,7 +11400,7 @@ instance HasCField.HasCField Wuffs_base__table_u32 "wuffs_base__table_u32_height
   type CFieldType Wuffs_base__table_u32 "wuffs_base__table_u32_height" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @stride@
 
@@ -11433,7 +11433,7 @@ instance HasCField.HasCField Wuffs_base__table_u32 "wuffs_base__table_u32_stride
   type CFieldType Wuffs_base__table_u32 "wuffs_base__table_u32_stride" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__table_u64@
 
@@ -11475,9 +11475,9 @@ data Wuffs_base__table_u64 = Wuffs_base__table_u64
 
 instance Marshal.StaticSize Wuffs_base__table_u64 where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (16 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__table_u64 where
 
@@ -11573,7 +11573,7 @@ instance HasCField.HasCField Wuffs_base__table_u64 "wuffs_base__table_u64_width"
   type CFieldType Wuffs_base__table_u64 "wuffs_base__table_u64_width" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @height@
 
@@ -11606,7 +11606,7 @@ instance HasCField.HasCField Wuffs_base__table_u64 "wuffs_base__table_u64_height
   type CFieldType Wuffs_base__table_u64 "wuffs_base__table_u64_height" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @stride@
 
@@ -11639,7 +11639,7 @@ instance HasCField.HasCField Wuffs_base__table_u64 "wuffs_base__table_u64_stride
   type CFieldType Wuffs_base__table_u64 "wuffs_base__table_u64_stride" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 12
 
 {-| __C declaration:__ @struct wuffs_base__io_buffer_meta__struct@
 
@@ -11681,7 +11681,7 @@ data Wuffs_base__io_buffer_meta = Wuffs_base__io_buffer_meta
 
 instance Marshal.StaticSize Wuffs_base__io_buffer_meta where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (24 :: Int)
 
   staticAlignment = \_ -> (8 :: Int)
 
@@ -11779,7 +11779,7 @@ instance HasCField.HasCField Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_m
   type CFieldType Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_meta_ri" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @pos@
 
@@ -11812,7 +11812,7 @@ instance HasCField.HasCField Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_m
   type CFieldType Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_meta_pos" =
     HsBindgen.Runtime.LibC.Word64
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @closed@
 
@@ -11845,7 +11845,7 @@ instance HasCField.HasCField Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_m
   type CFieldType Wuffs_base__io_buffer_meta "wuffs_base__io_buffer_meta_closed" =
     BG.CBool
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__io_buffer__struct@
 
@@ -11873,7 +11873,7 @@ data Wuffs_base__io_buffer = Wuffs_base__io_buffer
 
 instance Marshal.StaticSize Wuffs_base__io_buffer where
 
-  staticSizeOf = \_ -> (48 :: Int)
+  staticSizeOf = \_ -> (32 :: Int)
 
   staticAlignment = \_ -> (8 :: Int)
 
@@ -11959,7 +11959,7 @@ instance HasCField.HasCField Wuffs_base__io_buffer "wuffs_base__io_buffer_meta" 
   type CFieldType Wuffs_base__io_buffer "wuffs_base__io_buffer_meta" =
     Wuffs_base__io_buffer_meta
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @struct wuffs_base__slice_token@
 
@@ -11987,9 +11987,9 @@ data Wuffs_base__slice_token = Wuffs_base__slice_token
 
 instance Marshal.StaticSize Wuffs_base__slice_token where
 
-  staticSizeOf = \_ -> (16 :: Int)
+  staticSizeOf = \_ -> (8 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__slice_token where
 
@@ -12075,7 +12075,7 @@ instance HasCField.HasCField Wuffs_base__slice_token "wuffs_base__slice_token_le
   type CFieldType Wuffs_base__slice_token "wuffs_base__slice_token_len" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @struct wuffs_base__token_buffer_meta__struct@
 
@@ -12117,7 +12117,7 @@ data Wuffs_base__token_buffer_meta = Wuffs_base__token_buffer_meta
 
 instance Marshal.StaticSize Wuffs_base__token_buffer_meta where
 
-  staticSizeOf = \_ -> (32 :: Int)
+  staticSizeOf = \_ -> (24 :: Int)
 
   staticAlignment = \_ -> (8 :: Int)
 
@@ -12215,7 +12215,7 @@ instance HasCField.HasCField Wuffs_base__token_buffer_meta "wuffs_base__token_bu
   type CFieldType Wuffs_base__token_buffer_meta "wuffs_base__token_buffer_meta_ri" =
     HsBindgen.Runtime.LibC.CSize
 
-  offset# = \_ -> \_ -> 8
+  offset# = \_ -> \_ -> 4
 
 {-| __C declaration:__ @pos@
 
@@ -12248,7 +12248,7 @@ instance HasCField.HasCField Wuffs_base__token_buffer_meta "wuffs_base__token_bu
   type CFieldType Wuffs_base__token_buffer_meta "wuffs_base__token_buffer_meta_pos" =
     HsBindgen.Runtime.LibC.Word64
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @closed@
 
@@ -12281,7 +12281,7 @@ instance HasCField.HasCField Wuffs_base__token_buffer_meta "wuffs_base__token_bu
   type CFieldType Wuffs_base__token_buffer_meta "wuffs_base__token_buffer_meta_closed" =
     BG.CBool
 
-  offset# = \_ -> \_ -> 24
+  offset# = \_ -> \_ -> 16
 
 {-| __C declaration:__ @struct wuffs_base__token_buffer__struct@
 
@@ -12309,7 +12309,7 @@ data Wuffs_base__token_buffer = Wuffs_base__token_buffer
 
 instance Marshal.StaticSize Wuffs_base__token_buffer where
 
-  staticSizeOf = \_ -> (48 :: Int)
+  staticSizeOf = \_ -> (32 :: Int)
 
   staticAlignment = \_ -> (8 :: Int)
 
@@ -12397,7 +12397,7 @@ instance HasCField.HasCField Wuffs_base__token_buffer "wuffs_base__token_buffer_
   type CFieldType Wuffs_base__token_buffer "wuffs_base__token_buffer_meta" =
     Wuffs_base__token_buffer_meta
 
-  offset# = \_ -> \_ -> 16
+  offset# = \_ -> \_ -> 8
 
 {-| __C declaration:__ @struct \@wuffs_base__pixel_buffer__struct_private_impl@
 
@@ -12418,9 +12418,9 @@ data Wuffs_base__pixel_buffer__struct_private_impl = Wuffs_base__pixel_buffer__s
 
 instance Marshal.StaticSize Wuffs_base__pixel_buffer__struct_private_impl where
 
-  staticSizeOf = \_ -> (128 :: Int)
+  staticSizeOf = \_ -> (64 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__pixel_buffer__struct_private_impl where
 
@@ -12498,9 +12498,9 @@ data Wuffs_base__pixel_buffer = Wuffs_base__pixel_buffer
 
 instance Marshal.StaticSize Wuffs_base__pixel_buffer where
 
-  staticSizeOf = \_ -> (144 :: Int)
+  staticSizeOf = \_ -> (80 :: Int)
 
-  staticAlignment = \_ -> (8 :: Int)
+  staticAlignment = \_ -> (4 :: Int)
 
 instance Marshal.ReadRaw Wuffs_base__pixel_buffer where
 

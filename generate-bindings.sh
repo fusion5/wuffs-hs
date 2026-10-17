@@ -23,6 +23,7 @@ module_flags=(
 
 if [[ "$1" == "wasm" ]]; then
     module_flags+=(
+        --clang-option="--target=wasm32-wasi"
         --clang-option="-isystem"
         --clang-option="$WASI_SDK_PATH/share/wasi-sysroot/include/wasm32-wasi"
         -I "$WUFFS_WASI_INCLUDE"

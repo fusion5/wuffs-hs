@@ -7721,7 +7721,7 @@ hs_bindgen_c88bef8987f81ce9 =
 
 {-| __C declaration:__ @wuffs_base__count_leading_zeroes_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1328:1@
+    __defined at:__ @wuffs\/wuffs-v0.4.c 1336:1@
 
     __exported by:__ @wuffs\/wuffs-v0.4.c@
 -}
