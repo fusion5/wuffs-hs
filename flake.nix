@@ -146,49 +146,45 @@
           check-wasm = self.packages.${system}.wasm;
         };
 
-        devShells.default = pkgs.mkShell {
+        devShells.wasm = wasmGHC.shellFor {
           env = {
             WASI_SDK_PATH = wasiSDK;
             WUFFS_WASI_INCLUDE = "${wuffsWASM}/include";
             WUFFS_WASI_LIB = "${wuffsWASM}/lib";
           };
-          inputsFrom = [
-            (ghc.shellFor {
-              packages = ps: [wuffsHS];
-              nativeBuildInputs = with ghc; [
-                haskell-language-server
-                implicit-hie
-                cabal-install
-                cabal-fmt
-                pkgs.hs-bindgen-cli
-                # Connect `hs-bindgen` to the Clang toolchain and `wuffs`.
-                # Fixes [Error] [Libclang] [clang] unable to resolve #include <....h>:
-                pkgs.hsBindgenHook
-                pkgs.pkg-config # IMPORTANT: must be only in the native shell
-                # pkgs.wuffs
-              ];
-              buildInputs = [wuffs];
-            })
-            (wasmGHC.shellFor {
-              packages = ps: [wasmWuffsHS];
-              nativeBuildInputs = [
-                pkgs.cabal-install
-                pkgs.hs-bindgen-cli
-                pkgs.hsBindgenHook
-                pkgs.wasmtime
-                wasmPkgs.cabal-install
-                wasmTest
-                wasmCabal
-                # IMPORTANT: must not be present otherwise cabal picks it up and cabal test doesn't work anymore
-                # wasmPkgs.clang
-                # pkgs.pkg-config
-                # wasmPkgs.cmake
-              ];
-              buildInputs = [
-                wuffsWASM
-              ];
-            })
+          packages = ps: [wasmWuffsHS];
+          nativeBuildInputs = [
+            pkgs.cabal-install
+            pkgs.hs-bindgen-cli
+            pkgs.hsBindgenHook
+            pkgs.wasmtime
+            wasmPkgs.cabal-install
+            wasmTest
+            wasmCabal
+            wasmPkgs.pkg-config
+            # pkgs.clang # for generate-bindings.hs
+            wasiSDK
+            # wasmPkgs.cmake
           ];
+          buildInputs = [
+            wuffsWASM
+          ];
+        };
+        devShells.default = ghc.shellFor {
+          packages = ps: [wuffsHS];
+          nativeBuildInputs = with ghc; [
+            haskell-language-server
+            implicit-hie
+            cabal-install
+            cabal-fmt
+            pkgs.hs-bindgen-cli
+            # Connect `hs-bindgen` to the Clang toolchain and `wuffs`.
+            # Fixes [Error] [Libclang] [clang] unable to resolve #include <....h>:
+            pkgs.hsBindgenHook
+            pkgs.pkg-config # IMPORTANT: must be only in the native shell
+            # pkgs.wuffs
+          ];
+          buildInputs = [wuffs];
           # make hls happy about missing .so files
           shellHook = ''
             export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [wuffs]}:$LD_LIBRARY_PATH
