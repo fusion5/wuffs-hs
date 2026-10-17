@@ -23,7 +23,14 @@ in
   pkgs.stdenv.mkDerivation {
     pname = "wuffs-wasi";
     meta = {
-      platforms = ["wasm32-unknown-wasi" "wasm32-wasi" "x86_64-linux"];
+      platforms = [
+        "wasm32-unknown-wasi"
+        "wasm32-wasi"
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
     };
     version = wuffsVersion;
     src = pkgs.fetchFromGitHub {

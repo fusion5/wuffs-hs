@@ -4,8 +4,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+
     nix-wasm.url = "github:ners/nix-wasm";
+    nix-wasm.inputs.nixpkgs.follows = "nixpkgs";
+
     hs-bindgen.url = "github:well-typed/hs-bindgen";
+    hs-bindgen.inputs.nixpkgs.follows = "nixpkgs";
+    hs-bindgen.inputs.flake-parts.follows = "flake-parts";
   };
 
   outputs = inputs @ {
@@ -16,7 +22,14 @@
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = nixpkgs.lib.systems.flakeExposed;
+      systems = [
+        "wasm32-unknown-wasi"
+        "wasm32-wasi"
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
       perSystem = {system, ...}: let
         hl = pkgs.haskell.lib.compose;
         pkgs = import inputs.nixpkgs {
