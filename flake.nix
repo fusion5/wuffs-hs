@@ -106,7 +106,7 @@
             runHook preBuild
 
             # Find the single-file C release file
-            WUFFS_C=$(ls release/c/wuffs-v*.c | head -n 1)
+            WUFFS_C="release/c/wuffs-v0.4.c"
 
             # Compile the WASI object file with implementation defined
             $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
@@ -121,10 +121,10 @@
             runHook preInstall
 
             # Create the wuffs/ subdirectory under include
-            mkdir -p $out/lib $out/include/wuffs
+            mkdir -p "$out/lib" "$out/include/wuffs"
 
-            cp libwuffs.a $out/lib/
-            cp release/c/wuffs-v*.c $out/include/wuffs/
+            cp libwuffs.a "$out/lib/"
+            cp release/c/wuffs-v0.4.c "$out/include/wuffs/"
 
             runHook postInstall
           '';
@@ -201,8 +201,6 @@
               ];
               buildInputs = [
                 wuffsWASMTraced
-                # wasmPkgs.wuffs
-                # TODO: add wuffs-wasi?
               ];
             })
           ];
