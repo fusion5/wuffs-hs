@@ -46,7 +46,7 @@ select_flags=(
 debug_flags=(
     # -v2
     # # Run `hs-bindgen` with log level "Info".
-    -v3
+    # -v3
     # # Run `hs-bindgen` with log level "Debug".
     # -v4
 )

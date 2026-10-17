@@ -89,61 +89,117 @@
           ${pkgs.wasmtime}/bin/wasmtime --dir=. --dir=/tmp::/tmp "$WASM_FILE"
         '';
 
+        wuffsVersion = "0.4.0-alpha.10";
+        wuffsLibFile = "wuffs-unsupported-snapshot.c";
+
         wuffsWASMTraced = builtins.trace "wuffsWASM store path: ${wuffsWASM.outPath}" wuffsWASM;
-        wuffsWASM = let
-          version = "0.4.0-alpha.10";
-          libFile = "wuffs-unsupported-snapshot.c";
-        in
-          wasmPkgs.stdenv.mkDerivation {
-            pname = "wuffs-wasi";
-            meta = {
-              platforms = ["wasm32-unknown-wasi" "wasm32-wasi"];
-            };
-            inherit version;
-            src = pkgs.fetchFromGitHub {
-              owner = "google";
-              repo = "wuffs";
-              tag = "v" + version;
-              hash = "sha256-b7O2mGrn2AChVVnmfiTyG1OGUJnETFSU3wK5AlCNja0=";
-            };
-            nativeBuildInputs = [
-              wasiSDK
-              # wasmPkgs.cmake
-              wasmPkgs.pkg-config
-            ];
-            buildPhase = ''
-              runHook preBuild
-
-              ls -lah release/c/
-              # Find the single-file C release file
-              WUFFS_C="release/c/${libFile}"
-
-              # Compile the WASI object file with implementation defined
-              $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
-
-              # Archive into static library
-              $AR rcs libwuffs.a wuffs.o
-
-              runHook postBuild
-            '';
-
-            installPhase = ''
-              runHook preInstall
-
-              # Create the wuffs/ subdirectory under include
-              mkdir -p "$out/lib" "$out/include/wuffs"
-
-              cp libwuffs.a "$out/lib/"
-              cp release/c/${libFile} "$out/include/wuffs/"
-
-              runHook postInstall
-            '';
-            dontFixup = true;
+        wuffsWASM = wasmPkgs.stdenv.mkDerivation {
+          pname = "wuffs-wasi";
+          meta = {
+            platforms = ["wasm32-unknown-wasi" "wasm32-wasi"];
           };
+          version = wuffsVersion;
+          src = pkgs.fetchFromGitHub {
+            owner = "google";
+            repo = "wuffs";
+            tag = "v" + wuffsVersion;
+            hash = "sha256-b7O2mGrn2AChVVnmfiTyG1OGUJnETFSU3wK5AlCNja0=";
+          };
+          nativeBuildInputs = [
+            wasiSDK
+            # wasmPkgs.cmake
+            wasmPkgs.pkg-config
+          ];
+          buildPhase = ''
+            runHook preBuild
+
+            # Find the single-file C release file
+            WUFFS_C="release/c/${wuffsLibFile}"
+
+            # Compile the WASI object file with implementation defined
+            $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
+
+            # Archive into static library
+            $AR rcs libwuffs.a wuffs.o
+
+            runHook postBuild
+          '';
+
+          installPhase = ''
+            runHook preInstall
+
+            # Create the wuffs/ subdirectory under include
+            mkdir -p "$out/lib" "$out/include/wuffs"
+
+            cp libwuffs.a "$out/lib/"
+            cp release/c/${wuffsLibFile} "$out/include/wuffs/"
+
+            runHook postInstall
+          '';
+          dontFixup = true;
+        };
 
         ### NON WASM
+        wuffsPcTemplate = pkgs.writeText "wuffs.pc.in" ''
+          prefix=@out@
+          exec_prefix=''${prefix}
+          libdir=''${prefix}/lib
+          includedir=''${prefix}/include
+
+          Name: wuffs
+          Description: Wrangling Untrusted File Formats Safely
+          Version: @version@
+          Libs: -L''${libdir} -lwuffs
+          Cflags: -I''${includedir}
+        '';
+        wuffs = pkgs.stdenv.mkDerivation {
+          pname = "wuffs";
+          meta = {
+            platforms = [system];
+          };
+          version = wuffsVersion;
+          src = pkgs.fetchFromGitHub {
+            owner = "google";
+            repo = "wuffs";
+            tag = "v" + wuffsVersion;
+            hash = "sha256-b7O2mGrn2AChVVnmfiTyG1OGUJnETFSU3wK5AlCNja0=";
+          };
+          nativeBuildInputs = [
+            # pkgs.cmake
+            pkgs.pkg-config
+          ];
+          buildPhase = ''
+            runHook preBuild
+
+            # Find the single-file C release file
+            WUFFS_C="release/c/${wuffsLibFile}"
+
+            # Compile the WASI object file with implementation defined
+            $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
+
+            # Archive into static library
+            $AR rcs libwuffs.a wuffs.o
+
+            runHook postBuild
+          '';
+
+          installPhase = ''
+            runHook preInstall
+
+            # Create the wuffs/ subdirectory under include
+            mkdir -p "$out/lib/pkgconfig" "$out/include/wuffs"
+
+            cp libwuffs.a "$out/lib/"
+            cp release/c/${wuffsLibFile} "$out/include/wuffs/"
+
+            substituteAll ${wuffsPcTemplate} "$out/lib/pkgconfig/wuffs.pc"
+
+            runHook postInstall
+          '';
+          dontFixup = true;
+        };
         wuffsHS = ghc.callCabal2nix "wuffs-hs" (pkgs.lib.cleanSource ./.) {
-          wuffs = pkgs.wuffs.dev;
+          wuffs = wuffs;
         };
         ghc = pkgs.haskell.packages.ghc912.extend (
           hfinal: hprev: {
@@ -192,7 +248,7 @@
                 pkgs.pkg-config # IMPORTANT: must be only in the native shell
                 # pkgs.wuffs
               ];
-              buildInputs = [pkgs.wuffs];
+              buildInputs = [wuffs];
             })
             (wasmGHC.shellFor {
               packages = ps: [wasmWuffsHS];
@@ -214,9 +270,9 @@
               ];
             })
           ];
-          # make hls happy about missing .so files since
+          # make hls happy about missing .so files
           shellHook = ''
-            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [pkgs.wuffs]}:$LD_LIBRARY_PATH
+            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [wuffs]}:$LD_LIBRARY_PATH
           '';
         };
       };

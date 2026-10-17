@@ -119,14 +119,15 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__table_u8__subtable_ij
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__table__flattened_length
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__magic_number_guess_fourcc
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ii_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ii_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__is_empty
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__equals
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__intersect
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__unite
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__contains
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__contains_range
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ie_i32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ie_i32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__is_empty
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__equals
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__intersect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__unite
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__contains
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__contains_range
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_i32__length
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ie_u32
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ie_u32
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u32__is_empty
@@ -136,14 +137,6 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u32__contains
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u32__contains_range
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u32__length
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ii_u64
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ii_u64
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__is_empty
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__equals
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__intersect
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__unite
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__contains
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__contains_range
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ie_u64
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ie_u64
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u64__is_empty
@@ -153,14 +146,32 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u64__contains
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u64__contains_range
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ie_u64__length
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_rect_ii_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_rect_ii_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__is_empty
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__equals
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__intersect
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__unite
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__contains
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__contains_rect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ii_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ii_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__is_empty
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__equals
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__intersect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__unite
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__contains
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u32__contains_range
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_range_ii_u64
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_range_ii_u64
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__is_empty
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__equals
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__intersect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__unite
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__contains
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__range_ii_u64__contains_range
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_rect_ie_i32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_rect_ie_i32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__is_empty
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__equals
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__intersect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__unite
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__contains
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__contains_rect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__width
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_i32__height
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_rect_ie_u32
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_rect_ie_u32
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_u32__is_empty
@@ -171,6 +182,14 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_u32__contains_rect
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_u32__width
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ie_u32__height
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_rect_ii_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_rect_ii_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__is_empty
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__equals
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__intersect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__unite
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__contains
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__rect_ii_u32__contains_rect
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__empty_more_information
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__more_information__set
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__more_information__io_redirect__fourcc
@@ -245,14 +264,20 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u64_argb_premul__as__color_u8_gray
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u32__as__color_u64
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_u64__as__color_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc__as__color_u32
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc_bt601fr__as__color_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc_bt601fr__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc_bt601sr__as__color_u32
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_ycc_bt601sr__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_swap_u32_argb_abgr
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__color_swap_u64_argb_abgr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__make_pixel_format
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__is_valid
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__bits_per_pixel
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__default_background_color
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__is_direct
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__is_indexed
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_format__is_interleaved
@@ -303,6 +328,7 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_buffer__color_u32_at
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_buffer__set_color_u32_at
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_buffer__set_color_u32_fill_rect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_buffer__is_opaque
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_palette__closest_element
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_swizzler__prepare
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice
@@ -492,6 +518,24 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_gzip__decoder__dst_history_retain_length
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_gzip__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_gzip__decoder__transform_io
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__initialize
+    , Codec.Wuffs.Bindings.Generated.FunPtr.sizeof__wuffs_handsum__decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__alloc
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__get_quirk
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__set_quirk
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__decode_image_config
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__decode_frame_config
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__decode_frame
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__frame_dirty_rect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__num_animation_loops
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__num_decoded_frame_configs
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__num_decoded_frames
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__restart_frame
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__set_report_metadata
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__tell_me_more
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_handsum__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_jpeg__decoder__initialize
     , Codec.Wuffs.Bindings.Generated.FunPtr.sizeof__wuffs_jpeg__decoder
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_jpeg__decoder__alloc
@@ -680,9 +724,24 @@ module Codec.Wuffs.Bindings.Generated.FunPtr
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_thumbhash__decoder__set_report_metadata
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_thumbhash__decoder__tell_me_more
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_thumbhash__decoder__workbuf_len
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__placeholder__initialize
-    , Codec.Wuffs.Bindings.Generated.FunPtr.sizeof__wuffs_vp8__placeholder
-    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__placeholder__alloc
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__initialize
+    , Codec.Wuffs.Bindings.Generated.FunPtr.sizeof__wuffs_vp8__decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__alloc
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__get_quirk
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__set_quirk
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__decode_image_config
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__decode_frame_config
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__decode_frame
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__frame_dirty_rect
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__num_animation_loops
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__num_decoded_frame_configs
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__num_decoded_frames
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__restart_frame
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__set_report_metadata
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__tell_me_more
+    , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_vp8__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_wbmp__decoder__initialize
     , Codec.Wuffs.Bindings.Generated.FunPtr.sizeof__wuffs_wbmp__decoder
     , Codec.Wuffs.Bindings.Generated.FunPtr.wuffs_wbmp__decoder__alloc
@@ -760,7 +819,7 @@ import Codec.Wuffs.Bindings.Generated
 import Prelude (IO, fmap)
 
 $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unlines
-  [ "#include <wuffs/wuffs-v0.4.c>"
+  [ "#include <wuffs/wuffs-unsupported-snapshot.c>"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__cpu_arch__have_arm_crc32 */"
   , "__attribute__ ((const))"
   , "_Bool (*hs_bindgen_ad18f30b99c672c9 (void)) (void)"
@@ -1743,73 +1802,81 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_base__magic_number_guess_fourcc;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32 */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_i32 */"
   , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u32 (*hs_bindgen_6a39e12f315465c8 (void)) (void)"
+  , "wuffs_base__range_ie_i32 (*hs_bindgen_87c0addee949d11b (void)) (void)"
   , "{"
-  , "  return &wuffs_base__empty_range_ii_u32;"
+  , "  return &wuffs_base__empty_range_ie_i32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32 */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ie_i32 */"
   , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u32 (*hs_bindgen_624388e1ffa8d5a7 (void)) ("
-  , "  uint32_t arg1,"
-  , "  uint32_t arg2"
+  , "wuffs_base__range_ie_i32 (*hs_bindgen_e207474ba0b6dcf4 (void)) ("
+  , "  int32_t arg1,"
+  , "  int32_t arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__make_range_ii_u32;"
+  , "  return &wuffs_base__make_range_ie_i32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__is_empty */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_29e56142d1e16b21 (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1"
+  , "_Bool (*hs_bindgen_5ea171f62abb4e78 (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__is_empty;"
+  , "  return &wuffs_base__range_ie_i32__is_empty;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__equals */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_0274888a0e3e3e8f (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 arg2"
+  , "_Bool (*hs_bindgen_2ab1e39879a1d62f (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__equals;"
+  , "  return &wuffs_base__range_ie_i32__equals;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__intersect */"
   , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u32 (*hs_bindgen_7a468bf64a707365 (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 arg2"
+  , "wuffs_base__range_ie_i32 (*hs_bindgen_c59864cc9fb6fa3c (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__intersect;"
+  , "  return &wuffs_base__range_ie_i32__intersect;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__unite */"
   , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u32 (*hs_bindgen_e1b839f18c791c95 (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 arg2"
+  , "wuffs_base__range_ie_i32 (*hs_bindgen_025af0cfd163f946 (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__unite;"
+  , "  return &wuffs_base__range_ie_i32__unite;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_31ac590f1e0f762d (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  uint32_t arg2"
+  , "_Bool (*hs_bindgen_bcc891681754fb95 (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  int32_t arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__contains;"
+  , "  return &wuffs_base__range_ie_i32__contains;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains_range */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_a933ae0a78cdf8a1 (void)) ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 arg2"
+  , "_Bool (*hs_bindgen_fcd0813f4fea00e3 (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__range_ii_u32__contains_range;"
+  , "  return &wuffs_base__range_ie_i32__contains_range;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__length */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_514d18053b92f9a9 (void)) ("
+  , "  wuffs_base__range_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ie_i32__length;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_u32 */"
   , "__attribute__ ((const))"
@@ -1887,74 +1954,6 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_base__range_ie_u32__length;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64 */"
-  , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u64 (*hs_bindgen_d0bbc07ad9879123 (void)) (void)"
-  , "{"
-  , "  return &wuffs_base__empty_range_ii_u64;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64 */"
-  , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u64 (*hs_bindgen_4ff464f400705659 (void)) ("
-  , "  uint64_t arg1,"
-  , "  uint64_t arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__make_range_ii_u64;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty */"
-  , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_d0872a5a8d18c181 (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__is_empty;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals */"
-  , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_654e3584fe7e0483 (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__equals;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect */"
-  , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u64 (*hs_bindgen_840252558d0fc219 (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__intersect;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite */"
-  , "__attribute__ ((const))"
-  , "wuffs_base__range_ii_u64 (*hs_bindgen_9bfcb30f81f85012 (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__unite;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains */"
-  , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_444eba7f1ca2bd7e (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  uint64_t arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__contains;"
-  , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range */"
-  , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_3e7006c59e92a354 (void)) ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 arg2"
-  , ")"
-  , "{"
-  , "  return &wuffs_base__range_ii_u64__contains_range;"
-  , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_u64 */"
   , "__attribute__ ((const))"
   , "wuffs_base__range_ie_u64 (*hs_bindgen_28b83d9f3d8825de (void)) (void)"
@@ -2031,76 +2030,228 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_base__range_ie_u64__length;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32 */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32 */"
   , "__attribute__ ((const))"
-  , "wuffs_base__rect_ii_u32 (*hs_bindgen_a9bd324df48b515d (void)) (void)"
+  , "wuffs_base__range_ii_u32 (*hs_bindgen_6a39e12f315465c8 (void)) (void)"
   , "{"
-  , "  return &wuffs_base__empty_rect_ii_u32;"
+  , "  return &wuffs_base__empty_range_ii_u32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32 */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32 */"
   , "__attribute__ ((const))"
-  , "wuffs_base__rect_ii_u32 (*hs_bindgen_f259cc9864c594aa (void)) ("
+  , "wuffs_base__range_ii_u32 (*hs_bindgen_624388e1ffa8d5a7 (void)) ("
   , "  uint32_t arg1,"
-  , "  uint32_t arg2,"
-  , "  uint32_t arg3,"
-  , "  uint32_t arg4"
+  , "  uint32_t arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__make_rect_ii_u32;"
+  , "  return &wuffs_base__make_range_ii_u32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_7f1300d28dd48892 (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1"
+  , "_Bool (*hs_bindgen_29e56142d1e16b21 (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__is_empty;"
+  , "  return &wuffs_base__range_ii_u32__is_empty;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_3d069d5003a4b01a (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 arg2"
+  , "_Bool (*hs_bindgen_0274888a0e3e3e8f (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__equals;"
+  , "  return &wuffs_base__range_ii_u32__equals;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect */"
   , "__attribute__ ((const))"
-  , "wuffs_base__rect_ii_u32 (*hs_bindgen_821005a0387ab15a (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 arg2"
+  , "wuffs_base__range_ii_u32 (*hs_bindgen_7a468bf64a707365 (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__intersect;"
+  , "  return &wuffs_base__range_ii_u32__intersect;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite */"
   , "__attribute__ ((const))"
-  , "wuffs_base__rect_ii_u32 (*hs_bindgen_a15954bbd662212f (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 arg2"
+  , "wuffs_base__range_ii_u32 (*hs_bindgen_e1b839f18c791c95 (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__unite;"
+  , "  return &wuffs_base__range_ii_u32__unite;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_7c48b214b519e8c4 (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  uint32_t arg2,"
-  , "  uint32_t arg3"
+  , "_Bool (*hs_bindgen_31ac590f1e0f762d (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  uint32_t arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__contains;"
+  , "  return &wuffs_base__range_ii_u32__contains;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range */"
   , "__attribute__ ((const))"
-  , "_Bool (*hs_bindgen_d8c54fc52973d0f9 (void)) ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 arg2"
+  , "_Bool (*hs_bindgen_a933ae0a78cdf8a1 (void)) ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 arg2"
   , ")"
   , "{"
-  , "  return &wuffs_base__rect_ii_u32__contains_rect;"
+  , "  return &wuffs_base__range_ii_u32__contains_range;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_d0bbc07ad9879123 (void)) (void)"
+  , "{"
+  , "  return &wuffs_base__empty_range_ii_u64;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_4ff464f400705659 (void)) ("
+  , "  uint64_t arg1,"
+  , "  uint64_t arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__make_range_ii_u64;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_d0872a5a8d18c181 (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__is_empty;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_654e3584fe7e0483 (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__equals;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_840252558d0fc219 (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__intersect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_9bfcb30f81f85012 (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__unite;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_444eba7f1ca2bd7e (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  uint64_t arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__contains;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_3e7006c59e92a354 (void)) ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__range_ii_u64__contains_range;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ie_i32 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_i32 (*hs_bindgen_0a812b23dda42af1 (void)) (void)"
+  , "{"
+  , "  return &wuffs_base__empty_rect_ie_i32;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ie_i32 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_i32 (*hs_bindgen_6f181bb1cfece745 (void)) ("
+  , "  int32_t arg1,"
+  , "  int32_t arg2,"
+  , "  int32_t arg3,"
+  , "  int32_t arg4"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__make_rect_ie_i32;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__is_empty */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_5cc6526b67dc2eef (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__is_empty;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__equals */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_6a2abcd5ea4e6533 (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__equals;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__intersect */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_i32 (*hs_bindgen_f65b7d2b02e5f4bf (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__intersect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__unite */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_i32 (*hs_bindgen_ae215c24a443d264 (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__unite;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_8bddfe23dd7df09d (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  int32_t arg2,"
+  , "  int32_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__contains;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains_rect */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_cc584f4efe3bd364 (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__contains_rect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__width */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_e28f0df89e35a7f6 (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__width;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__height */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_3381c96500239b18 (void)) ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ie_i32__height;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ie_u32 */"
   , "__attribute__ ((const))"
@@ -2188,6 +2339,77 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  return &wuffs_base__rect_ie_u32__height;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ii_u32 (*hs_bindgen_a9bd324df48b515d (void)) (void)"
+  , "{"
+  , "  return &wuffs_base__empty_rect_ii_u32;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ii_u32 (*hs_bindgen_f259cc9864c594aa (void)) ("
+  , "  uint32_t arg1,"
+  , "  uint32_t arg2,"
+  , "  uint32_t arg3,"
+  , "  uint32_t arg4"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__make_rect_ii_u32;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_7f1300d28dd48892 (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__is_empty;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_3d069d5003a4b01a (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__equals;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ii_u32 (*hs_bindgen_821005a0387ab15a (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__intersect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ii_u32 (*hs_bindgen_a15954bbd662212f (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__unite;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_7c48b214b519e8c4 (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint32_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__contains;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_d8c54fc52973d0f9 (void)) ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__rect_ii_u32__contains_rect;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_more_information */"
   , "__attribute__ ((const))"
@@ -2351,7 +2573,7 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__io_buffer__compact */"
   , "__attribute__ ((const))"
-  , "void (*hs_bindgen_5690ccd29adbf85a (void)) ("
+  , "size_t (*hs_bindgen_5690ccd29adbf85a (void)) ("
   , "  wuffs_base__io_buffer *arg1"
   , ")"
   , "{"
@@ -2359,7 +2581,7 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__io_buffer__compact_retaining */"
   , "__attribute__ ((const))"
-  , "void (*hs_bindgen_bb9787670ba99145 (void)) ("
+  , "size_t (*hs_bindgen_bb9787670ba99145 (void)) ("
   , "  wuffs_base__io_buffer *arg1,"
   , "  uint64_t arg2"
   , ")"
@@ -2592,7 +2814,7 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__token_buffer__compact */"
   , "__attribute__ ((const))"
-  , "void (*hs_bindgen_cd33811692b6bf3b (void)) ("
+  , "size_t (*hs_bindgen_cd33811692b6bf3b (void)) ("
   , "  wuffs_base__token_buffer *arg1"
   , ")"
   , "{"
@@ -2600,7 +2822,7 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__token_buffer__compact_retaining */"
   , "__attribute__ ((const))"
-  , "void (*hs_bindgen_eba59da6087b3ea8 (void)) ("
+  , "size_t (*hs_bindgen_eba59da6087b3ea8 (void)) ("
   , "  wuffs_base__token_buffer *arg1,"
   , "  uint64_t arg2"
   , ")"
@@ -2803,6 +3025,14 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_base__color_u64_argb_premul__as__color_u8_gray;"
   , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_1724790361151f03 (void)) ("
+  , "  uint64_t arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul;"
+  , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray */"
   , "__attribute__ ((const))"
   , "uint8_t (*hs_bindgen_0bc44ab4c381a1fd (void)) ("
@@ -2827,25 +3057,61 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_base__color_u64__as__color_u32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32 */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32 */"
   , "__attribute__ ((const))"
-  , "wuffs_base__color_u32_argb_premul (*hs_bindgen_43658a312c1feafb (void)) ("
+  , "wuffs_base__color_u32_argb_premul (*hs_bindgen_87e8fc25264242f0 (void)) ("
   , "  uint8_t arg1,"
   , "  uint8_t arg2,"
   , "  uint8_t arg3"
   , ")"
   , "{"
-  , "  return &wuffs_base__color_ycc__as__color_u32;"
+  , "  return &wuffs_base__color_ycc_bt601fr__as__color_u32;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32_abgr */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32_abgr */"
   , "__attribute__ ((const))"
-  , "uint32_t (*hs_bindgen_46ca30efe1fa70ec (void)) ("
+  , "uint32_t (*hs_bindgen_773344a8c97c51c9 (void)) ("
   , "  uint8_t arg1,"
   , "  uint8_t arg2,"
   , "  uint8_t arg3"
   , ")"
   , "{"
-  , "  return &wuffs_base__color_ycc__as__color_u32_abgr;"
+  , "  return &wuffs_base__color_ycc_bt601fr__as__color_u32_abgr;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32 */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__color_u32_argb_premul (*hs_bindgen_43bad1f1c8440485 (void)) ("
+  , "  uint8_t arg1,"
+  , "  uint8_t arg2,"
+  , "  uint8_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__color_ycc_bt601sr__as__color_u32;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32_abgr */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_8e0d39b7404b982a (void)) ("
+  , "  uint8_t arg1,"
+  , "  uint8_t arg2,"
+  , "  uint8_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__color_ycc_bt601sr__as__color_u32_abgr;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u32_argb_abgr */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_fb48051bc7e220ee (void)) ("
+  , "  uint32_t arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__color_swap_u32_argb_abgr;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u64_argb_abgr */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_329c46df02bcba8d (void)) ("
+  , "  uint64_t arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__color_swap_u64_argb_abgr;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_pixel_format */"
   , "__attribute__ ((const))"
@@ -2870,6 +3136,14 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  return &wuffs_base__pixel_format__bits_per_pixel;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_format__default_background_color */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_4649e9d601c4ceba (void)) ("
+  , "  wuffs_base__pixel_format const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__pixel_format__default_background_color;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_format__is_direct */"
   , "__attribute__ ((const))"
@@ -3298,6 +3572,14 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  return &wuffs_base__pixel_buffer__set_color_u32_fill_rect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_buffer__is_opaque */"
+  , "__attribute__ ((const))"
+  , "_Bool (*hs_bindgen_31784f2d6dc70c9c (void)) ("
+  , "  wuffs_base__pixel_buffer const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_base__pixel_buffer__is_opaque;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_palette__closest_element */"
   , "__attribute__ ((const))"
@@ -4968,6 +5250,166 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_gzip__decoder__transform_io;"
   , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__initialize */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_191983ed5f1e51f9 (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  size_t arg2,"
+  , "  uint64_t arg3,"
+  , "  uint32_t arg4"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__initialize;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_handsum__decoder */"
+  , "__attribute__ ((const))"
+  , "size_t (*hs_bindgen_b2682b60515204bd (void)) (void)"
+  , "{"
+  , "  return &sizeof__wuffs_handsum__decoder;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc */"
+  , "__attribute__ ((const))"
+  , "wuffs_handsum__decoder *(*hs_bindgen_82717a7273fba0e2 (void)) (void)"
+  , "{"
+  , "  return &wuffs_handsum__decoder__alloc;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__image_decoder *(*hs_bindgen_1f973270ae8eec23 (void)) (void)"
+  , "{"
+  , "  return &wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__image_decoder *(*hs_bindgen_bce8f6cdfc2c6253 (void)) ("
+  , "  wuffs_handsum__decoder *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__get_quirk */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_ad38be2d6f03b54c (void)) ("
+  , "  wuffs_handsum__decoder const *arg1,"
+  , "  uint32_t arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__get_quirk;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_quirk */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_228732e6b361a7af (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint64_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__set_quirk;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_image_config */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_9ca089565734fe7c (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__image_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__decode_image_config;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame_config */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_767d06199853b829 (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__frame_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__decode_frame_config;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_4e945297c4e9c050 (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__pixel_buffer *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__pixel_blend arg4,"
+  , "  wuffs_base__slice_u8 arg5,"
+  , "  wuffs_base__decode_frame_options *arg6"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__decode_frame;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__frame_dirty_rect */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_u32 (*hs_bindgen_9717896fbb755497 (void)) ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__frame_dirty_rect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_animation_loops */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_af6872b1fbc47734 (void)) ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__num_animation_loops;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frame_configs */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_b75c05c1f0b15526 (void)) ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__num_decoded_frame_configs;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frames */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_8721ecb8be59c14a (void)) ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__num_decoded_frames;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__restart_frame */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_8e5d176cfe53cef4 (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint64_t arg2,"
+  , "  uint64_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__restart_frame;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_report_metadata */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__empty_struct (*hs_bindgen_452de9417930452b (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  _Bool arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__set_report_metadata;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__tell_me_more */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_6facb582ead64cd3 (void)) ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__io_buffer *arg2,"
+  , "  wuffs_base__more_information *arg3,"
+  , "  wuffs_base__io_buffer *arg4"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__tell_me_more;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__workbuf_len */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_b89ea31b64516267 (void)) ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_handsum__decoder__workbuf_len;"
+  , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_jpeg__decoder__initialize */"
   , "__attribute__ ((const))"
   , "wuffs_base__status (*hs_bindgen_fef3a1e9d24de4cf (void)) ("
@@ -6602,28 +7044,165 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return &wuffs_thumbhash__decoder__workbuf_len;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__initialize */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__initialize */"
   , "__attribute__ ((const))"
-  , "wuffs_base__status (*hs_bindgen_cf824926d5288ccb (void)) ("
-  , "  wuffs_vp8__placeholder *arg1,"
+  , "wuffs_base__status (*hs_bindgen_18f81fd159cff285 (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
   , "  size_t arg2,"
   , "  uint64_t arg3,"
   , "  uint32_t arg4"
   , ")"
   , "{"
-  , "  return &wuffs_vp8__placeholder__initialize;"
+  , "  return &wuffs_vp8__decoder__initialize;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__placeholder */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__decoder */"
   , "__attribute__ ((const))"
-  , "size_t (*hs_bindgen_efa7e5c2df470a09 (void)) (void)"
+  , "size_t (*hs_bindgen_229ef453044437b3 (void)) (void)"
   , "{"
-  , "  return &sizeof__wuffs_vp8__placeholder;"
+  , "  return &sizeof__wuffs_vp8__decoder;"
   , "}"
-  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__alloc */"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc */"
   , "__attribute__ ((const))"
-  , "wuffs_vp8__placeholder *(*hs_bindgen_03d821764d78ef60 (void)) (void)"
+  , "wuffs_vp8__decoder *(*hs_bindgen_2bb1111914289259 (void)) (void)"
   , "{"
-  , "  return &wuffs_vp8__placeholder__alloc;"
+  , "  return &wuffs_vp8__decoder__alloc;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__image_decoder *(*hs_bindgen_3ee33f5d7578eda0 (void)) (void)"
+  , "{"
+  , "  return &wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__image_decoder *(*hs_bindgen_0e5b8951d5e9d742 (void)) ("
+  , "  wuffs_vp8__decoder *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__get_quirk */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_c90e2c0a25d0424c (void)) ("
+  , "  wuffs_vp8__decoder const *arg1,"
+  , "  uint32_t arg2"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__get_quirk;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_quirk */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_d86b1ccc5fe2de2d (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint64_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__set_quirk;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_image_config */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_792191cf55a59db0 (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__image_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__decode_image_config;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame_config */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_93b324773d945acb (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__frame_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__decode_frame_config;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_3f8210ecb7769b1d (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__pixel_buffer *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__pixel_blend arg4,"
+  , "  wuffs_base__slice_u8 arg5,"
+  , "  wuffs_base__decode_frame_options *arg6"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__decode_frame;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__frame_dirty_rect */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__rect_ie_u32 (*hs_bindgen_a991a21bfbc4cf47 (void)) ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__frame_dirty_rect;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_animation_loops */"
+  , "__attribute__ ((const))"
+  , "uint32_t (*hs_bindgen_27f86b750624438d (void)) ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__num_animation_loops;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frame_configs */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_75de8a4e90c41924 (void)) ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__num_decoded_frame_configs;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frames */"
+  , "__attribute__ ((const))"
+  , "uint64_t (*hs_bindgen_0430bc8a66d911a3 (void)) ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__num_decoded_frames;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__restart_frame */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_8163e5ca9748602a (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint64_t arg2,"
+  , "  uint64_t arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__restart_frame;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_report_metadata */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__empty_struct (*hs_bindgen_9beda2da2ff3bda8 (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  _Bool arg3"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__set_report_metadata;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__tell_me_more */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__status (*hs_bindgen_ba074845185a5c16 (void)) ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__io_buffer *arg2,"
+  , "  wuffs_base__more_information *arg3,"
+  , "  wuffs_base__io_buffer *arg4"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__tell_me_more;"
+  , "}"
+  , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__workbuf_len */"
+  , "__attribute__ ((const))"
+  , "wuffs_base__range_ii_u64 (*hs_bindgen_1cad648c61cbbac9 (void)) ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return &wuffs_vp8__decoder__workbuf_len;"
   , "}"
   , "/* org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_wbmp__decoder__initialize */"
   , "__attribute__ ((const))"
@@ -7206,9 +7785,9 @@ hs_bindgen_ad18f30b99c672c9 =
 {-# NOINLINE wuffs_base__cpu_arch__have_arm_crc32 #-}
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_arm_crc32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 281:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 271:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_arm_crc32 :: BG.FunPtr (IO BG.CBool)
 wuffs_base__cpu_arch__have_arm_crc32 =
@@ -7226,9 +7805,9 @@ hs_bindgen_cac734b15fb5e9f4 =
 {-# NOINLINE wuffs_base__cpu_arch__have_arm_neon #-}
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_arm_neon@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 290:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 280:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_arm_neon :: BG.FunPtr (IO BG.CBool)
 wuffs_base__cpu_arch__have_arm_neon =
@@ -7246,9 +7825,9 @@ hs_bindgen_63b9db6ebbb3d6e4 =
 {-# NOINLINE wuffs_base__cpu_arch__have_x86_avx2 #-}
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_avx2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 299:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 289:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_avx2 :: BG.FunPtr (IO BG.CBool)
 wuffs_base__cpu_arch__have_x86_avx2 =
@@ -7266,9 +7845,9 @@ hs_bindgen_43b58f9bfe4e98ee =
 {-# NOINLINE wuffs_base__cpu_arch__have_x86_bmi2 #-}
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_bmi2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 351:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 341:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_bmi2 :: BG.FunPtr (IO BG.CBool)
 wuffs_base__cpu_arch__have_x86_bmi2 =
@@ -7286,9 +7865,9 @@ hs_bindgen_24a1de3fe6437d30 =
 {-# NOINLINE wuffs_base__cpu_arch__have_x86_sse42 #-}
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_sse42@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 385:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 375:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_sse42 :: BG.FunPtr (IO BG.CBool)
 wuffs_base__cpu_arch__have_x86_sse42 =
@@ -7306,9 +7885,9 @@ hs_bindgen_c9bae436d1d2aa0f =
 {-# NOINLINE wuffs_base__strip_const_from_u8_ptr #-}
 {-| __C declaration:__ @wuffs_base__strip_const_from_u8_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 501:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u8_ptr :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word8))
 wuffs_base__strip_const_from_u8_ptr =
@@ -7326,9 +7905,9 @@ hs_bindgen_9941aa8341afaef0 =
 {-# NOINLINE wuffs_base__strip_const_from_u16_ptr #-}
 {-| __C declaration:__ @wuffs_base__strip_const_from_u16_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 506:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u16_ptr :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word16 -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word16))
 wuffs_base__strip_const_from_u16_ptr =
@@ -7346,9 +7925,9 @@ hs_bindgen_6a89f43ebc8d06ff =
 {-# NOINLINE wuffs_base__strip_const_from_u32_ptr #-}
 {-| __C declaration:__ @wuffs_base__strip_const_from_u32_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 521:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u32_ptr :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word32 -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word32))
 wuffs_base__strip_const_from_u32_ptr =
@@ -7366,9 +7945,9 @@ hs_bindgen_f40e0869692c22be =
 {-# NOINLINE wuffs_base__strip_const_from_u64_ptr #-}
 {-| __C declaration:__ @wuffs_base__strip_const_from_u64_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 526:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 516:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u64_ptr :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word64 -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word64))
 wuffs_base__strip_const_from_u64_ptr =
@@ -7386,9 +7965,9 @@ hs_bindgen_eee2caab34c2bdfc =
 {-# NOINLINE wuffs_base__make_empty_struct #-}
 {-| __C declaration:__ @wuffs_base__make_empty_struct@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 553:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_empty_struct :: BG.FunPtr (IO Wuffs_base__empty_struct)
 wuffs_base__make_empty_struct =
@@ -7406,9 +7985,9 @@ hs_bindgen_9367215d24d0f36b =
 {-# NOINLINE wuffs_base__make_status #-}
 {-| __C declaration:__ @wuffs_base__make_status@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 634:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 624:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_status :: BG.FunPtr (PtrConst.PtrConst BG.CChar -> IO Wuffs_base__status)
 wuffs_base__make_status =
@@ -7426,9 +8005,9 @@ hs_bindgen_aa39096adb8210fc =
 {-# NOINLINE wuffs_base__status__is_complete #-}
 {-| __C declaration:__ @wuffs_base__status__is_complete@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 641:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_complete :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_complete =
@@ -7446,9 +8025,9 @@ hs_bindgen_a91995756e68a32e =
 {-# NOINLINE wuffs_base__status__is_error #-}
 {-| __C declaration:__ @wuffs_base__status__is_error@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 636:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_error :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_error =
@@ -7466,9 +8045,9 @@ hs_bindgen_42b8e8a6be0c7c90 =
 {-# NOINLINE wuffs_base__status__is_note #-}
 {-| __C declaration:__ @wuffs_base__status__is_note@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 651:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 641:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_note :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_note =
@@ -7486,9 +8065,9 @@ hs_bindgen_99fa428f346c7cba =
 {-# NOINLINE wuffs_base__status__is_ok #-}
 {-| __C declaration:__ @wuffs_base__status__is_ok@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 656:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_ok :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_ok =
@@ -7506,9 +8085,9 @@ hs_bindgen_d5cd1c7d0baf500a =
 {-# NOINLINE wuffs_base__status__is_suspension #-}
 {-| __C declaration:__ @wuffs_base__status__is_suspension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 661:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 651:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_suspension :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_suspension =
@@ -7526,9 +8105,9 @@ hs_bindgen_040ea47040b9576e =
 {-# NOINLINE wuffs_base__status__is_truncated_input_error #-}
 {-| __C declaration:__ @wuffs_base__status__is_truncated_input_error@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 666:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 656:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_truncated_input_error :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO BG.CBool)
 wuffs_base__status__is_truncated_input_error =
@@ -7546,9 +8125,9 @@ hs_bindgen_765712661ded0480 =
 {-# NOINLINE wuffs_base__status__message #-}
 {-| __C declaration:__ @wuffs_base__status__message@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 684:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 674:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__message :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__status -> IO (PtrConst.PtrConst BG.CChar))
 wuffs_base__status__message =
@@ -7566,9 +8145,9 @@ hs_bindgen_fe2bce156153cb21 =
 {-# NOINLINE wuffs_base__i8__min #-}
 {-| __C declaration:__ @wuffs_base__i8__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i8__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Int8 -> HsBindgen.Runtime.LibC.Int8 -> IO HsBindgen.Runtime.LibC.Int8)
 wuffs_base__i8__min =
@@ -7586,9 +8165,9 @@ hs_bindgen_64f924834eac2bda =
 {-# NOINLINE wuffs_base__i8__max #-}
 {-| __C declaration:__ @wuffs_base__i8__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i8__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Int8 -> HsBindgen.Runtime.LibC.Int8 -> IO HsBindgen.Runtime.LibC.Int8)
 wuffs_base__i8__max =
@@ -7606,9 +8185,9 @@ hs_bindgen_7638b3d1f1f7bfb5 =
 {-# NOINLINE wuffs_base__i16__min #-}
 {-| __C declaration:__ @wuffs_base__i16__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1012:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1007:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i16__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Int16 -> HsBindgen.Runtime.LibC.Int16 -> IO HsBindgen.Runtime.LibC.Int16)
 wuffs_base__i16__min =
@@ -7626,9 +8205,9 @@ hs_bindgen_ec98b3889211437b =
 {-# NOINLINE wuffs_base__i16__max #-}
 {-| __C declaration:__ @wuffs_base__i16__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1017:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1012:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i16__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Int16 -> HsBindgen.Runtime.LibC.Int16 -> IO HsBindgen.Runtime.LibC.Int16)
 wuffs_base__i16__max =
@@ -7646,9 +8225,9 @@ hs_bindgen_4587e668213038cf =
 {-# NOINLINE wuffs_base__i32__min #-}
 {-| __C declaration:__ @wuffs_base__i32__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1022:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1017:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i32__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO HsBindgen.Runtime.LibC.Int32)
 wuffs_base__i32__min =
@@ -7666,9 +8245,9 @@ hs_bindgen_7485c4d1428ff8be =
 {-# NOINLINE wuffs_base__i32__max #-}
 {-| __C declaration:__ @wuffs_base__i32__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1027:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1022:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i32__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO HsBindgen.Runtime.LibC.Int32)
 wuffs_base__i32__max =
@@ -7686,9 +8265,9 @@ hs_bindgen_8af043371ff6dbdb =
 {-# NOINLINE wuffs_base__i64__min #-}
 {-| __C declaration:__ @wuffs_base__i64__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1032:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1027:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i64__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Int64 -> HsBindgen.Runtime.LibC.Int64 -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__i64__min =
@@ -7706,9 +8285,9 @@ hs_bindgen_83e5ab042a15efad =
 {-# NOINLINE wuffs_base__i64__max #-}
 {-| __C declaration:__ @wuffs_base__i64__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1037:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1032:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i64__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Int64 -> HsBindgen.Runtime.LibC.Int64 -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__i64__max =
@@ -7726,9 +8305,9 @@ hs_bindgen_9199421155fd4409 =
 {-# NOINLINE wuffs_base__u8__min #-}
 {-| __C declaration:__ @wuffs_base__u8__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1042:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__min =
@@ -7746,9 +8325,9 @@ hs_bindgen_146a8d9f8f82538f =
 {-# NOINLINE wuffs_base__u8__max #-}
 {-| __C declaration:__ @wuffs_base__u8__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1047:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1042:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__max =
@@ -7766,9 +8345,9 @@ hs_bindgen_707c9c1196c09b40 =
 {-# NOINLINE wuffs_base__u16__min #-}
 {-| __C declaration:__ @wuffs_base__u16__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1052:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word16 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__min =
@@ -7786,9 +8365,9 @@ hs_bindgen_fdffe8cb789b95bd =
 {-# NOINLINE wuffs_base__u16__max #-}
 {-| __C declaration:__ @wuffs_base__u16__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1057:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1052:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word16 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__max =
@@ -7806,9 +8385,9 @@ hs_bindgen_c6c746bfefe74b23 =
 {-# NOINLINE wuffs_base__u32__min #-}
 {-| __C declaration:__ @wuffs_base__u32__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1062:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1057:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__min =
@@ -7826,9 +8405,9 @@ hs_bindgen_5e99b89c27c8d7af =
 {-# NOINLINE wuffs_base__u32__max #-}
 {-| __C declaration:__ @wuffs_base__u32__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1067:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1062:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__max =
@@ -7846,9 +8425,9 @@ hs_bindgen_b8c18ea773fc0b1d =
 {-# NOINLINE wuffs_base__u64__min #-}
 {-| __C declaration:__ @wuffs_base__u64__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1072:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1067:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__min :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__min =
@@ -7866,9 +8445,9 @@ hs_bindgen_b9e8c6d9887f6235 =
 {-# NOINLINE wuffs_base__u64__max #-}
 {-| __C declaration:__ @wuffs_base__u64__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1077:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1072:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__max :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__max =
@@ -7886,9 +8465,9 @@ hs_bindgen_124734dbfa60e946 =
 {-# NOINLINE wuffs_base__u8__rotate_left #-}
 {-| __C declaration:__ @wuffs_base__u8__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1084:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__rotate_left :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__rotate_left =
@@ -7906,9 +8485,9 @@ hs_bindgen_6c1f334d3bf5ae12 =
 {-# NOINLINE wuffs_base__u8__rotate_right #-}
 {-| __C declaration:__ @wuffs_base__u8__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1090:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1085:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__rotate_right :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__rotate_right =
@@ -7926,9 +8505,9 @@ hs_bindgen_7c750408cb5ac792 =
 {-# NOINLINE wuffs_base__u16__rotate_left #-}
 {-| __C declaration:__ @wuffs_base__u16__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1096:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1091:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__rotate_left :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__rotate_left =
@@ -7946,9 +8525,9 @@ hs_bindgen_176e54a041f801ce =
 {-# NOINLINE wuffs_base__u16__rotate_right #-}
 {-| __C declaration:__ @wuffs_base__u16__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1097:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__rotate_right :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__rotate_right =
@@ -7966,9 +8545,9 @@ hs_bindgen_eb49f7f2153f15fc =
 {-# NOINLINE wuffs_base__u32__rotate_left #-}
 {-| __C declaration:__ @wuffs_base__u32__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1108:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1103:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__rotate_left :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__rotate_left =
@@ -7986,9 +8565,9 @@ hs_bindgen_8f5b5de7090cc4d0 =
 {-# NOINLINE wuffs_base__u32__rotate_right #-}
 {-| __C declaration:__ @wuffs_base__u32__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1114:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1109:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__rotate_right :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__rotate_right =
@@ -8006,9 +8585,9 @@ hs_bindgen_93124dd461269efa =
 {-# NOINLINE wuffs_base__u64__rotate_left #-}
 {-| __C declaration:__ @wuffs_base__u64__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1120:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1115:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__rotate_left :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__rotate_left =
@@ -8026,9 +8605,9 @@ hs_bindgen_5fc1f64fe6049c9f =
 {-# NOINLINE wuffs_base__u64__rotate_right #-}
 {-| __C declaration:__ @wuffs_base__u64__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1126:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1121:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__rotate_right :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__rotate_right =
@@ -8046,9 +8625,9 @@ hs_bindgen_6c6af5ab4702e690 =
 {-# NOINLINE wuffs_base__u8__sat_add #-}
 {-| __C declaration:__ @wuffs_base__u8__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1140:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1135:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__sat_add :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__sat_add =
@@ -8066,9 +8645,9 @@ hs_bindgen_fe690650ffbf9184 =
 {-# NOINLINE wuffs_base__u8__sat_sub #-}
 {-| __C declaration:__ @wuffs_base__u8__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1147:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1142:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__sat_sub :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__u8__sat_sub =
@@ -8086,9 +8665,9 @@ hs_bindgen_30fb5fc5018cda5b =
 {-# NOINLINE wuffs_base__u16__sat_add #-}
 {-| __C declaration:__ @wuffs_base__u16__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1154:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1149:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__sat_add :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word16 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__sat_add =
@@ -8106,9 +8685,9 @@ hs_bindgen_d8a5940f279a83a6 =
 {-# NOINLINE wuffs_base__u16__sat_sub #-}
 {-| __C declaration:__ @wuffs_base__u16__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1161:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1156:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__sat_sub :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.Word16 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__u16__sat_sub =
@@ -8126,9 +8705,9 @@ hs_bindgen_f0fcae1b3ddd919f =
 {-# NOINLINE wuffs_base__u32__sat_add #-}
 {-| __C declaration:__ @wuffs_base__u32__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1168:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1163:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__sat_add :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__sat_add =
@@ -8146,9 +8725,9 @@ hs_bindgen_1b9bf26401c8ca96 =
 {-# NOINLINE wuffs_base__u32__sat_sub #-}
 {-| __C declaration:__ @wuffs_base__u32__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1175:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1170:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__sat_sub :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__u32__sat_sub =
@@ -8166,9 +8745,9 @@ hs_bindgen_ef4b15485742314f =
 {-# NOINLINE wuffs_base__u64__sat_add #-}
 {-| __C declaration:__ @wuffs_base__u64__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1182:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1177:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__sat_add :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__sat_add =
@@ -8186,9 +8765,9 @@ hs_bindgen_84642a22e24d77d3 =
 {-# NOINLINE wuffs_base__u64__sat_sub #-}
 {-| __C declaration:__ @wuffs_base__u64__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1189:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__sat_sub :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__u64__sat_sub =
@@ -8206,9 +8785,9 @@ hs_bindgen_30ce062e2599acaf =
 {-# NOINLINE wuffs_base__multiply_u64 #-}
 {-| __C declaration:__ @wuffs_base__multiply_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__multiply_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__multiply_u64__output)
 wuffs_base__multiply_u64 =
@@ -8226,9 +8805,9 @@ hs_bindgen_6064291307ea57dd =
 {-# NOINLINE wuffs_base__make_bitvec256 #-}
 {-| __C declaration:__ @wuffs_base__make_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1240:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1235:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_bitvec256 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__bitvec256)
 wuffs_base__make_bitvec256 =
@@ -8246,9 +8825,9 @@ hs_bindgen_0351168c32a32df9 =
 {-# NOINLINE wuffs_base__bitvec256__get_u64 #-}
 {-| __C declaration:__ @wuffs_base__bitvec256__get_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1253:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1248:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__bitvec256__get_u64 :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__bitvec256 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__bitvec256__get_u64 =
@@ -8266,9 +8845,9 @@ hs_bindgen_3d97a88cee1131e8 =
 {-# NOINLINE wuffs_base__make_optional_u63 #-}
 {-| __C declaration:__ @wuffs_base__make_optional_u63@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1279:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1274:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_optional_u63 :: BG.FunPtr (BG.CBool -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__optional_u63)
 wuffs_base__make_optional_u63 =
@@ -8286,9 +8865,9 @@ hs_bindgen_3d7998e005a534cd =
 {-# NOINLINE wuffs_base__optional_u63__has_value #-}
 {-| __C declaration:__ @wuffs_base__optional_u63__has_value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1286:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1281:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__has_value :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__optional_u63 -> IO BG.CBool)
 wuffs_base__optional_u63__has_value =
@@ -8306,9 +8885,9 @@ hs_bindgen_0e7a1a8f70046262 =
 {-# NOINLINE wuffs_base__optional_u63__value #-}
 {-| __C declaration:__ @wuffs_base__optional_u63__value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1292:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1287:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__value :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__optional_u63 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__optional_u63__value =
@@ -8326,9 +8905,9 @@ hs_bindgen_c9d47470b40f3207 =
 {-# NOINLINE wuffs_base__optional_u63__value_or #-}
 {-| __C declaration:__ @wuffs_base__optional_u63__value_or@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1297:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1292:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__value_or :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__optional_u63 -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__optional_u63__value_or =
@@ -8346,9 +8925,9 @@ hs_bindgen_a753dcef7b974f4e =
 {-# NOINLINE wuffs_base__count_leading_zeroes_u64 #-}
 {-| __C declaration:__ @wuffs_base__count_leading_zeroes_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1328:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1323:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__count_leading_zeroes_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__count_leading_zeroes_u64 =
@@ -8366,9 +8945,9 @@ hs_bindgen_3708790f5b0dbd8d =
 {-# NOINLINE wuffs_base__peek_u8__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u8__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1395:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1390:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u8__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__peek_u8__no_bounds_check =
@@ -8386,9 +8965,9 @@ hs_bindgen_6b7706198e3d459f =
 {-# NOINLINE wuffs_base__peek_u16be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u16be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1400:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1395:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u16be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__peek_u16be__no_bounds_check =
@@ -8406,9 +8985,9 @@ hs_bindgen_0bed88e04752f26c =
 {-# NOINLINE wuffs_base__peek_u16le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u16le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1411:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1406:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u16le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__peek_u16le__no_bounds_check =
@@ -8426,9 +9005,9 @@ hs_bindgen_8af1f80e0730e10a =
 {-# NOINLINE wuffs_base__peek_u24be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u24be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1422:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1417:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u24be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__peek_u24be__no_bounds_check =
@@ -8446,9 +9025,9 @@ hs_bindgen_6b4506d1fa32a4c3 =
 {-# NOINLINE wuffs_base__peek_u24le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u24le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1428:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1423:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u24le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__peek_u24le__no_bounds_check =
@@ -8466,9 +9045,9 @@ hs_bindgen_8a56a3634521358f =
 {-# NOINLINE wuffs_base__peek_u32be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u32be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1434:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1429:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u32be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__peek_u32be__no_bounds_check =
@@ -8486,9 +9065,9 @@ hs_bindgen_b5e32424bff36e52 =
 {-# NOINLINE wuffs_base__peek_u32le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u32le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1446:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1441:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u32le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__peek_u32le__no_bounds_check =
@@ -8506,9 +9085,9 @@ hs_bindgen_90a2bd1ba1e0c778 =
 {-# NOINLINE wuffs_base__peek_u40be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u40be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1458:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1453:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u40be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u40be__no_bounds_check =
@@ -8526,9 +9105,9 @@ hs_bindgen_23a61604b2e6b1b6 =
 {-# NOINLINE wuffs_base__peek_u40le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u40le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1465:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1460:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u40le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u40le__no_bounds_check =
@@ -8546,9 +9125,9 @@ hs_bindgen_79db41441e2bd541 =
 {-# NOINLINE wuffs_base__peek_u48be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u48be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1472:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1467:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u48be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u48be__no_bounds_check =
@@ -8566,9 +9145,9 @@ hs_bindgen_bc041a11e2431893 =
 {-# NOINLINE wuffs_base__peek_u48le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u48le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1479:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1474:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u48le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u48le__no_bounds_check =
@@ -8586,9 +9165,9 @@ hs_bindgen_1bfb6ca9017161a1 =
 {-# NOINLINE wuffs_base__peek_u56be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u56be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1486:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1481:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u56be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u56be__no_bounds_check =
@@ -8606,9 +9185,9 @@ hs_bindgen_f6086d2e1830daa7 =
 {-# NOINLINE wuffs_base__peek_u56le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u56le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1489:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u56le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u56le__no_bounds_check =
@@ -8626,9 +9205,9 @@ hs_bindgen_b3491ad706c25e34 =
 {-# NOINLINE wuffs_base__peek_u64be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u64be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1502:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1497:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u64be__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u64be__no_bounds_check =
@@ -8646,9 +9225,9 @@ hs_bindgen_96b051a0b0e9a818 =
 {-# NOINLINE wuffs_base__peek_u64le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__peek_u64le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u64le__no_bounds_check :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__peek_u64le__no_bounds_check =
@@ -8666,9 +9245,9 @@ hs_bindgen_eec62d48a5e9cd31 =
 {-# NOINLINE wuffs_base__poke_u8__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u8__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1537:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1532:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u8__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO ())
 wuffs_base__poke_u8__no_bounds_check =
@@ -8686,9 +9265,9 @@ hs_bindgen_ae6312e55440ccdf =
 {-# NOINLINE wuffs_base__poke_u16be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u16be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1542:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1537:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u16be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word16 -> IO ())
 wuffs_base__poke_u16be__no_bounds_check =
@@ -8706,9 +9285,9 @@ hs_bindgen_804513ba543883c5 =
 {-# NOINLINE wuffs_base__poke_u16le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u16le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u16le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word16 -> IO ())
 wuffs_base__poke_u16le__no_bounds_check =
@@ -8726,9 +9305,9 @@ hs_bindgen_82c4fda86255822e =
 {-# NOINLINE wuffs_base__poke_u24be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u24be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1561:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1556:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u24be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO ())
 wuffs_base__poke_u24be__no_bounds_check =
@@ -8746,9 +9325,9 @@ hs_bindgen_e50dc13c1039f501 =
 {-# NOINLINE wuffs_base__poke_u24le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u24le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1568:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1563:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u24le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO ())
 wuffs_base__poke_u24le__no_bounds_check =
@@ -8766,9 +9345,9 @@ hs_bindgen_c3cc3a0be575b0c6 =
 {-# NOINLINE wuffs_base__poke_u32be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u32be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1575:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1570:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u32be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO ())
 wuffs_base__poke_u32be__no_bounds_check =
@@ -8786,9 +9365,9 @@ hs_bindgen_091199adfc3871e8 =
 {-# NOINLINE wuffs_base__poke_u32le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u32le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1583:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1578:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u32le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word32 -> IO ())
 wuffs_base__poke_u32le__no_bounds_check =
@@ -8806,9 +9385,9 @@ hs_bindgen_cfb7bf37c91adcb2 =
 {-# NOINLINE wuffs_base__poke_u40be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u40be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1593:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u40be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u40be__no_bounds_check =
@@ -8826,9 +9405,9 @@ hs_bindgen_21af16e5965e60fe =
 {-# NOINLINE wuffs_base__poke_u40le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u40le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1607:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1602:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u40le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u40le__no_bounds_check =
@@ -8846,9 +9425,9 @@ hs_bindgen_06f02b483aa9418e =
 {-# NOINLINE wuffs_base__poke_u48be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u48be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1616:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1611:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u48be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u48be__no_bounds_check =
@@ -8866,9 +9445,9 @@ hs_bindgen_e3d0aeb934854819 =
 {-# NOINLINE wuffs_base__poke_u48le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u48le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1626:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1621:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u48le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u48le__no_bounds_check =
@@ -8886,9 +9465,9 @@ hs_bindgen_8060d7dd5aa123e8 =
 {-# NOINLINE wuffs_base__poke_u56be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u56be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1636:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u56be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u56be__no_bounds_check =
@@ -8906,9 +9485,9 @@ hs_bindgen_356abcf055e3e7aa =
 {-# NOINLINE wuffs_base__poke_u56le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u56le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1647:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1642:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u56le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u56le__no_bounds_check =
@@ -8926,9 +9505,9 @@ hs_bindgen_49ebf5a871697b65 =
 {-# NOINLINE wuffs_base__poke_u64be__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u64be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1658:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1653:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u64be__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u64be__no_bounds_check =
@@ -8946,9 +9525,9 @@ hs_bindgen_130ef6e717b3b6c9 =
 {-# NOINLINE wuffs_base__poke_u64le__no_bounds_check #-}
 {-| __C declaration:__ @wuffs_base__poke_u64le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1670:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1665:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u64le__no_bounds_check :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__poke_u64le__no_bounds_check =
@@ -8966,9 +9545,9 @@ hs_bindgen_4c71731cd4704b5f =
 {-# NOINLINE wuffs_base__make_slice_u8 #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1726:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1721:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u8 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u8)
 wuffs_base__make_slice_u8 =
@@ -8986,9 +9565,9 @@ hs_bindgen_d192b9095a27f3ff =
 {-# NOINLINE wuffs_base__make_slice_u16 #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1734:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1729:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u16 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u16)
 wuffs_base__make_slice_u16 =
@@ -9006,9 +9585,9 @@ hs_bindgen_012f896900064492 =
 {-# NOINLINE wuffs_base__make_slice_u32 #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1742:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1737:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u32 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u32)
 wuffs_base__make_slice_u32 =
@@ -9026,9 +9605,9 @@ hs_bindgen_59135c7ebb6bbf98 =
 {-# NOINLINE wuffs_base__make_slice_u64 #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1750:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1745:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u64 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u64)
 wuffs_base__make_slice_u64 =
@@ -9046,9 +9625,9 @@ hs_bindgen_9f36bfdb5054fc37 =
 {-# NOINLINE wuffs_base__make_slice_u8_ij #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u8_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1758:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1753:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u8_ij :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u8)
 wuffs_base__make_slice_u8_ij =
@@ -9066,9 +9645,9 @@ hs_bindgen_a86dcead0bcdbced =
 {-# NOINLINE wuffs_base__make_slice_u16_ij #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u16_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1761:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u16_ij :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u16)
 wuffs_base__make_slice_u16_ij =
@@ -9086,9 +9665,9 @@ hs_bindgen_e911281645591c41 =
 {-# NOINLINE wuffs_base__make_slice_u32_ij #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u32_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1774:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1769:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u32_ij :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u32)
 wuffs_base__make_slice_u32_ij =
@@ -9106,9 +9685,9 @@ hs_bindgen_7de5c51b0ae0b4e4 =
 {-# NOINLINE wuffs_base__make_slice_u64_ij #-}
 {-| __C declaration:__ @wuffs_base__make_slice_u64_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1782:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1777:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u64_ij :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_u64)
 wuffs_base__make_slice_u64_ij =
@@ -9126,9 +9705,9 @@ hs_bindgen_1677ad0d2e5fdc72 =
 {-# NOINLINE wuffs_base__empty_slice_u8 #-}
 {-| __C declaration:__ @wuffs_base__empty_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1790:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1785:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u8 :: BG.FunPtr (IO Wuffs_base__slice_u8)
 wuffs_base__empty_slice_u8 =
@@ -9146,9 +9725,9 @@ hs_bindgen_6a9900f37cd633b6 =
 {-# NOINLINE wuffs_base__empty_slice_u16 #-}
 {-| __C declaration:__ @wuffs_base__empty_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1793:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u16 :: BG.FunPtr (IO Wuffs_base__slice_u16)
 wuffs_base__empty_slice_u16 =
@@ -9166,9 +9745,9 @@ hs_bindgen_ae58cadb6e167dc9 =
 {-# NOINLINE wuffs_base__empty_slice_u32 #-}
 {-| __C declaration:__ @wuffs_base__empty_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1801:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u32 :: BG.FunPtr (IO Wuffs_base__slice_u32)
 wuffs_base__empty_slice_u32 =
@@ -9186,9 +9765,9 @@ hs_bindgen_115c268dc13d3d02 =
 {-# NOINLINE wuffs_base__empty_slice_u64 #-}
 {-| __C declaration:__ @wuffs_base__empty_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1809:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u64 :: BG.FunPtr (IO Wuffs_base__slice_u64)
 wuffs_base__empty_slice_u64 =
@@ -9206,9 +9785,9 @@ hs_bindgen_176f9a4fa9ff1892 =
 {-# NOINLINE wuffs_base__make_table_u8 #-}
 {-| __C declaration:__ @wuffs_base__make_table_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1822:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1817:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u8 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__table_u8)
 wuffs_base__make_table_u8 =
@@ -9226,9 +9805,9 @@ hs_bindgen_1d072747558cd3bd =
 {-# NOINLINE wuffs_base__make_table_u16 #-}
 {-| __C declaration:__ @wuffs_base__make_table_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1835:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1830:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u16 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word16 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__table_u16)
 wuffs_base__make_table_u16 =
@@ -9246,9 +9825,9 @@ hs_bindgen_32d9e05b1a359711 =
 {-# NOINLINE wuffs_base__make_table_u32 #-}
 {-| __C declaration:__ @wuffs_base__make_table_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1848:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1843:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u32 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__table_u32)
 wuffs_base__make_table_u32 =
@@ -9266,9 +9845,9 @@ hs_bindgen_9b877d8c79953c53 =
 {-# NOINLINE wuffs_base__make_table_u64 #-}
 {-| __C declaration:__ @wuffs_base__make_table_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1861:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1856:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u64 :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__table_u64)
 wuffs_base__make_table_u64 =
@@ -9286,9 +9865,9 @@ hs_bindgen_cf6cd390281576ba =
 {-# NOINLINE wuffs_base__empty_table_u8 #-}
 {-| __C declaration:__ @wuffs_base__empty_table_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1874:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1869:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u8 :: BG.FunPtr (IO Wuffs_base__table_u8)
 wuffs_base__empty_table_u8 =
@@ -9306,9 +9885,9 @@ hs_bindgen_70140564fa58085b =
 {-# NOINLINE wuffs_base__empty_table_u16 #-}
 {-| __C declaration:__ @wuffs_base__empty_table_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1884:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1879:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u16 :: BG.FunPtr (IO Wuffs_base__table_u16)
 wuffs_base__empty_table_u16 =
@@ -9326,9 +9905,9 @@ hs_bindgen_480029e0eac62d65 =
 {-# NOINLINE wuffs_base__empty_table_u32 #-}
 {-| __C declaration:__ @wuffs_base__empty_table_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1894:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1889:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u32 :: BG.FunPtr (IO Wuffs_base__table_u32)
 wuffs_base__empty_table_u32 =
@@ -9346,9 +9925,9 @@ hs_bindgen_1a43797ce7e6448a =
 {-# NOINLINE wuffs_base__empty_table_u64 #-}
 {-| __C declaration:__ @wuffs_base__empty_table_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1904:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1899:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u64 :: BG.FunPtr (IO Wuffs_base__table_u64)
 wuffs_base__empty_table_u64 =
@@ -9366,9 +9945,9 @@ hs_bindgen_b912c7af09797cc5 =
 {-# NOINLINE wuffs_base__slice_u8__overlaps #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__overlaps@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1914:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1909:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__overlaps :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> IO BG.CBool)
 wuffs_base__slice_u8__overlaps =
@@ -9386,9 +9965,9 @@ hs_bindgen_9610518ef1d2b86a =
 {-# NOINLINE wuffs_base__slice_u8__subslice_i #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_i@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1923:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1918:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_i :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u8)
 wuffs_base__slice_u8__subslice_i =
@@ -9406,9 +9985,9 @@ hs_bindgen_350829da4b425a16 =
 {-# NOINLINE wuffs_base__slice_u8__subslice_j #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_j@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1934:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_j :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u8)
 wuffs_base__slice_u8__subslice_j =
@@ -9426,9 +10005,9 @@ hs_bindgen_5bbd2281fd74f27d =
 {-# NOINLINE wuffs_base__slice_u8__subslice_ij #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1945:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1940:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_ij :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u8)
 wuffs_base__slice_u8__subslice_ij =
@@ -9446,9 +10025,9 @@ hs_bindgen_8036f6c2962d0855 =
 {-# NOINLINE wuffs_base__table_u8__subtable_ij #-}
 {-| __C declaration:__ @wuffs_base__table_u8__subtable_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1958:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__table_u8__subtable_ij :: BG.FunPtr (Wuffs_base__table_u8 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__table_u8)
 wuffs_base__table_u8__subtable_ij =
@@ -9466,9 +10045,9 @@ hs_bindgen_b122d32591ba9c02 =
 {-# NOINLINE wuffs_base__table__flattened_length #-}
 {-| __C declaration:__ @wuffs_base__table__flattened_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2003:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1998:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__table__flattened_length :: BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__table__flattened_length =
@@ -9486,173 +10065,193 @@ hs_bindgen_a5361b01a7d29bbb =
 {-# NOINLINE wuffs_base__magic_number_guess_fourcc #-}
 {-| __C declaration:__ @wuffs_base__magic_number_guess_fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2042:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__magic_number_guess_fourcc :: BG.FunPtr (Wuffs_base__slice_u8 -> BG.CBool -> IO HsBindgen.Runtime.LibC.Int32)
 wuffs_base__magic_number_guess_fourcc =
   BG.unsafePerformIO hs_bindgen_a5361b01a7d29bbb
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32@
-foreign import ccall unsafe "hs_bindgen_6a39e12f315465c8" hs_bindgen_6a39e12f315465c8_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_i32@
+foreign import ccall unsafe "hs_bindgen_87c0addee949d11b" hs_bindgen_87c0addee949d11b_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32@
-hs_bindgen_6a39e12f315465c8 :: IO (BG.FunPtr (IO Wuffs_base__range_ii_u32))
-hs_bindgen_6a39e12f315465c8 =
-  fmap BG.fromFFIType hs_bindgen_6a39e12f315465c8_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_i32@
+hs_bindgen_87c0addee949d11b :: IO (BG.FunPtr (IO Wuffs_base__range_ie_i32))
+hs_bindgen_87c0addee949d11b =
+  fmap BG.fromFFIType hs_bindgen_87c0addee949d11b_base
 
-{-# NOINLINE wuffs_base__empty_range_ii_u32 #-}
-{-| __C declaration:__ @wuffs_base__empty_range_ii_u32@
+{-# NOINLINE wuffs_base__empty_range_ie_i32 #-}
+{-| __C declaration:__ @wuffs_base__empty_range_ie_i32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2081:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__empty_range_ii_u32 :: BG.FunPtr (IO Wuffs_base__range_ii_u32)
-wuffs_base__empty_range_ii_u32 =
-  BG.unsafePerformIO hs_bindgen_6a39e12f315465c8
+wuffs_base__empty_range_ie_i32 :: BG.FunPtr (IO Wuffs_base__range_ie_i32)
+wuffs_base__empty_range_ie_i32 =
+  BG.unsafePerformIO hs_bindgen_87c0addee949d11b
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32@
-foreign import ccall unsafe "hs_bindgen_624388e1ffa8d5a7" hs_bindgen_624388e1ffa8d5a7_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ie_i32@
+foreign import ccall unsafe "hs_bindgen_e207474ba0b6dcf4" hs_bindgen_e207474ba0b6dcf4_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32@
-hs_bindgen_624388e1ffa8d5a7 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__range_ii_u32))
-hs_bindgen_624388e1ffa8d5a7 =
-  fmap BG.fromFFIType hs_bindgen_624388e1ffa8d5a7_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ie_i32@
+hs_bindgen_e207474ba0b6dcf4 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO Wuffs_base__range_ie_i32))
+hs_bindgen_e207474ba0b6dcf4 =
+  fmap BG.fromFFIType hs_bindgen_e207474ba0b6dcf4_base
 
-{-# NOINLINE wuffs_base__make_range_ii_u32 #-}
-{-| __C declaration:__ @wuffs_base__make_range_ii_u32@
+{-# NOINLINE wuffs_base__make_range_ie_i32 #-}
+{-| __C declaration:__ @wuffs_base__make_range_ie_i32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2089:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2087:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__make_range_ii_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__range_ii_u32)
-wuffs_base__make_range_ii_u32 =
-  BG.unsafePerformIO hs_bindgen_624388e1ffa8d5a7
+wuffs_base__make_range_ie_i32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO Wuffs_base__range_ie_i32)
+wuffs_base__make_range_ie_i32 =
+  BG.unsafePerformIO hs_bindgen_e207474ba0b6dcf4
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty@
-foreign import ccall unsafe "hs_bindgen_29e56142d1e16b21" hs_bindgen_29e56142d1e16b21_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__is_empty@
+foreign import ccall unsafe "hs_bindgen_5ea171f62abb4e78" hs_bindgen_5ea171f62abb4e78_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty@
-hs_bindgen_29e56142d1e16b21 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> IO BG.CBool))
-hs_bindgen_29e56142d1e16b21 =
-  fmap BG.fromFFIType hs_bindgen_29e56142d1e16b21_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__is_empty@
+hs_bindgen_5ea171f62abb4e78 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> IO BG.CBool))
+hs_bindgen_5ea171f62abb4e78 =
+  fmap BG.fromFFIType hs_bindgen_5ea171f62abb4e78_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__is_empty #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__is_empty@
+{-# NOINLINE wuffs_base__range_ie_i32__is_empty #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2097:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2095:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> IO BG.CBool)
-wuffs_base__range_ii_u32__is_empty =
-  BG.unsafePerformIO hs_bindgen_29e56142d1e16b21
+wuffs_base__range_ie_i32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> IO BG.CBool)
+wuffs_base__range_ie_i32__is_empty =
+  BG.unsafePerformIO hs_bindgen_5ea171f62abb4e78
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals@
-foreign import ccall unsafe "hs_bindgen_0274888a0e3e3e8f" hs_bindgen_0274888a0e3e3e8f_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__equals@
+foreign import ccall unsafe "hs_bindgen_2ab1e39879a1d62f" hs_bindgen_2ab1e39879a1d62f_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals@
-hs_bindgen_0274888a0e3e3e8f :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool))
-hs_bindgen_0274888a0e3e3e8f =
-  fmap BG.fromFFIType hs_bindgen_0274888a0e3e3e8f_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__equals@
+hs_bindgen_2ab1e39879a1d62f :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO BG.CBool))
+hs_bindgen_2ab1e39879a1d62f =
+  fmap BG.fromFFIType hs_bindgen_2ab1e39879a1d62f_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__equals #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__equals@
+{-# NOINLINE wuffs_base__range_ie_i32__equals #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2100:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool)
-wuffs_base__range_ii_u32__equals =
-  BG.unsafePerformIO hs_bindgen_0274888a0e3e3e8f
+wuffs_base__range_ie_i32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO BG.CBool)
+wuffs_base__range_ie_i32__equals =
+  BG.unsafePerformIO hs_bindgen_2ab1e39879a1d62f
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect@
-foreign import ccall unsafe "hs_bindgen_7a468bf64a707365" hs_bindgen_7a468bf64a707365_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__intersect@
+foreign import ccall unsafe "hs_bindgen_c59864cc9fb6fa3c" hs_bindgen_c59864cc9fb6fa3c_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect@
-hs_bindgen_7a468bf64a707365 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32))
-hs_bindgen_7a468bf64a707365 =
-  fmap BG.fromFFIType hs_bindgen_7a468bf64a707365_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__intersect@
+hs_bindgen_c59864cc9fb6fa3c :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO Wuffs_base__range_ie_i32))
+hs_bindgen_c59864cc9fb6fa3c =
+  fmap BG.fromFFIType hs_bindgen_c59864cc9fb6fa3c_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__intersect #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__intersect@
+{-# NOINLINE wuffs_base__range_ie_i32__intersect #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2110:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2108:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32)
-wuffs_base__range_ii_u32__intersect =
-  BG.unsafePerformIO hs_bindgen_7a468bf64a707365
+wuffs_base__range_ie_i32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO Wuffs_base__range_ie_i32)
+wuffs_base__range_ie_i32__intersect =
+  BG.unsafePerformIO hs_bindgen_c59864cc9fb6fa3c
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite@
-foreign import ccall unsafe "hs_bindgen_e1b839f18c791c95" hs_bindgen_e1b839f18c791c95_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__unite@
+foreign import ccall unsafe "hs_bindgen_025af0cfd163f946" hs_bindgen_025af0cfd163f946_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite@
-hs_bindgen_e1b839f18c791c95 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32))
-hs_bindgen_e1b839f18c791c95 =
-  fmap BG.fromFFIType hs_bindgen_e1b839f18c791c95_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__unite@
+hs_bindgen_025af0cfd163f946 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO Wuffs_base__range_ie_i32))
+hs_bindgen_025af0cfd163f946 =
+  fmap BG.fromFFIType hs_bindgen_025af0cfd163f946_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__unite #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__unite@
+{-# NOINLINE wuffs_base__range_ie_i32__unite #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2119:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2117:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32)
-wuffs_base__range_ii_u32__unite =
-  BG.unsafePerformIO hs_bindgen_e1b839f18c791c95
+wuffs_base__range_ie_i32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO Wuffs_base__range_ie_i32)
+wuffs_base__range_ie_i32__unite =
+  BG.unsafePerformIO hs_bindgen_025af0cfd163f946
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains@
-foreign import ccall unsafe "hs_bindgen_31ac590f1e0f762d" hs_bindgen_31ac590f1e0f762d_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains@
+foreign import ccall unsafe "hs_bindgen_bcc891681754fb95" hs_bindgen_bcc891681754fb95_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains@
-hs_bindgen_31ac590f1e0f762d :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool))
-hs_bindgen_31ac590f1e0f762d =
-  fmap BG.fromFFIType hs_bindgen_31ac590f1e0f762d_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains@
+hs_bindgen_bcc891681754fb95 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> HsBindgen.Runtime.LibC.Int32 -> IO BG.CBool))
+hs_bindgen_bcc891681754fb95 =
+  fmap BG.fromFFIType hs_bindgen_bcc891681754fb95_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__contains #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__contains@
+{-# NOINLINE wuffs_base__range_ie_i32__contains #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2132:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
-wuffs_base__range_ii_u32__contains =
-  BG.unsafePerformIO hs_bindgen_31ac590f1e0f762d
+wuffs_base__range_ie_i32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> HsBindgen.Runtime.LibC.Int32 -> IO BG.CBool)
+wuffs_base__range_ie_i32__contains =
+  BG.unsafePerformIO hs_bindgen_bcc891681754fb95
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range@
-foreign import ccall unsafe "hs_bindgen_a933ae0a78cdf8a1" hs_bindgen_a933ae0a78cdf8a1_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains_range@
+foreign import ccall unsafe "hs_bindgen_fcd0813f4fea00e3" hs_bindgen_fcd0813f4fea00e3_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range@
-hs_bindgen_a933ae0a78cdf8a1 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool))
-hs_bindgen_a933ae0a78cdf8a1 =
-  fmap BG.fromFFIType hs_bindgen_a933ae0a78cdf8a1_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__contains_range@
+hs_bindgen_fcd0813f4fea00e3 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO BG.CBool))
+hs_bindgen_fcd0813f4fea00e3 =
+  fmap BG.fromFFIType hs_bindgen_fcd0813f4fea00e3_base
 
-{-# NOINLINE wuffs_base__range_ii_u32__contains_range #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u32__contains_range@
+{-# NOINLINE wuffs_base__range_ie_i32__contains_range #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2140:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2138:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool)
-wuffs_base__range_ii_u32__contains_range =
-  BG.unsafePerformIO hs_bindgen_a933ae0a78cdf8a1
+wuffs_base__range_ie_i32__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> Wuffs_base__range_ie_i32 -> IO BG.CBool)
+wuffs_base__range_ie_i32__contains_range =
+  BG.unsafePerformIO hs_bindgen_fcd0813f4fea00e3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__length@
+foreign import ccall unsafe "hs_bindgen_514d18053b92f9a9" hs_bindgen_514d18053b92f9a9_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ie_i32__length@
+hs_bindgen_514d18053b92f9a9 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_514d18053b92f9a9 =
+  fmap BG.fromFFIType hs_bindgen_514d18053b92f9a9_base
+
+{-# NOINLINE wuffs_base__range_ie_i32__length #-}
+{-| __C declaration:__ @wuffs_base__range_ie_i32__length@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2145:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ie_i32__length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__range_ie_i32__length =
+  BG.unsafePerformIO hs_bindgen_514d18053b92f9a9
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_u32@
 foreign import ccall unsafe "hs_bindgen_228e214a411e4d39" hs_bindgen_228e214a411e4d39_base ::
@@ -9666,9 +10265,9 @@ hs_bindgen_228e214a411e4d39 =
 {-# NOINLINE wuffs_base__empty_range_ie_u32 #-}
 {-| __C declaration:__ @wuffs_base__empty_range_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2201:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2211:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_range_ie_u32 :: BG.FunPtr (IO Wuffs_base__range_ie_u32)
 wuffs_base__empty_range_ie_u32 =
@@ -9686,9 +10285,9 @@ hs_bindgen_c9184f4c820f41f3 =
 {-# NOINLINE wuffs_base__make_range_ie_u32 #-}
 {-| __C declaration:__ @wuffs_base__make_range_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2209:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2219:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_range_ie_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__range_ie_u32)
 wuffs_base__make_range_ie_u32 =
@@ -9706,9 +10305,9 @@ hs_bindgen_f85f3478e37fd414 =
 {-# NOINLINE wuffs_base__range_ie_u32__is_empty #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2217:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2227:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> IO BG.CBool)
 wuffs_base__range_ie_u32__is_empty =
@@ -9726,9 +10325,9 @@ hs_bindgen_9da404db3901f8e3 =
 {-# NOINLINE wuffs_base__range_ie_u32__equals #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2222:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2232:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> Wuffs_base__range_ie_u32 -> IO BG.CBool)
 wuffs_base__range_ie_u32__equals =
@@ -9746,9 +10345,9 @@ hs_bindgen_52d6bdd7fbd0ad41 =
 {-# NOINLINE wuffs_base__range_ie_u32__intersect #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2230:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2240:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> Wuffs_base__range_ie_u32 -> IO Wuffs_base__range_ie_u32)
 wuffs_base__range_ie_u32__intersect =
@@ -9766,9 +10365,9 @@ hs_bindgen_507ecf2ceec54f11 =
 {-# NOINLINE wuffs_base__range_ie_u32__unite #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2239:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2249:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> Wuffs_base__range_ie_u32 -> IO Wuffs_base__range_ie_u32)
 wuffs_base__range_ie_u32__unite =
@@ -9786,9 +10385,9 @@ hs_bindgen_f01542fc7786abf4 =
 {-# NOINLINE wuffs_base__range_ie_u32__contains #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2254:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2264:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
 wuffs_base__range_ie_u32__contains =
@@ -9806,9 +10405,9 @@ hs_bindgen_3c86f0db06ee19b3 =
 {-# NOINLINE wuffs_base__range_ie_u32__contains_range #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2260:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2270:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> Wuffs_base__range_ie_u32 -> IO BG.CBool)
 wuffs_base__range_ie_u32__contains_range =
@@ -9826,173 +10425,13 @@ hs_bindgen_c71c156a3b633a4e =
 {-# NOINLINE wuffs_base__range_ie_u32__length #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u32__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2267:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2277:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__range_ie_u32__length =
   BG.unsafePerformIO hs_bindgen_c71c156a3b633a4e
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64@
-foreign import ccall unsafe "hs_bindgen_d0bbc07ad9879123" hs_bindgen_d0bbc07ad9879123_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64@
-hs_bindgen_d0bbc07ad9879123 :: IO (BG.FunPtr (IO Wuffs_base__range_ii_u64))
-hs_bindgen_d0bbc07ad9879123 =
-  fmap BG.fromFFIType hs_bindgen_d0bbc07ad9879123_base
-
-{-# NOINLINE wuffs_base__empty_range_ii_u64 #-}
-{-| __C declaration:__ @wuffs_base__empty_range_ii_u64@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2330:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__empty_range_ii_u64 :: BG.FunPtr (IO Wuffs_base__range_ii_u64)
-wuffs_base__empty_range_ii_u64 =
-  BG.unsafePerformIO hs_bindgen_d0bbc07ad9879123
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64@
-foreign import ccall unsafe "hs_bindgen_4ff464f400705659" hs_bindgen_4ff464f400705659_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64@
-hs_bindgen_4ff464f400705659 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__range_ii_u64))
-hs_bindgen_4ff464f400705659 =
-  fmap BG.fromFFIType hs_bindgen_4ff464f400705659_base
-
-{-# NOINLINE wuffs_base__make_range_ii_u64 #-}
-{-| __C declaration:__ @wuffs_base__make_range_ii_u64@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2338:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__make_range_ii_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__range_ii_u64)
-wuffs_base__make_range_ii_u64 =
-  BG.unsafePerformIO hs_bindgen_4ff464f400705659
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty@
-foreign import ccall unsafe "hs_bindgen_d0872a5a8d18c181" hs_bindgen_d0872a5a8d18c181_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty@
-hs_bindgen_d0872a5a8d18c181 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> IO BG.CBool))
-hs_bindgen_d0872a5a8d18c181 =
-  fmap BG.fromFFIType hs_bindgen_d0872a5a8d18c181_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__is_empty #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__is_empty@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2346:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> IO BG.CBool)
-wuffs_base__range_ii_u64__is_empty =
-  BG.unsafePerformIO hs_bindgen_d0872a5a8d18c181
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals@
-foreign import ccall unsafe "hs_bindgen_654e3584fe7e0483" hs_bindgen_654e3584fe7e0483_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals@
-hs_bindgen_654e3584fe7e0483 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool))
-hs_bindgen_654e3584fe7e0483 =
-  fmap BG.fromFFIType hs_bindgen_654e3584fe7e0483_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__equals #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__equals@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2351:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool)
-wuffs_base__range_ii_u64__equals =
-  BG.unsafePerformIO hs_bindgen_654e3584fe7e0483
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect@
-foreign import ccall unsafe "hs_bindgen_840252558d0fc219" hs_bindgen_840252558d0fc219_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect@
-hs_bindgen_840252558d0fc219 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64))
-hs_bindgen_840252558d0fc219 =
-  fmap BG.fromFFIType hs_bindgen_840252558d0fc219_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__intersect #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__intersect@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2359:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64)
-wuffs_base__range_ii_u64__intersect =
-  BG.unsafePerformIO hs_bindgen_840252558d0fc219
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite@
-foreign import ccall unsafe "hs_bindgen_9bfcb30f81f85012" hs_bindgen_9bfcb30f81f85012_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite@
-hs_bindgen_9bfcb30f81f85012 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64))
-hs_bindgen_9bfcb30f81f85012 =
-  fmap BG.fromFFIType hs_bindgen_9bfcb30f81f85012_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__unite #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__unite@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2368:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64)
-wuffs_base__range_ii_u64__unite =
-  BG.unsafePerformIO hs_bindgen_9bfcb30f81f85012
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains@
-foreign import ccall unsafe "hs_bindgen_444eba7f1ca2bd7e" hs_bindgen_444eba7f1ca2bd7e_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains@
-hs_bindgen_444eba7f1ca2bd7e :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> HsBindgen.Runtime.LibC.Word64 -> IO BG.CBool))
-hs_bindgen_444eba7f1ca2bd7e =
-  fmap BG.fromFFIType hs_bindgen_444eba7f1ca2bd7e_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__contains #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__contains@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2383:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> HsBindgen.Runtime.LibC.Word64 -> IO BG.CBool)
-wuffs_base__range_ii_u64__contains =
-  BG.unsafePerformIO hs_bindgen_444eba7f1ca2bd7e
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range@
-foreign import ccall unsafe "hs_bindgen_3e7006c59e92a354" hs_bindgen_3e7006c59e92a354_base ::
-     IO (BG.FunPtr BG.Void)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range@
-hs_bindgen_3e7006c59e92a354 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool))
-hs_bindgen_3e7006c59e92a354 =
-  fmap BG.fromFFIType hs_bindgen_3e7006c59e92a354_base
-
-{-# NOINLINE wuffs_base__range_ii_u64__contains_range #-}
-{-| __C declaration:__ @wuffs_base__range_ii_u64__contains_range@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2389:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool)
-wuffs_base__range_ii_u64__contains_range =
-  BG.unsafePerformIO hs_bindgen_3e7006c59e92a354
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ie_u64@
 foreign import ccall unsafe "hs_bindgen_28b83d9f3d8825de" hs_bindgen_28b83d9f3d8825de_base ::
@@ -10006,9 +10445,9 @@ hs_bindgen_28b83d9f3d8825de =
 {-# NOINLINE wuffs_base__empty_range_ie_u64 #-}
 {-| __C declaration:__ @wuffs_base__empty_range_ie_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2450:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2341:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_range_ie_u64 :: BG.FunPtr (IO Wuffs_base__range_ie_u64)
 wuffs_base__empty_range_ie_u64 =
@@ -10026,9 +10465,9 @@ hs_bindgen_a73b44d923bf3bcf =
 {-# NOINLINE wuffs_base__make_range_ie_u64 #-}
 {-| __C declaration:__ @wuffs_base__make_range_ie_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2458:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2349:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_range_ie_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__range_ie_u64)
 wuffs_base__make_range_ie_u64 =
@@ -10046,9 +10485,9 @@ hs_bindgen_e5b814c9fda58d5e =
 {-# NOINLINE wuffs_base__range_ie_u64__is_empty #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2357:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> IO BG.CBool)
 wuffs_base__range_ie_u64__is_empty =
@@ -10066,9 +10505,9 @@ hs_bindgen_51cebc49fd68ace9 =
 {-# NOINLINE wuffs_base__range_ie_u64__equals #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2471:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2362:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> Wuffs_base__range_ie_u64 -> IO BG.CBool)
 wuffs_base__range_ie_u64__equals =
@@ -10086,9 +10525,9 @@ hs_bindgen_e7b714eb3fe4db05 =
 {-# NOINLINE wuffs_base__range_ie_u64__intersect #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2479:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2370:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> Wuffs_base__range_ie_u64 -> IO Wuffs_base__range_ie_u64)
 wuffs_base__range_ie_u64__intersect =
@@ -10106,9 +10545,9 @@ hs_bindgen_a216a563b8abe5f6 =
 {-# NOINLINE wuffs_base__range_ie_u64__unite #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2488:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2379:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> Wuffs_base__range_ie_u64 -> IO Wuffs_base__range_ie_u64)
 wuffs_base__range_ie_u64__unite =
@@ -10126,9 +10565,9 @@ hs_bindgen_c26de463b5cc16b4 =
 {-# NOINLINE wuffs_base__range_ie_u64__contains #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2503:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> HsBindgen.Runtime.LibC.Word64 -> IO BG.CBool)
 wuffs_base__range_ie_u64__contains =
@@ -10146,9 +10585,9 @@ hs_bindgen_9cd5c274e02b0c4b =
 {-# NOINLINE wuffs_base__range_ie_u64__contains_range #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2509:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2400:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> Wuffs_base__range_ie_u64 -> IO BG.CBool)
 wuffs_base__range_ie_u64__contains_range =
@@ -10166,173 +10605,533 @@ hs_bindgen_5e9b6bc31bb9cab6 =
 {-# NOINLINE wuffs_base__range_ie_u64__length #-}
 {-| __C declaration:__ @wuffs_base__range_ie_u64__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2407:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ie_u64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__range_ie_u64__length =
   BG.unsafePerformIO hs_bindgen_5e9b6bc31bb9cab6
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32@
-foreign import ccall unsafe "hs_bindgen_a9bd324df48b515d" hs_bindgen_a9bd324df48b515d_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32@
+foreign import ccall unsafe "hs_bindgen_6a39e12f315465c8" hs_bindgen_6a39e12f315465c8_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32@
-hs_bindgen_a9bd324df48b515d :: IO (BG.FunPtr (IO Wuffs_base__rect_ii_u32))
-hs_bindgen_a9bd324df48b515d =
-  fmap BG.fromFFIType hs_bindgen_a9bd324df48b515d_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u32@
+hs_bindgen_6a39e12f315465c8 :: IO (BG.FunPtr (IO Wuffs_base__range_ii_u32))
+hs_bindgen_6a39e12f315465c8 =
+  fmap BG.fromFFIType hs_bindgen_6a39e12f315465c8_base
 
-{-# NOINLINE wuffs_base__empty_rect_ii_u32 #-}
-{-| __C declaration:__ @wuffs_base__empty_rect_ii_u32@
+{-# NOINLINE wuffs_base__empty_range_ii_u32 #-}
+{-| __C declaration:__ @wuffs_base__empty_range_ii_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2581:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__empty_rect_ii_u32 :: BG.FunPtr (IO Wuffs_base__rect_ii_u32)
-wuffs_base__empty_rect_ii_u32 =
-  BG.unsafePerformIO hs_bindgen_a9bd324df48b515d
+wuffs_base__empty_range_ii_u32 :: BG.FunPtr (IO Wuffs_base__range_ii_u32)
+wuffs_base__empty_range_ii_u32 =
+  BG.unsafePerformIO hs_bindgen_6a39e12f315465c8
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32@
-foreign import ccall unsafe "hs_bindgen_f259cc9864c594aa" hs_bindgen_f259cc9864c594aa_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32@
+foreign import ccall unsafe "hs_bindgen_624388e1ffa8d5a7" hs_bindgen_624388e1ffa8d5a7_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32@
-hs_bindgen_f259cc9864c594aa :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__rect_ii_u32))
-hs_bindgen_f259cc9864c594aa =
-  fmap BG.fromFFIType hs_bindgen_f259cc9864c594aa_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u32@
+hs_bindgen_624388e1ffa8d5a7 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__range_ii_u32))
+hs_bindgen_624388e1ffa8d5a7 =
+  fmap BG.fromFFIType hs_bindgen_624388e1ffa8d5a7_base
 
-{-# NOINLINE wuffs_base__make_rect_ii_u32 #-}
-{-| __C declaration:__ @wuffs_base__make_rect_ii_u32@
+{-# NOINLINE wuffs_base__make_range_ii_u32 #-}
+{-| __C declaration:__ @wuffs_base__make_range_ii_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2591:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2478:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__make_rect_ii_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__rect_ii_u32)
-wuffs_base__make_rect_ii_u32 =
-  BG.unsafePerformIO hs_bindgen_f259cc9864c594aa
+wuffs_base__make_range_ii_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__range_ii_u32)
+wuffs_base__make_range_ii_u32 =
+  BG.unsafePerformIO hs_bindgen_624388e1ffa8d5a7
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty@
-foreign import ccall unsafe "hs_bindgen_7f1300d28dd48892" hs_bindgen_7f1300d28dd48892_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty@
+foreign import ccall unsafe "hs_bindgen_29e56142d1e16b21" hs_bindgen_29e56142d1e16b21_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty@
-hs_bindgen_7f1300d28dd48892 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> IO BG.CBool))
-hs_bindgen_7f1300d28dd48892 =
-  fmap BG.fromFFIType hs_bindgen_7f1300d28dd48892_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__is_empty@
+hs_bindgen_29e56142d1e16b21 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> IO BG.CBool))
+hs_bindgen_29e56142d1e16b21 =
+  fmap BG.fromFFIType hs_bindgen_29e56142d1e16b21_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__is_empty #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__is_empty@
+{-# NOINLINE wuffs_base__range_ii_u32__is_empty #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2604:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2486:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> IO BG.CBool)
-wuffs_base__rect_ii_u32__is_empty =
-  BG.unsafePerformIO hs_bindgen_7f1300d28dd48892
+wuffs_base__range_ii_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> IO BG.CBool)
+wuffs_base__range_ii_u32__is_empty =
+  BG.unsafePerformIO hs_bindgen_29e56142d1e16b21
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals@
-foreign import ccall unsafe "hs_bindgen_3d069d5003a4b01a" hs_bindgen_3d069d5003a4b01a_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals@
+foreign import ccall unsafe "hs_bindgen_0274888a0e3e3e8f" hs_bindgen_0274888a0e3e3e8f_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals@
-hs_bindgen_3d069d5003a4b01a :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool))
-hs_bindgen_3d069d5003a4b01a =
-  fmap BG.fromFFIType hs_bindgen_3d069d5003a4b01a_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__equals@
+hs_bindgen_0274888a0e3e3e8f :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool))
+hs_bindgen_0274888a0e3e3e8f =
+  fmap BG.fromFFIType hs_bindgen_0274888a0e3e3e8f_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__equals #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__equals@
+{-# NOINLINE wuffs_base__range_ii_u32__equals #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2609:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2491:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool)
-wuffs_base__rect_ii_u32__equals =
-  BG.unsafePerformIO hs_bindgen_3d069d5003a4b01a
+wuffs_base__range_ii_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool)
+wuffs_base__range_ii_u32__equals =
+  BG.unsafePerformIO hs_bindgen_0274888a0e3e3e8f
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect@
-foreign import ccall unsafe "hs_bindgen_821005a0387ab15a" hs_bindgen_821005a0387ab15a_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect@
+foreign import ccall unsafe "hs_bindgen_7a468bf64a707365" hs_bindgen_7a468bf64a707365_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect@
-hs_bindgen_821005a0387ab15a :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32))
-hs_bindgen_821005a0387ab15a =
-  fmap BG.fromFFIType hs_bindgen_821005a0387ab15a_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__intersect@
+hs_bindgen_7a468bf64a707365 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32))
+hs_bindgen_7a468bf64a707365 =
+  fmap BG.fromFFIType hs_bindgen_7a468bf64a707365_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__intersect #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__intersect@
+{-# NOINLINE wuffs_base__range_ii_u32__intersect #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2618:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2499:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32)
-wuffs_base__rect_ii_u32__intersect =
-  BG.unsafePerformIO hs_bindgen_821005a0387ab15a
+wuffs_base__range_ii_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32)
+wuffs_base__range_ii_u32__intersect =
+  BG.unsafePerformIO hs_bindgen_7a468bf64a707365
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite@
-foreign import ccall unsafe "hs_bindgen_a15954bbd662212f" hs_bindgen_a15954bbd662212f_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite@
+foreign import ccall unsafe "hs_bindgen_e1b839f18c791c95" hs_bindgen_e1b839f18c791c95_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite@
-hs_bindgen_a15954bbd662212f :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32))
-hs_bindgen_a15954bbd662212f =
-  fmap BG.fromFFIType hs_bindgen_a15954bbd662212f_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__unite@
+hs_bindgen_e1b839f18c791c95 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32))
+hs_bindgen_e1b839f18c791c95 =
+  fmap BG.fromFFIType hs_bindgen_e1b839f18c791c95_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__unite #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__unite@
+{-# NOINLINE wuffs_base__range_ii_u32__unite #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2629:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2508:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32)
-wuffs_base__rect_ii_u32__unite =
-  BG.unsafePerformIO hs_bindgen_a15954bbd662212f
+wuffs_base__range_ii_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO Wuffs_base__range_ii_u32)
+wuffs_base__range_ii_u32__unite =
+  BG.unsafePerformIO hs_bindgen_e1b839f18c791c95
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains@
-foreign import ccall unsafe "hs_bindgen_7c48b214b519e8c4" hs_bindgen_7c48b214b519e8c4_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains@
+foreign import ccall unsafe "hs_bindgen_31ac590f1e0f762d" hs_bindgen_31ac590f1e0f762d_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains@
-hs_bindgen_7c48b214b519e8c4 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool))
-hs_bindgen_7c48b214b519e8c4 =
-  fmap BG.fromFFIType hs_bindgen_7c48b214b519e8c4_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains@
+hs_bindgen_31ac590f1e0f762d :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool))
+hs_bindgen_31ac590f1e0f762d =
+  fmap BG.fromFFIType hs_bindgen_31ac590f1e0f762d_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__contains #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains@
+{-# NOINLINE wuffs_base__range_ii_u32__contains #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2523:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
-wuffs_base__rect_ii_u32__contains =
-  BG.unsafePerformIO hs_bindgen_7c48b214b519e8c4
+wuffs_base__range_ii_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
+wuffs_base__range_ii_u32__contains =
+  BG.unsafePerformIO hs_bindgen_31ac590f1e0f762d
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect@
-foreign import ccall unsafe "hs_bindgen_d8c54fc52973d0f9" hs_bindgen_d8c54fc52973d0f9_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range@
+foreign import ccall unsafe "hs_bindgen_a933ae0a78cdf8a1" hs_bindgen_a933ae0a78cdf8a1_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect@
-hs_bindgen_d8c54fc52973d0f9 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool))
-hs_bindgen_d8c54fc52973d0f9 =
-  fmap BG.fromFFIType hs_bindgen_d8c54fc52973d0f9_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u32__contains_range@
+hs_bindgen_a933ae0a78cdf8a1 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool))
+hs_bindgen_a933ae0a78cdf8a1 =
+  fmap BG.fromFFIType hs_bindgen_a933ae0a78cdf8a1_base
 
-{-# NOINLINE wuffs_base__rect_ii_u32__contains_rect #-}
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains_rect@
+{-# NOINLINE wuffs_base__range_ii_u32__contains_range #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u32__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2654:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2529:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__contains_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool)
-wuffs_base__rect_ii_u32__contains_rect =
-  BG.unsafePerformIO hs_bindgen_d8c54fc52973d0f9
+wuffs_base__range_ii_u32__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u32 -> Wuffs_base__range_ii_u32 -> IO BG.CBool)
+wuffs_base__range_ii_u32__contains_range =
+  BG.unsafePerformIO hs_bindgen_a933ae0a78cdf8a1
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64@
+foreign import ccall unsafe "hs_bindgen_d0bbc07ad9879123" hs_bindgen_d0bbc07ad9879123_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_range_ii_u64@
+hs_bindgen_d0bbc07ad9879123 :: IO (BG.FunPtr (IO Wuffs_base__range_ii_u64))
+hs_bindgen_d0bbc07ad9879123 =
+  fmap BG.fromFFIType hs_bindgen_d0bbc07ad9879123_base
+
+{-# NOINLINE wuffs_base__empty_range_ii_u64 #-}
+{-| __C declaration:__ @wuffs_base__empty_range_ii_u64@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2589:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_range_ii_u64 :: BG.FunPtr (IO Wuffs_base__range_ii_u64)
+wuffs_base__empty_range_ii_u64 =
+  BG.unsafePerformIO hs_bindgen_d0bbc07ad9879123
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64@
+foreign import ccall unsafe "hs_bindgen_4ff464f400705659" hs_bindgen_4ff464f400705659_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_range_ii_u64@
+hs_bindgen_4ff464f400705659 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__range_ii_u64))
+hs_bindgen_4ff464f400705659 =
+  fmap BG.fromFFIType hs_bindgen_4ff464f400705659_base
+
+{-# NOINLINE wuffs_base__make_range_ii_u64 #-}
+{-| __C declaration:__ @wuffs_base__make_range_ii_u64@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2597:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_range_ii_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__range_ii_u64)
+wuffs_base__make_range_ii_u64 =
+  BG.unsafePerformIO hs_bindgen_4ff464f400705659
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty@
+foreign import ccall unsafe "hs_bindgen_d0872a5a8d18c181" hs_bindgen_d0872a5a8d18c181_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__is_empty@
+hs_bindgen_d0872a5a8d18c181 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> IO BG.CBool))
+hs_bindgen_d0872a5a8d18c181 =
+  fmap BG.fromFFIType hs_bindgen_d0872a5a8d18c181_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__is_empty #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2605:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> IO BG.CBool)
+wuffs_base__range_ii_u64__is_empty =
+  BG.unsafePerformIO hs_bindgen_d0872a5a8d18c181
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals@
+foreign import ccall unsafe "hs_bindgen_654e3584fe7e0483" hs_bindgen_654e3584fe7e0483_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__equals@
+hs_bindgen_654e3584fe7e0483 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool))
+hs_bindgen_654e3584fe7e0483 =
+  fmap BG.fromFFIType hs_bindgen_654e3584fe7e0483_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__equals #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2610:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool)
+wuffs_base__range_ii_u64__equals =
+  BG.unsafePerformIO hs_bindgen_654e3584fe7e0483
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect@
+foreign import ccall unsafe "hs_bindgen_840252558d0fc219" hs_bindgen_840252558d0fc219_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__intersect@
+hs_bindgen_840252558d0fc219 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64))
+hs_bindgen_840252558d0fc219 =
+  fmap BG.fromFFIType hs_bindgen_840252558d0fc219_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__intersect #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2618:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64)
+wuffs_base__range_ii_u64__intersect =
+  BG.unsafePerformIO hs_bindgen_840252558d0fc219
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite@
+foreign import ccall unsafe "hs_bindgen_9bfcb30f81f85012" hs_bindgen_9bfcb30f81f85012_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__unite@
+hs_bindgen_9bfcb30f81f85012 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64))
+hs_bindgen_9bfcb30f81f85012 =
+  fmap BG.fromFFIType hs_bindgen_9bfcb30f81f85012_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__unite #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2627:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO Wuffs_base__range_ii_u64)
+wuffs_base__range_ii_u64__unite =
+  BG.unsafePerformIO hs_bindgen_9bfcb30f81f85012
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains@
+foreign import ccall unsafe "hs_bindgen_444eba7f1ca2bd7e" hs_bindgen_444eba7f1ca2bd7e_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains@
+hs_bindgen_444eba7f1ca2bd7e :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> HsBindgen.Runtime.LibC.Word64 -> IO BG.CBool))
+hs_bindgen_444eba7f1ca2bd7e =
+  fmap BG.fromFFIType hs_bindgen_444eba7f1ca2bd7e_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__contains #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2642:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> HsBindgen.Runtime.LibC.Word64 -> IO BG.CBool)
+wuffs_base__range_ii_u64__contains =
+  BG.unsafePerformIO hs_bindgen_444eba7f1ca2bd7e
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range@
+foreign import ccall unsafe "hs_bindgen_3e7006c59e92a354" hs_bindgen_3e7006c59e92a354_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__range_ii_u64__contains_range@
+hs_bindgen_3e7006c59e92a354 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool))
+hs_bindgen_3e7006c59e92a354 =
+  fmap BG.fromFFIType hs_bindgen_3e7006c59e92a354_base
+
+{-# NOINLINE wuffs_base__range_ii_u64__contains_range #-}
+{-| __C declaration:__ @wuffs_base__range_ii_u64__contains_range@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2648:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__contains_range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__range_ii_u64 -> Wuffs_base__range_ii_u64 -> IO BG.CBool)
+wuffs_base__range_ii_u64__contains_range =
+  BG.unsafePerformIO hs_bindgen_3e7006c59e92a354
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ie_i32@
+foreign import ccall unsafe "hs_bindgen_0a812b23dda42af1" hs_bindgen_0a812b23dda42af1_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ie_i32@
+hs_bindgen_0a812b23dda42af1 :: IO (BG.FunPtr (IO Wuffs_base__rect_ie_i32))
+hs_bindgen_0a812b23dda42af1 =
+  fmap BG.fromFFIType hs_bindgen_0a812b23dda42af1_base
+
+{-# NOINLINE wuffs_base__empty_rect_ie_i32 #-}
+{-| __C declaration:__ @wuffs_base__empty_rect_ie_i32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2712:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_rect_ie_i32 :: BG.FunPtr (IO Wuffs_base__rect_ie_i32)
+wuffs_base__empty_rect_ie_i32 =
+  BG.unsafePerformIO hs_bindgen_0a812b23dda42af1
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ie_i32@
+foreign import ccall unsafe "hs_bindgen_6f181bb1cfece745" hs_bindgen_6f181bb1cfece745_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ie_i32@
+hs_bindgen_6f181bb1cfece745 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO Wuffs_base__rect_ie_i32))
+hs_bindgen_6f181bb1cfece745 =
+  fmap BG.fromFFIType hs_bindgen_6f181bb1cfece745_base
+
+{-# NOINLINE wuffs_base__make_rect_ie_i32 #-}
+{-| __C declaration:__ @wuffs_base__make_rect_ie_i32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2722:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_rect_ie_i32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO Wuffs_base__rect_ie_i32)
+wuffs_base__make_rect_ie_i32 =
+  BG.unsafePerformIO hs_bindgen_6f181bb1cfece745
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__is_empty@
+foreign import ccall unsafe "hs_bindgen_5cc6526b67dc2eef" hs_bindgen_5cc6526b67dc2eef_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__is_empty@
+hs_bindgen_5cc6526b67dc2eef :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO BG.CBool))
+hs_bindgen_5cc6526b67dc2eef =
+  fmap BG.fromFFIType hs_bindgen_5cc6526b67dc2eef_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__is_empty #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2735:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO BG.CBool)
+wuffs_base__rect_ie_i32__is_empty =
+  BG.unsafePerformIO hs_bindgen_5cc6526b67dc2eef
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__equals@
+foreign import ccall unsafe "hs_bindgen_6a2abcd5ea4e6533" hs_bindgen_6a2abcd5ea4e6533_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__equals@
+hs_bindgen_6a2abcd5ea4e6533 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO BG.CBool))
+hs_bindgen_6a2abcd5ea4e6533 =
+  fmap BG.fromFFIType hs_bindgen_6a2abcd5ea4e6533_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__equals #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2740:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO BG.CBool)
+wuffs_base__rect_ie_i32__equals =
+  BG.unsafePerformIO hs_bindgen_6a2abcd5ea4e6533
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__intersect@
+foreign import ccall unsafe "hs_bindgen_f65b7d2b02e5f4bf" hs_bindgen_f65b7d2b02e5f4bf_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__intersect@
+hs_bindgen_f65b7d2b02e5f4bf :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO Wuffs_base__rect_ie_i32))
+hs_bindgen_f65b7d2b02e5f4bf =
+  fmap BG.fromFFIType hs_bindgen_f65b7d2b02e5f4bf_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__intersect #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2749:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO Wuffs_base__rect_ie_i32)
+wuffs_base__rect_ie_i32__intersect =
+  BG.unsafePerformIO hs_bindgen_f65b7d2b02e5f4bf
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__unite@
+foreign import ccall unsafe "hs_bindgen_ae215c24a443d264" hs_bindgen_ae215c24a443d264_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__unite@
+hs_bindgen_ae215c24a443d264 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO Wuffs_base__rect_ie_i32))
+hs_bindgen_ae215c24a443d264 =
+  fmap BG.fromFFIType hs_bindgen_ae215c24a443d264_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__unite #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2760:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO Wuffs_base__rect_ie_i32)
+wuffs_base__rect_ie_i32__unite =
+  BG.unsafePerformIO hs_bindgen_ae215c24a443d264
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains@
+foreign import ccall unsafe "hs_bindgen_8bddfe23dd7df09d" hs_bindgen_8bddfe23dd7df09d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains@
+hs_bindgen_8bddfe23dd7df09d :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO BG.CBool))
+hs_bindgen_8bddfe23dd7df09d =
+  fmap BG.fromFFIType hs_bindgen_8bddfe23dd7df09d_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__contains #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2777:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> HsBindgen.Runtime.LibC.Int32 -> HsBindgen.Runtime.LibC.Int32 -> IO BG.CBool)
+wuffs_base__rect_ie_i32__contains =
+  BG.unsafePerformIO hs_bindgen_8bddfe23dd7df09d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains_rect@
+foreign import ccall unsafe "hs_bindgen_cc584f4efe3bd364" hs_bindgen_cc584f4efe3bd364_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__contains_rect@
+hs_bindgen_cc584f4efe3bd364 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO BG.CBool))
+hs_bindgen_cc584f4efe3bd364 =
+  fmap BG.fromFFIType hs_bindgen_cc584f4efe3bd364_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__contains_rect #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__contains_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2785:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__contains_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> Wuffs_base__rect_ie_i32 -> IO BG.CBool)
+wuffs_base__rect_ie_i32__contains_rect =
+  BG.unsafePerformIO hs_bindgen_cc584f4efe3bd364
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__width@
+foreign import ccall unsafe "hs_bindgen_e28f0df89e35a7f6" hs_bindgen_e28f0df89e35a7f6_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__width@
+hs_bindgen_e28f0df89e35a7f6 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_e28f0df89e35a7f6 =
+  fmap BG.fromFFIType hs_bindgen_e28f0df89e35a7f6_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__width #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__width@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2792:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__width :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__rect_ie_i32__width =
+  BG.unsafePerformIO hs_bindgen_e28f0df89e35a7f6
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__height@
+foreign import ccall unsafe "hs_bindgen_3381c96500239b18" hs_bindgen_3381c96500239b18_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ie_i32__height@
+hs_bindgen_3381c96500239b18 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_3381c96500239b18 =
+  fmap BG.fromFFIType hs_bindgen_3381c96500239b18_base
+
+{-# NOINLINE wuffs_base__rect_ie_i32__height #-}
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__height@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2799:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__height :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_i32 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__rect_ie_i32__height =
+  BG.unsafePerformIO hs_bindgen_3381c96500239b18
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ie_u32@
 foreign import ccall unsafe "hs_bindgen_7856e6191a584fa7" hs_bindgen_7856e6191a584fa7_base ::
@@ -10346,9 +11145,9 @@ hs_bindgen_7856e6191a584fa7 =
 {-# NOINLINE wuffs_base__empty_rect_ie_u32 #-}
 {-| __C declaration:__ @wuffs_base__empty_rect_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2718:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2873:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_rect_ie_u32 :: BG.FunPtr (IO Wuffs_base__rect_ie_u32)
 wuffs_base__empty_rect_ie_u32 =
@@ -10366,9 +11165,9 @@ hs_bindgen_6e2656ecc65a61f7 =
 {-# NOINLINE wuffs_base__make_rect_ie_u32 #-}
 {-| __C declaration:__ @wuffs_base__make_rect_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2728:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2883:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_rect_ie_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__make_rect_ie_u32 =
@@ -10386,9 +11185,9 @@ hs_bindgen_736b544b384cb20b =
 {-# NOINLINE wuffs_base__rect_ie_u32__is_empty #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2741:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2896:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> IO BG.CBool)
 wuffs_base__rect_ie_u32__is_empty =
@@ -10406,9 +11205,9 @@ hs_bindgen_f2ecee6bc3aa1bba =
 {-# NOINLINE wuffs_base__rect_ie_u32__equals #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2746:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2901:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> Wuffs_base__rect_ie_u32 -> IO BG.CBool)
 wuffs_base__rect_ie_u32__equals =
@@ -10426,9 +11225,9 @@ hs_bindgen_14782fa249903547 =
 {-# NOINLINE wuffs_base__rect_ie_u32__intersect #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2755:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2910:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> Wuffs_base__rect_ie_u32 -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__rect_ie_u32__intersect =
@@ -10446,9 +11245,9 @@ hs_bindgen_8043e362e8511e8e =
 {-# NOINLINE wuffs_base__rect_ie_u32__unite #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2921:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> Wuffs_base__rect_ie_u32 -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__rect_ie_u32__unite =
@@ -10466,9 +11265,9 @@ hs_bindgen_53d43637808027f7 =
 {-# NOINLINE wuffs_base__rect_ie_u32__contains #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2783:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2938:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
 wuffs_base__rect_ie_u32__contains =
@@ -10486,9 +11285,9 @@ hs_bindgen_e77237ff71743dac =
 {-# NOINLINE wuffs_base__rect_ie_u32__contains_rect #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__contains_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2946:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__contains_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> Wuffs_base__rect_ie_u32 -> IO BG.CBool)
 wuffs_base__rect_ie_u32__contains_rect =
@@ -10506,9 +11305,9 @@ hs_bindgen_db2e021b9c998724 =
 {-# NOINLINE wuffs_base__rect_ie_u32__width #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__width :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__rect_ie_u32__width =
@@ -10526,13 +11325,173 @@ hs_bindgen_2c25226a37a2f4fe =
 {-# NOINLINE wuffs_base__rect_ie_u32__height #-}
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2803:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2958:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__height :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ie_u32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__rect_ie_u32__height =
   BG.unsafePerformIO hs_bindgen_2c25226a37a2f4fe
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32@
+foreign import ccall unsafe "hs_bindgen_a9bd324df48b515d" hs_bindgen_a9bd324df48b515d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_rect_ii_u32@
+hs_bindgen_a9bd324df48b515d :: IO (BG.FunPtr (IO Wuffs_base__rect_ii_u32))
+hs_bindgen_a9bd324df48b515d =
+  fmap BG.fromFFIType hs_bindgen_a9bd324df48b515d_base
+
+{-# NOINLINE wuffs_base__empty_rect_ii_u32 #-}
+{-| __C declaration:__ @wuffs_base__empty_rect_ii_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3028:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_rect_ii_u32 :: BG.FunPtr (IO Wuffs_base__rect_ii_u32)
+wuffs_base__empty_rect_ii_u32 =
+  BG.unsafePerformIO hs_bindgen_a9bd324df48b515d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32@
+foreign import ccall unsafe "hs_bindgen_f259cc9864c594aa" hs_bindgen_f259cc9864c594aa_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_rect_ii_u32@
+hs_bindgen_f259cc9864c594aa :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__rect_ii_u32))
+hs_bindgen_f259cc9864c594aa =
+  fmap BG.fromFFIType hs_bindgen_f259cc9864c594aa_base
+
+{-# NOINLINE wuffs_base__make_rect_ii_u32 #-}
+{-| __C declaration:__ @wuffs_base__make_rect_ii_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3038:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_rect_ii_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__rect_ii_u32)
+wuffs_base__make_rect_ii_u32 =
+  BG.unsafePerformIO hs_bindgen_f259cc9864c594aa
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty@
+foreign import ccall unsafe "hs_bindgen_7f1300d28dd48892" hs_bindgen_7f1300d28dd48892_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__is_empty@
+hs_bindgen_7f1300d28dd48892 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> IO BG.CBool))
+hs_bindgen_7f1300d28dd48892 =
+  fmap BG.fromFFIType hs_bindgen_7f1300d28dd48892_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__is_empty #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3051:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__is_empty :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> IO BG.CBool)
+wuffs_base__rect_ii_u32__is_empty =
+  BG.unsafePerformIO hs_bindgen_7f1300d28dd48892
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals@
+foreign import ccall unsafe "hs_bindgen_3d069d5003a4b01a" hs_bindgen_3d069d5003a4b01a_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__equals@
+hs_bindgen_3d069d5003a4b01a :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool))
+hs_bindgen_3d069d5003a4b01a =
+  fmap BG.fromFFIType hs_bindgen_3d069d5003a4b01a_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__equals #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3056:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__equals :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool)
+wuffs_base__rect_ii_u32__equals =
+  BG.unsafePerformIO hs_bindgen_3d069d5003a4b01a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect@
+foreign import ccall unsafe "hs_bindgen_821005a0387ab15a" hs_bindgen_821005a0387ab15a_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__intersect@
+hs_bindgen_821005a0387ab15a :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32))
+hs_bindgen_821005a0387ab15a =
+  fmap BG.fromFFIType hs_bindgen_821005a0387ab15a_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__intersect #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3065:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__intersect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32)
+wuffs_base__rect_ii_u32__intersect =
+  BG.unsafePerformIO hs_bindgen_821005a0387ab15a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite@
+foreign import ccall unsafe "hs_bindgen_a15954bbd662212f" hs_bindgen_a15954bbd662212f_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__unite@
+hs_bindgen_a15954bbd662212f :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32))
+hs_bindgen_a15954bbd662212f =
+  fmap BG.fromFFIType hs_bindgen_a15954bbd662212f_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__unite #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3076:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__unite :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO Wuffs_base__rect_ii_u32)
+wuffs_base__rect_ii_u32__unite =
+  BG.unsafePerformIO hs_bindgen_a15954bbd662212f
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains@
+foreign import ccall unsafe "hs_bindgen_7c48b214b519e8c4" hs_bindgen_7c48b214b519e8c4_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains@
+hs_bindgen_7c48b214b519e8c4 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool))
+hs_bindgen_7c48b214b519e8c4 =
+  fmap BG.fromFFIType hs_bindgen_7c48b214b519e8c4_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__contains #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3093:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__contains :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO BG.CBool)
+wuffs_base__rect_ii_u32__contains =
+  BG.unsafePerformIO hs_bindgen_7c48b214b519e8c4
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect@
+foreign import ccall unsafe "hs_bindgen_d8c54fc52973d0f9" hs_bindgen_d8c54fc52973d0f9_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__rect_ii_u32__contains_rect@
+hs_bindgen_d8c54fc52973d0f9 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool))
+hs_bindgen_d8c54fc52973d0f9 =
+  fmap BG.fromFFIType hs_bindgen_d8c54fc52973d0f9_base
+
+{-# NOINLINE wuffs_base__rect_ii_u32__contains_rect #-}
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3101:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__contains_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__rect_ii_u32 -> Wuffs_base__rect_ii_u32 -> IO BG.CBool)
+wuffs_base__rect_ii_u32__contains_rect =
+  BG.unsafePerformIO hs_bindgen_d8c54fc52973d0f9
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__empty_more_information@
 foreign import ccall unsafe "hs_bindgen_a9b43a5494f03af2" hs_bindgen_a9b43a5494f03af2_base ::
@@ -10546,9 +11505,9 @@ hs_bindgen_a9b43a5494f03af2 =
 {-# NOINLINE wuffs_base__empty_more_information #-}
 {-| __C declaration:__ @wuffs_base__empty_more_information@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2891:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3181:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_more_information :: BG.FunPtr (IO Wuffs_base__more_information)
 wuffs_base__empty_more_information =
@@ -10566,9 +11525,9 @@ hs_bindgen_d884d679d4b1515d =
 {-# NOINLINE wuffs_base__more_information__set #-}
 {-| __C declaration:__ @wuffs_base__more_information__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2902:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3192:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__set :: BG.FunPtr (BG.Ptr Wuffs_base__more_information -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO ())
 wuffs_base__more_information__set =
@@ -10586,9 +11545,9 @@ hs_bindgen_e110268ca3812475 =
 {-# NOINLINE wuffs_base__more_information__io_redirect__fourcc #-}
 {-| __C declaration:__ @wuffs_base__more_information__io_redirect__fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2919:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3209:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_redirect__fourcc :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__more_information__io_redirect__fourcc =
@@ -10606,9 +11565,9 @@ hs_bindgen_cd4da6d60893a214 =
 {-# NOINLINE wuffs_base__more_information__io_redirect__range #-}
 {-| __C declaration:__ @wuffs_base__more_information__io_redirect__range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2925:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3215:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_redirect__range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO Wuffs_base__range_ie_u64)
 wuffs_base__more_information__io_redirect__range =
@@ -10626,9 +11585,9 @@ hs_bindgen_7c2c2fa87cc5447a =
 {-# NOINLINE wuffs_base__more_information__io_seek__position #-}
 {-| __C declaration:__ @wuffs_base__more_information__io_seek__position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2934:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_seek__position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__more_information__io_seek__position =
@@ -10646,9 +11605,9 @@ hs_bindgen_5e1a3c5221f43f58 =
 {-# NOINLINE wuffs_base__more_information__metadata__fourcc #-}
 {-| __C declaration:__ @wuffs_base__more_information__metadata__fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2940:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3230:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata__fourcc :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__more_information__metadata__fourcc =
@@ -10666,9 +11625,9 @@ hs_bindgen_1ac4dff07b36a780 =
 {-# NOINLINE wuffs_base__more_information__metadata_raw_passthrough__range #-}
 {-| __C declaration:__ @wuffs_base__more_information__metadata_raw_passthrough__range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2946:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3236:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_raw_passthrough__range :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO Wuffs_base__range_ie_u64)
 wuffs_base__more_information__metadata_raw_passthrough__range =
@@ -10686,9 +11645,9 @@ hs_bindgen_5a9444dc84996a9d =
 {-# NOINLINE wuffs_base__more_information__metadata_parsed__chrm #-}
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__chrm@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2978:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3268:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__chrm :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Int32)
 wuffs_base__more_information__metadata_parsed__chrm =
@@ -10706,9 +11665,9 @@ hs_bindgen_0e24667e9f91a5a6 =
 {-# NOINLINE wuffs_base__more_information__metadata_parsed__gama #-}
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__gama@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3024:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3314:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__gama :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__more_information__metadata_parsed__gama =
@@ -10726,9 +11685,9 @@ hs_bindgen_19f828a19b2ce61f =
 {-# NOINLINE wuffs_base__more_information__metadata_parsed__srgb #-}
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__srgb@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3037:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3327:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__srgb :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__more_information -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__more_information__metadata_parsed__srgb =
@@ -10746,9 +11705,9 @@ hs_bindgen_2a6878e766b6536e =
 {-# NOINLINE wuffs_base__make_io_buffer #-}
 {-| __C declaration:__ @wuffs_base__make_io_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3424:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_io_buffer :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__io_buffer_meta -> IO Wuffs_base__io_buffer)
 wuffs_base__make_io_buffer =
@@ -10766,9 +11725,9 @@ hs_bindgen_82c9c8fdb3c6cd62 =
 {-# NOINLINE wuffs_base__make_io_buffer_meta #-}
 {-| __C declaration:__ @wuffs_base__make_io_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3143:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3433:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_io_buffer_meta :: BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> BG.CBool -> IO Wuffs_base__io_buffer_meta)
 wuffs_base__make_io_buffer_meta =
@@ -10786,9 +11745,9 @@ hs_bindgen_33b08769edba516d =
 {-# NOINLINE wuffs_base__ptr_u8__reader #-}
 {-| __C declaration:__ @wuffs_base__ptr_u8__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3156:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3446:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ptr_u8__reader :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> BG.CBool -> IO Wuffs_base__io_buffer)
 wuffs_base__ptr_u8__reader =
@@ -10806,9 +11765,9 @@ hs_bindgen_8f68b4b1256c8f7a =
 {-# NOINLINE wuffs_base__ptr_u8__writer #-}
 {-| __C declaration:__ @wuffs_base__ptr_u8__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3168:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3458:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ptr_u8__writer :: BG.FunPtr (BG.Ptr HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__io_buffer)
 wuffs_base__ptr_u8__writer =
@@ -10826,9 +11785,9 @@ hs_bindgen_69cd3562f5b92d62 =
 {-# NOINLINE wuffs_base__slice_u8__reader #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3180:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__reader :: BG.FunPtr (Wuffs_base__slice_u8 -> BG.CBool -> IO Wuffs_base__io_buffer)
 wuffs_base__slice_u8__reader =
@@ -10846,9 +11805,9 @@ hs_bindgen_888ff60bea378360 =
 {-# NOINLINE wuffs_base__slice_u8__writer #-}
 {-| __C declaration:__ @wuffs_base__slice_u8__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3192:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3482:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__writer :: BG.FunPtr (Wuffs_base__slice_u8 -> IO Wuffs_base__io_buffer)
 wuffs_base__slice_u8__writer =
@@ -10866,9 +11825,9 @@ hs_bindgen_1b4a0fb1cd51c652 =
 {-# NOINLINE wuffs_base__empty_io_buffer #-}
 {-| __C declaration:__ @wuffs_base__empty_io_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3204:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_io_buffer :: BG.FunPtr (IO Wuffs_base__io_buffer)
 wuffs_base__empty_io_buffer =
@@ -10886,9 +11845,9 @@ hs_bindgen_a0584f5e9437390f =
 {-# NOINLINE wuffs_base__empty_io_buffer_meta #-}
 {-| __C declaration:__ @wuffs_base__empty_io_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3216:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3506:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_io_buffer_meta :: BG.FunPtr (IO Wuffs_base__io_buffer_meta)
 wuffs_base__empty_io_buffer_meta =
@@ -10906,9 +11865,9 @@ hs_bindgen_3742bf8924d9b408 =
 {-# NOINLINE wuffs_base__io_buffer__is_valid #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3226:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3516:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO BG.CBool)
 wuffs_base__io_buffer__is_valid =
@@ -10919,18 +11878,18 @@ foreign import ccall unsafe "hs_bindgen_5690ccd29adbf85a" hs_bindgen_5690ccd29ad
      IO (BG.FunPtr BG.Void)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__io_buffer__compact@
-hs_bindgen_5690ccd29adbf85a :: IO (BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> IO ()))
+hs_bindgen_5690ccd29adbf85a :: IO (BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.CSize))
 hs_bindgen_5690ccd29adbf85a =
   fmap BG.fromFFIType hs_bindgen_5690ccd29adbf85a_base
 
 {-# NOINLINE wuffs_base__io_buffer__compact #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__compact@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3240:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3532:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__io_buffer__compact :: BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> IO ())
+wuffs_base__io_buffer__compact :: BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__io_buffer__compact =
   BG.unsafePerformIO hs_bindgen_5690ccd29adbf85a
 
@@ -10939,18 +11898,18 @@ foreign import ccall unsafe "hs_bindgen_bb9787670ba99145" hs_bindgen_bb9787670ba
      IO (BG.FunPtr BG.Void)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__io_buffer__compact_retaining@
-hs_bindgen_bb9787670ba99145 :: IO (BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO ()))
+hs_bindgen_bb9787670ba99145 :: IO (BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.CSize))
 hs_bindgen_bb9787670ba99145 =
   fmap BG.fromFFIType hs_bindgen_bb9787670ba99145_base
 
 {-# NOINLINE wuffs_base__io_buffer__compact_retaining #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__compact_retaining@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3278:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3574:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__io_buffer__compact_retaining :: BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO ())
+wuffs_base__io_buffer__compact_retaining :: BG.FunPtr (BG.Ptr Wuffs_base__io_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__io_buffer__compact_retaining =
   BG.unsafePerformIO hs_bindgen_bb9787670ba99145
 
@@ -10966,9 +11925,9 @@ hs_bindgen_8c876b3ee42cd8ab =
 {-# NOINLINE wuffs_base__io_buffer__reader_length #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3296:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3593:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__io_buffer__reader_length =
@@ -10986,9 +11945,9 @@ hs_bindgen_e3312801b0cef013 =
 {-# NOINLINE wuffs_base__io_buffer__reader_pointer #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3598:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_pointer :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word8))
 wuffs_base__io_buffer__reader_pointer =
@@ -11006,9 +11965,9 @@ hs_bindgen_eb712691acf3f989 =
 {-# NOINLINE wuffs_base__io_buffer__reader_position #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3306:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3603:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__io_buffer__reader_position =
@@ -11026,9 +11985,9 @@ hs_bindgen_d65eb9407ed28d64 =
 {-# NOINLINE wuffs_base__io_buffer__reader_slice #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3608:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_slice :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO Wuffs_base__slice_u8)
 wuffs_base__io_buffer__reader_slice =
@@ -11046,9 +12005,9 @@ hs_bindgen_1bcdbd31b6c1f4ae =
 {-# NOINLINE wuffs_base__io_buffer__writer_length #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3616:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__io_buffer__writer_length =
@@ -11066,9 +12025,9 @@ hs_bindgen_9a5eac69608b03a2 =
 {-# NOINLINE wuffs_base__io_buffer__writer_pointer #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3324:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3621:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_pointer :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO (BG.Ptr HsBindgen.Runtime.LibC.Word8))
 wuffs_base__io_buffer__writer_pointer =
@@ -11086,9 +12045,9 @@ hs_bindgen_9addeb01b76586d5 =
 {-# NOINLINE wuffs_base__io_buffer__writer_position #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3329:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__io_buffer__writer_position =
@@ -11106,9 +12065,9 @@ hs_bindgen_65c274ec47b40508 =
 {-# NOINLINE wuffs_base__io_buffer__writer_slice #-}
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3334:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_slice :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_buffer -> IO Wuffs_base__slice_u8)
 wuffs_base__io_buffer__writer_slice =
@@ -11126,9 +12085,9 @@ hs_bindgen_3649d499cf0feebb =
 {-# NOINLINE wuffs_base__make_token #-}
 {-| __C declaration:__ @wuffs_base__make_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3423:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3720:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__token)
 wuffs_base__make_token =
@@ -11146,9 +12105,9 @@ hs_bindgen_34656e08c8425c9f =
 {-# NOINLINE wuffs_base__token__value #-}
 {-| __C declaration:__ @wuffs_base__token__value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3572:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3869:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__token__value =
@@ -11166,9 +12125,9 @@ hs_bindgen_39b58221f6d5a513 =
 {-# NOINLINE wuffs_base__token__value_extension #-}
 {-| __C declaration:__ @wuffs_base__token__value_extension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3579:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3876:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_extension :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__token__value_extension =
@@ -11186,9 +12145,9 @@ hs_bindgen_e5bca8d660527748 =
 {-# NOINLINE wuffs_base__token__value_major #-}
 {-| __C declaration:__ @wuffs_base__token__value_major@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3586:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3883:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_major :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__token__value_major =
@@ -11206,9 +12165,9 @@ hs_bindgen_818fe1de1fa76d0a =
 {-# NOINLINE wuffs_base__token__value_base_category #-}
 {-| __C declaration:__ @wuffs_base__token__value_base_category@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3593:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3890:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_category :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__token__value_base_category =
@@ -11226,9 +12185,9 @@ hs_bindgen_9fa6d17a9b463e2d =
 {-# NOINLINE wuffs_base__token__value_minor #-}
 {-| __C declaration:__ @wuffs_base__token__value_minor@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3895:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_minor :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token__value_minor =
@@ -11246,9 +12205,9 @@ hs_bindgen_73f4b7b9b263f1e4 =
 {-# NOINLINE wuffs_base__token__value_base_detail #-}
 {-| __C declaration:__ @wuffs_base__token__value_base_detail@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3900:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_detail :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token__value_base_detail =
@@ -11266,9 +12225,9 @@ hs_bindgen_bda817fc07faf024 =
 {-# NOINLINE wuffs_base__token__value_base_detail__sign_extended #-}
 {-| __C declaration:__ @wuffs_base__token__value_base_detail__sign_extended@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3608:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3905:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_detail__sign_extended :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Int64)
 wuffs_base__token__value_base_detail__sign_extended =
@@ -11286,9 +12245,9 @@ hs_bindgen_8aa06f81270e3286 =
 {-# NOINLINE wuffs_base__token__continued #-}
 {-| __C declaration:__ @wuffs_base__token__continued@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3617:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3914:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__continued :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO BG.CBool)
 wuffs_base__token__continued =
@@ -11306,9 +12265,9 @@ hs_bindgen_452b1b4762eb0e58 =
 {-# NOINLINE wuffs_base__token__length #-}
 {-| __C declaration:__ @wuffs_base__token__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3622:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3919:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token__length =
@@ -11326,9 +12285,9 @@ hs_bindgen_b2e62a913bc8a795 =
 {-# NOINLINE wuffs_base__strip_const_from_token_ptr #-}
 {-| __C declaration:__ @wuffs_base__strip_const_from_token_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3683:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3980:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_token_ptr :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token -> IO (BG.Ptr Wuffs_base__token))
 wuffs_base__strip_const_from_token_ptr =
@@ -11346,9 +12305,9 @@ hs_bindgen_31a58f9bf623b46c =
 {-# NOINLINE wuffs_base__make_slice_token #-}
 {-| __C declaration:__ @wuffs_base__make_slice_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3696:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3993:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_token :: BG.FunPtr (BG.Ptr Wuffs_base__token -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__slice_token)
 wuffs_base__make_slice_token =
@@ -11366,9 +12325,9 @@ hs_bindgen_247cd42336d45f68 =
 {-# NOINLINE wuffs_base__empty_slice_token #-}
 {-| __C declaration:__ @wuffs_base__empty_slice_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3704:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4001:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_token :: BG.FunPtr (IO Wuffs_base__slice_token)
 wuffs_base__empty_slice_token =
@@ -11386,9 +12345,9 @@ hs_bindgen_590cbcc7ae432db8 =
 {-# NOINLINE wuffs_base__make_token_buffer #-}
 {-| __C declaration:__ @wuffs_base__make_token_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3747:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4044:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token_buffer :: BG.FunPtr (Wuffs_base__slice_token -> Wuffs_base__token_buffer_meta -> IO Wuffs_base__token_buffer)
 wuffs_base__make_token_buffer =
@@ -11406,9 +12365,9 @@ hs_bindgen_b2b7da189bd89a4c =
 {-# NOINLINE wuffs_base__make_token_buffer_meta #-}
 {-| __C declaration:__ @wuffs_base__make_token_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3756:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4053:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token_buffer_meta :: BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> BG.CBool -> IO Wuffs_base__token_buffer_meta)
 wuffs_base__make_token_buffer_meta =
@@ -11426,9 +12385,9 @@ hs_bindgen_73ed9958bd4d68be =
 {-# NOINLINE wuffs_base__slice_token__reader #-}
 {-| __C declaration:__ @wuffs_base__slice_token__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4066:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_token__reader :: BG.FunPtr (Wuffs_base__slice_token -> BG.CBool -> IO Wuffs_base__token_buffer)
 wuffs_base__slice_token__reader =
@@ -11446,9 +12405,9 @@ hs_bindgen_64c04db728bb8923 =
 {-# NOINLINE wuffs_base__slice_token__writer #-}
 {-| __C declaration:__ @wuffs_base__slice_token__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4078:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_token__writer :: BG.FunPtr (Wuffs_base__slice_token -> IO Wuffs_base__token_buffer)
 wuffs_base__slice_token__writer =
@@ -11466,9 +12425,9 @@ hs_bindgen_bdcaa6c237877e3a =
 {-# NOINLINE wuffs_base__empty_token_buffer #-}
 {-| __C declaration:__ @wuffs_base__empty_token_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3793:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4090:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_token_buffer :: BG.FunPtr (IO Wuffs_base__token_buffer)
 wuffs_base__empty_token_buffer =
@@ -11486,9 +12445,9 @@ hs_bindgen_398356e7687f858b =
 {-# NOINLINE wuffs_base__empty_token_buffer_meta #-}
 {-| __C declaration:__ @wuffs_base__empty_token_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4102:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_token_buffer_meta :: BG.FunPtr (IO Wuffs_base__token_buffer_meta)
 wuffs_base__empty_token_buffer_meta =
@@ -11506,9 +12465,9 @@ hs_bindgen_0bce50456573b566 =
 {-# NOINLINE wuffs_base__token_buffer__is_valid #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3815:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4112:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO BG.CBool)
 wuffs_base__token_buffer__is_valid =
@@ -11519,18 +12478,18 @@ foreign import ccall unsafe "hs_bindgen_cd33811692b6bf3b" hs_bindgen_cd33811692b
      IO (BG.FunPtr BG.Void)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__token_buffer__compact@
-hs_bindgen_cd33811692b6bf3b :: IO (BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> IO ()))
+hs_bindgen_cd33811692b6bf3b :: IO (BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.CSize))
 hs_bindgen_cd33811692b6bf3b =
   fmap BG.fromFFIType hs_bindgen_cd33811692b6bf3b_base
 
 {-# NOINLINE wuffs_base__token_buffer__compact #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__compact@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3829:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4128:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__token_buffer__compact :: BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> IO ())
+wuffs_base__token_buffer__compact :: BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__token_buffer__compact =
   BG.unsafePerformIO hs_bindgen_cd33811692b6bf3b
 
@@ -11539,18 +12498,18 @@ foreign import ccall unsafe "hs_bindgen_eba59da6087b3ea8" hs_bindgen_eba59da6087
      IO (BG.FunPtr BG.Void)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__token_buffer__compact_retaining@
-hs_bindgen_eba59da6087b3ea8 :: IO (BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO ()))
+hs_bindgen_eba59da6087b3ea8 :: IO (BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.CSize))
 hs_bindgen_eba59da6087b3ea8 =
   fmap BG.fromFFIType hs_bindgen_eba59da6087b3ea8_base
 
 {-# NOINLINE wuffs_base__token_buffer__compact_retaining #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__compact_retaining@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3868:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4171:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__token_buffer__compact_retaining :: BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO ())
+wuffs_base__token_buffer__compact_retaining :: BG.FunPtr (BG.Ptr Wuffs_base__token_buffer -> HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__token_buffer__compact_retaining =
   BG.unsafePerformIO hs_bindgen_eba59da6087b3ea8
 
@@ -11566,9 +12525,9 @@ hs_bindgen_c5faaf255bb2ed37 =
 {-# NOINLINE wuffs_base__token_buffer__reader_length #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3887:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token_buffer__reader_length =
@@ -11586,9 +12545,9 @@ hs_bindgen_67f241b9ab01c3f7 =
 {-# NOINLINE wuffs_base__token_buffer__reader_pointer #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3892:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4196:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_pointer :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO (BG.Ptr Wuffs_base__token))
 wuffs_base__token_buffer__reader_pointer =
@@ -11606,9 +12565,9 @@ hs_bindgen_f020b7a831f6b90f =
 {-# NOINLINE wuffs_base__token_buffer__reader_slice #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3897:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_slice :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO Wuffs_base__slice_token)
 wuffs_base__token_buffer__reader_slice =
@@ -11626,9 +12585,9 @@ hs_bindgen_9ca41015244c8c41 =
 {-# NOINLINE wuffs_base__token_buffer__reader_token_position #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_token_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3904:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4208:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_token_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token_buffer__reader_token_position =
@@ -11646,9 +12605,9 @@ hs_bindgen_db4c3e6dd40751ab =
 {-# NOINLINE wuffs_base__token_buffer__writer_length #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3910:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4214:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token_buffer__writer_length =
@@ -11666,9 +12625,9 @@ hs_bindgen_61f15de891c2021d =
 {-# NOINLINE wuffs_base__token_buffer__writer_pointer #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3915:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4219:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_pointer :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO (BG.Ptr Wuffs_base__token))
 wuffs_base__token_buffer__writer_pointer =
@@ -11686,9 +12645,9 @@ hs_bindgen_0085279ef62dc1e0 =
 {-# NOINLINE wuffs_base__token_buffer__writer_slice #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3920:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_slice :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO Wuffs_base__slice_token)
 wuffs_base__token_buffer__writer_slice =
@@ -11706,9 +12665,9 @@ hs_bindgen_dadcacf0562eb0e8 =
 {-# NOINLINE wuffs_base__token_buffer__writer_token_position #-}
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_token_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3927:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4231:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_token_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_buffer -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token_buffer__writer_token_position =
@@ -11726,9 +12685,9 @@ hs_bindgen_d753e9f75e273962 =
 {-# NOINLINE wuffs_base__malloc_slice_u8 #-}
 {-| __C declaration:__ @wuffs_base__malloc_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4312:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u8 :: BG.FunPtr (BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void)) -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u8)
 wuffs_base__malloc_slice_u8 =
@@ -11746,9 +12705,9 @@ hs_bindgen_aa1000fcecd00071 =
 {-# NOINLINE wuffs_base__malloc_slice_u16 #-}
 {-| __C declaration:__ @wuffs_base__malloc_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4018:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4323:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u16 :: BG.FunPtr (BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void)) -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u16)
 wuffs_base__malloc_slice_u16 =
@@ -11766,9 +12725,9 @@ hs_bindgen_34f7f7acc5e38c02 =
 {-# NOINLINE wuffs_base__malloc_slice_u32 #-}
 {-| __C declaration:__ @wuffs_base__malloc_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4029:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4334:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u32 :: BG.FunPtr (BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void)) -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u32)
 wuffs_base__malloc_slice_u32 =
@@ -11786,9 +12745,9 @@ hs_bindgen_7c5c669421ad2071 =
 {-# NOINLINE wuffs_base__malloc_slice_u64 #-}
 {-| __C declaration:__ @wuffs_base__malloc_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4040:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u64 :: BG.FunPtr (BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void)) -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__slice_u64)
 wuffs_base__malloc_slice_u64 =
@@ -11806,9 +12765,9 @@ hs_bindgen_3a5aa38629096401 =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__is_valid #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4064:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4384:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__is_valid :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO BG.CBool)
 wuffs_base__color_u32_argb_premul__is_valid =
@@ -11826,9 +12785,9 @@ hs_bindgen_dd2cebb9fe5986d0 =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565 #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4074:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565 :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565 =
@@ -11846,9 +12805,9 @@ hs_bindgen_125c657d359238dc =
 {-# NOINLINE wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul #-}
 {-| __C declaration:__ @wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4083:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4403:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> IO Wuffs_base__color_u32_argb_premul)
 wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul =
@@ -11866,9 +12825,9 @@ hs_bindgen_c4df0e2819834197 =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u8_gray #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4094:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4414:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u8_gray :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__color_u32_argb_premul__as__color_u8_gray =
@@ -11886,9 +12845,9 @@ hs_bindgen_67069a6560d1280f =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4432:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul =
@@ -11906,9 +12865,9 @@ hs_bindgen_db931e9e8918828e =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u16_gray #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4132:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4452:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_gray :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word16)
 wuffs_base__color_u32_argb_premul__as__color_u16_gray =
@@ -11926,9 +12885,9 @@ hs_bindgen_74b35f714ba502a6 =
 {-# NOINLINE wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4150:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__color_u32_argb_premul)
 wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul =
@@ -11946,9 +12905,9 @@ hs_bindgen_317987d63ab4555f =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4177:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4497:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul =
@@ -11966,9 +12925,9 @@ hs_bindgen_18348a1df4bf8159 =
 {-# NOINLINE wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul #-}
 {-| __C declaration:__ @wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4520:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__color_u32_argb_premul)
 wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul =
@@ -11986,9 +12945,9 @@ hs_bindgen_cf689cb0a345e3bc =
 {-# NOINLINE wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul #-}
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4218:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4538:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul :: BG.FunPtr (Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul =
@@ -12006,13 +12965,33 @@ hs_bindgen_45134a46b712ddd4 =
 {-# NOINLINE wuffs_base__color_u64_argb_premul__as__color_u8_gray #-}
 {-| __C declaration:__ @wuffs_base__color_u64_argb_premul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4562:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_premul__as__color_u8_gray :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__color_u64_argb_premul__as__color_u8_gray =
   BG.unsafePerformIO hs_bindgen_45134a46b712ddd4
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+foreign import ccall unsafe "hs_bindgen_1724790361151f03" hs_bindgen_1724790361151f03_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+hs_bindgen_1724790361151f03 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_1724790361151f03 =
+  fmap BG.fromFFIType hs_bindgen_1724790361151f03_base
+
+{-# NOINLINE wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul #-}
+{-| __C declaration:__ @wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4579:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul =
+  BG.unsafePerformIO hs_bindgen_1724790361151f03
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray@
 foreign import ccall unsafe "hs_bindgen_0bc44ab4c381a1fd" hs_bindgen_0bc44ab4c381a1fd_base ::
@@ -12026,9 +13005,9 @@ hs_bindgen_0bc44ab4c381a1fd =
 {-# NOINLINE wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray #-}
 {-| __C declaration:__ @wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4259:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4599:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray =
@@ -12046,9 +13025,9 @@ hs_bindgen_2a8151c8714b66a6 =
 {-# NOINLINE wuffs_base__color_u32__as__color_u64 #-}
 {-| __C declaration:__ @wuffs_base__color_u32__as__color_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4282:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4622:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32__as__color_u64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__color_u32__as__color_u64 =
@@ -12066,53 +13045,133 @@ hs_bindgen_85aa354a866e6dea =
 {-# NOINLINE wuffs_base__color_u64__as__color_u32 #-}
 {-| __C declaration:__ @wuffs_base__color_u64__as__color_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4291:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64__as__color_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__color_u64__as__color_u32 =
   BG.unsafePerformIO hs_bindgen_85aa354a866e6dea
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32@
-foreign import ccall unsafe "hs_bindgen_43658a312c1feafb" hs_bindgen_43658a312c1feafb_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32@
+foreign import ccall unsafe "hs_bindgen_87e8fc25264242f0" hs_bindgen_87e8fc25264242f0_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32@
-hs_bindgen_43658a312c1feafb :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul))
-hs_bindgen_43658a312c1feafb =
-  fmap BG.fromFFIType hs_bindgen_43658a312c1feafb_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32@
+hs_bindgen_87e8fc25264242f0 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul))
+hs_bindgen_87e8fc25264242f0 =
+  fmap BG.fromFFIType hs_bindgen_87e8fc25264242f0_base
 
-{-# NOINLINE wuffs_base__color_ycc__as__color_u32 #-}
-{-| __C declaration:__ @wuffs_base__color_ycc__as__color_u32@
+{-# NOINLINE wuffs_base__color_ycc_bt601fr__as__color_u32 #-}
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601fr__as__color_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4302:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__color_ycc__as__color_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul)
-wuffs_base__color_ycc__as__color_u32 =
-  BG.unsafePerformIO hs_bindgen_43658a312c1feafb
+wuffs_base__color_ycc_bt601fr__as__color_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul)
+wuffs_base__color_ycc_bt601fr__as__color_u32 =
+  BG.unsafePerformIO hs_bindgen_87e8fc25264242f0
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32_abgr@
-foreign import ccall unsafe "hs_bindgen_46ca30efe1fa70ec" hs_bindgen_46ca30efe1fa70ec_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
+foreign import ccall unsafe "hs_bindgen_773344a8c97c51c9" hs_bindgen_773344a8c97c51c9_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc__as__color_u32_abgr@
-hs_bindgen_46ca30efe1fa70ec :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32))
-hs_bindgen_46ca30efe1fa70ec =
-  fmap BG.fromFFIType hs_bindgen_46ca30efe1fa70ec_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
+hs_bindgen_773344a8c97c51c9 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_773344a8c97c51c9 =
+  fmap BG.fromFFIType hs_bindgen_773344a8c97c51c9_base
 
-{-# NOINLINE wuffs_base__color_ycc__as__color_u32_abgr #-}
-{-| __C declaration:__ @wuffs_base__color_ycc__as__color_u32_abgr@
+{-# NOINLINE wuffs_base__color_ycc_bt601fr__as__color_u32_abgr #-}
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4355:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4715:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__color_ycc__as__color_u32_abgr :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
-wuffs_base__color_ycc__as__color_u32_abgr =
-  BG.unsafePerformIO hs_bindgen_46ca30efe1fa70ec
+wuffs_base__color_ycc_bt601fr__as__color_u32_abgr :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__color_ycc_bt601fr__as__color_u32_abgr =
+  BG.unsafePerformIO hs_bindgen_773344a8c97c51c9
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32@
+foreign import ccall unsafe "hs_bindgen_43bad1f1c8440485" hs_bindgen_43bad1f1c8440485_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32@
+hs_bindgen_43bad1f1c8440485 :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul))
+hs_bindgen_43bad1f1c8440485 =
+  fmap BG.fromFFIType hs_bindgen_43bad1f1c8440485_base
+
+{-# NOINLINE wuffs_base__color_ycc_bt601sr__as__color_u32 #-}
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601sr__as__color_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4743:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_ycc_bt601sr__as__color_u32 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO Wuffs_base__color_u32_argb_premul)
+wuffs_base__color_ycc_bt601sr__as__color_u32 =
+  BG.unsafePerformIO hs_bindgen_43bad1f1c8440485
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+foreign import ccall unsafe "hs_bindgen_8e0d39b7404b982a" hs_bindgen_8e0d39b7404b982a_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+hs_bindgen_8e0d39b7404b982a :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_8e0d39b7404b982a =
+  fmap BG.fromFFIType hs_bindgen_8e0d39b7404b982a_base
+
+{-# NOINLINE wuffs_base__color_ycc_bt601sr__as__color_u32_abgr #-}
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4779:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_ycc_bt601sr__as__color_u32_abgr :: BG.FunPtr (HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.Word8 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__color_ycc_bt601sr__as__color_u32_abgr =
+  BG.unsafePerformIO hs_bindgen_8e0d39b7404b982a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u32_argb_abgr@
+foreign import ccall unsafe "hs_bindgen_fb48051bc7e220ee" hs_bindgen_fb48051bc7e220ee_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u32_argb_abgr@
+hs_bindgen_fb48051bc7e220ee :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_fb48051bc7e220ee =
+  fmap BG.fromFFIType hs_bindgen_fb48051bc7e220ee_base
+
+{-# NOINLINE wuffs_base__color_swap_u32_argb_abgr #-}
+{-| __C declaration:__ @wuffs_base__color_swap_u32_argb_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4800:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_swap_u32_argb_abgr :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__color_swap_u32_argb_abgr =
+  BG.unsafePerformIO hs_bindgen_fb48051bc7e220ee
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u64_argb_abgr@
+foreign import ccall unsafe "hs_bindgen_329c46df02bcba8d" hs_bindgen_329c46df02bcba8d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__color_swap_u64_argb_abgr@
+hs_bindgen_329c46df02bcba8d :: IO (BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_329c46df02bcba8d =
+  fmap BG.fromFFIType hs_bindgen_329c46df02bcba8d_base
+
+{-# NOINLINE wuffs_base__color_swap_u64_argb_abgr #-}
+{-| __C declaration:__ @wuffs_base__color_swap_u64_argb_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4810:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_swap_u64_argb_abgr :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_base__color_swap_u64_argb_abgr =
+  BG.unsafePerformIO hs_bindgen_329c46df02bcba8d
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__make_pixel_format@
 foreign import ccall unsafe "hs_bindgen_4f03ef98e2fc92de" hs_bindgen_4f03ef98e2fc92de_base ::
@@ -12126,9 +13185,9 @@ hs_bindgen_4f03ef98e2fc92de =
 {-# NOINLINE wuffs_base__make_pixel_format #-}
 {-| __C declaration:__ @wuffs_base__make_pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4453:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4894:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_pixel_format :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__pixel_format)
 wuffs_base__make_pixel_format =
@@ -12146,9 +13205,9 @@ hs_bindgen_ad6ed5a58e7b97fa =
 {-# NOINLINE wuffs_base__pixel_format__is_valid #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO BG.CBool)
 wuffs_base__pixel_format__is_valid =
@@ -12166,13 +13225,33 @@ hs_bindgen_19ddcb0e1595c698 =
 {-# NOINLINE wuffs_base__pixel_format__bits_per_pixel #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__bits_per_pixel@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4518:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4960:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__bits_per_pixel :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_format__bits_per_pixel =
   BG.unsafePerformIO hs_bindgen_19ddcb0e1595c698
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_format__default_background_color@
+foreign import ccall unsafe "hs_bindgen_4649e9d601c4ceba" hs_bindgen_4649e9d601c4ceba_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_format__default_background_color@
+hs_bindgen_4649e9d601c4ceba :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_4649e9d601c4ceba =
+  fmap BG.fromFFIType hs_bindgen_4649e9d601c4ceba_base
+
+{-# NOINLINE wuffs_base__pixel_format__default_background_color #-}
+{-| __C declaration:__ @wuffs_base__pixel_format__default_background_color@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4975:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__pixel_format__default_background_color :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_base__pixel_format__default_background_color =
+  BG.unsafePerformIO hs_bindgen_4649e9d601c4ceba
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_format__is_direct@
 foreign import ccall unsafe "hs_bindgen_c321bd21d4910ce1" hs_bindgen_c321bd21d4910ce1_base ::
@@ -12186,9 +13265,9 @@ hs_bindgen_c321bd21d4910ce1 =
 {-# NOINLINE wuffs_base__pixel_format__is_direct #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__is_direct@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4533:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4982:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_direct :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO BG.CBool)
 wuffs_base__pixel_format__is_direct =
@@ -12206,9 +13285,9 @@ hs_bindgen_6f0f00aa961a865a =
 {-# NOINLINE wuffs_base__pixel_format__is_indexed #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__is_indexed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4538:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_indexed :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO BG.CBool)
 wuffs_base__pixel_format__is_indexed =
@@ -12226,9 +13305,9 @@ hs_bindgen_34be14332dbcdc60 =
 {-# NOINLINE wuffs_base__pixel_format__is_interleaved #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__is_interleaved@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4992:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_interleaved :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO BG.CBool)
 wuffs_base__pixel_format__is_interleaved =
@@ -12246,9 +13325,9 @@ hs_bindgen_2e89578342eae74e =
 {-# NOINLINE wuffs_base__pixel_format__is_planar #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__is_planar@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_planar :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO BG.CBool)
 wuffs_base__pixel_format__is_planar =
@@ -12266,9 +13345,9 @@ hs_bindgen_f964093f76006921 =
 {-# NOINLINE wuffs_base__pixel_format__coloration #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__coloration@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4553:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__coloration :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_format__coloration =
@@ -12286,9 +13365,9 @@ hs_bindgen_20970bd9c7f932b4 =
 {-# NOINLINE wuffs_base__pixel_format__num_planes #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__num_planes@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4559:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__num_planes :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_format__num_planes =
@@ -12306,9 +13385,9 @@ hs_bindgen_e732d847d10c9720 =
 {-# NOINLINE wuffs_base__pixel_format__transparency #-}
 {-| __C declaration:__ @wuffs_base__pixel_format__transparency@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4564:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5013:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__transparency :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_format -> IO Wuffs_base__pixel_alpha_transparency)
 wuffs_base__pixel_format__transparency =
@@ -12326,9 +13405,9 @@ hs_bindgen_b0dc2d03327b9b3f =
 {-# NOINLINE wuffs_base__make_pixel_subsampling #-}
 {-| __C declaration:__ @wuffs_base__make_pixel_subsampling@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4639:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5093:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_pixel_subsampling :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__pixel_subsampling)
 wuffs_base__make_pixel_subsampling =
@@ -12346,9 +13425,9 @@ hs_bindgen_92a945ec688f39d8 =
 {-# NOINLINE wuffs_base__pixel_subsampling__bias_x #-}
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__bias_x@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4655:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5109:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__bias_x :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_subsampling -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_subsampling__bias_x =
@@ -12366,9 +13445,9 @@ hs_bindgen_0c297505d257e70a =
 {-# NOINLINE wuffs_base__pixel_subsampling__denominator_x #-}
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__denominator_x@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4662:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5116:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__denominator_x :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_subsampling -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_subsampling__denominator_x =
@@ -12386,9 +13465,9 @@ hs_bindgen_9413860da31aa427 =
 {-# NOINLINE wuffs_base__pixel_subsampling__bias_y #-}
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__bias_y@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4670:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__bias_y :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_subsampling -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_subsampling__bias_y =
@@ -12406,9 +13485,9 @@ hs_bindgen_149ca69fa3b21b5e =
 {-# NOINLINE wuffs_base__pixel_subsampling__denominator_y #-}
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__denominator_y@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4677:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5131:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__denominator_y :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_subsampling -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_subsampling__denominator_y =
@@ -12426,9 +13505,9 @@ hs_bindgen_6ea2f8a528a3822a =
 {-# NOINLINE wuffs_base__null_pixel_config #-}
 {-| __C declaration:__ @wuffs_base__null_pixel_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4738:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5250:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_pixel_config :: BG.FunPtr (IO Wuffs_base__pixel_config)
 wuffs_base__null_pixel_config =
@@ -12446,9 +13525,9 @@ hs_bindgen_9326e984e755eafe =
 {-# NOINLINE wuffs_base__pixel_config__set #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4749:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5261:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__set :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_config -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO ())
 wuffs_base__pixel_config__set =
@@ -12466,9 +13545,9 @@ hs_bindgen_a5e8958865072957 =
 {-# NOINLINE wuffs_base__pixel_config__invalidate #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__invalidate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5293:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__invalidate :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_config -> IO ())
 wuffs_base__pixel_config__invalidate =
@@ -12486,9 +13565,9 @@ hs_bindgen_609348d41c3d8525 =
 {-# NOINLINE wuffs_base__pixel_config__is_valid #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5303:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO BG.CBool)
 wuffs_base__pixel_config__is_valid =
@@ -12506,9 +13585,9 @@ hs_bindgen_60c33e91b42c3eeb =
 {-# NOINLINE wuffs_base__pixel_config__pixel_format #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4796:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixel_format :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO Wuffs_base__pixel_format)
 wuffs_base__pixel_config__pixel_format =
@@ -12526,9 +13605,9 @@ hs_bindgen_dcbf8cf63b9ba0d7 =
 {-# NOINLINE wuffs_base__pixel_config__pixel_subsampling #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__pixel_subsampling@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5313:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixel_subsampling :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO Wuffs_base__pixel_subsampling)
 wuffs_base__pixel_config__pixel_subsampling =
@@ -12546,9 +13625,9 @@ hs_bindgen_8c85a6e50c3627b2 =
 {-# NOINLINE wuffs_base__pixel_config__bounds #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5318:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__bounds :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__pixel_config__bounds =
@@ -12566,9 +13645,9 @@ hs_bindgen_74c8a546824522b0 =
 {-# NOINLINE wuffs_base__pixel_config__width #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4825:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5337:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__width :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_config__width =
@@ -12586,9 +13665,9 @@ hs_bindgen_5b8889643a95ac95 =
 {-# NOINLINE wuffs_base__pixel_config__height #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4830:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5342:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__height :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__pixel_config__height =
@@ -12606,9 +13685,9 @@ hs_bindgen_268fab1e12ca5bd0 =
 {-# NOINLINE wuffs_base__pixel_config__pixbuf_len #-}
 {-| __C declaration:__ @wuffs_base__pixel_config__pixbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4838:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5350:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_config -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__pixel_config__pixbuf_len =
@@ -12626,9 +13705,9 @@ hs_bindgen_0fabbffffbc7ded0 =
 {-# NOINLINE wuffs_base__null_image_config #-}
 {-| __C declaration:__ @wuffs_base__null_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4952:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5464:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_image_config :: BG.FunPtr (IO Wuffs_base__image_config)
 wuffs_base__null_image_config =
@@ -12646,9 +13725,9 @@ hs_bindgen_1431e0620d3c2601 =
 {-# NOINLINE wuffs_base__image_config__set #-}
 {-| __C declaration:__ @wuffs_base__image_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4962:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5474:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__set :: BG.FunPtr (BG.Ptr Wuffs_base__image_config -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> BG.CBool -> IO ())
 wuffs_base__image_config__set =
@@ -12666,9 +13745,9 @@ hs_bindgen_6198e04e4f0c5885 =
 {-# NOINLINE wuffs_base__image_config__invalidate #-}
 {-| __C declaration:__ @wuffs_base__image_config__invalidate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4991:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5503:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__invalidate :: BG.FunPtr (BG.Ptr Wuffs_base__image_config -> IO ())
 wuffs_base__image_config__invalidate =
@@ -12686,9 +13765,9 @@ hs_bindgen_69fb4ed1aa03305a =
 {-# NOINLINE wuffs_base__image_config__is_valid #-}
 {-| __C declaration:__ @wuffs_base__image_config__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5003:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5515:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_config -> IO BG.CBool)
 wuffs_base__image_config__is_valid =
@@ -12706,9 +13785,9 @@ hs_bindgen_e15a57f7eacf9176 =
 {-# NOINLINE wuffs_base__image_config__first_frame_io_position #-}
 {-| __C declaration:__ @wuffs_base__image_config__first_frame_io_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5008:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5520:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__first_frame_io_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_config -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__image_config__first_frame_io_position =
@@ -12726,9 +13805,9 @@ hs_bindgen_f3f4f81bae9edb6e =
 {-# NOINLINE wuffs_base__image_config__first_frame_is_opaque #-}
 {-| __C declaration:__ @wuffs_base__image_config__first_frame_is_opaque@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5014:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5526:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__first_frame_is_opaque :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_config -> IO BG.CBool)
 wuffs_base__image_config__first_frame_is_opaque =
@@ -12746,9 +13825,9 @@ hs_bindgen_3a62f26a746a0cdd =
 {-# NOINLINE wuffs_base__null_frame_config #-}
 {-| __C declaration:__ @wuffs_base__null_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5624:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_frame_config :: BG.FunPtr (IO Wuffs_base__frame_config)
 wuffs_base__null_frame_config =
@@ -12766,9 +13845,9 @@ hs_bindgen_d3996cf9fbb85ceb =
 {-# NOINLINE wuffs_base__frame_config__set #-}
 {-| __C declaration:__ @wuffs_base__frame_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5125:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5637:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__set :: BG.FunPtr (BG.Ptr Wuffs_base__frame_config -> Wuffs_base__rect_ie_u32 -> Wuffs_base__flicks -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> Wuffs_base__animation_disposal -> BG.CBool -> BG.CBool -> Wuffs_base__color_u32_argb_premul -> IO ())
 wuffs_base__frame_config__set =
@@ -12786,9 +13865,9 @@ hs_bindgen_3bec85f389227e83 =
 {-# NOINLINE wuffs_base__frame_config__bounds #-}
 {-| __C declaration:__ @wuffs_base__frame_config__bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5150:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5662:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__bounds :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__frame_config__bounds =
@@ -12806,9 +13885,9 @@ hs_bindgen_54d1a9ab56993f9b =
 {-# NOINLINE wuffs_base__frame_config__width #-}
 {-| __C declaration:__ @wuffs_base__frame_config__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5164:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5676:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__width :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__frame_config__width =
@@ -12826,9 +13905,9 @@ hs_bindgen_8c5d451f25bcec8f =
 {-# NOINLINE wuffs_base__frame_config__height #-}
 {-| __C declaration:__ @wuffs_base__frame_config__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5169:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5681:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__height :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__frame_config__height =
@@ -12846,9 +13925,9 @@ hs_bindgen_f87846216eff4d56 =
 {-# NOINLINE wuffs_base__frame_config__duration #-}
 {-| __C declaration:__ @wuffs_base__frame_config__duration@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5176:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5688:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__duration :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO Wuffs_base__flicks)
 wuffs_base__frame_config__duration =
@@ -12866,9 +13945,9 @@ hs_bindgen_fe4ea9d631062c81 =
 {-# NOINLINE wuffs_base__frame_config__index #-}
 {-| __C declaration:__ @wuffs_base__frame_config__index@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5183:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5695:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__index :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__frame_config__index =
@@ -12886,9 +13965,9 @@ hs_bindgen_a9e6cd60117de84e =
 {-# NOINLINE wuffs_base__frame_config__io_position #-}
 {-| __C declaration:__ @wuffs_base__frame_config__io_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5190:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5702:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__io_position :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__frame_config__io_position =
@@ -12906,9 +13985,9 @@ hs_bindgen_72be381e269bfd17 =
 {-# NOINLINE wuffs_base__frame_config__disposal #-}
 {-| __C declaration:__ @wuffs_base__frame_config__disposal@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5197:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5709:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__disposal :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO Wuffs_base__animation_disposal)
 wuffs_base__frame_config__disposal =
@@ -12926,9 +14005,9 @@ hs_bindgen_ab3c60c1afc3db02 =
 {-# NOINLINE wuffs_base__frame_config__opaque_within_bounds #-}
 {-| __C declaration:__ @wuffs_base__frame_config__opaque_within_bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5725:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__opaque_within_bounds :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO BG.CBool)
 wuffs_base__frame_config__opaque_within_bounds =
@@ -12946,9 +14025,9 @@ hs_bindgen_67bef7182cc11a3a =
 {-# NOINLINE wuffs_base__frame_config__overwrite_instead_of_blend #-}
 {-| __C declaration:__ @wuffs_base__frame_config__overwrite_instead_of_blend@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5227:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5739:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__overwrite_instead_of_blend :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO BG.CBool)
 wuffs_base__frame_config__overwrite_instead_of_blend =
@@ -12966,9 +14045,9 @@ hs_bindgen_dd029c1dde2f47f7 =
 {-# NOINLINE wuffs_base__frame_config__background_color #-}
 {-| __C declaration:__ @wuffs_base__frame_config__background_color@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5233:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5745:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__background_color :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__frame_config -> IO Wuffs_base__color_u32_argb_premul)
 wuffs_base__frame_config__background_color =
@@ -12986,9 +14065,9 @@ hs_bindgen_87ab97fc7a3e5f9b =
 {-# NOINLINE wuffs_base__null_pixel_buffer #-}
 {-| __C declaration:__ @wuffs_base__null_pixel_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5344:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5857:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_pixel_buffer :: BG.FunPtr (IO Wuffs_base__pixel_buffer)
 wuffs_base__null_pixel_buffer =
@@ -13006,9 +14085,9 @@ hs_bindgen_bb94ff394218003f =
 {-# NOINLINE wuffs_base__pixel_buffer__set_interleaved #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_interleaved@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5355:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5868:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_interleaved :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> PtrConst.PtrConst Wuffs_base__pixel_config -> Wuffs_base__table_u8 -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_base__pixel_buffer__set_interleaved =
@@ -13026,9 +14105,9 @@ hs_bindgen_5d59234f23a6f58f =
 {-# NOINLINE wuffs_base__pixel_buffer__set_from_slice #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_from_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5404:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5917:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_from_slice :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> PtrConst.PtrConst Wuffs_base__pixel_config -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_base__pixel_buffer__set_from_slice =
@@ -13046,9 +14125,9 @@ hs_bindgen_5bf58374998ecd16 =
 {-# NOINLINE wuffs_base__pixel_buffer__palette #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__palette@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5476:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5989:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__palette :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> IO Wuffs_base__slice_u8)
 wuffs_base__pixel_buffer__palette =
@@ -13066,9 +14145,9 @@ hs_bindgen_429a5515ee6ad0a2 =
 {-# NOINLINE wuffs_base__pixel_buffer__palette_or_else #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__palette_or_else@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5493:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6006:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__palette_or_else :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__slice_u8)
 wuffs_base__pixel_buffer__palette_or_else =
@@ -13086,9 +14165,9 @@ hs_bindgen_b6ef1fc5a737ffe7 =
 {-# NOINLINE wuffs_base__pixel_buffer__pixel_format #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6024:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__pixel_format :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_buffer -> IO Wuffs_base__pixel_format)
 wuffs_base__pixel_buffer__pixel_format =
@@ -13106,9 +14185,9 @@ hs_bindgen_5c65305134d2b502 =
 {-# NOINLINE wuffs_base__pixel_buffer__plane #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__plane@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5519:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6032:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__plane :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__table_u8)
 wuffs_base__pixel_buffer__plane =
@@ -13126,9 +14205,9 @@ hs_bindgen_877cbf0b08dc487c =
 {-# NOINLINE wuffs_base__pixel_buffer__color_u32_at #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__color_u32_at@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5533:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6046:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__color_u32_at :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_buffer -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__color_u32_argb_premul)
 wuffs_base__pixel_buffer__color_u32_at =
@@ -13146,9 +14225,9 @@ hs_bindgen_1b123662c6edc01f =
 {-# NOINLINE wuffs_base__pixel_buffer__set_color_u32_at #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_color_u32_at@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5538:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6051:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_color_u32_at :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> Wuffs_base__color_u32_argb_premul -> IO Wuffs_base__status)
 wuffs_base__pixel_buffer__set_color_u32_at =
@@ -13166,13 +14245,33 @@ hs_bindgen_0aefeb4c58c8e33a =
 {-# NOINLINE wuffs_base__pixel_buffer__set_color_u32_fill_rect #-}
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_color_u32_fill_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5545:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6058:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_color_u32_fill_rect :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_buffer -> Wuffs_base__rect_ie_u32 -> Wuffs_base__color_u32_argb_premul -> IO Wuffs_base__status)
 wuffs_base__pixel_buffer__set_color_u32_fill_rect =
   BG.unsafePerformIO hs_bindgen_0aefeb4c58c8e33a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_buffer__is_opaque@
+foreign import ccall unsafe "hs_bindgen_31784f2d6dc70c9c" hs_bindgen_31784f2d6dc70c9c_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_buffer__is_opaque@
+hs_bindgen_31784f2d6dc70c9c :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_buffer -> IO BG.CBool))
+hs_bindgen_31784f2d6dc70c9c =
+  fmap BG.fromFFIType hs_bindgen_31784f2d6dc70c9c_base
+
+{-# NOINLINE wuffs_base__pixel_buffer__is_opaque #-}
+{-| __C declaration:__ @wuffs_base__pixel_buffer__is_opaque@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6064:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__pixel_buffer__is_opaque :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_buffer -> IO BG.CBool)
+wuffs_base__pixel_buffer__is_opaque =
+  BG.unsafePerformIO hs_bindgen_31784f2d6dc70c9c
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_base__pixel_palette__closest_element@
 foreign import ccall unsafe "hs_bindgen_78f164ca9718032a" hs_bindgen_78f164ca9718032a_base ::
@@ -13186,9 +14285,9 @@ hs_bindgen_78f164ca9718032a =
 {-# NOINLINE wuffs_base__pixel_palette__closest_element #-}
 {-| __C declaration:__ @wuffs_base__pixel_palette__closest_element@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5641:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_palette__closest_element :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__pixel_format -> Wuffs_base__color_u32_argb_premul -> IO HsBindgen.Runtime.LibC.Word8)
 wuffs_base__pixel_palette__closest_element =
@@ -13206,9 +14305,9 @@ hs_bindgen_07b11065aaf51580 =
 {-# NOINLINE wuffs_base__pixel_swizzler__prepare #-}
 {-| __C declaration:__ @wuffs_base__pixel_swizzler__prepare@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5695:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6216:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_swizzler__prepare :: BG.FunPtr (BG.Ptr Wuffs_base__pixel_swizzler -> Wuffs_base__pixel_format -> Wuffs_base__slice_u8 -> Wuffs_base__pixel_format -> Wuffs_base__slice_u8 -> Wuffs_base__pixel_blend -> IO Wuffs_base__status)
 wuffs_base__pixel_swizzler__prepare =
@@ -13226,9 +14325,9 @@ hs_bindgen_6830438fdfc05fce =
 {-# NOINLINE wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice #-}
 {-| __C declaration:__ @wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5709:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6230:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__pixel_swizzler -> Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice =
@@ -13246,9 +14345,9 @@ hs_bindgen_5fbe13cd804e2342 =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5858:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6379:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate :: BG.FunPtr (BG.CDouble -> IO Wuffs_base__lossy_value_u16)
 wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate =
@@ -13266,9 +14365,9 @@ hs_bindgen_da0a3900e131069f =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5861:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6382:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate :: BG.FunPtr (BG.CDouble -> IO Wuffs_base__lossy_value_u32)
 wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate =
@@ -13286,9 +14385,9 @@ hs_bindgen_9f5eaf0bc89d53d6 =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_f64_to_u64 #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5864:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6385:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u64 :: BG.FunPtr (BG.CDouble -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__ieee_754_bit_representation__from_f64_to_u64 =
@@ -13306,9 +14405,9 @@ hs_bindgen_d51d6ae8f89b40e5 =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_u16_to_f64 #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u16_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5873:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u16_to_f64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word16 -> IO BG.CDouble)
 wuffs_base__ieee_754_bit_representation__from_u16_to_f64 =
@@ -13326,9 +14425,9 @@ hs_bindgen_b369277a84eaeba3 =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_u32_to_f64 #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u32_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5901:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6422:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u32_to_f64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> IO BG.CDouble)
 wuffs_base__ieee_754_bit_representation__from_u32_to_f64 =
@@ -13346,9 +14445,9 @@ hs_bindgen_33233714b9207742 =
 {-# NOINLINE wuffs_base__ieee_754_bit_representation__from_u64_to_f64 #-}
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u64_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5910:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6431:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u64_to_f64 :: BG.FunPtr (HsBindgen.Runtime.LibC.Word64 -> IO BG.CDouble)
 wuffs_base__ieee_754_bit_representation__from_u64_to_f64 =
@@ -13366,9 +14465,9 @@ hs_bindgen_33119eea0c9374c5 =
 {-# NOINLINE wuffs_base__parse_number_f64 #-}
 {-| __C declaration:__ @wuffs_base__parse_number_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6475:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_f64 :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__result_f64)
 wuffs_base__parse_number_f64 =
@@ -13386,9 +14485,9 @@ hs_bindgen_cf3dd4a1f6adfe66 =
 {-# NOINLINE wuffs_base__parse_number_i64 #-}
 {-| __C declaration:__ @wuffs_base__parse_number_i64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5969:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6490:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_i64 :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__result_i64)
 wuffs_base__parse_number_i64 =
@@ -13406,9 +14505,9 @@ hs_bindgen_c4ed51b658224c3b =
 {-# NOINLINE wuffs_base__parse_number_u64 #-}
 {-| __C declaration:__ @wuffs_base__parse_number_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6523:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_u64 :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__result_u64)
 wuffs_base__parse_number_u64 =
@@ -13426,9 +14525,9 @@ hs_bindgen_b040831e77c421c4 =
 {-# NOINLINE wuffs_base__render_number_f64 #-}
 {-| __C declaration:__ @wuffs_base__render_number_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6045:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6566:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_f64 :: BG.FunPtr (Wuffs_base__slice_u8 -> BG.CDouble -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__render_number_f64 =
@@ -13446,9 +14545,9 @@ hs_bindgen_00a38d8702c2385c =
 {-# NOINLINE wuffs_base__render_number_i64 #-}
 {-| __C declaration:__ @wuffs_base__render_number_i64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6061:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6582:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_i64 :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Int64 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__render_number_i64 =
@@ -13466,9 +14565,9 @@ hs_bindgen_291d57511ffb8766 =
 {-# NOINLINE wuffs_base__render_number_u64 #-}
 {-| __C declaration:__ @wuffs_base__render_number_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6076:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_u64 :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__render_number_u64 =
@@ -13486,9 +14585,9 @@ hs_bindgen_47109961f6ff3bc8 =
 {-# NOINLINE wuffs_base__base_16__decode2 #-}
 {-| __C declaration:__ @wuffs_base__base_16__decode2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6097:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6618:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__decode2 :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_16__decode2 =
@@ -13506,9 +14605,9 @@ hs_bindgen_8a33185188e2212e =
 {-# NOINLINE wuffs_base__base_16__decode4 #-}
 {-| __C declaration:__ @wuffs_base__base_16__decode4@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6113:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6634:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__decode4 :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_16__decode4 =
@@ -13526,9 +14625,9 @@ hs_bindgen_282080c069c091d6 =
 {-# NOINLINE wuffs_base__base_16__encode2 #-}
 {-| __C declaration:__ @wuffs_base__base_16__encode2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6125:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__encode2 :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_16__encode2 =
@@ -13546,9 +14645,9 @@ hs_bindgen_876eb30f514ac9dd =
 {-# NOINLINE wuffs_base__base_16__encode4 #-}
 {-| __C declaration:__ @wuffs_base__base_16__encode4@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6137:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6658:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__encode4 :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_16__encode4 =
@@ -13566,9 +14665,9 @@ hs_bindgen_39236f8b88feba59 =
 {-# NOINLINE wuffs_base__base_64__decode #-}
 {-| __C declaration:__ @wuffs_base__base_64__decode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6176:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6697:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_64__decode :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_64__decode =
@@ -13586,9 +14685,9 @@ hs_bindgen_a2ab15df497445d2 =
 {-# NOINLINE wuffs_base__base_64__encode #-}
 {-| __C declaration:__ @wuffs_base__base_64__encode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6188:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6709:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_64__encode :: BG.FunPtr (Wuffs_base__slice_u8 -> Wuffs_base__slice_u8 -> BG.CBool -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__transform__output)
 wuffs_base__base_64__encode =
@@ -13606,9 +14705,9 @@ hs_bindgen_2bbe139dfbc40a98 =
 {-# NOINLINE wuffs_base__make_utf_8__next__output #-}
 {-| __C declaration:__ @wuffs_base__make_utf_8__next__output@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6233:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6754:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_utf_8__next__output :: BG.FunPtr (HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__utf_8__next__output)
 wuffs_base__make_utf_8__next__output =
@@ -13626,9 +14725,9 @@ hs_bindgen_2f1362ab0c02a0d3 =
 {-# NOINLINE wuffs_base__utf_8__next__output__is_valid #-}
 {-| __C declaration:__ @wuffs_base__utf_8__next__output__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6763:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next__output__is_valid :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__utf_8__next__output -> IO BG.CBool)
 wuffs_base__utf_8__next__output__is_valid =
@@ -13646,9 +14745,9 @@ hs_bindgen_91257f4503ea32b2 =
 {-# NOINLINE wuffs_base__utf_8__encode #-}
 {-| __C declaration:__ @wuffs_base__utf_8__encode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6284:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6805:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__encode :: BG.FunPtr (Wuffs_base__slice_u8 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__utf_8__encode =
@@ -13666,9 +14765,9 @@ hs_bindgen_3671a92c3369280e =
 {-# NOINLINE wuffs_base__utf_8__next #-}
 {-| __C declaration:__ @wuffs_base__utf_8__next@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6832:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__utf_8__next__output)
 wuffs_base__utf_8__next =
@@ -13686,9 +14785,9 @@ hs_bindgen_6b2164311e497db9 =
 {-# NOINLINE wuffs_base__utf_8__next_from_end #-}
 {-| __C declaration:__ @wuffs_base__utf_8__next_from_end@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6320:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6841:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next_from_end :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO Wuffs_base__utf_8__next__output)
 wuffs_base__utf_8__next_from_end =
@@ -13706,9 +14805,9 @@ hs_bindgen_41be270274aceb33 =
 {-# NOINLINE wuffs_base__utf_8__longest_valid_prefix #-}
 {-| __C declaration:__ @wuffs_base__utf_8__longest_valid_prefix@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6337:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6858:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__longest_valid_prefix :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__utf_8__longest_valid_prefix =
@@ -13726,9 +14825,9 @@ hs_bindgen_038f8218f8b360d4 =
 {-# NOINLINE wuffs_base__ascii__longest_valid_prefix #-}
 {-| __C declaration:__ @wuffs_base__ascii__longest_valid_prefix@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6350:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6871:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ascii__longest_valid_prefix :: BG.FunPtr (PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8 -> HsBindgen.Runtime.LibC.CSize -> IO HsBindgen.Runtime.LibC.CSize)
 wuffs_base__ascii__longest_valid_prefix =
@@ -13746,9 +14845,9 @@ hs_bindgen_10e809dffe7ed444 =
 {-# NOINLINE wuffs_base__hasher_u32__checksum_u32 #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6384:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6905:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__checksum_u32 :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_u32 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__hasher_u32__checksum_u32 =
@@ -13766,9 +14865,9 @@ hs_bindgen_48abad6c3254ff85 =
 {-# NOINLINE wuffs_base__hasher_u32__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6389:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6910:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_u32 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__hasher_u32__get_quirk =
@@ -13786,9 +14885,9 @@ hs_bindgen_1789c477a09aa4a9 =
 {-# NOINLINE wuffs_base__hasher_u32__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6395:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6916:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u32 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__hasher_u32__set_quirk =
@@ -13806,9 +14905,9 @@ hs_bindgen_d3ef3e69d2820154 =
 {-# NOINLINE wuffs_base__hasher_u32__update #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6402:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__update :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u32 -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_base__hasher_u32__update =
@@ -13826,9 +14925,9 @@ hs_bindgen_41f9a563f93359eb =
 {-# NOINLINE wuffs_base__hasher_u32__update_u32 #-}
 {-| __C declaration:__ @wuffs_base__hasher_u32__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6408:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__update_u32 :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u32 -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__hasher_u32__update_u32 =
@@ -13846,9 +14945,9 @@ hs_bindgen_c4b46746876a703b =
 {-# NOINLINE wuffs_base__hasher_u64__checksum_u64 #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6491:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7012:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__checksum_u64 :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_u64 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__hasher_u64__checksum_u64 =
@@ -13866,9 +14965,9 @@ hs_bindgen_5114042c653ca135 =
 {-# NOINLINE wuffs_base__hasher_u64__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6496:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7017:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_u64 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__hasher_u64__get_quirk =
@@ -13886,9 +14985,9 @@ hs_bindgen_61af88f3dbab500d =
 {-# NOINLINE wuffs_base__hasher_u64__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6502:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7023:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u64 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__hasher_u64__set_quirk =
@@ -13906,9 +15005,9 @@ hs_bindgen_c82676b7542feef2 =
 {-# NOINLINE wuffs_base__hasher_u64__update #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6509:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7030:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__update :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u64 -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_base__hasher_u64__update =
@@ -13926,9 +15025,9 @@ hs_bindgen_5c49fc244d1ed617 =
 {-# NOINLINE wuffs_base__hasher_u64__update_u64 #-}
 {-| __C declaration:__ @wuffs_base__hasher_u64__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6515:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7036:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__update_u64 :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_u64 -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__hasher_u64__update_u64 =
@@ -13946,9 +15045,9 @@ hs_bindgen_187556025ffa865f =
 {-# NOINLINE wuffs_base__hasher_bitvec256__checksum_bitvec256 #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__checksum_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7119:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__checksum_bitvec256 :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_bitvec256 -> IO Wuffs_base__bitvec256)
 wuffs_base__hasher_bitvec256__checksum_bitvec256 =
@@ -13966,9 +15065,9 @@ hs_bindgen_599cbfcc9b19bcdb =
 {-# NOINLINE wuffs_base__hasher_bitvec256__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__hasher_bitvec256 -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__hasher_bitvec256__get_quirk =
@@ -13986,9 +15085,9 @@ hs_bindgen_92c1cb4036310e58 =
 {-# NOINLINE wuffs_base__hasher_bitvec256__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6609:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7130:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_bitvec256 -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__hasher_bitvec256__set_quirk =
@@ -14006,9 +15105,9 @@ hs_bindgen_ee5f93b881238a7c =
 {-# NOINLINE wuffs_base__hasher_bitvec256__update #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6616:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7137:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__update :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_bitvec256 -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_base__hasher_bitvec256__update =
@@ -14026,9 +15125,9 @@ hs_bindgen_069f5e86a434f293 =
 {-# NOINLINE wuffs_base__hasher_bitvec256__update_bitvec256 #-}
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__update_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6622:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7143:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__update_bitvec256 :: BG.FunPtr (BG.Ptr Wuffs_base__hasher_bitvec256 -> Wuffs_base__slice_u8 -> IO Wuffs_base__bitvec256)
 wuffs_base__hasher_bitvec256__update_bitvec256 =
@@ -14046,9 +15145,9 @@ hs_bindgen_abe66ab44190bd70 =
 {-# NOINLINE wuffs_base__image_decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6735:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7256:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_base__image_decoder__decode_frame =
@@ -14066,9 +15165,9 @@ hs_bindgen_f45972416d3b560d =
 {-# NOINLINE wuffs_base__image_decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6745:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7266:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_base__image_decoder__decode_frame_config =
@@ -14086,9 +15185,9 @@ hs_bindgen_a16a601d59b5e99a =
 {-# NOINLINE wuffs_base__image_decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6752:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7273:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_base__image_decoder__decode_image_config =
@@ -14106,9 +15205,9 @@ hs_bindgen_6b0fc2eb11f39d8a =
 {-# NOINLINE wuffs_base__image_decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6759:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7280:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_base__image_decoder__frame_dirty_rect =
@@ -14126,9 +15225,9 @@ hs_bindgen_5cfbedbf02196ff2 =
 {-# NOINLINE wuffs_base__image_decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6764:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7285:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__image_decoder__get_quirk =
@@ -14146,9 +15245,9 @@ hs_bindgen_370617aacbaa7559 =
 {-# NOINLINE wuffs_base__image_decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6770:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7291:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_base__image_decoder__num_animation_loops =
@@ -14166,9 +15265,9 @@ hs_bindgen_2585cd02a2be521d =
 {-# NOINLINE wuffs_base__image_decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6775:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7296:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__image_decoder__num_decoded_frame_configs =
@@ -14186,9 +15285,9 @@ hs_bindgen_02b25efa29df83e3 =
 {-# NOINLINE wuffs_base__image_decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__image_decoder__num_decoded_frames =
@@ -14206,9 +15305,9 @@ hs_bindgen_baa1f9eb9e985f7c =
 {-# NOINLINE wuffs_base__image_decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6785:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7306:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__image_decoder__restart_frame =
@@ -14226,9 +15325,9 @@ hs_bindgen_bc8a5960161eb454 =
 {-# NOINLINE wuffs_base__image_decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6792:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7313:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__image_decoder__set_quirk =
@@ -14246,9 +15345,9 @@ hs_bindgen_3829c2d40177b35d =
 {-# NOINLINE wuffs_base__image_decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7320:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_base__image_decoder__set_report_metadata =
@@ -14266,9 +15365,9 @@ hs_bindgen_ef02ae90ea2ab980 =
 {-# NOINLINE wuffs_base__image_decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7327:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_base__image_decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_base__image_decoder__tell_me_more =
@@ -14286,9 +15385,9 @@ hs_bindgen_2cc6ee49d45ad996 =
 {-# NOINLINE wuffs_base__image_decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_base__image_decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7335:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__image_decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_base__image_decoder__workbuf_len =
@@ -14306,9 +15405,9 @@ hs_bindgen_38e6a75f7248a9af =
 {-# NOINLINE wuffs_base__io_transformer__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6955:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7476:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_transformer -> IO Wuffs_base__optional_u63)
 wuffs_base__io_transformer__dst_history_retain_length =
@@ -14326,9 +15425,9 @@ hs_bindgen_4ba9bec36502dd75 =
 {-# NOINLINE wuffs_base__io_transformer__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6960:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7481:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_transformer -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__io_transformer__get_quirk =
@@ -14346,9 +15445,9 @@ hs_bindgen_900734d813129173 =
 {-# NOINLINE wuffs_base__io_transformer__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6966:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7487:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__io_transformer -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__io_transformer__set_quirk =
@@ -14366,9 +15465,9 @@ hs_bindgen_935b2f9a1092c24b =
 {-# NOINLINE wuffs_base__io_transformer__transform_io #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6973:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__transform_io :: BG.FunPtr (BG.Ptr Wuffs_base__io_transformer -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_base__io_transformer__transform_io =
@@ -14386,9 +15485,9 @@ hs_bindgen_f17558e08ce8a9c7 =
 {-# NOINLINE wuffs_base__io_transformer__workbuf_len #-}
 {-| __C declaration:__ @wuffs_base__io_transformer__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6981:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7502:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__io_transformer -> IO Wuffs_base__range_ii_u64)
 wuffs_base__io_transformer__workbuf_len =
@@ -14406,9 +15505,9 @@ hs_bindgen_f482ee2a2ae2fd14 =
 {-# NOINLINE wuffs_base__token_decoder__decode_tokens #-}
 {-| __C declaration:__ @wuffs_base__token_decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7062:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7583:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__decode_tokens :: BG.FunPtr (BG.Ptr Wuffs_base__token_decoder -> BG.Ptr Wuffs_base__token_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_base__token_decoder__decode_tokens =
@@ -14426,9 +15525,9 @@ hs_bindgen_78fd17f7b76cb8ee =
 {-# NOINLINE wuffs_base__token_decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_base__token_decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7070:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7591:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_base__token_decoder__get_quirk =
@@ -14446,9 +15545,9 @@ hs_bindgen_f0c6c898fdb7d53b =
 {-# NOINLINE wuffs_base__token_decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_base__token_decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7076:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_base__token_decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_base__token_decoder__set_quirk =
@@ -14466,9 +15565,9 @@ hs_bindgen_1dcc5a364d9863a1 =
 {-# NOINLINE wuffs_base__token_decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_base__token_decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7083:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7604:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_base__token_decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_base__token_decoder__workbuf_len =
@@ -14486,9 +15585,9 @@ hs_bindgen_37ef85ffc1c7c803 =
 {-# NOINLINE wuffs_adler32__hasher__initialize #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7163:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7684:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_adler32__hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_adler32__hasher__initialize =
@@ -14506,9 +15605,9 @@ hs_bindgen_d7b637247e4856dd =
 {-# NOINLINE sizeof__wuffs_adler32__hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_adler32__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7170:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7691:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_adler32__hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_adler32__hasher =
@@ -14526,9 +15625,9 @@ hs_bindgen_0b7feca3e3a16adc =
 {-# NOINLINE wuffs_adler32__hasher__alloc #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7181:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7702:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_adler32__hasher))
 wuffs_adler32__hasher__alloc =
@@ -14546,9 +15645,9 @@ hs_bindgen_f9c44a5b54e701b5 =
 {-# NOINLINE wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7184:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7705:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -14566,9 +15665,9 @@ hs_bindgen_93ee5207f4131580 =
 {-# NOINLINE wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7191:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7712:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32 :: BG.FunPtr (BG.Ptr Wuffs_adler32__hasher -> IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32 =
@@ -14586,9 +15685,9 @@ hs_bindgen_99dc7c784e911dd9 =
 {-# NOINLINE wuffs_adler32__hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7721:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_adler32__hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_adler32__hasher__get_quirk =
@@ -14606,9 +15705,9 @@ hs_bindgen_c35f18b68f6e724f =
 {-# NOINLINE wuffs_adler32__hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7727:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_adler32__hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_adler32__hasher__set_quirk =
@@ -14626,9 +15725,9 @@ hs_bindgen_5376478f400f47c1 =
 {-# NOINLINE wuffs_adler32__hasher__update #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7734:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__update :: BG.FunPtr (BG.Ptr Wuffs_adler32__hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_adler32__hasher__update =
@@ -14646,9 +15745,9 @@ hs_bindgen_95acf8df76e39d06 =
 {-# NOINLINE wuffs_adler32__hasher__update_u32 #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7219:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__update_u32 :: BG.FunPtr (BG.Ptr Wuffs_adler32__hasher -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_adler32__hasher__update_u32 =
@@ -14666,9 +15765,9 @@ hs_bindgen_49832d8e8e3aa739 =
 {-# NOINLINE wuffs_adler32__hasher__checksum_u32 #-}
 {-| __C declaration:__ @wuffs_adler32__hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7225:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7746:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__checksum_u32 :: BG.FunPtr (PtrConst.PtrConst Wuffs_adler32__hasher -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_adler32__hasher__checksum_u32 =
@@ -14686,9 +15785,9 @@ hs_bindgen_746ff2e9ccb6db5e =
 {-# NOINLINE wuffs_bmp__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7392:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7913:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_bmp__decoder__initialize =
@@ -14706,9 +15805,9 @@ hs_bindgen_129d7b38bc4625b4 =
 {-# NOINLINE sizeof__wuffs_bmp__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_bmp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7399:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7920:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_bmp__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_bmp__decoder =
@@ -14726,9 +15825,9 @@ hs_bindgen_3946dc8256d3d5c4 =
 {-# NOINLINE wuffs_bmp__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7410:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7931:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_bmp__decoder))
 wuffs_bmp__decoder__alloc =
@@ -14746,9 +15845,9 @@ hs_bindgen_89f234eaef7d4b4b =
 {-# NOINLINE wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7413:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7934:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -14766,9 +15865,9 @@ hs_bindgen_585bd18e1959f43f =
 {-# NOINLINE wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7420:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7941:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder =
@@ -14786,9 +15885,9 @@ hs_bindgen_5b2dd8b8c3cfba92 =
 {-# NOINLINE wuffs_bmp__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7429:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7950:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_bmp__decoder__get_quirk =
@@ -14806,9 +15905,9 @@ hs_bindgen_e42a5f3c0db7f7d7 =
 {-# NOINLINE wuffs_bmp__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7435:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7956:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_bmp__decoder__set_quirk =
@@ -14826,9 +15925,9 @@ hs_bindgen_a99cb30a6ca9be17 =
 {-# NOINLINE wuffs_bmp__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7442:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7963:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_bmp__decoder__decode_image_config =
@@ -14846,9 +15945,9 @@ hs_bindgen_2ed7a0c571081de3 =
 {-# NOINLINE wuffs_bmp__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7449:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7970:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_bmp__decoder__decode_frame_config =
@@ -14866,9 +15965,9 @@ hs_bindgen_c57ebb6a940e7862 =
 {-# NOINLINE wuffs_bmp__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7456:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7977:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_bmp__decoder__decode_frame =
@@ -14886,9 +15985,9 @@ hs_bindgen_7434627dc9d304fd =
 {-# NOINLINE wuffs_bmp__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_bmp__decoder__frame_dirty_rect =
@@ -14906,9 +16005,9 @@ hs_bindgen_04789e86194f39b3 =
 {-# NOINLINE wuffs_bmp__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7471:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7992:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_bmp__decoder__num_animation_loops =
@@ -14926,9 +16025,9 @@ hs_bindgen_389b155607d4b576 =
 {-# NOINLINE wuffs_bmp__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7476:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_bmp__decoder__num_decoded_frame_configs =
@@ -14946,9 +16045,9 @@ hs_bindgen_3b87b78818869e1e =
 {-# NOINLINE wuffs_bmp__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7481:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_bmp__decoder__num_decoded_frames =
@@ -14966,9 +16065,9 @@ hs_bindgen_7a93e611853e56f8 =
 {-# NOINLINE wuffs_bmp__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7486:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8007:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_bmp__decoder__restart_frame =
@@ -14986,9 +16085,9 @@ hs_bindgen_4faee9a125cee850 =
 {-# NOINLINE wuffs_bmp__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7493:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8014:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_bmp__decoder__set_report_metadata =
@@ -15006,9 +16105,9 @@ hs_bindgen_b684e8fa5a019d4a =
 {-# NOINLINE wuffs_bmp__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7500:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8021:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_bmp__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_bmp__decoder__tell_me_more =
@@ -15026,9 +16125,9 @@ hs_bindgen_c661951fadf3e154 =
 {-# NOINLINE wuffs_bmp__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_bmp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8029:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_bmp__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_bmp__decoder__workbuf_len =
@@ -15046,9 +16145,9 @@ hs_bindgen_6283e4a86e5d4551 =
 {-# NOINLINE wuffs_bzip2__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_bzip2__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_bzip2__decoder__initialize =
@@ -15066,9 +16165,9 @@ hs_bindgen_874a6f9bca7fb188 =
 {-# NOINLINE sizeof__wuffs_bzip2__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_bzip2__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7787:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_bzip2__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_bzip2__decoder =
@@ -15086,9 +16185,9 @@ hs_bindgen_a5c519e080e77a40 =
 {-# NOINLINE wuffs_bzip2__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8319:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_bzip2__decoder))
 wuffs_bzip2__decoder__alloc =
@@ -15106,9 +16205,9 @@ hs_bindgen_1b00dfcf1bf2066b =
 {-# NOINLINE wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8322:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer =
@@ -15126,9 +16225,9 @@ hs_bindgen_9c5d11c4d9bede0a =
 {-# NOINLINE wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7808:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8329:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_bzip2__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer =
@@ -15146,9 +16245,9 @@ hs_bindgen_51fb996274dfad72 =
 {-# NOINLINE wuffs_bzip2__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7817:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8338:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_bzip2__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_bzip2__decoder__get_quirk =
@@ -15166,9 +16265,9 @@ hs_bindgen_77075d914151834d =
 {-# NOINLINE wuffs_bzip2__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7823:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8344:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_bzip2__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_bzip2__decoder__set_quirk =
@@ -15186,9 +16285,9 @@ hs_bindgen_c518a3caba2373a4 =
 {-# NOINLINE wuffs_bzip2__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7830:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8351:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_bzip2__decoder -> IO Wuffs_base__optional_u63)
 wuffs_bzip2__decoder__dst_history_retain_length =
@@ -15206,9 +16305,9 @@ hs_bindgen_5b6a7c91f31612dc =
 {-# NOINLINE wuffs_bzip2__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7835:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8356:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_bzip2__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_bzip2__decoder__workbuf_len =
@@ -15226,9 +16325,9 @@ hs_bindgen_2930e2fc3dad15cd =
 {-# NOINLINE wuffs_bzip2__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_bzip2__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7840:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8361:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_bzip2__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_bzip2__decoder__transform_io =
@@ -15246,9 +16345,9 @@ hs_bindgen_e13af0948a6194ad =
 {-# NOINLINE wuffs_cbor__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8084:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8605:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_cbor__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_cbor__decoder__initialize =
@@ -15266,9 +16365,9 @@ hs_bindgen_3cf199abe3970e73 =
 {-# NOINLINE sizeof__wuffs_cbor__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_cbor__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8091:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8612:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_cbor__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_cbor__decoder =
@@ -15286,9 +16385,9 @@ hs_bindgen_1792809f09a6ef7f =
 {-# NOINLINE wuffs_cbor__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8623:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_cbor__decoder))
 wuffs_cbor__decoder__alloc =
@@ -15306,9 +16405,9 @@ hs_bindgen_566ec08a84b63d39 =
 {-# NOINLINE wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8105:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__token_decoder))
 wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder =
@@ -15326,9 +16425,9 @@ hs_bindgen_0cbbb0165cd1130e =
 {-# NOINLINE wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8633:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder :: BG.FunPtr (BG.Ptr Wuffs_cbor__decoder -> IO (BG.Ptr Wuffs_base__token_decoder))
 wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder =
@@ -15346,9 +16445,9 @@ hs_bindgen_d82357921c7386b5 =
 {-# NOINLINE wuffs_cbor__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8121:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8642:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_cbor__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_cbor__decoder__get_quirk =
@@ -15366,9 +16465,9 @@ hs_bindgen_7f8879ad07a4efa8 =
 {-# NOINLINE wuffs_cbor__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8127:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8648:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_cbor__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_cbor__decoder__set_quirk =
@@ -15386,9 +16485,9 @@ hs_bindgen_bfbd30eb6474e2aa =
 {-# NOINLINE wuffs_cbor__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8655:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_cbor__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_cbor__decoder__workbuf_len =
@@ -15406,9 +16505,9 @@ hs_bindgen_39271776464843c1 =
 {-# NOINLINE wuffs_cbor__decoder__decode_tokens #-}
 {-| __C declaration:__ @wuffs_cbor__decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8139:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__decode_tokens :: BG.FunPtr (BG.Ptr Wuffs_cbor__decoder -> BG.Ptr Wuffs_base__token_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_cbor__decoder__decode_tokens =
@@ -15426,9 +16525,9 @@ hs_bindgen_f88e30ec5d286dd1 =
 {-# NOINLINE wuffs_crc32__ieee_hasher__initialize #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8307:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8828:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_crc32__ieee_hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_crc32__ieee_hasher__initialize =
@@ -15446,9 +16545,9 @@ hs_bindgen_3e415347ed3b476c =
 {-# NOINLINE sizeof__wuffs_crc32__ieee_hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_crc32__ieee_hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8314:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8835:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_crc32__ieee_hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_crc32__ieee_hasher =
@@ -15466,9 +16565,9 @@ hs_bindgen_5b4968f660b3ce17 =
 {-# NOINLINE wuffs_crc32__ieee_hasher__alloc #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8325:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8846:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_crc32__ieee_hasher))
 wuffs_crc32__ieee_hasher__alloc =
@@ -15486,9 +16585,9 @@ hs_bindgen_606486f441c739de =
 {-# NOINLINE wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8328:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8849:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -15506,9 +16605,9 @@ hs_bindgen_a2b064bda3298068 =
 {-# NOINLINE wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8335:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8856:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32 :: BG.FunPtr (BG.Ptr Wuffs_crc32__ieee_hasher -> IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32 =
@@ -15526,9 +16625,9 @@ hs_bindgen_d1cec63ff96a19bf =
 {-# NOINLINE wuffs_crc32__ieee_hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8344:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8865:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_crc32__ieee_hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_crc32__ieee_hasher__get_quirk =
@@ -15546,9 +16645,9 @@ hs_bindgen_9c4924a0dc0e09ce =
 {-# NOINLINE wuffs_crc32__ieee_hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8350:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8871:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_crc32__ieee_hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_crc32__ieee_hasher__set_quirk =
@@ -15566,9 +16665,9 @@ hs_bindgen_cd1e3d088938476b =
 {-# NOINLINE wuffs_crc32__ieee_hasher__update #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8357:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8878:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__update :: BG.FunPtr (BG.Ptr Wuffs_crc32__ieee_hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_crc32__ieee_hasher__update =
@@ -15586,9 +16685,9 @@ hs_bindgen_6b4d78cb0c86c034 =
 {-# NOINLINE wuffs_crc32__ieee_hasher__update_u32 #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8363:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8884:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__update_u32 :: BG.FunPtr (BG.Ptr Wuffs_crc32__ieee_hasher -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_crc32__ieee_hasher__update_u32 =
@@ -15606,9 +16705,9 @@ hs_bindgen_fff9d471d26b329c =
 {-# NOINLINE wuffs_crc32__ieee_hasher__checksum_u32 #-}
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8369:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8890:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__checksum_u32 :: BG.FunPtr (PtrConst.PtrConst Wuffs_crc32__ieee_hasher -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_crc32__ieee_hasher__checksum_u32 =
@@ -15626,9 +16725,9 @@ hs_bindgen_6491d9402a679d98 =
 {-# NOINLINE wuffs_crc64__ecma_hasher__initialize #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8528:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9049:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_crc64__ecma_hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_crc64__ecma_hasher__initialize =
@@ -15646,9 +16745,9 @@ hs_bindgen_aaeb673ef02ca7d2 =
 {-# NOINLINE sizeof__wuffs_crc64__ecma_hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_crc64__ecma_hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8535:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9056:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_crc64__ecma_hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_crc64__ecma_hasher =
@@ -15666,9 +16765,9 @@ hs_bindgen_d6563176e8a6c868 =
 {-# NOINLINE wuffs_crc64__ecma_hasher__alloc #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8546:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9067:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_crc64__ecma_hasher))
 wuffs_crc64__ecma_hasher__alloc =
@@ -15686,9 +16785,9 @@ hs_bindgen_6af4e563f3ecef0e =
 {-# NOINLINE wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64 #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8549:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9070:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_u64))
 wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64 =
@@ -15706,9 +16805,9 @@ hs_bindgen_609fa1da27cd1910 =
 {-# NOINLINE wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64 #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8556:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9077:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64 :: BG.FunPtr (BG.Ptr Wuffs_crc64__ecma_hasher -> IO (BG.Ptr Wuffs_base__hasher_u64))
 wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64 =
@@ -15726,9 +16825,9 @@ hs_bindgen_0e975b3a69a6615b =
 {-# NOINLINE wuffs_crc64__ecma_hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8565:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9086:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_crc64__ecma_hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_crc64__ecma_hasher__get_quirk =
@@ -15746,9 +16845,9 @@ hs_bindgen_09e5f401ee07348c =
 {-# NOINLINE wuffs_crc64__ecma_hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8571:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9092:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_crc64__ecma_hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_crc64__ecma_hasher__set_quirk =
@@ -15766,9 +16865,9 @@ hs_bindgen_f4b34dca4cfc0b53 =
 {-# NOINLINE wuffs_crc64__ecma_hasher__update #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8578:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9099:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__update :: BG.FunPtr (BG.Ptr Wuffs_crc64__ecma_hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_crc64__ecma_hasher__update =
@@ -15786,9 +16885,9 @@ hs_bindgen_516f63ff6b79f349 =
 {-# NOINLINE wuffs_crc64__ecma_hasher__update_u64 #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8584:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9105:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__update_u64 :: BG.FunPtr (BG.Ptr Wuffs_crc64__ecma_hasher -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_crc64__ecma_hasher__update_u64 =
@@ -15806,9 +16905,9 @@ hs_bindgen_4c1f1bb71e5fab5b =
 {-# NOINLINE wuffs_crc64__ecma_hasher__checksum_u64 #-}
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8590:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9111:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__checksum_u64 :: BG.FunPtr (PtrConst.PtrConst Wuffs_crc64__ecma_hasher -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_crc64__ecma_hasher__checksum_u64 =
@@ -15826,9 +16925,9 @@ hs_bindgen_9d54449ba27842b1 =
 {-# NOINLINE wuffs_deflate__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8768:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9289:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_deflate__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_deflate__decoder__initialize =
@@ -15846,9 +16945,9 @@ hs_bindgen_b1d16ea5dac5f724 =
 {-# NOINLINE sizeof__wuffs_deflate__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_deflate__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8775:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9296:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_deflate__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_deflate__decoder =
@@ -15866,9 +16965,9 @@ hs_bindgen_074faf5bef82be92 =
 {-# NOINLINE wuffs_deflate__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8786:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9307:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_deflate__decoder))
 wuffs_deflate__decoder__alloc =
@@ -15886,9 +16985,9 @@ hs_bindgen_c99dbf6d9450029a =
 {-# NOINLINE wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8789:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9310:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer =
@@ -15906,9 +17005,9 @@ hs_bindgen_cc735a3cfe03df60 =
 {-# NOINLINE wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8796:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9317:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_deflate__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer =
@@ -15926,9 +17025,9 @@ hs_bindgen_0b87863e3e0fc283 =
 {-# NOINLINE wuffs_deflate__decoder__add_history #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__add_history@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9326:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__add_history :: BG.FunPtr (BG.Ptr Wuffs_deflate__decoder -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_deflate__decoder__add_history =
@@ -15946,9 +17045,9 @@ hs_bindgen_e146acd5017dcd1a =
 {-# NOINLINE wuffs_deflate__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8811:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9332:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_deflate__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_deflate__decoder__get_quirk =
@@ -15966,9 +17065,9 @@ hs_bindgen_1253165248b31170 =
 {-# NOINLINE wuffs_deflate__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8817:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9338:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_deflate__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_deflate__decoder__set_quirk =
@@ -15986,9 +17085,9 @@ hs_bindgen_789d8b0dac8ebb99 =
 {-# NOINLINE wuffs_deflate__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8824:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_deflate__decoder -> IO Wuffs_base__optional_u63)
 wuffs_deflate__decoder__dst_history_retain_length =
@@ -16006,9 +17105,9 @@ hs_bindgen_ed4b738e71519d3e =
 {-# NOINLINE wuffs_deflate__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8829:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9350:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_deflate__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_deflate__decoder__workbuf_len =
@@ -16026,9 +17125,9 @@ hs_bindgen_775a036b4d0ed4b6 =
 {-# NOINLINE wuffs_deflate__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_deflate__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8834:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9355:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_deflate__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_deflate__decoder__transform_io =
@@ -16046,9 +17145,9 @@ hs_bindgen_4a49788027c89570 =
 {-# NOINLINE wuffs_etc2__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9059:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9579:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_etc2__decoder__initialize =
@@ -16066,9 +17165,9 @@ hs_bindgen_5ea2cfcacace2ebd =
 {-# NOINLINE sizeof__wuffs_etc2__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_etc2__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9066:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9586:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_etc2__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_etc2__decoder =
@@ -16086,9 +17185,9 @@ hs_bindgen_8db710addff7c54b =
 {-# NOINLINE wuffs_etc2__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9077:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_etc2__decoder))
 wuffs_etc2__decoder__alloc =
@@ -16106,9 +17205,9 @@ hs_bindgen_eb671a125bc181c1 =
 {-# NOINLINE wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9080:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9600:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder =
@@ -16126,9 +17225,9 @@ hs_bindgen_c5faa1d406a63273 =
 {-# NOINLINE wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9087:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9607:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder =
@@ -16146,9 +17245,9 @@ hs_bindgen_790e6533732021bc =
 {-# NOINLINE wuffs_etc2__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9096:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9616:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_etc2__decoder__get_quirk =
@@ -16166,9 +17265,9 @@ hs_bindgen_e9e9e9cf8ea36782 =
 {-# NOINLINE wuffs_etc2__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9622:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_etc2__decoder__set_quirk =
@@ -16186,9 +17285,9 @@ hs_bindgen_0246289a5132726c =
 {-# NOINLINE wuffs_etc2__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9109:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9629:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_etc2__decoder__decode_image_config =
@@ -16206,9 +17305,9 @@ hs_bindgen_6acb8c89919919d7 =
 {-# NOINLINE wuffs_etc2__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9116:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9636:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_etc2__decoder__decode_frame_config =
@@ -16226,9 +17325,9 @@ hs_bindgen_fa4e58c9cdb59a20 =
 {-# NOINLINE wuffs_etc2__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9123:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9643:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_etc2__decoder__decode_frame =
@@ -16246,9 +17345,9 @@ hs_bindgen_e1f0b00d31da837a =
 {-# NOINLINE wuffs_etc2__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9133:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9653:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_etc2__decoder__frame_dirty_rect =
@@ -16266,9 +17365,9 @@ hs_bindgen_21451a4f6b5ec4be =
 {-# NOINLINE wuffs_etc2__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9138:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9658:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_etc2__decoder__num_animation_loops =
@@ -16286,9 +17385,9 @@ hs_bindgen_e642bf67e4d2a156 =
 {-# NOINLINE wuffs_etc2__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9143:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9663:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_etc2__decoder__num_decoded_frame_configs =
@@ -16306,9 +17405,9 @@ hs_bindgen_5b87bcd775f3b959 =
 {-# NOINLINE wuffs_etc2__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9148:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9668:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_etc2__decoder__num_decoded_frames =
@@ -16326,9 +17425,9 @@ hs_bindgen_889756d74dd5947c =
 {-# NOINLINE wuffs_etc2__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9153:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9673:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_etc2__decoder__restart_frame =
@@ -16346,9 +17445,9 @@ hs_bindgen_93b75120fb48c1e2 =
 {-# NOINLINE wuffs_etc2__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9160:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9680:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_etc2__decoder__set_report_metadata =
@@ -16366,9 +17465,9 @@ hs_bindgen_350920ead110a70e =
 {-# NOINLINE wuffs_etc2__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9167:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9687:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_etc2__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_etc2__decoder__tell_me_more =
@@ -16386,9 +17485,9 @@ hs_bindgen_a28c958b98d20b03 =
 {-# NOINLINE wuffs_etc2__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_etc2__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9175:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9695:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_etc2__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_etc2__decoder__workbuf_len =
@@ -16406,9 +17505,9 @@ hs_bindgen_386debe3b8b3b251 =
 {-# NOINLINE wuffs_gif__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_gif__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9444:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9965:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_gif__decoder__initialize =
@@ -16426,9 +17525,9 @@ hs_bindgen_0f183e197996babf =
 {-# NOINLINE sizeof__wuffs_gif__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_gif__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9451:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9972:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_gif__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_gif__decoder =
@@ -16446,9 +17545,9 @@ hs_bindgen_95f177c7a4a110f7 =
 {-# NOINLINE wuffs_gif__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_gif__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9462:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9983:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_gif__decoder))
 wuffs_gif__decoder__alloc =
@@ -16466,9 +17565,9 @@ hs_bindgen_780eb8f4bf208295 =
 {-# NOINLINE wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9465:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9986:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder =
@@ -16486,9 +17585,9 @@ hs_bindgen_46cc1c9bd25c0a0b =
 {-# NOINLINE wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9472:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9993:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder =
@@ -16506,9 +17605,9 @@ hs_bindgen_8fe607ffeb1da1c9 =
 {-# NOINLINE wuffs_gif__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_gif__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9481:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_gif__decoder__get_quirk =
@@ -16526,9 +17625,9 @@ hs_bindgen_8da6749f305d006d =
 {-# NOINLINE wuffs_gif__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_gif__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9487:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_gif__decoder__set_quirk =
@@ -16546,9 +17645,9 @@ hs_bindgen_61841e27a66f76f8 =
 {-# NOINLINE wuffs_gif__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_gif__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10015:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_gif__decoder__decode_image_config =
@@ -16566,9 +17665,9 @@ hs_bindgen_541c127d1dc9440d =
 {-# NOINLINE wuffs_gif__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_gif__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9501:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10022:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_gif__decoder__set_report_metadata =
@@ -16586,9 +17685,9 @@ hs_bindgen_3f1023d1871c91db =
 {-# NOINLINE wuffs_gif__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_gif__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10029:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_gif__decoder__tell_me_more =
@@ -16606,9 +17705,9 @@ hs_bindgen_f2da2e2e358012fb =
 {-# NOINLINE wuffs_gif__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_gif__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_gif__decoder__num_animation_loops =
@@ -16626,9 +17725,9 @@ hs_bindgen_cce3363c4bcb026e =
 {-# NOINLINE wuffs_gif__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_gif__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9521:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10042:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_gif__decoder__num_decoded_frame_configs =
@@ -16646,9 +17745,9 @@ hs_bindgen_39ca8e9b56843c16 =
 {-# NOINLINE wuffs_gif__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_gif__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9526:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_gif__decoder__num_decoded_frames =
@@ -16666,9 +17765,9 @@ hs_bindgen_06b2f5c6e1403a23 =
 {-# NOINLINE wuffs_gif__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_gif__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9531:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10052:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_gif__decoder__frame_dirty_rect =
@@ -16686,9 +17785,9 @@ hs_bindgen_97dbb35c3cf5469d =
 {-# NOINLINE wuffs_gif__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_gif__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9536:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10057:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_gif__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_gif__decoder__workbuf_len =
@@ -16706,9 +17805,9 @@ hs_bindgen_71ae10922587ed1c =
 {-# NOINLINE wuffs_gif__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_gif__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9541:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10062:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_gif__decoder__restart_frame =
@@ -16726,9 +17825,9 @@ hs_bindgen_13dcd56b3acaa000 =
 {-# NOINLINE wuffs_gif__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_gif__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10069:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_gif__decoder__decode_frame_config =
@@ -16746,9 +17845,9 @@ hs_bindgen_a54626ca6c45b5b2 =
 {-# NOINLINE wuffs_gif__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_gif__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9555:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10076:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_gif__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_gif__decoder__decode_frame =
@@ -16766,9 +17865,9 @@ hs_bindgen_c0324b08337a6023 =
 {-# NOINLINE wuffs_gzip__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9899:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10420:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_gzip__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_gzip__decoder__initialize =
@@ -16786,9 +17885,9 @@ hs_bindgen_235eabd64a4e6eb6 =
 {-# NOINLINE sizeof__wuffs_gzip__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_gzip__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9906:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10427:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_gzip__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_gzip__decoder =
@@ -16806,9 +17905,9 @@ hs_bindgen_6c4cb180ebe0cd1f =
 {-# NOINLINE wuffs_gzip__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9917:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10438:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_gzip__decoder))
 wuffs_gzip__decoder__alloc =
@@ -16826,9 +17925,9 @@ hs_bindgen_f67cf414c2979e3a =
 {-# NOINLINE wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9920:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10441:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer =
@@ -16846,9 +17945,9 @@ hs_bindgen_145b55f615d73a0d =
 {-# NOINLINE wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9927:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10448:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_gzip__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer =
@@ -16866,9 +17965,9 @@ hs_bindgen_0da1b95fc571683f =
 {-# NOINLINE wuffs_gzip__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9936:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10457:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_gzip__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_gzip__decoder__get_quirk =
@@ -16886,9 +17985,9 @@ hs_bindgen_37b1afe67648a288 =
 {-# NOINLINE wuffs_gzip__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9942:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10463:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_gzip__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_gzip__decoder__set_quirk =
@@ -16906,9 +18005,9 @@ hs_bindgen_8809dd0b00dc720a =
 {-# NOINLINE wuffs_gzip__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9949:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_gzip__decoder -> IO Wuffs_base__optional_u63)
 wuffs_gzip__decoder__dst_history_retain_length =
@@ -16926,9 +18025,9 @@ hs_bindgen_d5947da9427153fc =
 {-# NOINLINE wuffs_gzip__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10475:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_gzip__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_gzip__decoder__workbuf_len =
@@ -16946,13 +18045,373 @@ hs_bindgen_af640397e514c883 =
 {-# NOINLINE wuffs_gzip__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_gzip__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9959:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10480:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_gzip__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_gzip__decoder__transform_io =
   BG.unsafePerformIO hs_bindgen_af640397e514c883
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__initialize@
+foreign import ccall unsafe "hs_bindgen_191983ed5f1e51f9" hs_bindgen_191983ed5f1e51f9_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__initialize@
+hs_bindgen_191983ed5f1e51f9 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status))
+hs_bindgen_191983ed5f1e51f9 =
+  fmap BG.fromFFIType hs_bindgen_191983ed5f1e51f9_base
+
+{-# NOINLINE wuffs_handsum__decoder__initialize #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__initialize@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10660:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
+wuffs_handsum__decoder__initialize =
+  BG.unsafePerformIO hs_bindgen_191983ed5f1e51f9
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_handsum__decoder@
+foreign import ccall unsafe "hs_bindgen_b2682b60515204bd" hs_bindgen_b2682b60515204bd_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_handsum__decoder@
+hs_bindgen_b2682b60515204bd :: IO (BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize))
+hs_bindgen_b2682b60515204bd =
+  fmap BG.fromFFIType hs_bindgen_b2682b60515204bd_base
+
+{-# NOINLINE sizeof__wuffs_handsum__decoder #-}
+{-| __C declaration:__ @sizeof__wuffs_handsum__decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10667:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+sizeof__wuffs_handsum__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
+sizeof__wuffs_handsum__decoder =
+  BG.unsafePerformIO hs_bindgen_b2682b60515204bd
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc@
+foreign import ccall unsafe "hs_bindgen_82717a7273fba0e2" hs_bindgen_82717a7273fba0e2_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc@
+hs_bindgen_82717a7273fba0e2 :: IO (BG.FunPtr (IO (BG.Ptr Wuffs_handsum__decoder)))
+hs_bindgen_82717a7273fba0e2 =
+  fmap BG.fromFFIType hs_bindgen_82717a7273fba0e2_base
+
+{-# NOINLINE wuffs_handsum__decoder__alloc #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__alloc@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10678:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_handsum__decoder))
+wuffs_handsum__decoder__alloc =
+  BG.unsafePerformIO hs_bindgen_82717a7273fba0e2
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+foreign import ccall unsafe "hs_bindgen_1f973270ae8eec23" hs_bindgen_1f973270ae8eec23_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+hs_bindgen_1f973270ae8eec23 :: IO (BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder)))
+hs_bindgen_1f973270ae8eec23 =
+  fmap BG.fromFFIType hs_bindgen_1f973270ae8eec23_base
+
+{-# NOINLINE wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10681:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
+wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder =
+  BG.unsafePerformIO hs_bindgen_1f973270ae8eec23
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+foreign import ccall unsafe "hs_bindgen_bce8f6cdfc2c6253" hs_bindgen_bce8f6cdfc2c6253_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+hs_bindgen_bce8f6cdfc2c6253 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> IO (BG.Ptr Wuffs_base__image_decoder)))
+hs_bindgen_bce8f6cdfc2c6253 =
+  fmap BG.fromFFIType hs_bindgen_bce8f6cdfc2c6253_base
+
+{-# NOINLINE wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10688:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
+wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder =
+  BG.unsafePerformIO hs_bindgen_bce8f6cdfc2c6253
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__get_quirk@
+foreign import ccall unsafe "hs_bindgen_ad38be2d6f03b54c" hs_bindgen_ad38be2d6f03b54c_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__get_quirk@
+hs_bindgen_ad38be2d6f03b54c :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_ad38be2d6f03b54c =
+  fmap BG.fromFFIType hs_bindgen_ad38be2d6f03b54c_base
+
+{-# NOINLINE wuffs_handsum__decoder__get_quirk #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__get_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10697:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_handsum__decoder__get_quirk =
+  BG.unsafePerformIO hs_bindgen_ad38be2d6f03b54c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_quirk@
+foreign import ccall unsafe "hs_bindgen_228732e6b361a7af" hs_bindgen_228732e6b361a7af_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_quirk@
+hs_bindgen_228732e6b361a7af :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status))
+hs_bindgen_228732e6b361a7af =
+  fmap BG.fromFFIType hs_bindgen_228732e6b361a7af_base
+
+{-# NOINLINE wuffs_handsum__decoder__set_quirk #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__set_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10703:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
+wuffs_handsum__decoder__set_quirk =
+  BG.unsafePerformIO hs_bindgen_228732e6b361a7af
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_image_config@
+foreign import ccall unsafe "hs_bindgen_9ca089565734fe7c" hs_bindgen_9ca089565734fe7c_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_image_config@
+hs_bindgen_9ca089565734fe7c :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_9ca089565734fe7c =
+  fmap BG.fromFFIType hs_bindgen_9ca089565734fe7c_base
+
+{-# NOINLINE wuffs_handsum__decoder__decode_image_config #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_image_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10710:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_handsum__decoder__decode_image_config =
+  BG.unsafePerformIO hs_bindgen_9ca089565734fe7c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame_config@
+foreign import ccall unsafe "hs_bindgen_767d06199853b829" hs_bindgen_767d06199853b829_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame_config@
+hs_bindgen_767d06199853b829 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_767d06199853b829 =
+  fmap BG.fromFFIType hs_bindgen_767d06199853b829_base
+
+{-# NOINLINE wuffs_handsum__decoder__decode_frame_config #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_frame_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10717:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_handsum__decoder__decode_frame_config =
+  BG.unsafePerformIO hs_bindgen_767d06199853b829
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame@
+foreign import ccall unsafe "hs_bindgen_4e945297c4e9c050" hs_bindgen_4e945297c4e9c050_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__decode_frame@
+hs_bindgen_4e945297c4e9c050 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status))
+hs_bindgen_4e945297c4e9c050 =
+  fmap BG.fromFFIType hs_bindgen_4e945297c4e9c050_base
+
+{-# NOINLINE wuffs_handsum__decoder__decode_frame #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10724:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
+wuffs_handsum__decoder__decode_frame =
+  BG.unsafePerformIO hs_bindgen_4e945297c4e9c050
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__frame_dirty_rect@
+foreign import ccall unsafe "hs_bindgen_9717896fbb755497" hs_bindgen_9717896fbb755497_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__frame_dirty_rect@
+hs_bindgen_9717896fbb755497 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO Wuffs_base__rect_ie_u32))
+hs_bindgen_9717896fbb755497 =
+  fmap BG.fromFFIType hs_bindgen_9717896fbb755497_base
+
+{-# NOINLINE wuffs_handsum__decoder__frame_dirty_rect #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__frame_dirty_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10734:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO Wuffs_base__rect_ie_u32)
+wuffs_handsum__decoder__frame_dirty_rect =
+  BG.unsafePerformIO hs_bindgen_9717896fbb755497
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_animation_loops@
+foreign import ccall unsafe "hs_bindgen_af6872b1fbc47734" hs_bindgen_af6872b1fbc47734_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_animation_loops@
+hs_bindgen_af6872b1fbc47734 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_af6872b1fbc47734 =
+  fmap BG.fromFFIType hs_bindgen_af6872b1fbc47734_base
+
+{-# NOINLINE wuffs_handsum__decoder__num_animation_loops #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__num_animation_loops@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10739:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_handsum__decoder__num_animation_loops =
+  BG.unsafePerformIO hs_bindgen_af6872b1fbc47734
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frame_configs@
+foreign import ccall unsafe "hs_bindgen_b75c05c1f0b15526" hs_bindgen_b75c05c1f0b15526_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frame_configs@
+hs_bindgen_b75c05c1f0b15526 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_b75c05c1f0b15526 =
+  fmap BG.fromFFIType hs_bindgen_b75c05c1f0b15526_base
+
+{-# NOINLINE wuffs_handsum__decoder__num_decoded_frame_configs #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__num_decoded_frame_configs@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10744:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_handsum__decoder__num_decoded_frame_configs =
+  BG.unsafePerformIO hs_bindgen_b75c05c1f0b15526
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frames@
+foreign import ccall unsafe "hs_bindgen_8721ecb8be59c14a" hs_bindgen_8721ecb8be59c14a_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__num_decoded_frames@
+hs_bindgen_8721ecb8be59c14a :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_8721ecb8be59c14a =
+  fmap BG.fromFFIType hs_bindgen_8721ecb8be59c14a_base
+
+{-# NOINLINE wuffs_handsum__decoder__num_decoded_frames #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__num_decoded_frames@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10749:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_handsum__decoder__num_decoded_frames =
+  BG.unsafePerformIO hs_bindgen_8721ecb8be59c14a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__restart_frame@
+foreign import ccall unsafe "hs_bindgen_8e5d176cfe53cef4" hs_bindgen_8e5d176cfe53cef4_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__restart_frame@
+hs_bindgen_8e5d176cfe53cef4 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status))
+hs_bindgen_8e5d176cfe53cef4 =
+  fmap BG.fromFFIType hs_bindgen_8e5d176cfe53cef4_base
+
+{-# NOINLINE wuffs_handsum__decoder__restart_frame #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__restart_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10754:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
+wuffs_handsum__decoder__restart_frame =
+  BG.unsafePerformIO hs_bindgen_8e5d176cfe53cef4
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_report_metadata@
+foreign import ccall unsafe "hs_bindgen_452de9417930452b" hs_bindgen_452de9417930452b_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__set_report_metadata@
+hs_bindgen_452de9417930452b :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct))
+hs_bindgen_452de9417930452b =
+  fmap BG.fromFFIType hs_bindgen_452de9417930452b_base
+
+{-# NOINLINE wuffs_handsum__decoder__set_report_metadata #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__set_report_metadata@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10761:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
+wuffs_handsum__decoder__set_report_metadata =
+  BG.unsafePerformIO hs_bindgen_452de9417930452b
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__tell_me_more@
+foreign import ccall unsafe "hs_bindgen_6facb582ead64cd3" hs_bindgen_6facb582ead64cd3_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__tell_me_more@
+hs_bindgen_6facb582ead64cd3 :: IO (BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_6facb582ead64cd3 =
+  fmap BG.fromFFIType hs_bindgen_6facb582ead64cd3_base
+
+{-# NOINLINE wuffs_handsum__decoder__tell_me_more #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__tell_me_more@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10768:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_handsum__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_handsum__decoder__tell_me_more =
+  BG.unsafePerformIO hs_bindgen_6facb582ead64cd3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__workbuf_len@
+foreign import ccall unsafe "hs_bindgen_b89ea31b64516267" hs_bindgen_b89ea31b64516267_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_handsum__decoder__workbuf_len@
+hs_bindgen_b89ea31b64516267 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO Wuffs_base__range_ii_u64))
+hs_bindgen_b89ea31b64516267 =
+  fmap BG.fromFFIType hs_bindgen_b89ea31b64516267_base
+
+{-# NOINLINE wuffs_handsum__decoder__workbuf_len #-}
+{-| __C declaration:__ @wuffs_handsum__decoder__workbuf_len@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10776:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_handsum__decoder -> IO Wuffs_base__range_ii_u64)
+wuffs_handsum__decoder__workbuf_len =
+  BG.unsafePerformIO hs_bindgen_b89ea31b64516267
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_jpeg__decoder__initialize@
 foreign import ccall unsafe "hs_bindgen_fef3a1e9d24de4cf" hs_bindgen_fef3a1e9d24de4cf_base ::
@@ -16966,9 +18425,9 @@ hs_bindgen_fef3a1e9d24de4cf =
 {-# NOINLINE wuffs_jpeg__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10163:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11040:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__initialize =
@@ -16986,9 +18445,9 @@ hs_bindgen_092420d101df5d5a =
 {-# NOINLINE sizeof__wuffs_jpeg__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_jpeg__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10170:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_jpeg__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_jpeg__decoder =
@@ -17006,9 +18465,9 @@ hs_bindgen_133130e0f1e5beff =
 {-# NOINLINE wuffs_jpeg__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10181:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11058:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_jpeg__decoder))
 wuffs_jpeg__decoder__alloc =
@@ -17026,9 +18485,9 @@ hs_bindgen_236fe62458298593 =
 {-# NOINLINE wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10184:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11061:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder =
@@ -17046,9 +18505,9 @@ hs_bindgen_0ce4acb530b2e8d1 =
 {-# NOINLINE wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10191:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11068:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder =
@@ -17066,9 +18525,9 @@ hs_bindgen_f007e472391295d5 =
 {-# NOINLINE wuffs_jpeg__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11077:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_jpeg__decoder__get_quirk =
@@ -17086,9 +18545,9 @@ hs_bindgen_e99d42fd494b3690 =
 {-# NOINLINE wuffs_jpeg__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11083:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__set_quirk =
@@ -17106,9 +18565,9 @@ hs_bindgen_67a3d00aa718e6f7 =
 {-# NOINLINE wuffs_jpeg__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11090:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__decode_image_config =
@@ -17126,9 +18585,9 @@ hs_bindgen_5ba9630c5cfa6a95 =
 {-# NOINLINE wuffs_jpeg__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10220:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11097:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__decode_frame_config =
@@ -17146,9 +18605,9 @@ hs_bindgen_fd5e65414d6d1c91 =
 {-# NOINLINE wuffs_jpeg__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10227:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11104:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__decode_frame =
@@ -17166,9 +18625,9 @@ hs_bindgen_d4f66dd7f7fa6bc4 =
 {-# NOINLINE wuffs_jpeg__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10237:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11114:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_jpeg__decoder__frame_dirty_rect =
@@ -17186,9 +18645,9 @@ hs_bindgen_0abca802f691e0bc =
 {-# NOINLINE wuffs_jpeg__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11119:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_jpeg__decoder__num_animation_loops =
@@ -17206,9 +18665,9 @@ hs_bindgen_33641d919502bfb5 =
 {-# NOINLINE wuffs_jpeg__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10247:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_jpeg__decoder__num_decoded_frame_configs =
@@ -17226,9 +18685,9 @@ hs_bindgen_99d004b0f65ce3a4 =
 {-# NOINLINE wuffs_jpeg__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10252:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11129:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_jpeg__decoder__num_decoded_frames =
@@ -17246,9 +18705,9 @@ hs_bindgen_30a7376efe90ae52 =
 {-# NOINLINE wuffs_jpeg__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10257:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11134:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__restart_frame =
@@ -17266,9 +18725,9 @@ hs_bindgen_19ae8be76f447270 =
 {-# NOINLINE wuffs_jpeg__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10264:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_jpeg__decoder__set_report_metadata =
@@ -17286,9 +18745,9 @@ hs_bindgen_e36a7be70267f98d =
 {-# NOINLINE wuffs_jpeg__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10271:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11148:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_jpeg__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_jpeg__decoder__tell_me_more =
@@ -17306,9 +18765,9 @@ hs_bindgen_8ae6366493299cb6 =
 {-# NOINLINE wuffs_jpeg__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_jpeg__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10279:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11156:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_jpeg__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_jpeg__decoder__workbuf_len =
@@ -17326,9 +18785,9 @@ hs_bindgen_063b71a4d6ac10b3 =
 {-# NOINLINE wuffs_json__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_json__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10699:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11576:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_json__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_json__decoder__initialize =
@@ -17346,9 +18805,9 @@ hs_bindgen_db362969574de094 =
 {-# NOINLINE sizeof__wuffs_json__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_json__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10706:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11583:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_json__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_json__decoder =
@@ -17366,9 +18825,9 @@ hs_bindgen_dc8fa49f92912dc8 =
 {-# NOINLINE wuffs_json__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_json__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10717:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11594:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_json__decoder))
 wuffs_json__decoder__alloc =
@@ -17386,9 +18845,9 @@ hs_bindgen_2115df1cf3594752 =
 {-# NOINLINE wuffs_json__decoder__alloc_as__wuffs_base__token_decoder #-}
 {-| __C declaration:__ @wuffs_json__decoder__alloc_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10720:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__alloc_as__wuffs_base__token_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__token_decoder))
 wuffs_json__decoder__alloc_as__wuffs_base__token_decoder =
@@ -17406,9 +18865,9 @@ hs_bindgen_0fd5e8212a1bc041 =
 {-# NOINLINE wuffs_json__decoder__upcast_as__wuffs_base__token_decoder #-}
 {-| __C declaration:__ @wuffs_json__decoder__upcast_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10727:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11604:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__upcast_as__wuffs_base__token_decoder :: BG.FunPtr (BG.Ptr Wuffs_json__decoder -> IO (BG.Ptr Wuffs_base__token_decoder))
 wuffs_json__decoder__upcast_as__wuffs_base__token_decoder =
@@ -17426,9 +18885,9 @@ hs_bindgen_d0c3b164da465d49 =
 {-# NOINLINE wuffs_json__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_json__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10736:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11613:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_json__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_json__decoder__get_quirk =
@@ -17446,9 +18905,9 @@ hs_bindgen_1c50beb3640882f3 =
 {-# NOINLINE wuffs_json__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_json__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10742:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11619:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_json__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_json__decoder__set_quirk =
@@ -17466,9 +18925,9 @@ hs_bindgen_b7bdd364058975f4 =
 {-# NOINLINE wuffs_json__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_json__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10749:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_json__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_json__decoder__workbuf_len =
@@ -17486,9 +18945,9 @@ hs_bindgen_4c9dd6e5740eb1c4 =
 {-# NOINLINE wuffs_json__decoder__decode_tokens #-}
 {-| __C declaration:__ @wuffs_json__decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10754:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__decode_tokens :: BG.FunPtr (BG.Ptr Wuffs_json__decoder -> BG.Ptr Wuffs_base__token_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_json__decoder__decode_tokens =
@@ -17506,9 +18965,9 @@ hs_bindgen_02c075ef36501fa0 =
 {-# NOINLINE wuffs_lzma__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10947:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11824:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_lzma__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_lzma__decoder__initialize =
@@ -17526,9 +18985,9 @@ hs_bindgen_321c3530774a29b8 =
 {-# NOINLINE sizeof__wuffs_lzma__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_lzma__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11831:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzma__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_lzma__decoder =
@@ -17546,9 +19005,9 @@ hs_bindgen_e5f7550e2acc2324 =
 {-# NOINLINE wuffs_lzma__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10965:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11842:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_lzma__decoder))
 wuffs_lzma__decoder__alloc =
@@ -17566,9 +19025,9 @@ hs_bindgen_2f3c2323f8f84238 =
 {-# NOINLINE wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10968:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11845:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer =
@@ -17586,9 +19045,9 @@ hs_bindgen_ae6214aa63401aca =
 {-# NOINLINE wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10975:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11852:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_lzma__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer =
@@ -17606,9 +19065,9 @@ hs_bindgen_6538fed5db7433da =
 {-# NOINLINE wuffs_lzma__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10984:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11861:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzma__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_lzma__decoder__get_quirk =
@@ -17626,9 +19085,9 @@ hs_bindgen_ca6a6749bdf85e84 =
 {-# NOINLINE wuffs_lzma__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10990:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11867:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_lzma__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_lzma__decoder__set_quirk =
@@ -17646,9 +19105,9 @@ hs_bindgen_82ceddf0117d2878 =
 {-# NOINLINE wuffs_lzma__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10997:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11874:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzma__decoder -> IO Wuffs_base__optional_u63)
 wuffs_lzma__decoder__dst_history_retain_length =
@@ -17666,9 +19125,9 @@ hs_bindgen_19a78f6d7fcc7ace =
 {-# NOINLINE wuffs_lzma__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11879:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzma__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_lzma__decoder__workbuf_len =
@@ -17686,9 +19145,9 @@ hs_bindgen_8af332cb0c99148e =
 {-# NOINLINE wuffs_lzma__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_lzma__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11884:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_lzma__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_lzma__decoder__transform_io =
@@ -17706,9 +19165,9 @@ hs_bindgen_9384dd4ca41eb341 =
 {-# NOINLINE wuffs_lzip__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11264:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_lzip__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_lzip__decoder__initialize =
@@ -17726,9 +19185,9 @@ hs_bindgen_55b91c38ed67b6c8 =
 {-# NOINLINE sizeof__wuffs_lzip__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_lzip__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11271:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12148:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzip__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_lzip__decoder =
@@ -17746,9 +19205,9 @@ hs_bindgen_b93c2c5c900b0182 =
 {-# NOINLINE wuffs_lzip__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11282:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12159:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_lzip__decoder))
 wuffs_lzip__decoder__alloc =
@@ -17766,9 +19225,9 @@ hs_bindgen_aa83c5c4e1c9bd14 =
 {-# NOINLINE wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11285:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer =
@@ -17786,9 +19245,9 @@ hs_bindgen_58c4589fdfe43171 =
 {-# NOINLINE wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11292:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12169:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_lzip__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer =
@@ -17806,9 +19265,9 @@ hs_bindgen_1a85ff02105cd521 =
 {-# NOINLINE wuffs_lzip__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12178:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzip__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_lzip__decoder__get_quirk =
@@ -17826,9 +19285,9 @@ hs_bindgen_ccc8e3a25ff86353 =
 {-# NOINLINE wuffs_lzip__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11307:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_lzip__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_lzip__decoder__set_quirk =
@@ -17846,9 +19305,9 @@ hs_bindgen_5fb041097be9f8ac =
 {-# NOINLINE wuffs_lzip__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11314:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzip__decoder -> IO Wuffs_base__optional_u63)
 wuffs_lzip__decoder__dst_history_retain_length =
@@ -17866,9 +19325,9 @@ hs_bindgen_d27f8bcd90bfaecd =
 {-# NOINLINE wuffs_lzip__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12196:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzip__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_lzip__decoder__workbuf_len =
@@ -17886,9 +19345,9 @@ hs_bindgen_339350704ce2bbb5 =
 {-# NOINLINE wuffs_lzip__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_lzip__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11324:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_lzip__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_lzip__decoder__transform_io =
@@ -17906,9 +19365,9 @@ hs_bindgen_753a603d6d8e4214 =
 {-# NOINLINE wuffs_lzw__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11506:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12383:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_lzw__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_lzw__decoder__initialize =
@@ -17926,9 +19385,9 @@ hs_bindgen_6e2015978ee33318 =
 {-# NOINLINE sizeof__wuffs_lzw__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_lzw__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11513:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12390:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzw__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_lzw__decoder =
@@ -17946,9 +19405,9 @@ hs_bindgen_fed27bff1b8dadad =
 {-# NOINLINE wuffs_lzw__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11524:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12401:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_lzw__decoder))
 wuffs_lzw__decoder__alloc =
@@ -17966,9 +19425,9 @@ hs_bindgen_1453a9611201aa7b =
 {-# NOINLINE wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11527:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12404:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer =
@@ -17986,9 +19445,9 @@ hs_bindgen_2c9d8b97ba08ae8f =
 {-# NOINLINE wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11534:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12411:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_lzw__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer =
@@ -18006,9 +19465,9 @@ hs_bindgen_38aac8a3058cd2ae =
 {-# NOINLINE wuffs_lzw__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12420:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzw__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_lzw__decoder__get_quirk =
@@ -18026,9 +19485,9 @@ hs_bindgen_4bde0d323cf20453 =
 {-# NOINLINE wuffs_lzw__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11549:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12426:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_lzw__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_lzw__decoder__set_quirk =
@@ -18046,9 +19505,9 @@ hs_bindgen_be30e0c033c793b8 =
 {-# NOINLINE wuffs_lzw__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11556:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12433:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzw__decoder -> IO Wuffs_base__optional_u63)
 wuffs_lzw__decoder__dst_history_retain_length =
@@ -18066,9 +19525,9 @@ hs_bindgen_16571184b6a21bd3 =
 {-# NOINLINE wuffs_lzw__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11561:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12438:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_lzw__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_lzw__decoder__workbuf_len =
@@ -18086,9 +19545,9 @@ hs_bindgen_1c361adf237278bd =
 {-# NOINLINE wuffs_lzw__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11566:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12443:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_lzw__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_lzw__decoder__transform_io =
@@ -18106,9 +19565,9 @@ hs_bindgen_bf93aa62b30fd909 =
 {-# NOINLINE wuffs_lzw__decoder__flush #-}
 {-| __C declaration:__ @wuffs_lzw__decoder__flush@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11574:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12451:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__flush :: BG.FunPtr (BG.Ptr Wuffs_lzw__decoder -> IO Wuffs_base__slice_u8)
 wuffs_lzw__decoder__flush =
@@ -18126,9 +19585,9 @@ hs_bindgen_bfecb783c0d5ce83 =
 {-# NOINLINE wuffs_netpbm__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11762:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12639:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__initialize =
@@ -18146,9 +19605,9 @@ hs_bindgen_3b54adc6643a3173 =
 {-# NOINLINE sizeof__wuffs_netpbm__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_netpbm__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_netpbm__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_netpbm__decoder =
@@ -18166,9 +19625,9 @@ hs_bindgen_d5ee0e556f084da8 =
 {-# NOINLINE wuffs_netpbm__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12657:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_netpbm__decoder))
 wuffs_netpbm__decoder__alloc =
@@ -18186,9 +19645,9 @@ hs_bindgen_23e6c43264eac3b1 =
 {-# NOINLINE wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11783:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder =
@@ -18206,9 +19665,9 @@ hs_bindgen_c14e092e3ee90df0 =
 {-# NOINLINE wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11790:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12667:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder =
@@ -18226,9 +19685,9 @@ hs_bindgen_ec4223cf7a2b58f1 =
 {-# NOINLINE wuffs_netpbm__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12676:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_netpbm__decoder__get_quirk =
@@ -18246,9 +19705,9 @@ hs_bindgen_058be86990a0d429 =
 {-# NOINLINE wuffs_netpbm__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12682:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__set_quirk =
@@ -18266,9 +19725,9 @@ hs_bindgen_40c9101f8ee1342e =
 {-# NOINLINE wuffs_netpbm__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11812:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12689:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__decode_image_config =
@@ -18286,9 +19745,9 @@ hs_bindgen_5a3305805fa48c12 =
 {-# NOINLINE wuffs_netpbm__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11819:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12696:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__decode_frame_config =
@@ -18306,9 +19765,9 @@ hs_bindgen_54fee17a5adec605 =
 {-# NOINLINE wuffs_netpbm__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11826:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12703:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__decode_frame =
@@ -18326,9 +19785,9 @@ hs_bindgen_2c117ab278e98f38 =
 {-# NOINLINE wuffs_netpbm__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11836:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12713:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_netpbm__decoder__frame_dirty_rect =
@@ -18346,9 +19805,9 @@ hs_bindgen_94f1d386cd49d2b0 =
 {-# NOINLINE wuffs_netpbm__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11841:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12718:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_netpbm__decoder__num_animation_loops =
@@ -18366,9 +19825,9 @@ hs_bindgen_c908aa30f074c4f2 =
 {-# NOINLINE wuffs_netpbm__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11846:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12723:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_netpbm__decoder__num_decoded_frame_configs =
@@ -18386,9 +19845,9 @@ hs_bindgen_bfd6eb6f16279b01 =
 {-# NOINLINE wuffs_netpbm__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11851:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12728:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_netpbm__decoder__num_decoded_frames =
@@ -18406,9 +19865,9 @@ hs_bindgen_020f8cc58d6c3d05 =
 {-# NOINLINE wuffs_netpbm__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11856:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12733:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__restart_frame =
@@ -18426,9 +19885,9 @@ hs_bindgen_c8c601d040e61fc1 =
 {-# NOINLINE wuffs_netpbm__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11863:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_netpbm__decoder__set_report_metadata =
@@ -18446,9 +19905,9 @@ hs_bindgen_d365892a6c556f7a =
 {-# NOINLINE wuffs_netpbm__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11870:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12747:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_netpbm__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_netpbm__decoder__tell_me_more =
@@ -18466,9 +19925,9 @@ hs_bindgen_632c4a0862e3eb2d =
 {-# NOINLINE wuffs_netpbm__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_netpbm__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11878:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12755:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_netpbm__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_netpbm__decoder__workbuf_len =
@@ -18486,9 +19945,9 @@ hs_bindgen_3fcaf2205aca4573 =
 {-# NOINLINE wuffs_nie__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_nie__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12108:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12990:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_nie__decoder__initialize =
@@ -18506,9 +19965,9 @@ hs_bindgen_da4d9377691e8ff4 =
 {-# NOINLINE sizeof__wuffs_nie__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_nie__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12115:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_nie__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_nie__decoder =
@@ -18526,9 +19985,9 @@ hs_bindgen_6df0b204d8b06e53 =
 {-# NOINLINE wuffs_nie__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_nie__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12126:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_nie__decoder))
 wuffs_nie__decoder__alloc =
@@ -18546,9 +20005,9 @@ hs_bindgen_e71e9bb3568d59d6 =
 {-# NOINLINE wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12129:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13011:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder =
@@ -18566,9 +20025,9 @@ hs_bindgen_15801efcc235dc33 =
 {-# NOINLINE wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12136:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13018:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder =
@@ -18586,9 +20045,9 @@ hs_bindgen_64b70600711bebcd =
 {-# NOINLINE wuffs_nie__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_nie__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12145:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13027:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_nie__decoder__get_quirk =
@@ -18606,9 +20065,9 @@ hs_bindgen_fd92f0eb98fd62e6 =
 {-# NOINLINE wuffs_nie__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_nie__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12151:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13033:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_nie__decoder__set_quirk =
@@ -18626,9 +20085,9 @@ hs_bindgen_dbf037c6168c7f33 =
 {-# NOINLINE wuffs_nie__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_nie__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12158:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13040:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_nie__decoder__decode_image_config =
@@ -18646,9 +20105,9 @@ hs_bindgen_a3027b24526c7ab7 =
 {-# NOINLINE wuffs_nie__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_nie__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12165:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_nie__decoder__decode_frame_config =
@@ -18666,9 +20125,9 @@ hs_bindgen_0cc58d961fdf937a =
 {-# NOINLINE wuffs_nie__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_nie__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12172:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13054:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_nie__decoder__decode_frame =
@@ -18686,9 +20145,9 @@ hs_bindgen_8d6b7b78b46d8ffd =
 {-# NOINLINE wuffs_nie__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_nie__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12182:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13064:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_nie__decoder__frame_dirty_rect =
@@ -18706,9 +20165,9 @@ hs_bindgen_8943645683ce3823 =
 {-# NOINLINE wuffs_nie__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_nie__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12187:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13069:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_nie__decoder__num_animation_loops =
@@ -18726,9 +20185,9 @@ hs_bindgen_0cf8b8f0dbda9073 =
 {-# NOINLINE wuffs_nie__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_nie__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12192:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13074:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_nie__decoder__num_decoded_frame_configs =
@@ -18746,9 +20205,9 @@ hs_bindgen_7d58a15e1a983a0e =
 {-# NOINLINE wuffs_nie__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_nie__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12197:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_nie__decoder__num_decoded_frames =
@@ -18766,9 +20225,9 @@ hs_bindgen_e42079805553b1bc =
 {-# NOINLINE wuffs_nie__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_nie__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12202:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13084:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_nie__decoder__restart_frame =
@@ -18786,9 +20245,9 @@ hs_bindgen_c303ebae7279d90a =
 {-# NOINLINE wuffs_nie__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_nie__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12209:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13091:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_nie__decoder__set_report_metadata =
@@ -18806,9 +20265,9 @@ hs_bindgen_8b328efcd990609e =
 {-# NOINLINE wuffs_nie__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_nie__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12216:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13098:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_nie__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_nie__decoder__tell_me_more =
@@ -18826,9 +20285,9 @@ hs_bindgen_3157af8b7eb52090 =
 {-# NOINLINE wuffs_nie__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_nie__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12224:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13106:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_nie__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_nie__decoder__workbuf_len =
@@ -18846,9 +20305,9 @@ hs_bindgen_196d2cdf8b1c0e77 =
 {-# NOINLINE wuffs_zlib__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13363:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_zlib__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_zlib__decoder__initialize =
@@ -18866,9 +20325,9 @@ hs_bindgen_8033920f596984f7 =
 {-# NOINLINE sizeof__wuffs_zlib__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_zlib__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12473:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13370:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_zlib__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_zlib__decoder =
@@ -18886,9 +20345,9 @@ hs_bindgen_30e20f33ffe11e12 =
 {-# NOINLINE wuffs_zlib__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12484:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13381:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_zlib__decoder))
 wuffs_zlib__decoder__alloc =
@@ -18906,9 +20365,9 @@ hs_bindgen_199ff500d08506d9 =
 {-# NOINLINE wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12487:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13384:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer =
@@ -18926,9 +20385,9 @@ hs_bindgen_a9beb5d0e24db6ed =
 {-# NOINLINE wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13391:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_zlib__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer =
@@ -18946,9 +20405,9 @@ hs_bindgen_c9483516364fcd25 =
 {-# NOINLINE wuffs_zlib__decoder__dictionary_id #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__dictionary_id@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12503:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13400:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__dictionary_id :: BG.FunPtr (PtrConst.PtrConst Wuffs_zlib__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_zlib__decoder__dictionary_id =
@@ -18966,9 +20425,9 @@ hs_bindgen_0329ee4d2b670721 =
 {-# NOINLINE wuffs_zlib__decoder__add_dictionary #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__add_dictionary@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13405:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__add_dictionary :: BG.FunPtr (BG.Ptr Wuffs_zlib__decoder -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_zlib__decoder__add_dictionary =
@@ -18986,9 +20445,9 @@ hs_bindgen_58157f0b6e205049 =
 {-# NOINLINE wuffs_zlib__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12514:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13411:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_zlib__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_zlib__decoder__get_quirk =
@@ -19006,9 +20465,9 @@ hs_bindgen_782c8f3d75af4d54 =
 {-# NOINLINE wuffs_zlib__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12520:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13417:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_zlib__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_zlib__decoder__set_quirk =
@@ -19026,9 +20485,9 @@ hs_bindgen_dd549644f5bf86ea =
 {-# NOINLINE wuffs_zlib__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12527:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13424:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_zlib__decoder -> IO Wuffs_base__optional_u63)
 wuffs_zlib__decoder__dst_history_retain_length =
@@ -19046,9 +20505,9 @@ hs_bindgen_e8f4b013893fb4f8 =
 {-# NOINLINE wuffs_zlib__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12532:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13429:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_zlib__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_zlib__decoder__workbuf_len =
@@ -19066,9 +20525,9 @@ hs_bindgen_f604b4bf46121458 =
 {-# NOINLINE wuffs_zlib__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_zlib__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12537:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13434:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_zlib__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_zlib__decoder__transform_io =
@@ -19086,9 +20545,9 @@ hs_bindgen_27aed318036a05b6 =
 {-# NOINLINE wuffs_png__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_png__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12744:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13641:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_png__decoder__initialize =
@@ -19106,9 +20565,9 @@ hs_bindgen_fb9b90680cae7ee4 =
 {-# NOINLINE sizeof__wuffs_png__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_png__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12751:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13648:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_png__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_png__decoder =
@@ -19126,9 +20585,9 @@ hs_bindgen_e541a40bdac1774b =
 {-# NOINLINE wuffs_png__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_png__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12762:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13659:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_png__decoder))
 wuffs_png__decoder__alloc =
@@ -19146,9 +20605,9 @@ hs_bindgen_0d5041745dbb74fb =
 {-# NOINLINE wuffs_png__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_png__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12765:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13662:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_png__decoder__alloc_as__wuffs_base__image_decoder =
@@ -19166,9 +20625,9 @@ hs_bindgen_475455effa48f274 =
 {-# NOINLINE wuffs_png__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_png__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12772:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13669:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_png__decoder__upcast_as__wuffs_base__image_decoder =
@@ -19186,9 +20645,9 @@ hs_bindgen_ef50dcb6c1ca8c72 =
 {-# NOINLINE wuffs_png__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_png__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13678:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_png__decoder__get_quirk =
@@ -19206,9 +20665,9 @@ hs_bindgen_34ce0fbf561c0b4d =
 {-# NOINLINE wuffs_png__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_png__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12787:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13684:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_png__decoder__set_quirk =
@@ -19226,9 +20685,9 @@ hs_bindgen_175a7af7464d243e =
 {-# NOINLINE wuffs_png__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_png__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12794:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13691:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_png__decoder__decode_image_config =
@@ -19246,9 +20705,9 @@ hs_bindgen_790db9e24f1d7aba =
 {-# NOINLINE wuffs_png__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_png__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13698:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_png__decoder__decode_frame_config =
@@ -19266,9 +20725,9 @@ hs_bindgen_ebcca93d7be75225 =
 {-# NOINLINE wuffs_png__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_png__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12808:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13705:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_png__decoder__decode_frame =
@@ -19286,9 +20745,9 @@ hs_bindgen_857bd1f58c9f4045 =
 {-# NOINLINE wuffs_png__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_png__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12818:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13715:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_png__decoder__frame_dirty_rect =
@@ -19306,9 +20765,9 @@ hs_bindgen_85c30ada1547a5a0 =
 {-# NOINLINE wuffs_png__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_png__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12823:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13720:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_png__decoder__num_animation_loops =
@@ -19326,9 +20785,9 @@ hs_bindgen_02fbf7341ef41cb0 =
 {-# NOINLINE wuffs_png__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_png__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12828:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13725:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_png__decoder__num_decoded_frame_configs =
@@ -19346,9 +20805,9 @@ hs_bindgen_33aecdecccdc1b12 =
 {-# NOINLINE wuffs_png__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_png__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12833:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13730:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_png__decoder__num_decoded_frames =
@@ -19366,9 +20825,9 @@ hs_bindgen_c991ec3e42dfc9d5 =
 {-# NOINLINE wuffs_png__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_png__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12838:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13735:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_png__decoder__restart_frame =
@@ -19386,9 +20845,9 @@ hs_bindgen_13b4d25b3ef39adb =
 {-# NOINLINE wuffs_png__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_png__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12845:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13742:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_png__decoder__set_report_metadata =
@@ -19406,9 +20865,9 @@ hs_bindgen_fef17de6a72076e6 =
 {-# NOINLINE wuffs_png__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_png__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12852:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13749:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_png__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_png__decoder__tell_me_more =
@@ -19426,9 +20885,9 @@ hs_bindgen_54cb7e1a6a7934f4 =
 {-# NOINLINE wuffs_png__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_png__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12860:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13757:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_png__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_png__decoder__workbuf_len =
@@ -19446,9 +20905,9 @@ hs_bindgen_32ddf6762bdce30f =
 {-# NOINLINE wuffs_qoi__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13237:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14134:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_qoi__decoder__initialize =
@@ -19466,9 +20925,9 @@ hs_bindgen_d535334dc1b77761 =
 {-# NOINLINE sizeof__wuffs_qoi__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_qoi__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13244:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_qoi__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_qoi__decoder =
@@ -19486,9 +20945,9 @@ hs_bindgen_4bd72f75d65675d2 =
 {-# NOINLINE wuffs_qoi__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13255:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14152:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_qoi__decoder))
 wuffs_qoi__decoder__alloc =
@@ -19506,9 +20965,9 @@ hs_bindgen_1ee074bcbd35188f =
 {-# NOINLINE wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13258:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14155:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder =
@@ -19526,9 +20985,9 @@ hs_bindgen_646cd1e7001e5f88 =
 {-# NOINLINE wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13265:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder =
@@ -19546,9 +21005,9 @@ hs_bindgen_e0d8ba82db7fdb7e =
 {-# NOINLINE wuffs_qoi__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13274:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14171:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_qoi__decoder__get_quirk =
@@ -19566,9 +21025,9 @@ hs_bindgen_e74447845ceb45d5 =
 {-# NOINLINE wuffs_qoi__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13280:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14177:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_qoi__decoder__set_quirk =
@@ -19586,9 +21045,9 @@ hs_bindgen_03ba854b968e5ae6 =
 {-# NOINLINE wuffs_qoi__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13287:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_qoi__decoder__decode_image_config =
@@ -19606,9 +21065,9 @@ hs_bindgen_b49cd8e9e14fb3b4 =
 {-# NOINLINE wuffs_qoi__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13294:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_qoi__decoder__decode_frame_config =
@@ -19626,9 +21085,9 @@ hs_bindgen_1bba7ab5006f7fc2 =
 {-# NOINLINE wuffs_qoi__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14198:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_qoi__decoder__decode_frame =
@@ -19646,9 +21105,9 @@ hs_bindgen_46be8010ba57e258 =
 {-# NOINLINE wuffs_qoi__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14208:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_qoi__decoder__frame_dirty_rect =
@@ -19666,9 +21125,9 @@ hs_bindgen_eeb3486f2801b632 =
 {-# NOINLINE wuffs_qoi__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13316:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14213:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_qoi__decoder__num_animation_loops =
@@ -19686,9 +21145,9 @@ hs_bindgen_a9edd93516ed51c4 =
 {-# NOINLINE wuffs_qoi__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13321:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14218:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_qoi__decoder__num_decoded_frame_configs =
@@ -19706,9 +21165,9 @@ hs_bindgen_c44f6f57c8dad520 =
 {-# NOINLINE wuffs_qoi__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13326:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14223:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_qoi__decoder__num_decoded_frames =
@@ -19726,9 +21185,9 @@ hs_bindgen_7de8809e76f69b6c =
 {-# NOINLINE wuffs_qoi__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13331:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14228:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_qoi__decoder__restart_frame =
@@ -19746,9 +21205,9 @@ hs_bindgen_37e9b154fac2025e =
 {-# NOINLINE wuffs_qoi__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13338:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14235:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_qoi__decoder__set_report_metadata =
@@ -19766,9 +21225,9 @@ hs_bindgen_d745936c29ff981e =
 {-# NOINLINE wuffs_qoi__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13345:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14242:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_qoi__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_qoi__decoder__tell_me_more =
@@ -19786,9 +21245,9 @@ hs_bindgen_6611d6c08a0cb424 =
 {-# NOINLINE wuffs_qoi__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_qoi__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13353:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14250:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_qoi__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_qoi__decoder__workbuf_len =
@@ -19806,9 +21265,9 @@ hs_bindgen_2036ca81ecb9582e =
 {-# NOINLINE wuffs_sha256__hasher__initialize #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13596:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14493:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_sha256__hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_sha256__hasher__initialize =
@@ -19826,9 +21285,9 @@ hs_bindgen_9bb3c5d320d6af85 =
 {-# NOINLINE sizeof__wuffs_sha256__hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_sha256__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14500:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_sha256__hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_sha256__hasher =
@@ -19846,9 +21305,9 @@ hs_bindgen_eaace5560106f920 =
 {-# NOINLINE wuffs_sha256__hasher__alloc #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13614:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_sha256__hasher))
 wuffs_sha256__hasher__alloc =
@@ -19866,9 +21325,9 @@ hs_bindgen_97c7398f19426b90 =
 {-# NOINLINE wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256 #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13617:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14514:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_bitvec256))
 wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256 =
@@ -19886,9 +21345,9 @@ hs_bindgen_676797e2f063e827 =
 {-# NOINLINE wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256 #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13624:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14521:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256 :: BG.FunPtr (BG.Ptr Wuffs_sha256__hasher -> IO (BG.Ptr Wuffs_base__hasher_bitvec256))
 wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256 =
@@ -19906,9 +21365,9 @@ hs_bindgen_e879fc4113bb9031 =
 {-# NOINLINE wuffs_sha256__hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13633:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14530:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_sha256__hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_sha256__hasher__get_quirk =
@@ -19926,9 +21385,9 @@ hs_bindgen_273c565115eff412 =
 {-# NOINLINE wuffs_sha256__hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13639:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14536:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_sha256__hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_sha256__hasher__set_quirk =
@@ -19946,9 +21405,9 @@ hs_bindgen_c5ad27f86434a245 =
 {-# NOINLINE wuffs_sha256__hasher__update #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__update :: BG.FunPtr (BG.Ptr Wuffs_sha256__hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_sha256__hasher__update =
@@ -19966,9 +21425,9 @@ hs_bindgen_df037df770eaed35 =
 {-# NOINLINE wuffs_sha256__hasher__update_bitvec256 #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__update_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13652:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14549:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__update_bitvec256 :: BG.FunPtr (BG.Ptr Wuffs_sha256__hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__bitvec256)
 wuffs_sha256__hasher__update_bitvec256 =
@@ -19986,9 +21445,9 @@ hs_bindgen_6102fc89cbe1fef3 =
 {-# NOINLINE wuffs_sha256__hasher__checksum_bitvec256 #-}
 {-| __C declaration:__ @wuffs_sha256__hasher__checksum_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13658:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14555:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__checksum_bitvec256 :: BG.FunPtr (PtrConst.PtrConst Wuffs_sha256__hasher -> IO Wuffs_base__bitvec256)
 wuffs_sha256__hasher__checksum_bitvec256 =
@@ -20006,9 +21465,9 @@ hs_bindgen_8ec815b204c48a8e =
 {-# NOINLINE wuffs_targa__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_targa__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13834:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14731:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_targa__decoder__initialize =
@@ -20026,9 +21485,9 @@ hs_bindgen_ed8cc4b1448b6835 =
 {-# NOINLINE sizeof__wuffs_targa__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_targa__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13841:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14738:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_targa__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_targa__decoder =
@@ -20046,9 +21505,9 @@ hs_bindgen_6d027b9cda18302a =
 {-# NOINLINE wuffs_targa__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_targa__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13852:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14749:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_targa__decoder))
 wuffs_targa__decoder__alloc =
@@ -20066,9 +21525,9 @@ hs_bindgen_5e8dafd0e30f0754 =
 {-# NOINLINE wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13855:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14752:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder =
@@ -20086,9 +21545,9 @@ hs_bindgen_c528b890b7e55f24 =
 {-# NOINLINE wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13862:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14759:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder =
@@ -20106,9 +21565,9 @@ hs_bindgen_53e8300961a944b7 =
 {-# NOINLINE wuffs_targa__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_targa__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13871:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14768:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_targa__decoder__get_quirk =
@@ -20126,9 +21585,9 @@ hs_bindgen_a82e5f767c866457 =
 {-# NOINLINE wuffs_targa__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_targa__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13877:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14774:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_targa__decoder__set_quirk =
@@ -20146,9 +21605,9 @@ hs_bindgen_d252b564cd4c28f5 =
 {-# NOINLINE wuffs_targa__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_targa__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13884:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14781:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_targa__decoder__decode_image_config =
@@ -20166,9 +21625,9 @@ hs_bindgen_2b08f3d0bb1173c2 =
 {-# NOINLINE wuffs_targa__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_targa__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13891:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14788:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_targa__decoder__decode_frame_config =
@@ -20186,9 +21645,9 @@ hs_bindgen_1c188311daf3bb32 =
 {-# NOINLINE wuffs_targa__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_targa__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13898:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14795:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_targa__decoder__decode_frame =
@@ -20206,9 +21665,9 @@ hs_bindgen_87c473955a225764 =
 {-# NOINLINE wuffs_targa__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_targa__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13908:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14805:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_targa__decoder__frame_dirty_rect =
@@ -20226,9 +21685,9 @@ hs_bindgen_b6a2fee2a22816bf =
 {-# NOINLINE wuffs_targa__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_targa__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13913:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14810:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_targa__decoder__num_animation_loops =
@@ -20246,9 +21705,9 @@ hs_bindgen_56bba2178457ab00 =
 {-# NOINLINE wuffs_targa__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_targa__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13918:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14815:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_targa__decoder__num_decoded_frame_configs =
@@ -20266,9 +21725,9 @@ hs_bindgen_c8d828834daf02c4 =
 {-# NOINLINE wuffs_targa__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_targa__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13923:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14820:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_targa__decoder__num_decoded_frames =
@@ -20286,9 +21745,9 @@ hs_bindgen_8138634dd9e1d3ef =
 {-# NOINLINE wuffs_targa__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_targa__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13928:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14825:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_targa__decoder__restart_frame =
@@ -20306,9 +21765,9 @@ hs_bindgen_bc9e1a86feb6af78 =
 {-# NOINLINE wuffs_targa__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_targa__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13935:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14832:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_targa__decoder__set_report_metadata =
@@ -20326,9 +21785,9 @@ hs_bindgen_73bd5ac8f1165324 =
 {-# NOINLINE wuffs_targa__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_targa__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13942:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14839:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_targa__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_targa__decoder__tell_me_more =
@@ -20346,9 +21805,9 @@ hs_bindgen_37caed028812c5b2 =
 {-# NOINLINE wuffs_targa__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_targa__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13950:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14847:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_targa__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_targa__decoder__workbuf_len =
@@ -20366,9 +21825,9 @@ hs_bindgen_da4d7ee56bd5fd7a =
 {-# NOINLINE wuffs_thumbhash__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14211:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15108:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__initialize =
@@ -20386,9 +21845,9 @@ hs_bindgen_9ecf3d7da655e7f8 =
 {-# NOINLINE sizeof__wuffs_thumbhash__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_thumbhash__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14218:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15115:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_thumbhash__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_thumbhash__decoder =
@@ -20406,9 +21865,9 @@ hs_bindgen_db4289f2531039ef =
 {-# NOINLINE wuffs_thumbhash__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14229:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15126:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_thumbhash__decoder))
 wuffs_thumbhash__decoder__alloc =
@@ -20426,9 +21885,9 @@ hs_bindgen_98a495d70abe06fa =
 {-# NOINLINE wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14232:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15129:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder =
@@ -20446,9 +21905,9 @@ hs_bindgen_15810f0b236d2532 =
 {-# NOINLINE wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14239:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15136:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder =
@@ -20466,9 +21925,9 @@ hs_bindgen_cdf466bee37cc995 =
 {-# NOINLINE wuffs_thumbhash__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14248:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15145:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_thumbhash__decoder__get_quirk =
@@ -20486,9 +21945,9 @@ hs_bindgen_3e0e872ec2405d68 =
 {-# NOINLINE wuffs_thumbhash__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14254:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15151:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__set_quirk =
@@ -20506,9 +21965,9 @@ hs_bindgen_08e1381fee23c595 =
 {-# NOINLINE wuffs_thumbhash__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14261:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15158:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__decode_image_config =
@@ -20526,9 +21985,9 @@ hs_bindgen_1a571537cbd5972d =
 {-# NOINLINE wuffs_thumbhash__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14268:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15165:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__decode_frame_config =
@@ -20546,9 +22005,9 @@ hs_bindgen_d114e16c3f95e028 =
 {-# NOINLINE wuffs_thumbhash__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14275:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15172:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__decode_frame =
@@ -20566,9 +22025,9 @@ hs_bindgen_8bcfc2e97ddf53f1 =
 {-# NOINLINE wuffs_thumbhash__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14285:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15182:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_thumbhash__decoder__frame_dirty_rect =
@@ -20586,9 +22045,9 @@ hs_bindgen_dbfadaab9e119126 =
 {-# NOINLINE wuffs_thumbhash__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14290:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15187:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_thumbhash__decoder__num_animation_loops =
@@ -20606,9 +22065,9 @@ hs_bindgen_43e8d48306dc60a7 =
 {-# NOINLINE wuffs_thumbhash__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14295:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15192:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_thumbhash__decoder__num_decoded_frame_configs =
@@ -20626,9 +22085,9 @@ hs_bindgen_0b5270e434774337 =
 {-# NOINLINE wuffs_thumbhash__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14300:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15197:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_thumbhash__decoder__num_decoded_frames =
@@ -20646,9 +22105,9 @@ hs_bindgen_5f94e9c26aa692d2 =
 {-# NOINLINE wuffs_thumbhash__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14305:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15202:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__restart_frame =
@@ -20666,9 +22125,9 @@ hs_bindgen_9263a30dec670b45 =
 {-# NOINLINE wuffs_thumbhash__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14312:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15209:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_thumbhash__decoder__set_report_metadata =
@@ -20686,9 +22145,9 @@ hs_bindgen_b67ca682102cbb50 =
 {-# NOINLINE wuffs_thumbhash__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15216:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_thumbhash__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_thumbhash__decoder__tell_me_more =
@@ -20706,73 +22165,373 @@ hs_bindgen_57086378f9e979ee =
 {-# NOINLINE wuffs_thumbhash__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_thumbhash__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14327:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_thumbhash__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_thumbhash__decoder__workbuf_len =
   BG.unsafePerformIO hs_bindgen_57086378f9e979ee
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__initialize@
-foreign import ccall unsafe "hs_bindgen_cf824926d5288ccb" hs_bindgen_cf824926d5288ccb_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__initialize@
+foreign import ccall unsafe "hs_bindgen_18f81fd159cff285" hs_bindgen_18f81fd159cff285_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__initialize@
-hs_bindgen_cf824926d5288ccb :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__placeholder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status))
-hs_bindgen_cf824926d5288ccb =
-  fmap BG.fromFFIType hs_bindgen_cf824926d5288ccb_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__initialize@
+hs_bindgen_18f81fd159cff285 :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status))
+hs_bindgen_18f81fd159cff285 =
+  fmap BG.fromFFIType hs_bindgen_18f81fd159cff285_base
 
-{-# NOINLINE wuffs_vp8__placeholder__initialize #-}
-{-| __C declaration:__ @wuffs_vp8__placeholder__initialize@
+{-# NOINLINE wuffs_vp8__decoder__initialize #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14581:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15487:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_vp8__placeholder__initialize :: BG.FunPtr (BG.Ptr Wuffs_vp8__placeholder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
-wuffs_vp8__placeholder__initialize =
-  BG.unsafePerformIO hs_bindgen_cf824926d5288ccb
+wuffs_vp8__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
+wuffs_vp8__decoder__initialize =
+  BG.unsafePerformIO hs_bindgen_18f81fd159cff285
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__placeholder@
-foreign import ccall unsafe "hs_bindgen_efa7e5c2df470a09" hs_bindgen_efa7e5c2df470a09_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__decoder@
+foreign import ccall unsafe "hs_bindgen_229ef453044437b3" hs_bindgen_229ef453044437b3_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__placeholder@
-hs_bindgen_efa7e5c2df470a09 :: IO (BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize))
-hs_bindgen_efa7e5c2df470a09 =
-  fmap BG.fromFFIType hs_bindgen_efa7e5c2df470a09_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_sizeof__wuffs_vp8__decoder@
+hs_bindgen_229ef453044437b3 :: IO (BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize))
+hs_bindgen_229ef453044437b3 =
+  fmap BG.fromFFIType hs_bindgen_229ef453044437b3_base
 
-{-# NOINLINE sizeof__wuffs_vp8__placeholder #-}
-{-| __C declaration:__ @sizeof__wuffs_vp8__placeholder@
+{-# NOINLINE sizeof__wuffs_vp8__decoder #-}
+{-| __C declaration:__ @sizeof__wuffs_vp8__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14588:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-sizeof__wuffs_vp8__placeholder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
-sizeof__wuffs_vp8__placeholder =
-  BG.unsafePerformIO hs_bindgen_efa7e5c2df470a09
+sizeof__wuffs_vp8__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
+sizeof__wuffs_vp8__decoder =
+  BG.unsafePerformIO hs_bindgen_229ef453044437b3
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__alloc@
-foreign import ccall unsafe "hs_bindgen_03d821764d78ef60" hs_bindgen_03d821764d78ef60_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc@
+foreign import ccall unsafe "hs_bindgen_2bb1111914289259" hs_bindgen_2bb1111914289259_base ::
      IO (BG.FunPtr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__placeholder__alloc@
-hs_bindgen_03d821764d78ef60 :: IO (BG.FunPtr (IO (BG.Ptr Wuffs_vp8__placeholder)))
-hs_bindgen_03d821764d78ef60 =
-  fmap BG.fromFFIType hs_bindgen_03d821764d78ef60_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc@
+hs_bindgen_2bb1111914289259 :: IO (BG.FunPtr (IO (BG.Ptr Wuffs_vp8__decoder)))
+hs_bindgen_2bb1111914289259 =
+  fmap BG.fromFFIType hs_bindgen_2bb1111914289259_base
 
-{-# NOINLINE wuffs_vp8__placeholder__alloc #-}
-{-| __C declaration:__ @wuffs_vp8__placeholder__alloc@
+{-# NOINLINE wuffs_vp8__decoder__alloc #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14599:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15505:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_vp8__placeholder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_vp8__placeholder))
-wuffs_vp8__placeholder__alloc =
-  BG.unsafePerformIO hs_bindgen_03d821764d78ef60
+wuffs_vp8__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_vp8__decoder))
+wuffs_vp8__decoder__alloc =
+  BG.unsafePerformIO hs_bindgen_2bb1111914289259
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+foreign import ccall unsafe "hs_bindgen_3ee33f5d7578eda0" hs_bindgen_3ee33f5d7578eda0_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+hs_bindgen_3ee33f5d7578eda0 :: IO (BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder)))
+hs_bindgen_3ee33f5d7578eda0 =
+  fmap BG.fromFFIType hs_bindgen_3ee33f5d7578eda0_base
+
+{-# NOINLINE wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15508:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
+wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder =
+  BG.unsafePerformIO hs_bindgen_3ee33f5d7578eda0
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+foreign import ccall unsafe "hs_bindgen_0e5b8951d5e9d742" hs_bindgen_0e5b8951d5e9d742_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+hs_bindgen_0e5b8951d5e9d742 :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> IO (BG.Ptr Wuffs_base__image_decoder)))
+hs_bindgen_0e5b8951d5e9d742 =
+  fmap BG.fromFFIType hs_bindgen_0e5b8951d5e9d742_base
+
+{-# NOINLINE wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15515:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
+wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder =
+  BG.unsafePerformIO hs_bindgen_0e5b8951d5e9d742
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__get_quirk@
+foreign import ccall unsafe "hs_bindgen_c90e2c0a25d0424c" hs_bindgen_c90e2c0a25d0424c_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__get_quirk@
+hs_bindgen_c90e2c0a25d0424c :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_c90e2c0a25d0424c =
+  fmap BG.fromFFIType hs_bindgen_c90e2c0a25d0424c_base
+
+{-# NOINLINE wuffs_vp8__decoder__get_quirk #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__get_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15524:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_vp8__decoder__get_quirk =
+  BG.unsafePerformIO hs_bindgen_c90e2c0a25d0424c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_quirk@
+foreign import ccall unsafe "hs_bindgen_d86b1ccc5fe2de2d" hs_bindgen_d86b1ccc5fe2de2d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_quirk@
+hs_bindgen_d86b1ccc5fe2de2d :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status))
+hs_bindgen_d86b1ccc5fe2de2d =
+  fmap BG.fromFFIType hs_bindgen_d86b1ccc5fe2de2d_base
+
+{-# NOINLINE wuffs_vp8__decoder__set_quirk #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__set_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15530:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
+wuffs_vp8__decoder__set_quirk =
+  BG.unsafePerformIO hs_bindgen_d86b1ccc5fe2de2d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_image_config@
+foreign import ccall unsafe "hs_bindgen_792191cf55a59db0" hs_bindgen_792191cf55a59db0_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_image_config@
+hs_bindgen_792191cf55a59db0 :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_792191cf55a59db0 =
+  fmap BG.fromFFIType hs_bindgen_792191cf55a59db0_base
+
+{-# NOINLINE wuffs_vp8__decoder__decode_image_config #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_image_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15537:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_vp8__decoder__decode_image_config =
+  BG.unsafePerformIO hs_bindgen_792191cf55a59db0
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame_config@
+foreign import ccall unsafe "hs_bindgen_93b324773d945acb" hs_bindgen_93b324773d945acb_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame_config@
+hs_bindgen_93b324773d945acb :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_93b324773d945acb =
+  fmap BG.fromFFIType hs_bindgen_93b324773d945acb_base
+
+{-# NOINLINE wuffs_vp8__decoder__decode_frame_config #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_frame_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15544:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_vp8__decoder__decode_frame_config =
+  BG.unsafePerformIO hs_bindgen_93b324773d945acb
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame@
+foreign import ccall unsafe "hs_bindgen_3f8210ecb7769b1d" hs_bindgen_3f8210ecb7769b1d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__decode_frame@
+hs_bindgen_3f8210ecb7769b1d :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status))
+hs_bindgen_3f8210ecb7769b1d =
+  fmap BG.fromFFIType hs_bindgen_3f8210ecb7769b1d_base
+
+{-# NOINLINE wuffs_vp8__decoder__decode_frame #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15551:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
+wuffs_vp8__decoder__decode_frame =
+  BG.unsafePerformIO hs_bindgen_3f8210ecb7769b1d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__frame_dirty_rect@
+foreign import ccall unsafe "hs_bindgen_a991a21bfbc4cf47" hs_bindgen_a991a21bfbc4cf47_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__frame_dirty_rect@
+hs_bindgen_a991a21bfbc4cf47 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO Wuffs_base__rect_ie_u32))
+hs_bindgen_a991a21bfbc4cf47 =
+  fmap BG.fromFFIType hs_bindgen_a991a21bfbc4cf47_base
+
+{-# NOINLINE wuffs_vp8__decoder__frame_dirty_rect #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__frame_dirty_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15561:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO Wuffs_base__rect_ie_u32)
+wuffs_vp8__decoder__frame_dirty_rect =
+  BG.unsafePerformIO hs_bindgen_a991a21bfbc4cf47
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_animation_loops@
+foreign import ccall unsafe "hs_bindgen_27f86b750624438d" hs_bindgen_27f86b750624438d_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_animation_loops@
+hs_bindgen_27f86b750624438d :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word32))
+hs_bindgen_27f86b750624438d =
+  fmap BG.fromFFIType hs_bindgen_27f86b750624438d_base
+
+{-# NOINLINE wuffs_vp8__decoder__num_animation_loops #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__num_animation_loops@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15566:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word32)
+wuffs_vp8__decoder__num_animation_loops =
+  BG.unsafePerformIO hs_bindgen_27f86b750624438d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frame_configs@
+foreign import ccall unsafe "hs_bindgen_75de8a4e90c41924" hs_bindgen_75de8a4e90c41924_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frame_configs@
+hs_bindgen_75de8a4e90c41924 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_75de8a4e90c41924 =
+  fmap BG.fromFFIType hs_bindgen_75de8a4e90c41924_base
+
+{-# NOINLINE wuffs_vp8__decoder__num_decoded_frame_configs #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__num_decoded_frame_configs@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15571:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_vp8__decoder__num_decoded_frame_configs =
+  BG.unsafePerformIO hs_bindgen_75de8a4e90c41924
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frames@
+foreign import ccall unsafe "hs_bindgen_0430bc8a66d911a3" hs_bindgen_0430bc8a66d911a3_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__num_decoded_frames@
+hs_bindgen_0430bc8a66d911a3 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word64))
+hs_bindgen_0430bc8a66d911a3 =
+  fmap BG.fromFFIType hs_bindgen_0430bc8a66d911a3_base
+
+{-# NOINLINE wuffs_vp8__decoder__num_decoded_frames #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__num_decoded_frames@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15576:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO HsBindgen.Runtime.LibC.Word64)
+wuffs_vp8__decoder__num_decoded_frames =
+  BG.unsafePerformIO hs_bindgen_0430bc8a66d911a3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__restart_frame@
+foreign import ccall unsafe "hs_bindgen_8163e5ca9748602a" hs_bindgen_8163e5ca9748602a_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__restart_frame@
+hs_bindgen_8163e5ca9748602a :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status))
+hs_bindgen_8163e5ca9748602a =
+  fmap BG.fromFFIType hs_bindgen_8163e5ca9748602a_base
+
+{-# NOINLINE wuffs_vp8__decoder__restart_frame #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__restart_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15581:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
+wuffs_vp8__decoder__restart_frame =
+  BG.unsafePerformIO hs_bindgen_8163e5ca9748602a
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_report_metadata@
+foreign import ccall unsafe "hs_bindgen_9beda2da2ff3bda8" hs_bindgen_9beda2da2ff3bda8_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__set_report_metadata@
+hs_bindgen_9beda2da2ff3bda8 :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct))
+hs_bindgen_9beda2da2ff3bda8 =
+  fmap BG.fromFFIType hs_bindgen_9beda2da2ff3bda8_base
+
+{-# NOINLINE wuffs_vp8__decoder__set_report_metadata #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__set_report_metadata@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15588:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
+wuffs_vp8__decoder__set_report_metadata =
+  BG.unsafePerformIO hs_bindgen_9beda2da2ff3bda8
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__tell_me_more@
+foreign import ccall unsafe "hs_bindgen_ba074845185a5c16" hs_bindgen_ba074845185a5c16_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__tell_me_more@
+hs_bindgen_ba074845185a5c16 :: IO (BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status))
+hs_bindgen_ba074845185a5c16 =
+  fmap BG.fromFFIType hs_bindgen_ba074845185a5c16_base
+
+{-# NOINLINE wuffs_vp8__decoder__tell_me_more #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__tell_me_more@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15595:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_vp8__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
+wuffs_vp8__decoder__tell_me_more =
+  BG.unsafePerformIO hs_bindgen_ba074845185a5c16
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__workbuf_len@
+foreign import ccall unsafe "hs_bindgen_1cad648c61cbbac9" hs_bindgen_1cad648c61cbbac9_base ::
+     IO (BG.FunPtr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_vp8__decoder__workbuf_len@
+hs_bindgen_1cad648c61cbbac9 :: IO (BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO Wuffs_base__range_ii_u64))
+hs_bindgen_1cad648c61cbbac9 =
+  fmap BG.fromFFIType hs_bindgen_1cad648c61cbbac9_base
+
+{-# NOINLINE wuffs_vp8__decoder__workbuf_len #-}
+{-| __C declaration:__ @wuffs_vp8__decoder__workbuf_len@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15603:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_vp8__decoder -> IO Wuffs_base__range_ii_u64)
+wuffs_vp8__decoder__workbuf_len =
+  BG.unsafePerformIO hs_bindgen_1cad648c61cbbac9
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_get_wuffs_wbmp__decoder__initialize@
 foreign import ccall unsafe "hs_bindgen_4dbf53bc9ae23b39" hs_bindgen_4dbf53bc9ae23b39_base ::
@@ -20786,9 +22545,9 @@ hs_bindgen_4dbf53bc9ae23b39 =
 {-# NOINLINE wuffs_wbmp__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14720:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15886:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__initialize =
@@ -20806,9 +22565,9 @@ hs_bindgen_433371ccdbf49ab2 =
 {-# NOINLINE sizeof__wuffs_wbmp__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_wbmp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14727:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15893:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_wbmp__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_wbmp__decoder =
@@ -20826,9 +22585,9 @@ hs_bindgen_38170766d93a4a46 =
 {-# NOINLINE wuffs_wbmp__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14738:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15904:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_wbmp__decoder))
 wuffs_wbmp__decoder__alloc =
@@ -20846,9 +22605,9 @@ hs_bindgen_e1f39f2a19988683 =
 {-# NOINLINE wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14741:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15907:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -20866,9 +22625,9 @@ hs_bindgen_e4e4cbf810208322 =
 {-# NOINLINE wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14748:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15914:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder =
@@ -20886,9 +22645,9 @@ hs_bindgen_21f0ccd0ce473a7b =
 {-# NOINLINE wuffs_wbmp__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14757:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_wbmp__decoder__get_quirk =
@@ -20906,9 +22665,9 @@ hs_bindgen_4430a0e69049badb =
 {-# NOINLINE wuffs_wbmp__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14763:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__set_quirk =
@@ -20926,9 +22685,9 @@ hs_bindgen_4ad2c73f5a822ae0 =
 {-# NOINLINE wuffs_wbmp__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14770:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15936:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__decode_image_config =
@@ -20946,9 +22705,9 @@ hs_bindgen_896a370bd428d0fa =
 {-# NOINLINE wuffs_wbmp__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14777:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15943:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__decode_frame_config =
@@ -20966,9 +22725,9 @@ hs_bindgen_ce44454b054e51dc =
 {-# NOINLINE wuffs_wbmp__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14784:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15950:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__decode_frame =
@@ -20986,9 +22745,9 @@ hs_bindgen_2d0617edd3b55387 =
 {-# NOINLINE wuffs_wbmp__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14794:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15960:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_wbmp__decoder__frame_dirty_rect =
@@ -21006,9 +22765,9 @@ hs_bindgen_4af42b002933cbcf =
 {-# NOINLINE wuffs_wbmp__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15965:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_wbmp__decoder__num_animation_loops =
@@ -21026,9 +22785,9 @@ hs_bindgen_fd7fc26572bbeff7 =
 {-# NOINLINE wuffs_wbmp__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14804:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15970:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_wbmp__decoder__num_decoded_frame_configs =
@@ -21046,9 +22805,9 @@ hs_bindgen_d3afea8688530600 =
 {-# NOINLINE wuffs_wbmp__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14809:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15975:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_wbmp__decoder__num_decoded_frames =
@@ -21066,9 +22825,9 @@ hs_bindgen_dbbc3d1825ac3d6b =
 {-# NOINLINE wuffs_wbmp__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15980:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__restart_frame =
@@ -21086,9 +22845,9 @@ hs_bindgen_fb65530dde20e31c =
 {-# NOINLINE wuffs_wbmp__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14821:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_wbmp__decoder__set_report_metadata =
@@ -21106,9 +22865,9 @@ hs_bindgen_f6b39450ca1ab730 =
 {-# NOINLINE wuffs_wbmp__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14828:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15994:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_wbmp__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_wbmp__decoder__tell_me_more =
@@ -21126,9 +22885,9 @@ hs_bindgen_e5e32889866e4374 =
 {-# NOINLINE wuffs_wbmp__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_wbmp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14836:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_wbmp__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_wbmp__decoder__workbuf_len =
@@ -21146,9 +22905,9 @@ hs_bindgen_8afad660629e7ce7 =
 {-# NOINLINE wuffs_webp__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_webp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15085:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16251:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_webp__decoder__initialize =
@@ -21166,9 +22925,9 @@ hs_bindgen_a155cf7a2fae2e0a =
 {-# NOINLINE sizeof__wuffs_webp__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_webp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15092:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16258:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_webp__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_webp__decoder =
@@ -21186,9 +22945,9 @@ hs_bindgen_018dea4f81b0865f =
 {-# NOINLINE wuffs_webp__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_webp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15103:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16269:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_webp__decoder))
 wuffs_webp__decoder__alloc =
@@ -21206,9 +22965,9 @@ hs_bindgen_a083fa1f6208eb36 =
 {-# NOINLINE wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15106:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16272:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder :: BG.FunPtr (IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -21226,9 +22985,9 @@ hs_bindgen_e12e867b28184220 =
 {-# NOINLINE wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder #-}
 {-| __C declaration:__ @wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15113:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16279:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> IO (BG.Ptr Wuffs_base__image_decoder))
 wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder =
@@ -21246,9 +23005,9 @@ hs_bindgen_bb0b9088264e8671 =
 {-# NOINLINE wuffs_webp__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_webp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15122:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16288:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_webp__decoder__get_quirk =
@@ -21266,9 +23025,9 @@ hs_bindgen_8fed6b7e1efa3a05 =
 {-# NOINLINE wuffs_webp__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_webp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15128:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16294:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_webp__decoder__set_quirk =
@@ -21286,9 +23045,9 @@ hs_bindgen_00de38b1b5e610fa =
 {-# NOINLINE wuffs_webp__decoder__decode_image_config #-}
 {-| __C declaration:__ @wuffs_webp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15135:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_image_config :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> BG.Ptr Wuffs_base__image_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_webp__decoder__decode_image_config =
@@ -21306,9 +23065,9 @@ hs_bindgen_f73cd41aebff657f =
 {-# NOINLINE wuffs_webp__decoder__decode_frame_config #-}
 {-| __C declaration:__ @wuffs_webp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15142:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_frame_config :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> BG.Ptr Wuffs_base__frame_config -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_webp__decoder__decode_frame_config =
@@ -21326,9 +23085,9 @@ hs_bindgen_047511aa71667d04 =
 {-# NOINLINE wuffs_webp__decoder__decode_frame #-}
 {-| __C declaration:__ @wuffs_webp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15149:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16315:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_frame :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> BG.Ptr Wuffs_base__pixel_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__pixel_blend -> Wuffs_base__slice_u8 -> BG.Ptr Wuffs_base__decode_frame_options -> IO Wuffs_base__status)
 wuffs_webp__decoder__decode_frame =
@@ -21346,9 +23105,9 @@ hs_bindgen_e4e65e352a6d3930 =
 {-# NOINLINE wuffs_webp__decoder__frame_dirty_rect #-}
 {-| __C declaration:__ @wuffs_webp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15159:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16325:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__frame_dirty_rect :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> IO Wuffs_base__rect_ie_u32)
 wuffs_webp__decoder__frame_dirty_rect =
@@ -21366,9 +23125,9 @@ hs_bindgen_bc4df411b32d16a8 =
 {-# NOINLINE wuffs_webp__decoder__num_animation_loops #-}
 {-| __C declaration:__ @wuffs_webp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15164:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16330:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_animation_loops :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_webp__decoder__num_animation_loops =
@@ -21386,9 +23145,9 @@ hs_bindgen_1a8b50143c5e0882 =
 {-# NOINLINE wuffs_webp__decoder__num_decoded_frame_configs #-}
 {-| __C declaration:__ @wuffs_webp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15169:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16335:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_decoded_frame_configs :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_webp__decoder__num_decoded_frame_configs =
@@ -21406,9 +23165,9 @@ hs_bindgen_679e302db4038128 =
 {-# NOINLINE wuffs_webp__decoder__num_decoded_frames #-}
 {-| __C declaration:__ @wuffs_webp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15174:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16340:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_decoded_frames :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_webp__decoder__num_decoded_frames =
@@ -21426,9 +23185,9 @@ hs_bindgen_608cc18485ce6e17 =
 {-# NOINLINE wuffs_webp__decoder__restart_frame #-}
 {-| __C declaration:__ @wuffs_webp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15179:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__restart_frame :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_webp__decoder__restart_frame =
@@ -21446,9 +23205,9 @@ hs_bindgen_fbb34ad30a0627fd =
 {-# NOINLINE wuffs_webp__decoder__set_report_metadata #-}
 {-| __C declaration:__ @wuffs_webp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15186:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16352:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__set_report_metadata :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> HsBindgen.Runtime.LibC.Word32 -> BG.CBool -> IO Wuffs_base__empty_struct)
 wuffs_webp__decoder__set_report_metadata =
@@ -21466,9 +23225,9 @@ hs_bindgen_6f7b63407ec4fc3e =
 {-# NOINLINE wuffs_webp__decoder__tell_me_more #-}
 {-| __C declaration:__ @wuffs_webp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15193:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16359:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__tell_me_more :: BG.FunPtr (BG.Ptr Wuffs_webp__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__more_information -> BG.Ptr Wuffs_base__io_buffer -> IO Wuffs_base__status)
 wuffs_webp__decoder__tell_me_more =
@@ -21486,9 +23245,9 @@ hs_bindgen_0396d5df26fbfe5d =
 {-# NOINLINE wuffs_webp__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_webp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15201:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16367:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_webp__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_webp__decoder__workbuf_len =
@@ -21506,9 +23265,9 @@ hs_bindgen_2489c191a4d94820 =
 {-# NOINLINE wuffs_xxhash32__hasher__initialize #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15522:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16690:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_xxhash32__hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_xxhash32__hasher__initialize =
@@ -21526,9 +23285,9 @@ hs_bindgen_27cdf50763c4ec20 =
 {-# NOINLINE sizeof__wuffs_xxhash32__hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_xxhash32__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15529:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16697:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xxhash32__hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_xxhash32__hasher =
@@ -21546,9 +23305,9 @@ hs_bindgen_addb19599d7e3adf =
 {-# NOINLINE wuffs_xxhash32__hasher__alloc #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15540:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16708:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_xxhash32__hasher))
 wuffs_xxhash32__hasher__alloc =
@@ -21566,9 +23325,9 @@ hs_bindgen_6e582f06d8b080f8 =
 {-# NOINLINE wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16711:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -21586,9 +23345,9 @@ hs_bindgen_7dc9f08c2340c149 =
 {-# NOINLINE wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32 #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15550:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16718:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32 :: BG.FunPtr (BG.Ptr Wuffs_xxhash32__hasher -> IO (BG.Ptr Wuffs_base__hasher_u32))
 wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32 =
@@ -21606,9 +23365,9 @@ hs_bindgen_32f3913c0b9abafd =
 {-# NOINLINE wuffs_xxhash32__hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15559:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16727:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_xxhash32__hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_xxhash32__hasher__get_quirk =
@@ -21626,9 +23385,9 @@ hs_bindgen_c97a167ac775ddb8 =
 {-# NOINLINE wuffs_xxhash32__hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15565:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16733:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_xxhash32__hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_xxhash32__hasher__set_quirk =
@@ -21646,9 +23405,9 @@ hs_bindgen_0b85cd7b0a693a11 =
 {-# NOINLINE wuffs_xxhash32__hasher__update #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15572:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__update :: BG.FunPtr (BG.Ptr Wuffs_xxhash32__hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_xxhash32__hasher__update =
@@ -21666,9 +23425,9 @@ hs_bindgen_15575dec57d46428 =
 {-# NOINLINE wuffs_xxhash32__hasher__update_u32 #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15578:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16746:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__update_u32 :: BG.FunPtr (BG.Ptr Wuffs_xxhash32__hasher -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_xxhash32__hasher__update_u32 =
@@ -21686,9 +23445,9 @@ hs_bindgen_8632f12a5489d303 =
 {-# NOINLINE wuffs_xxhash32__hasher__checksum_u32 #-}
 {-| __C declaration:__ @wuffs_xxhash32__hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15584:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16752:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__checksum_u32 :: BG.FunPtr (PtrConst.PtrConst Wuffs_xxhash32__hasher -> IO HsBindgen.Runtime.LibC.Word32)
 wuffs_xxhash32__hasher__checksum_u32 =
@@ -21706,9 +23465,9 @@ hs_bindgen_3ee26383763e4847 =
 {-# NOINLINE wuffs_xxhash64__hasher__initialize #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15748:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16916:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__initialize :: BG.FunPtr (BG.Ptr Wuffs_xxhash64__hasher -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_xxhash64__hasher__initialize =
@@ -21726,9 +23485,9 @@ hs_bindgen_8c104fd6f2f62782 =
 {-# NOINLINE sizeof__wuffs_xxhash64__hasher #-}
 {-| __C declaration:__ @sizeof__wuffs_xxhash64__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15755:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xxhash64__hasher :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_xxhash64__hasher =
@@ -21746,9 +23505,9 @@ hs_bindgen_96d16b1bea117819 =
 {-# NOINLINE wuffs_xxhash64__hasher__alloc #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16934:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_xxhash64__hasher))
 wuffs_xxhash64__hasher__alloc =
@@ -21766,9 +23525,9 @@ hs_bindgen_0f7f46325f1fd557 =
 {-# NOINLINE wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64 #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16937:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64 :: BG.FunPtr (IO (BG.Ptr Wuffs_base__hasher_u64))
 wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64 =
@@ -21786,9 +23545,9 @@ hs_bindgen_6d7241ca087f1bea =
 {-# NOINLINE wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64 #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15776:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16944:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64 :: BG.FunPtr (BG.Ptr Wuffs_xxhash64__hasher -> IO (BG.Ptr Wuffs_base__hasher_u64))
 wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64 =
@@ -21806,9 +23565,9 @@ hs_bindgen_8ff9ff634b395da9 =
 {-# NOINLINE wuffs_xxhash64__hasher__get_quirk #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15785:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_xxhash64__hasher -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_xxhash64__hasher__get_quirk =
@@ -21826,9 +23585,9 @@ hs_bindgen_b1b297caba65cd87 =
 {-# NOINLINE wuffs_xxhash64__hasher__set_quirk #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16959:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_xxhash64__hasher -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_xxhash64__hasher__set_quirk =
@@ -21846,9 +23605,9 @@ hs_bindgen_17465607964f017f =
 {-# NOINLINE wuffs_xxhash64__hasher__update #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16966:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__update :: BG.FunPtr (BG.Ptr Wuffs_xxhash64__hasher -> Wuffs_base__slice_u8 -> IO Wuffs_base__empty_struct)
 wuffs_xxhash64__hasher__update =
@@ -21866,9 +23625,9 @@ hs_bindgen_70449e9b559f92a1 =
 {-# NOINLINE wuffs_xxhash64__hasher__update_u64 #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15804:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16972:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__update_u64 :: BG.FunPtr (BG.Ptr Wuffs_xxhash64__hasher -> Wuffs_base__slice_u8 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_xxhash64__hasher__update_u64 =
@@ -21886,9 +23645,9 @@ hs_bindgen_416b1faed75e9a5d =
 {-# NOINLINE wuffs_xxhash64__hasher__checksum_u64 #-}
 {-| __C declaration:__ @wuffs_xxhash64__hasher__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15810:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16978:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__checksum_u64 :: BG.FunPtr (PtrConst.PtrConst Wuffs_xxhash64__hasher -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_xxhash64__hasher__checksum_u64 =
@@ -21906,9 +23665,9 @@ hs_bindgen_6cc61f20910d6489 =
 {-# NOINLINE wuffs_xz__decoder__initialize #-}
 {-| __C declaration:__ @wuffs_xz__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15995:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17163:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__initialize :: BG.FunPtr (BG.Ptr Wuffs_xz__decoder -> HsBindgen.Runtime.LibC.CSize -> HsBindgen.Runtime.LibC.Word64 -> HsBindgen.Runtime.LibC.Word32 -> IO Wuffs_base__status)
 wuffs_xz__decoder__initialize =
@@ -21926,9 +23685,9 @@ hs_bindgen_b6ab0c042f7cbbc9 =
 {-# NOINLINE sizeof__wuffs_xz__decoder #-}
 {-| __C declaration:__ @sizeof__wuffs_xz__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17170:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xz__decoder :: BG.FunPtr (IO HsBindgen.Runtime.LibC.CSize)
 sizeof__wuffs_xz__decoder =
@@ -21946,9 +23705,9 @@ hs_bindgen_48fee516cda2fa56 =
 {-# NOINLINE wuffs_xz__decoder__alloc #-}
 {-| __C declaration:__ @wuffs_xz__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16013:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17181:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__alloc :: BG.FunPtr (IO (BG.Ptr Wuffs_xz__decoder))
 wuffs_xz__decoder__alloc =
@@ -21966,9 +23725,9 @@ hs_bindgen_39c08e47ac7951ab =
 {-# NOINLINE wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16016:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer :: BG.FunPtr (IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer =
@@ -21986,9 +23745,9 @@ hs_bindgen_ed63df4464b5fbd0 =
 {-# NOINLINE wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer #-}
 {-| __C declaration:__ @wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16023:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer :: BG.FunPtr (BG.Ptr Wuffs_xz__decoder -> IO (BG.Ptr Wuffs_base__io_transformer))
 wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer =
@@ -22006,9 +23765,9 @@ hs_bindgen_beca311561188877 =
 {-# NOINLINE wuffs_xz__decoder__get_quirk #-}
 {-| __C declaration:__ @wuffs_xz__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16032:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17200:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__get_quirk :: BG.FunPtr (PtrConst.PtrConst Wuffs_xz__decoder -> HsBindgen.Runtime.LibC.Word32 -> IO HsBindgen.Runtime.LibC.Word64)
 wuffs_xz__decoder__get_quirk =
@@ -22026,9 +23785,9 @@ hs_bindgen_39f36ebb86ad44d0 =
 {-# NOINLINE wuffs_xz__decoder__set_quirk #-}
 {-| __C declaration:__ @wuffs_xz__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16038:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17206:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__set_quirk :: BG.FunPtr (BG.Ptr Wuffs_xz__decoder -> HsBindgen.Runtime.LibC.Word32 -> HsBindgen.Runtime.LibC.Word64 -> IO Wuffs_base__status)
 wuffs_xz__decoder__set_quirk =
@@ -22046,9 +23805,9 @@ hs_bindgen_ace8ba12ddddae5d =
 {-# NOINLINE wuffs_xz__decoder__dst_history_retain_length #-}
 {-| __C declaration:__ @wuffs_xz__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16045:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17213:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__dst_history_retain_length :: BG.FunPtr (PtrConst.PtrConst Wuffs_xz__decoder -> IO Wuffs_base__optional_u63)
 wuffs_xz__decoder__dst_history_retain_length =
@@ -22066,9 +23825,9 @@ hs_bindgen_9f8054610e26b467 =
 {-# NOINLINE wuffs_xz__decoder__workbuf_len #-}
 {-| __C declaration:__ @wuffs_xz__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16050:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17218:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__workbuf_len :: BG.FunPtr (PtrConst.PtrConst Wuffs_xz__decoder -> IO Wuffs_base__range_ii_u64)
 wuffs_xz__decoder__workbuf_len =
@@ -22086,9 +23845,9 @@ hs_bindgen_3a93e15adc19ad91 =
 {-# NOINLINE wuffs_xz__decoder__transform_io #-}
 {-| __C declaration:__ @wuffs_xz__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16055:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17223:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__transform_io :: BG.FunPtr (BG.Ptr Wuffs_xz__decoder -> BG.Ptr Wuffs_base__io_buffer -> BG.Ptr Wuffs_base__io_buffer -> Wuffs_base__slice_u8 -> IO Wuffs_base__status)
 wuffs_xz__decoder__transform_io =

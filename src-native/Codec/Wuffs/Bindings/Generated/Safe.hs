@@ -119,14 +119,15 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__table_u8__subtable_ij
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__table__flattened_length
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__magic_number_guess_fourcc
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ii_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ii_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__is_empty
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__equals
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__intersect
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__unite
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__contains
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__contains_range
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ie_i32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ie_i32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__is_empty
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__equals
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__intersect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__unite
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__contains
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__contains_range
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_i32__length
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ie_u32
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ie_u32
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u32__is_empty
@@ -136,14 +137,6 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u32__contains
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u32__contains_range
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u32__length
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ii_u64
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ii_u64
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__is_empty
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__equals
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__intersect
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__unite
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__contains
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__contains_range
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ie_u64
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ie_u64
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u64__is_empty
@@ -153,14 +146,32 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u64__contains
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u64__contains_range
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ie_u64__length
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_rect_ii_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_rect_ii_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__is_empty
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__equals
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__intersect
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__unite
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__contains
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__contains_rect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ii_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ii_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__is_empty
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__equals
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__intersect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__unite
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__contains
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u32__contains_range
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_range_ii_u64
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_range_ii_u64
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__is_empty
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__equals
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__intersect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__unite
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__contains
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__range_ii_u64__contains_range
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_rect_ie_i32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_rect_ie_i32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__is_empty
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__equals
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__intersect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__unite
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__contains
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__contains_rect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__width
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_i32__height
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_rect_ie_u32
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_rect_ie_u32
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_u32__is_empty
@@ -171,6 +182,14 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_u32__contains_rect
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_u32__width
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ie_u32__height
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_rect_ii_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_rect_ii_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__is_empty
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__equals
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__intersect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__unite
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__contains
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__rect_ii_u32__contains_rect
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__empty_more_information
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__more_information__set
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__more_information__io_redirect__fourcc
@@ -245,14 +264,20 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u64_argb_premul__as__color_u8_gray
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u32__as__color_u64
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_u64__as__color_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc__as__color_u32
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc_bt601fr__as__color_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc_bt601fr__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc_bt601sr__as__color_u32
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_ycc_bt601sr__as__color_u32_abgr
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_swap_u32_argb_abgr
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__color_swap_u64_argb_abgr
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__make_pixel_format
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__is_valid
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__bits_per_pixel
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__default_background_color
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__is_direct
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__is_indexed
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_format__is_interleaved
@@ -303,6 +328,7 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_buffer__color_u32_at
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_buffer__set_color_u32_at
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_buffer__set_color_u32_fill_rect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_buffer__is_opaque
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_palette__closest_element
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_swizzler__prepare
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice
@@ -492,6 +518,24 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_gzip__decoder__dst_history_retain_length
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_gzip__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_gzip__decoder__transform_io
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__initialize
+    , Codec.Wuffs.Bindings.Generated.Safe.sizeof__wuffs_handsum__decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__alloc
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__get_quirk
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__set_quirk
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__decode_image_config
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__decode_frame_config
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__decode_frame
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__frame_dirty_rect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__num_animation_loops
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__num_decoded_frame_configs
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__num_decoded_frames
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__restart_frame
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__set_report_metadata
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__tell_me_more
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_handsum__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_jpeg__decoder__initialize
     , Codec.Wuffs.Bindings.Generated.Safe.sizeof__wuffs_jpeg__decoder
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_jpeg__decoder__alloc
@@ -680,9 +724,24 @@ module Codec.Wuffs.Bindings.Generated.Safe
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_thumbhash__decoder__set_report_metadata
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_thumbhash__decoder__tell_me_more
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_thumbhash__decoder__workbuf_len
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__placeholder__initialize
-    , Codec.Wuffs.Bindings.Generated.Safe.sizeof__wuffs_vp8__placeholder
-    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__placeholder__alloc
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__initialize
+    , Codec.Wuffs.Bindings.Generated.Safe.sizeof__wuffs_vp8__decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__alloc
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__get_quirk
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__set_quirk
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__decode_image_config
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__decode_frame_config
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__decode_frame
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__frame_dirty_rect
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__num_animation_loops
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__num_decoded_frame_configs
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__num_decoded_frames
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__restart_frame
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__set_report_metadata
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__tell_me_more
+    , Codec.Wuffs.Bindings.Generated.Safe.wuffs_vp8__decoder__workbuf_len
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_wbmp__decoder__initialize
     , Codec.Wuffs.Bindings.Generated.Safe.sizeof__wuffs_wbmp__decoder
     , Codec.Wuffs.Bindings.Generated.Safe.wuffs_wbmp__decoder__alloc
@@ -760,7 +819,7 @@ import Codec.Wuffs.Bindings.Generated
 import Prelude (IO, fmap)
 
 $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unlines
-  [ "#include <wuffs/wuffs-v0.4.c>"
+  [ "#include <wuffs/wuffs-unsupported-snapshot.c>"
   , "_Bool hs_bindgen_472e5f5471025c5c (void)"
   , "{"
   , "  return (wuffs_base__cpu_arch__have_arm_crc32)();"
@@ -1551,62 +1610,68 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__magic_number_guess_fourcc)(*arg1, arg2);"
   , "}"
-  , "void hs_bindgen_6a107d441df31826 ("
-  , "  wuffs_base__range_ii_u32 *arg1"
+  , "void hs_bindgen_2b3ffd5a212388eb ("
+  , "  wuffs_base__range_ie_i32 *arg1"
   , ")"
   , "{"
-  , "  *arg1 = (wuffs_base__empty_range_ii_u32)();"
+  , "  *arg1 = (wuffs_base__empty_range_ie_i32)();"
   , "}"
-  , "void hs_bindgen_9d0522901fa78bbd ("
-  , "  uint32_t arg1,"
-  , "  uint32_t arg2,"
-  , "  wuffs_base__range_ii_u32 *arg3"
+  , "void hs_bindgen_d00407aceac20759 ("
+  , "  int32_t arg1,"
+  , "  int32_t arg2,"
+  , "  wuffs_base__range_ie_i32 *arg3"
   , ")"
   , "{"
-  , "  *arg3 = (wuffs_base__make_range_ii_u32)(arg1, arg2);"
+  , "  *arg3 = (wuffs_base__make_range_ie_i32)(arg1, arg2);"
   , "}"
-  , "_Bool hs_bindgen_07fca97bd182b065 ("
-  , "  wuffs_base__range_ii_u32 const *arg1"
+  , "_Bool hs_bindgen_2c893c779893cf1d ("
+  , "  wuffs_base__range_ie_i32 const *arg1"
   , ")"
   , "{"
-  , "  return (wuffs_base__range_ii_u32__is_empty)(arg1);"
+  , "  return (wuffs_base__range_ie_i32__is_empty)(arg1);"
   , "}"
-  , "_Bool hs_bindgen_cca20af4761f9086 ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 *arg2"
+  , "_Bool hs_bindgen_b284cee049c7f4fa ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 *arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__range_ii_u32__equals)(arg1, *arg2);"
+  , "  return (wuffs_base__range_ie_i32__equals)(arg1, *arg2);"
   , "}"
-  , "void hs_bindgen_f7e7108736450774 ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 *arg2,"
-  , "  wuffs_base__range_ii_u32 *arg3"
+  , "void hs_bindgen_05b9e7d6b8cf0f68 ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 *arg2,"
+  , "  wuffs_base__range_ie_i32 *arg3"
   , ")"
   , "{"
-  , "  *arg3 = (wuffs_base__range_ii_u32__intersect)(arg1, *arg2);"
+  , "  *arg3 = (wuffs_base__range_ie_i32__intersect)(arg1, *arg2);"
   , "}"
-  , "void hs_bindgen_3954ddb6c233e7f2 ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 *arg2,"
-  , "  wuffs_base__range_ii_u32 *arg3"
+  , "void hs_bindgen_f57cd888f0158f81 ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 *arg2,"
+  , "  wuffs_base__range_ie_i32 *arg3"
   , ")"
   , "{"
-  , "  *arg3 = (wuffs_base__range_ii_u32__unite)(arg1, *arg2);"
+  , "  *arg3 = (wuffs_base__range_ie_i32__unite)(arg1, *arg2);"
   , "}"
-  , "_Bool hs_bindgen_5134855fd6d706aa ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  uint32_t arg2"
+  , "_Bool hs_bindgen_49b51490988f7307 ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  int32_t arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__range_ii_u32__contains)(arg1, arg2);"
+  , "  return (wuffs_base__range_ie_i32__contains)(arg1, arg2);"
   , "}"
-  , "_Bool hs_bindgen_84a80e331ec45457 ("
-  , "  wuffs_base__range_ii_u32 const *arg1,"
-  , "  wuffs_base__range_ii_u32 *arg2"
+  , "_Bool hs_bindgen_89e2dece4467f734 ("
+  , "  wuffs_base__range_ie_i32 const *arg1,"
+  , "  wuffs_base__range_ie_i32 *arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__range_ii_u32__contains_range)(arg1, *arg2);"
+  , "  return (wuffs_base__range_ie_i32__contains_range)(arg1, *arg2);"
+  , "}"
+  , "uint32_t hs_bindgen_eec42d14fe851efa ("
+  , "  wuffs_base__range_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__range_ie_i32__length)(arg1);"
   , "}"
   , "void hs_bindgen_7a61474ba710893d ("
   , "  wuffs_base__range_ie_u32 *arg1"
@@ -1671,63 +1736,6 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__range_ie_u32__length)(arg1);"
   , "}"
-  , "void hs_bindgen_975d8c204c433477 ("
-  , "  wuffs_base__range_ii_u64 *arg1"
-  , ")"
-  , "{"
-  , "  *arg1 = (wuffs_base__empty_range_ii_u64)();"
-  , "}"
-  , "void hs_bindgen_93b8128b9dd3ab9b ("
-  , "  uint64_t arg1,"
-  , "  uint64_t arg2,"
-  , "  wuffs_base__range_ii_u64 *arg3"
-  , ")"
-  , "{"
-  , "  *arg3 = (wuffs_base__make_range_ii_u64)(arg1, arg2);"
-  , "}"
-  , "_Bool hs_bindgen_37d074598c22a733 ("
-  , "  wuffs_base__range_ii_u64 const *arg1"
-  , ")"
-  , "{"
-  , "  return (wuffs_base__range_ii_u64__is_empty)(arg1);"
-  , "}"
-  , "_Bool hs_bindgen_b3fa331bf747c18a ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 *arg2"
-  , ")"
-  , "{"
-  , "  return (wuffs_base__range_ii_u64__equals)(arg1, *arg2);"
-  , "}"
-  , "void hs_bindgen_a9f8fe16ca14c857 ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 *arg2,"
-  , "  wuffs_base__range_ii_u64 *arg3"
-  , ")"
-  , "{"
-  , "  *arg3 = (wuffs_base__range_ii_u64__intersect)(arg1, *arg2);"
-  , "}"
-  , "void hs_bindgen_f4e594c8354645c6 ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 *arg2,"
-  , "  wuffs_base__range_ii_u64 *arg3"
-  , ")"
-  , "{"
-  , "  *arg3 = (wuffs_base__range_ii_u64__unite)(arg1, *arg2);"
-  , "}"
-  , "_Bool hs_bindgen_36b75c7ca543aac1 ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  uint64_t arg2"
-  , ")"
-  , "{"
-  , "  return (wuffs_base__range_ii_u64__contains)(arg1, arg2);"
-  , "}"
-  , "_Bool hs_bindgen_d664c8a74892d48b ("
-  , "  wuffs_base__range_ii_u64 const *arg1,"
-  , "  wuffs_base__range_ii_u64 *arg2"
-  , ")"
-  , "{"
-  , "  return (wuffs_base__range_ii_u64__contains_range)(arg1, *arg2);"
-  , "}"
   , "void hs_bindgen_3884e8296b8406cd ("
   , "  wuffs_base__range_ie_u64 *arg1"
   , ")"
@@ -1791,65 +1799,191 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__range_ie_u64__length)(arg1);"
   , "}"
-  , "void hs_bindgen_42264fddd0967274 ("
-  , "  wuffs_base__rect_ii_u32 *arg1"
+  , "void hs_bindgen_6a107d441df31826 ("
+  , "  wuffs_base__range_ii_u32 *arg1"
   , ")"
   , "{"
-  , "  *arg1 = (wuffs_base__empty_rect_ii_u32)();"
+  , "  *arg1 = (wuffs_base__empty_range_ii_u32)();"
   , "}"
-  , "void hs_bindgen_c215b42b3ebeada7 ("
+  , "void hs_bindgen_9d0522901fa78bbd ("
   , "  uint32_t arg1,"
   , "  uint32_t arg2,"
-  , "  uint32_t arg3,"
-  , "  uint32_t arg4,"
-  , "  wuffs_base__rect_ii_u32 *arg5"
+  , "  wuffs_base__range_ii_u32 *arg3"
   , ")"
   , "{"
-  , "  *arg5 = (wuffs_base__make_rect_ii_u32)(arg1, arg2, arg3, arg4);"
+  , "  *arg3 = (wuffs_base__make_range_ii_u32)(arg1, arg2);"
   , "}"
-  , "_Bool hs_bindgen_5b97561c6c2e9b51 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1"
+  , "_Bool hs_bindgen_07fca97bd182b065 ("
+  , "  wuffs_base__range_ii_u32 const *arg1"
   , ")"
   , "{"
-  , "  return (wuffs_base__rect_ii_u32__is_empty)(arg1);"
+  , "  return (wuffs_base__range_ii_u32__is_empty)(arg1);"
   , "}"
-  , "_Bool hs_bindgen_53466b5f8d99d765 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 *arg2"
+  , "_Bool hs_bindgen_cca20af4761f9086 ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 *arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__rect_ii_u32__equals)(arg1, *arg2);"
+  , "  return (wuffs_base__range_ii_u32__equals)(arg1, *arg2);"
   , "}"
-  , "void hs_bindgen_faf2a0cd57ee6f02 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 *arg2,"
-  , "  wuffs_base__rect_ii_u32 *arg3"
+  , "void hs_bindgen_f7e7108736450774 ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 *arg2,"
+  , "  wuffs_base__range_ii_u32 *arg3"
   , ")"
   , "{"
-  , "  *arg3 = (wuffs_base__rect_ii_u32__intersect)(arg1, *arg2);"
+  , "  *arg3 = (wuffs_base__range_ii_u32__intersect)(arg1, *arg2);"
   , "}"
-  , "void hs_bindgen_9a3e55381719a213 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 *arg2,"
-  , "  wuffs_base__rect_ii_u32 *arg3"
+  , "void hs_bindgen_3954ddb6c233e7f2 ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 *arg2,"
+  , "  wuffs_base__range_ii_u32 *arg3"
   , ")"
   , "{"
-  , "  *arg3 = (wuffs_base__rect_ii_u32__unite)(arg1, *arg2);"
+  , "  *arg3 = (wuffs_base__range_ii_u32__unite)(arg1, *arg2);"
   , "}"
-  , "_Bool hs_bindgen_217342a02762a2c3 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  uint32_t arg2,"
-  , "  uint32_t arg3"
+  , "_Bool hs_bindgen_5134855fd6d706aa ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  uint32_t arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__rect_ii_u32__contains)(arg1, arg2, arg3);"
+  , "  return (wuffs_base__range_ii_u32__contains)(arg1, arg2);"
   , "}"
-  , "_Bool hs_bindgen_d408141a28bceab2 ("
-  , "  wuffs_base__rect_ii_u32 const *arg1,"
-  , "  wuffs_base__rect_ii_u32 *arg2"
+  , "_Bool hs_bindgen_84a80e331ec45457 ("
+  , "  wuffs_base__range_ii_u32 const *arg1,"
+  , "  wuffs_base__range_ii_u32 *arg2"
   , ")"
   , "{"
-  , "  return (wuffs_base__rect_ii_u32__contains_rect)(arg1, *arg2);"
+  , "  return (wuffs_base__range_ii_u32__contains_range)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_975d8c204c433477 ("
+  , "  wuffs_base__range_ii_u64 *arg1"
+  , ")"
+  , "{"
+  , "  *arg1 = (wuffs_base__empty_range_ii_u64)();"
+  , "}"
+  , "void hs_bindgen_93b8128b9dd3ab9b ("
+  , "  uint64_t arg1,"
+  , "  uint64_t arg2,"
+  , "  wuffs_base__range_ii_u64 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__make_range_ii_u64)(arg1, arg2);"
+  , "}"
+  , "_Bool hs_bindgen_37d074598c22a733 ("
+  , "  wuffs_base__range_ii_u64 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__range_ii_u64__is_empty)(arg1);"
+  , "}"
+  , "_Bool hs_bindgen_b3fa331bf747c18a ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__range_ii_u64__equals)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_a9f8fe16ca14c857 ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2,"
+  , "  wuffs_base__range_ii_u64 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__range_ii_u64__intersect)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_f4e594c8354645c6 ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2,"
+  , "  wuffs_base__range_ii_u64 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__range_ii_u64__unite)(arg1, *arg2);"
+  , "}"
+  , "_Bool hs_bindgen_36b75c7ca543aac1 ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  uint64_t arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__range_ii_u64__contains)(arg1, arg2);"
+  , "}"
+  , "_Bool hs_bindgen_d664c8a74892d48b ("
+  , "  wuffs_base__range_ii_u64 const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__range_ii_u64__contains_range)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_91cdbedfa0e13e01 ("
+  , "  wuffs_base__rect_ie_i32 *arg1"
+  , ")"
+  , "{"
+  , "  *arg1 = (wuffs_base__empty_rect_ie_i32)();"
+  , "}"
+  , "void hs_bindgen_ec46e8f68a7d42b8 ("
+  , "  int32_t arg1,"
+  , "  int32_t arg2,"
+  , "  int32_t arg3,"
+  , "  int32_t arg4,"
+  , "  wuffs_base__rect_ie_i32 *arg5"
+  , ")"
+  , "{"
+  , "  *arg5 = (wuffs_base__make_rect_ie_i32)(arg1, arg2, arg3, arg4);"
+  , "}"
+  , "_Bool hs_bindgen_68e270deff79e350 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__is_empty)(arg1);"
+  , "}"
+  , "_Bool hs_bindgen_56da9232784fc0a4 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__equals)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_c811b54213112a17 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 *arg2,"
+  , "  wuffs_base__rect_ie_i32 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__rect_ie_i32__intersect)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_e5ddc046165247a6 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 *arg2,"
+  , "  wuffs_base__rect_ie_i32 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__rect_ie_i32__unite)(arg1, *arg2);"
+  , "}"
+  , "_Bool hs_bindgen_3e669826c469a0a5 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  int32_t arg2,"
+  , "  int32_t arg3"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__contains)(arg1, arg2, arg3);"
+  , "}"
+  , "_Bool hs_bindgen_3d588ff27d4fc00b ("
+  , "  wuffs_base__rect_ie_i32 const *arg1,"
+  , "  wuffs_base__rect_ie_i32 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__contains_rect)(arg1, *arg2);"
+  , "}"
+  , "uint32_t hs_bindgen_de1f66520233d620 ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__width)(arg1);"
+  , "}"
+  , "uint32_t hs_bindgen_29ed826bff7988bb ("
+  , "  wuffs_base__rect_ie_i32 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ie_i32__height)(arg1);"
   , "}"
   , "void hs_bindgen_875e773b5da50701 ("
   , "  wuffs_base__rect_ie_u32 *arg1"
@@ -1922,6 +2056,66 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  return (wuffs_base__rect_ie_u32__height)(arg1);"
+  , "}"
+  , "void hs_bindgen_42264fddd0967274 ("
+  , "  wuffs_base__rect_ii_u32 *arg1"
+  , ")"
+  , "{"
+  , "  *arg1 = (wuffs_base__empty_rect_ii_u32)();"
+  , "}"
+  , "void hs_bindgen_c215b42b3ebeada7 ("
+  , "  uint32_t arg1,"
+  , "  uint32_t arg2,"
+  , "  uint32_t arg3,"
+  , "  uint32_t arg4,"
+  , "  wuffs_base__rect_ii_u32 *arg5"
+  , ")"
+  , "{"
+  , "  *arg5 = (wuffs_base__make_rect_ii_u32)(arg1, arg2, arg3, arg4);"
+  , "}"
+  , "_Bool hs_bindgen_5b97561c6c2e9b51 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ii_u32__is_empty)(arg1);"
+  , "}"
+  , "_Bool hs_bindgen_53466b5f8d99d765 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ii_u32__equals)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_faf2a0cd57ee6f02 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 *arg2,"
+  , "  wuffs_base__rect_ii_u32 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__rect_ii_u32__intersect)(arg1, *arg2);"
+  , "}"
+  , "void hs_bindgen_9a3e55381719a213 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 *arg2,"
+  , "  wuffs_base__rect_ii_u32 *arg3"
+  , ")"
+  , "{"
+  , "  *arg3 = (wuffs_base__rect_ii_u32__unite)(arg1, *arg2);"
+  , "}"
+  , "_Bool hs_bindgen_217342a02762a2c3 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint32_t arg3"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ii_u32__contains)(arg1, arg2, arg3);"
+  , "}"
+  , "_Bool hs_bindgen_d408141a28bceab2 ("
+  , "  wuffs_base__rect_ii_u32 const *arg1,"
+  , "  wuffs_base__rect_ii_u32 *arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__rect_ii_u32__contains_rect)(arg1, *arg2);"
   , "}"
   , "void hs_bindgen_bc723da2622fcc63 ("
   , "  wuffs_base__more_information *arg1"
@@ -2059,18 +2253,18 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__io_buffer__is_valid)(arg1);"
   , "}"
-  , "void hs_bindgen_e228ebab6c97c92b ("
+  , "size_t hs_bindgen_e228ebab6c97c92b ("
   , "  wuffs_base__io_buffer *arg1"
   , ")"
   , "{"
-  , "  (wuffs_base__io_buffer__compact)(arg1);"
+  , "  return (wuffs_base__io_buffer__compact)(arg1);"
   , "}"
-  , "void hs_bindgen_283f3a232f5f39ca ("
+  , "size_t hs_bindgen_283f3a232f5f39ca ("
   , "  wuffs_base__io_buffer *arg1,"
   , "  uint64_t arg2"
   , ")"
   , "{"
-  , "  (wuffs_base__io_buffer__compact_retaining)(arg1, arg2);"
+  , "  return (wuffs_base__io_buffer__compact_retaining)(arg1, arg2);"
   , "}"
   , "size_t hs_bindgen_67d213f1d0ea3eec ("
   , "  wuffs_base__io_buffer const *arg1"
@@ -2254,18 +2448,18 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__token_buffer__is_valid)(arg1);"
   , "}"
-  , "void hs_bindgen_b2103d296a7afbda ("
+  , "size_t hs_bindgen_b2103d296a7afbda ("
   , "  wuffs_base__token_buffer *arg1"
   , ")"
   , "{"
-  , "  (wuffs_base__token_buffer__compact)(arg1);"
+  , "  return (wuffs_base__token_buffer__compact)(arg1);"
   , "}"
-  , "void hs_bindgen_0e086a20d6c0e7a8 ("
+  , "size_t hs_bindgen_0e086a20d6c0e7a8 ("
   , "  wuffs_base__token_buffer *arg1,"
   , "  uint64_t arg2"
   , ")"
   , "{"
-  , "  (wuffs_base__token_buffer__compact_retaining)(arg1, arg2);"
+  , "  return (wuffs_base__token_buffer__compact_retaining)(arg1, arg2);"
   , "}"
   , "uint64_t hs_bindgen_62b5023038471a7d ("
   , "  wuffs_base__token_buffer const *arg1"
@@ -2423,6 +2617,12 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__color_u64_argb_premul__as__color_u8_gray)(arg1);"
   , "}"
+  , "uint64_t hs_bindgen_f7b9728495b251d3 ("
+  , "  uint64_t arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul)(arg1);"
+  , "}"
   , "uint8_t hs_bindgen_0802a11f9fe9798c ("
   , "  uint64_t arg1"
   , ")"
@@ -2441,21 +2641,49 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  return (wuffs_base__color_u64__as__color_u32)(arg1);"
   , "}"
-  , "wuffs_base__color_u32_argb_premul hs_bindgen_a7afa09d86151e87 ("
+  , "wuffs_base__color_u32_argb_premul hs_bindgen_c12351b2d61798e1 ("
   , "  uint8_t arg1,"
   , "  uint8_t arg2,"
   , "  uint8_t arg3"
   , ")"
   , "{"
-  , "  return (wuffs_base__color_ycc__as__color_u32)(arg1, arg2, arg3);"
+  , "  return (wuffs_base__color_ycc_bt601fr__as__color_u32)(arg1, arg2, arg3);"
   , "}"
-  , "uint32_t hs_bindgen_941d1c4af1dfe310 ("
+  , "uint32_t hs_bindgen_36650b96cf9ee9bd ("
   , "  uint8_t arg1,"
   , "  uint8_t arg2,"
   , "  uint8_t arg3"
   , ")"
   , "{"
-  , "  return (wuffs_base__color_ycc__as__color_u32_abgr)(arg1, arg2, arg3);"
+  , "  return (wuffs_base__color_ycc_bt601fr__as__color_u32_abgr)(arg1, arg2, arg3);"
+  , "}"
+  , "wuffs_base__color_u32_argb_premul hs_bindgen_23302fe8b752ce0d ("
+  , "  uint8_t arg1,"
+  , "  uint8_t arg2,"
+  , "  uint8_t arg3"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__color_ycc_bt601sr__as__color_u32)(arg1, arg2, arg3);"
+  , "}"
+  , "uint32_t hs_bindgen_b708e4426f8d5447 ("
+  , "  uint8_t arg1,"
+  , "  uint8_t arg2,"
+  , "  uint8_t arg3"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__color_ycc_bt601sr__as__color_u32_abgr)(arg1, arg2, arg3);"
+  , "}"
+  , "uint32_t hs_bindgen_14636b8532ae3863 ("
+  , "  uint32_t arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__color_swap_u32_argb_abgr)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_ca9446ccad139df9 ("
+  , "  uint64_t arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__color_swap_u64_argb_abgr)(arg1);"
   , "}"
   , "void hs_bindgen_2ac8b8ca496ee30d ("
   , "  uint32_t arg1,"
@@ -2475,6 +2703,12 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  return (wuffs_base__pixel_format__bits_per_pixel)(arg1);"
+  , "}"
+  , "uint32_t hs_bindgen_dd3f640967b998b6 ("
+  , "  wuffs_base__pixel_format const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__pixel_format__default_background_color)(arg1);"
   , "}"
   , "_Bool hs_bindgen_eb033cb3900bbcef ("
   , "  wuffs_base__pixel_format const *arg1"
@@ -2824,6 +3058,12 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , ")"
   , "{"
   , "  *arg4 = (wuffs_base__pixel_buffer__set_color_u32_fill_rect)(arg1, *arg2, arg3);"
+  , "}"
+  , "_Bool hs_bindgen_377bc6f6b098c4a9 ("
+  , "  wuffs_base__pixel_buffer const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_base__pixel_buffer__is_opaque)(arg1);"
   , "}"
   , "uint8_t hs_bindgen_3e3d0392e2b8e067 ("
   , "  wuffs_base__slice_u8 *arg1,"
@@ -4214,6 +4454,140 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  *arg5 = (wuffs_gzip__decoder__transform_io)(arg1, arg2, arg3, *arg4);"
   , "}"
+  , "void hs_bindgen_5bfb5a193afb13f4 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  size_t arg2,"
+  , "  uint64_t arg3,"
+  , "  uint32_t arg4,"
+  , "  wuffs_base__status *arg5"
+  , ")"
+  , "{"
+  , "  *arg5 = (wuffs_handsum__decoder__initialize)(arg1, arg2, arg3, arg4);"
+  , "}"
+  , "size_t hs_bindgen_cf580cc017086cab (void)"
+  , "{"
+  , "  return (sizeof__wuffs_handsum__decoder)();"
+  , "}"
+  , "wuffs_handsum__decoder *hs_bindgen_f98915c22a2d1349 (void)"
+  , "{"
+  , "  return (wuffs_handsum__decoder__alloc)();"
+  , "}"
+  , "wuffs_base__image_decoder *hs_bindgen_9499fc74850e5c61 (void)"
+  , "{"
+  , "  return (wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder)();"
+  , "}"
+  , "wuffs_base__image_decoder *hs_bindgen_90c2d55494a03a3d ("
+  , "  wuffs_handsum__decoder *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_ac6ba95c5ba596fd ("
+  , "  wuffs_handsum__decoder const *arg1,"
+  , "  uint32_t arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_handsum__decoder__get_quirk)(arg1, arg2);"
+  , "}"
+  , "void hs_bindgen_07a07a8cf8f36805 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint64_t arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_handsum__decoder__set_quirk)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_839b48026ea70022 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__image_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_handsum__decoder__decode_image_config)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_3f4e5f49ba3bace6 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__frame_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_handsum__decoder__decode_frame_config)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_bd17f5f96bb26a9f ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__pixel_buffer *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__pixel_blend arg4,"
+  , "  wuffs_base__slice_u8 *arg5,"
+  , "  wuffs_base__decode_frame_options *arg6,"
+  , "  wuffs_base__status *arg7"
+  , ")"
+  , "{"
+  , "  *arg7 = (wuffs_handsum__decoder__decode_frame)(arg1, arg2, arg3, arg4, *arg5, arg6);"
+  , "}"
+  , "void hs_bindgen_31df57fb07019223 ("
+  , "  wuffs_handsum__decoder const *arg1,"
+  , "  wuffs_base__rect_ie_u32 *arg2"
+  , ")"
+  , "{"
+  , "  *arg2 = (wuffs_handsum__decoder__frame_dirty_rect)(arg1);"
+  , "}"
+  , "uint32_t hs_bindgen_0138f97cb2154a6e ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_handsum__decoder__num_animation_loops)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_0416a4b316353e08 ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_handsum__decoder__num_decoded_frame_configs)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_16314b639955049d ("
+  , "  wuffs_handsum__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_handsum__decoder__num_decoded_frames)(arg1);"
+  , "}"
+  , "void hs_bindgen_09623633244e0803 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint64_t arg2,"
+  , "  uint64_t arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_handsum__decoder__restart_frame)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_50dd9b9482b5ccb1 ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  _Bool arg3,"
+  , "  wuffs_base__empty_struct *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_handsum__decoder__set_report_metadata)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_290d624e37355d9a ("
+  , "  wuffs_handsum__decoder *arg1,"
+  , "  wuffs_base__io_buffer *arg2,"
+  , "  wuffs_base__more_information *arg3,"
+  , "  wuffs_base__io_buffer *arg4,"
+  , "  wuffs_base__status *arg5"
+  , ")"
+  , "{"
+  , "  *arg5 = (wuffs_handsum__decoder__tell_me_more)(arg1, arg2, arg3, arg4);"
+  , "}"
+  , "void hs_bindgen_d11ddd818b67c8e3 ("
+  , "  wuffs_handsum__decoder const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2"
+  , ")"
+  , "{"
+  , "  *arg2 = (wuffs_handsum__decoder__workbuf_len)(arg1);"
+  , "}"
   , "void hs_bindgen_41a81e902d65dff4 ("
   , "  wuffs_jpeg__decoder *arg1,"
   , "  size_t arg2,"
@@ -5573,23 +5947,139 @@ $(HsBindgen.Runtime.Support.CAPI.addCSource (HsBindgen.Runtime.Support.CAPI.unli
   , "{"
   , "  *arg2 = (wuffs_thumbhash__decoder__workbuf_len)(arg1);"
   , "}"
-  , "void hs_bindgen_caa7f32449e09ced ("
-  , "  wuffs_vp8__placeholder *arg1,"
+  , "void hs_bindgen_fa98b200fbc783ae ("
+  , "  wuffs_vp8__decoder *arg1,"
   , "  size_t arg2,"
   , "  uint64_t arg3,"
   , "  uint32_t arg4,"
   , "  wuffs_base__status *arg5"
   , ")"
   , "{"
-  , "  *arg5 = (wuffs_vp8__placeholder__initialize)(arg1, arg2, arg3, arg4);"
+  , "  *arg5 = (wuffs_vp8__decoder__initialize)(arg1, arg2, arg3, arg4);"
   , "}"
-  , "size_t hs_bindgen_291b85017040750a (void)"
+  , "size_t hs_bindgen_dff53c4da321b1bc (void)"
   , "{"
-  , "  return (sizeof__wuffs_vp8__placeholder)();"
+  , "  return (sizeof__wuffs_vp8__decoder)();"
   , "}"
-  , "wuffs_vp8__placeholder *hs_bindgen_19510a304182ff26 (void)"
+  , "wuffs_vp8__decoder *hs_bindgen_3c4ebab5ede6bdd2 (void)"
   , "{"
-  , "  return (wuffs_vp8__placeholder__alloc)();"
+  , "  return (wuffs_vp8__decoder__alloc)();"
+  , "}"
+  , "wuffs_base__image_decoder *hs_bindgen_8a6cdbf4e497f83c (void)"
+  , "{"
+  , "  return (wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder)();"
+  , "}"
+  , "wuffs_base__image_decoder *hs_bindgen_92e9ae431b0f445c ("
+  , "  wuffs_vp8__decoder *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_5ab76efc543d6ca3 ("
+  , "  wuffs_vp8__decoder const *arg1,"
+  , "  uint32_t arg2"
+  , ")"
+  , "{"
+  , "  return (wuffs_vp8__decoder__get_quirk)(arg1, arg2);"
+  , "}"
+  , "void hs_bindgen_cc7c1eea4c94fe53 ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  uint64_t arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_vp8__decoder__set_quirk)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_51424a15e35e59c5 ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__image_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_vp8__decoder__decode_image_config)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_fb35ab24d73ba484 ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__frame_config *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_vp8__decoder__decode_frame_config)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_f60ee8b800390bb4 ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__pixel_buffer *arg2,"
+  , "  wuffs_base__io_buffer *arg3,"
+  , "  wuffs_base__pixel_blend arg4,"
+  , "  wuffs_base__slice_u8 *arg5,"
+  , "  wuffs_base__decode_frame_options *arg6,"
+  , "  wuffs_base__status *arg7"
+  , ")"
+  , "{"
+  , "  *arg7 = (wuffs_vp8__decoder__decode_frame)(arg1, arg2, arg3, arg4, *arg5, arg6);"
+  , "}"
+  , "void hs_bindgen_4126497719ef8ffb ("
+  , "  wuffs_vp8__decoder const *arg1,"
+  , "  wuffs_base__rect_ie_u32 *arg2"
+  , ")"
+  , "{"
+  , "  *arg2 = (wuffs_vp8__decoder__frame_dirty_rect)(arg1);"
+  , "}"
+  , "uint32_t hs_bindgen_f649c114edcac44f ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_vp8__decoder__num_animation_loops)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_db85d34b90bbd06c ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_vp8__decoder__num_decoded_frame_configs)(arg1);"
+  , "}"
+  , "uint64_t hs_bindgen_4fa66b8114a6726b ("
+  , "  wuffs_vp8__decoder const *arg1"
+  , ")"
+  , "{"
+  , "  return (wuffs_vp8__decoder__num_decoded_frames)(arg1);"
+  , "}"
+  , "void hs_bindgen_2c89cb2813275b6c ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint64_t arg2,"
+  , "  uint64_t arg3,"
+  , "  wuffs_base__status *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_vp8__decoder__restart_frame)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_430df8fc4c149c4f ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  uint32_t arg2,"
+  , "  _Bool arg3,"
+  , "  wuffs_base__empty_struct *arg4"
+  , ")"
+  , "{"
+  , "  *arg4 = (wuffs_vp8__decoder__set_report_metadata)(arg1, arg2, arg3);"
+  , "}"
+  , "void hs_bindgen_e94f885b4d325402 ("
+  , "  wuffs_vp8__decoder *arg1,"
+  , "  wuffs_base__io_buffer *arg2,"
+  , "  wuffs_base__more_information *arg3,"
+  , "  wuffs_base__io_buffer *arg4,"
+  , "  wuffs_base__status *arg5"
+  , ")"
+  , "{"
+  , "  *arg5 = (wuffs_vp8__decoder__tell_me_more)(arg1, arg2, arg3, arg4);"
+  , "}"
+  , "void hs_bindgen_7d28695e6822166e ("
+  , "  wuffs_vp8__decoder const *arg1,"
+  , "  wuffs_base__range_ii_u64 *arg2"
+  , ")"
+  , "{"
+  , "  *arg2 = (wuffs_vp8__decoder__workbuf_len)(arg1);"
   , "}"
   , "void hs_bindgen_99677468e460d52c ("
   , "  wuffs_wbmp__decoder *arg1,"
@@ -6070,9 +6560,9 @@ hs_bindgen_472e5f5471025c5c =
 
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_arm_crc32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 281:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 271:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_arm_crc32 :: IO BG.CBool
 wuffs_base__cpu_arch__have_arm_crc32 =
@@ -6089,9 +6579,9 @@ hs_bindgen_9f8b0cbb9bb53e37 =
 
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_arm_neon@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 290:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 280:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_arm_neon :: IO BG.CBool
 wuffs_base__cpu_arch__have_arm_neon =
@@ -6108,9 +6598,9 @@ hs_bindgen_5c999e3467e0f4f1 =
 
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_avx2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 299:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 289:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_avx2 :: IO BG.CBool
 wuffs_base__cpu_arch__have_x86_avx2 =
@@ -6127,9 +6617,9 @@ hs_bindgen_1bacac876dd8fb83 =
 
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_bmi2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 351:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 341:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_bmi2 :: IO BG.CBool
 wuffs_base__cpu_arch__have_x86_bmi2 =
@@ -6146,9 +6636,9 @@ hs_bindgen_eacbe7c8d36bc7a5 =
 
 {-| __C declaration:__ @wuffs_base__cpu_arch__have_x86_sse42@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 385:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 375:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__cpu_arch__have_x86_sse42 :: IO BG.CBool
 wuffs_base__cpu_arch__have_x86_sse42 =
@@ -6169,9 +6659,9 @@ hs_bindgen_ec0f1c3ecfab18d4 =
 
 {-| __C declaration:__ @wuffs_base__strip_const_from_u8_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 501:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u8_ptr ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -6195,9 +6685,9 @@ hs_bindgen_a85c086644eefdb9 =
 
 {-| __C declaration:__ @wuffs_base__strip_const_from_u16_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 506:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u16_ptr ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word16
@@ -6221,9 +6711,9 @@ hs_bindgen_869c6668e1db0e11 =
 
 {-| __C declaration:__ @wuffs_base__strip_const_from_u32_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 521:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u32_ptr ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word32
@@ -6247,9 +6737,9 @@ hs_bindgen_f5a4d865d0f91cac =
 
 {-| __C declaration:__ @wuffs_base__strip_const_from_u64_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 526:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 516:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_u64_ptr ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word64
@@ -6273,9 +6763,9 @@ hs_bindgen_aa9190dbfa4aa579 =
 
 {-| __C declaration:__ @wuffs_base__make_empty_struct@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 553:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_empty_struct :: IO Wuffs_base__empty_struct
 wuffs_base__make_empty_struct =
@@ -6300,9 +6790,9 @@ hs_bindgen_63d34c39f4caca62 =
 
 {-| __C declaration:__ @wuffs_base__make_status@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 634:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 624:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_status ::
      PtrConst.PtrConst BG.CChar
@@ -6328,9 +6818,9 @@ hs_bindgen_68a17b2c1bc0ca45 =
 
 {-| __C declaration:__ @wuffs_base__status__is_complete@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 641:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_complete ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6354,9 +6844,9 @@ hs_bindgen_4445aeea3643c53d =
 
 {-| __C declaration:__ @wuffs_base__status__is_error@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 636:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_error ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6380,9 +6870,9 @@ hs_bindgen_f3c72d6626295f90 =
 
 {-| __C declaration:__ @wuffs_base__status__is_note@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 651:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 641:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_note ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6406,9 +6896,9 @@ hs_bindgen_a0eb869a79d4d300 =
 
 {-| __C declaration:__ @wuffs_base__status__is_ok@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 656:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_ok ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6432,9 +6922,9 @@ hs_bindgen_899dea2fdc147c40 =
 
 {-| __C declaration:__ @wuffs_base__status__is_suspension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 661:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 651:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_suspension ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6458,9 +6948,9 @@ hs_bindgen_8899c87c99e1d4c5 =
 
 {-| __C declaration:__ @wuffs_base__status__is_truncated_input_error@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 666:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 656:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__is_truncated_input_error ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6484,9 +6974,9 @@ hs_bindgen_18275827e651fd30 =
 
 {-| __C declaration:__ @wuffs_base__status__message@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 684:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 674:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__status__message ::
      PtrConst.PtrConst Wuffs_base__status
@@ -6513,9 +7003,9 @@ hs_bindgen_3f1bf220c77e7911 =
 
 {-| __C declaration:__ @wuffs_base__i8__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i8__min ::
      HsBindgen.Runtime.LibC.Int8
@@ -6543,9 +7033,9 @@ hs_bindgen_6d1d6fed699b537e =
 
 {-| __C declaration:__ @wuffs_base__i8__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i8__max ::
      HsBindgen.Runtime.LibC.Int8
@@ -6573,9 +7063,9 @@ hs_bindgen_822e7d4ecd6b8e1e =
 
 {-| __C declaration:__ @wuffs_base__i16__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1012:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1007:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i16__min ::
      HsBindgen.Runtime.LibC.Int16
@@ -6603,9 +7093,9 @@ hs_bindgen_1f3cf8f90d4ad32b =
 
 {-| __C declaration:__ @wuffs_base__i16__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1017:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1012:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i16__max ::
      HsBindgen.Runtime.LibC.Int16
@@ -6633,9 +7123,9 @@ hs_bindgen_a4821988d6485b8e =
 
 {-| __C declaration:__ @wuffs_base__i32__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1022:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1017:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i32__min ::
      HsBindgen.Runtime.LibC.Int32
@@ -6663,9 +7153,9 @@ hs_bindgen_e7d09c307db8fa57 =
 
 {-| __C declaration:__ @wuffs_base__i32__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1027:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1022:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i32__max ::
      HsBindgen.Runtime.LibC.Int32
@@ -6693,9 +7183,9 @@ hs_bindgen_b71de2745a9890f6 =
 
 {-| __C declaration:__ @wuffs_base__i64__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1032:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1027:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i64__min ::
      HsBindgen.Runtime.LibC.Int64
@@ -6723,9 +7213,9 @@ hs_bindgen_c58316aa41303784 =
 
 {-| __C declaration:__ @wuffs_base__i64__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1037:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1032:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__i64__max ::
      HsBindgen.Runtime.LibC.Int64
@@ -6753,9 +7243,9 @@ hs_bindgen_10e3628ccefe3086 =
 
 {-| __C declaration:__ @wuffs_base__u8__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1042:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__min ::
      HsBindgen.Runtime.LibC.Word8
@@ -6783,9 +7273,9 @@ hs_bindgen_d19a3dbb5423bf26 =
 
 {-| __C declaration:__ @wuffs_base__u8__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1047:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1042:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__max ::
      HsBindgen.Runtime.LibC.Word8
@@ -6813,9 +7303,9 @@ hs_bindgen_b9ff0f42d027e394 =
 
 {-| __C declaration:__ @wuffs_base__u16__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1052:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__min ::
      HsBindgen.Runtime.LibC.Word16
@@ -6843,9 +7333,9 @@ hs_bindgen_657a1abd1a15290d =
 
 {-| __C declaration:__ @wuffs_base__u16__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1057:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1052:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__max ::
      HsBindgen.Runtime.LibC.Word16
@@ -6873,9 +7363,9 @@ hs_bindgen_df9e983cd277e124 =
 
 {-| __C declaration:__ @wuffs_base__u32__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1062:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1057:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__min ::
      HsBindgen.Runtime.LibC.Word32
@@ -6903,9 +7393,9 @@ hs_bindgen_d00c77f379e1349e =
 
 {-| __C declaration:__ @wuffs_base__u32__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1067:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1062:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__max ::
      HsBindgen.Runtime.LibC.Word32
@@ -6933,9 +7423,9 @@ hs_bindgen_9017ffd127ff59e0 =
 
 {-| __C declaration:__ @wuffs_base__u64__min@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1072:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1067:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__min ::
      HsBindgen.Runtime.LibC.Word64
@@ -6963,9 +7453,9 @@ hs_bindgen_3f0cfc4a376a067b =
 
 {-| __C declaration:__ @wuffs_base__u64__max@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1077:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1072:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__max ::
      HsBindgen.Runtime.LibC.Word64
@@ -6993,9 +7483,9 @@ hs_bindgen_6abc0f223957233f =
 
 {-| __C declaration:__ @wuffs_base__u8__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1084:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__rotate_left ::
      HsBindgen.Runtime.LibC.Word8
@@ -7024,9 +7514,9 @@ hs_bindgen_a2c1f37393d6f2e8 =
 
 {-| __C declaration:__ @wuffs_base__u8__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1090:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1085:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__rotate_right ::
      HsBindgen.Runtime.LibC.Word8
@@ -7055,9 +7545,9 @@ hs_bindgen_0f342ae9f2124cb7 =
 
 {-| __C declaration:__ @wuffs_base__u16__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1096:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1091:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__rotate_left ::
      HsBindgen.Runtime.LibC.Word16
@@ -7086,9 +7576,9 @@ hs_bindgen_f17ac2e707d51554 =
 
 {-| __C declaration:__ @wuffs_base__u16__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1097:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__rotate_right ::
      HsBindgen.Runtime.LibC.Word16
@@ -7117,9 +7607,9 @@ hs_bindgen_970b50e59156bdf9 =
 
 {-| __C declaration:__ @wuffs_base__u32__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1108:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1103:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__rotate_left ::
      HsBindgen.Runtime.LibC.Word32
@@ -7148,9 +7638,9 @@ hs_bindgen_de60c5a42d656b48 =
 
 {-| __C declaration:__ @wuffs_base__u32__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1114:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1109:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__rotate_right ::
      HsBindgen.Runtime.LibC.Word32
@@ -7179,9 +7669,9 @@ hs_bindgen_7276ef38c9f46fea =
 
 {-| __C declaration:__ @wuffs_base__u64__rotate_left@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1120:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1115:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__rotate_left ::
      HsBindgen.Runtime.LibC.Word64
@@ -7210,9 +7700,9 @@ hs_bindgen_d91da4836a1ead40 =
 
 {-| __C declaration:__ @wuffs_base__u64__rotate_right@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1126:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1121:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__rotate_right ::
      HsBindgen.Runtime.LibC.Word64
@@ -7241,9 +7731,9 @@ hs_bindgen_fe653bc7ff70c111 =
 
 {-| __C declaration:__ @wuffs_base__u8__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1140:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1135:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__sat_add ::
      HsBindgen.Runtime.LibC.Word8
@@ -7271,9 +7761,9 @@ hs_bindgen_faa932c75d769669 =
 
 {-| __C declaration:__ @wuffs_base__u8__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1147:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1142:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u8__sat_sub ::
      HsBindgen.Runtime.LibC.Word8
@@ -7301,9 +7791,9 @@ hs_bindgen_1317007c70b8b2f7 =
 
 {-| __C declaration:__ @wuffs_base__u16__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1154:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1149:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__sat_add ::
      HsBindgen.Runtime.LibC.Word16
@@ -7332,9 +7822,9 @@ hs_bindgen_051e7e9302bdf3d6 =
 
 {-| __C declaration:__ @wuffs_base__u16__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1161:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1156:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u16__sat_sub ::
      HsBindgen.Runtime.LibC.Word16
@@ -7363,9 +7853,9 @@ hs_bindgen_3dc37cd4251998f5 =
 
 {-| __C declaration:__ @wuffs_base__u32__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1168:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1163:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__sat_add ::
      HsBindgen.Runtime.LibC.Word32
@@ -7394,9 +7884,9 @@ hs_bindgen_9df0c259bcf86368 =
 
 {-| __C declaration:__ @wuffs_base__u32__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1175:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1170:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u32__sat_sub ::
      HsBindgen.Runtime.LibC.Word32
@@ -7425,9 +7915,9 @@ hs_bindgen_7b58bdfa0fa7960a =
 
 {-| __C declaration:__ @wuffs_base__u64__sat_add@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1182:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1177:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__sat_add ::
      HsBindgen.Runtime.LibC.Word64
@@ -7456,9 +7946,9 @@ hs_bindgen_f304e689fe5d6ad3 =
 
 {-| __C declaration:__ @wuffs_base__u64__sat_sub@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1189:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__u64__sat_sub ::
      HsBindgen.Runtime.LibC.Word64
@@ -7490,9 +7980,9 @@ hs_bindgen_7bfd3cbb749b9fa9 =
 
 {-| __C declaration:__ @wuffs_base__multiply_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__multiply_u64 ::
      HsBindgen.Runtime.LibC.Word64
@@ -7533,9 +8023,9 @@ hs_bindgen_6812fb728b8ddcab =
 
 {-| __C declaration:__ @wuffs_base__make_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1240:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1235:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_bitvec256 ::
      HsBindgen.Runtime.LibC.Word64
@@ -7573,9 +8063,9 @@ hs_bindgen_dc482ef1ab4b10dd =
 
 {-| __C declaration:__ @wuffs_base__bitvec256__get_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1253:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1248:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__bitvec256__get_u64 ::
      PtrConst.PtrConst Wuffs_base__bitvec256
@@ -7607,9 +8097,9 @@ hs_bindgen_827e56dd90f32b18 =
 
 {-| __C declaration:__ @wuffs_base__make_optional_u63@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1279:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1274:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_optional_u63 ::
      BG.CBool
@@ -7638,9 +8128,9 @@ hs_bindgen_ac8605ad72916013 =
 
 {-| __C declaration:__ @wuffs_base__optional_u63__has_value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1286:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1281:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__has_value ::
      PtrConst.PtrConst Wuffs_base__optional_u63
@@ -7664,9 +8154,9 @@ hs_bindgen_c137691445c2b5cd =
 
 {-| __C declaration:__ @wuffs_base__optional_u63__value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1292:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1287:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__value ::
      PtrConst.PtrConst Wuffs_base__optional_u63
@@ -7693,9 +8183,9 @@ hs_bindgen_0d07d34b360a86fb =
 
 {-| __C declaration:__ @wuffs_base__optional_u63__value_or@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1297:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1292:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__optional_u63__value_or ::
      PtrConst.PtrConst Wuffs_base__optional_u63
@@ -7721,9 +8211,9 @@ hs_bindgen_631cf8d85b4aa38e =
 
 {-| __C declaration:__ @wuffs_base__count_leading_zeroes_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1328:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1323:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__count_leading_zeroes_u64 ::
      HsBindgen.Runtime.LibC.Word64
@@ -7747,9 +8237,9 @@ hs_bindgen_c64b3266ddfb4a28 =
 
 {-| __C declaration:__ @wuffs_base__peek_u8__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1395:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1390:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u8__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7773,9 +8263,9 @@ hs_bindgen_328323246c1a9b8d =
 
 {-| __C declaration:__ @wuffs_base__peek_u16be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1400:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1395:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u16be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7799,9 +8289,9 @@ hs_bindgen_8d34fb324dc83f98 =
 
 {-| __C declaration:__ @wuffs_base__peek_u16le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1411:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1406:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u16le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7825,9 +8315,9 @@ hs_bindgen_8ee542e2ca31a834 =
 
 {-| __C declaration:__ @wuffs_base__peek_u24be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1422:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1417:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u24be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7851,9 +8341,9 @@ hs_bindgen_5cadd95ba640a9a6 =
 
 {-| __C declaration:__ @wuffs_base__peek_u24le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1428:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1423:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u24le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7877,9 +8367,9 @@ hs_bindgen_e72441966ea3a0ce =
 
 {-| __C declaration:__ @wuffs_base__peek_u32be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1434:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1429:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u32be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7903,9 +8393,9 @@ hs_bindgen_cee2e0c49f69cad8 =
 
 {-| __C declaration:__ @wuffs_base__peek_u32le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1446:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1441:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u32le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7929,9 +8419,9 @@ hs_bindgen_24763316aaaa2af8 =
 
 {-| __C declaration:__ @wuffs_base__peek_u40be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1458:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1453:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u40be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7955,9 +8445,9 @@ hs_bindgen_a00fbc9af5085b5b =
 
 {-| __C declaration:__ @wuffs_base__peek_u40le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1465:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1460:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u40le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -7981,9 +8471,9 @@ hs_bindgen_a8ba94dda4c1a15a =
 
 {-| __C declaration:__ @wuffs_base__peek_u48be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1472:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1467:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u48be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8007,9 +8497,9 @@ hs_bindgen_bc407e11650cdc63 =
 
 {-| __C declaration:__ @wuffs_base__peek_u48le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1479:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1474:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u48le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8033,9 +8523,9 @@ hs_bindgen_4285d0db9b474554 =
 
 {-| __C declaration:__ @wuffs_base__peek_u56be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1486:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1481:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u56be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8059,9 +8549,9 @@ hs_bindgen_03866af46f003235 =
 
 {-| __C declaration:__ @wuffs_base__peek_u56le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1489:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u56le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8085,9 +8575,9 @@ hs_bindgen_58bc3a4b8b039a5e =
 
 {-| __C declaration:__ @wuffs_base__peek_u64be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1502:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1497:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u64be__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8111,9 +8601,9 @@ hs_bindgen_43ea7091632a77e4 =
 
 {-| __C declaration:__ @wuffs_base__peek_u64le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__peek_u64le__no_bounds_check ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -8140,9 +8630,9 @@ hs_bindgen_69df9d433fa80948 =
 
 {-| __C declaration:__ @wuffs_base__poke_u8__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1537:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1532:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u8__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8171,9 +8661,9 @@ hs_bindgen_c090036d15466c73 =
 
 {-| __C declaration:__ @wuffs_base__poke_u16be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1542:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1537:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u16be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8202,9 +8692,9 @@ hs_bindgen_cc4241127df33de4 =
 
 {-| __C declaration:__ @wuffs_base__poke_u16le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u16le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8233,9 +8723,9 @@ hs_bindgen_aca76c8e0fdb6388 =
 
 {-| __C declaration:__ @wuffs_base__poke_u24be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1561:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1556:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u24be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8264,9 +8754,9 @@ hs_bindgen_b08f7ca0682be176 =
 
 {-| __C declaration:__ @wuffs_base__poke_u24le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1568:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1563:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u24le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8295,9 +8785,9 @@ hs_bindgen_e986e2078cf9d3ae =
 
 {-| __C declaration:__ @wuffs_base__poke_u32be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1575:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1570:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u32be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8326,9 +8816,9 @@ hs_bindgen_dfb9a949d912576c =
 
 {-| __C declaration:__ @wuffs_base__poke_u32le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1583:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1578:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u32le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8357,9 +8847,9 @@ hs_bindgen_8c6d3260164d4002 =
 
 {-| __C declaration:__ @wuffs_base__poke_u40be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1593:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u40be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8388,9 +8878,9 @@ hs_bindgen_e77e52d0551239e6 =
 
 {-| __C declaration:__ @wuffs_base__poke_u40le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1607:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1602:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u40le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8419,9 +8909,9 @@ hs_bindgen_a14e14702bb57895 =
 
 {-| __C declaration:__ @wuffs_base__poke_u48be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1616:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1611:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u48be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8450,9 +8940,9 @@ hs_bindgen_47487fe81dfc794c =
 
 {-| __C declaration:__ @wuffs_base__poke_u48le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1626:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1621:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u48le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8481,9 +8971,9 @@ hs_bindgen_30c38cbf89dff2a0 =
 
 {-| __C declaration:__ @wuffs_base__poke_u56be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1636:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u56be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8512,9 +9002,9 @@ hs_bindgen_47bd606754454905 =
 
 {-| __C declaration:__ @wuffs_base__poke_u56le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1647:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1642:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u56le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8543,9 +9033,9 @@ hs_bindgen_b7b74644bd8ba523 =
 
 {-| __C declaration:__ @wuffs_base__poke_u64be__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1658:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1653:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u64be__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8574,9 +9064,9 @@ hs_bindgen_bfc91716318acd98 =
 
 {-| __C declaration:__ @wuffs_base__poke_u64le__no_bounds_check@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1670:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1665:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__poke_u64le__no_bounds_check ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8608,9 +9098,9 @@ hs_bindgen_208f7696f678df7a =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1726:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1721:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u8 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8645,9 +9135,9 @@ hs_bindgen_962e4f9d92f7633e =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1734:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1729:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u16 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word16
@@ -8682,9 +9172,9 @@ hs_bindgen_128a266d63053fdc =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1742:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1737:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u32 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word32
@@ -8719,9 +9209,9 @@ hs_bindgen_52ba887d10104c05 =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1750:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1745:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u64 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word64
@@ -8759,9 +9249,9 @@ hs_bindgen_748db645c1732b14 =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u8_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1758:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1753:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u8_ij ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -8802,9 +9292,9 @@ hs_bindgen_a35615990aeaa1ec =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u16_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1761:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u16_ij ::
      BG.Ptr HsBindgen.Runtime.LibC.Word16
@@ -8845,9 +9335,9 @@ hs_bindgen_0022f0f8a3e7f4f7 =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u32_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1774:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1769:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u32_ij ::
      BG.Ptr HsBindgen.Runtime.LibC.Word32
@@ -8888,9 +9378,9 @@ hs_bindgen_8925de72a13aa37a =
 
 {-| __C declaration:__ @wuffs_base__make_slice_u64_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1782:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1777:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_u64_ij ::
      BG.Ptr HsBindgen.Runtime.LibC.Word64
@@ -8922,9 +9412,9 @@ hs_bindgen_cc29e520086f953d =
 
 {-| __C declaration:__ @wuffs_base__empty_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1790:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1785:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u8 :: IO Wuffs_base__slice_u8
 wuffs_base__empty_slice_u8 =
@@ -8946,9 +9436,9 @@ hs_bindgen_415aaa5a09c2bbac =
 
 {-| __C declaration:__ @wuffs_base__empty_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1793:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u16 :: IO Wuffs_base__slice_u16
 wuffs_base__empty_slice_u16 =
@@ -8970,9 +9460,9 @@ hs_bindgen_31d999cffad4bd05 =
 
 {-| __C declaration:__ @wuffs_base__empty_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1801:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u32 :: IO Wuffs_base__slice_u32
 wuffs_base__empty_slice_u32 =
@@ -8994,9 +9484,9 @@ hs_bindgen_4a0f0cecd10319cf =
 
 {-| __C declaration:__ @wuffs_base__empty_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1809:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_u64 :: IO Wuffs_base__slice_u64
 wuffs_base__empty_slice_u64 =
@@ -9030,9 +9520,9 @@ hs_bindgen_3b00531705c1d8eb =
 
 {-| __C declaration:__ @wuffs_base__make_table_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1822:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1817:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u8 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -9079,9 +9569,9 @@ hs_bindgen_4a158b7c5e07e47f =
 
 {-| __C declaration:__ @wuffs_base__make_table_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1835:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1830:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u16 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word16
@@ -9128,9 +9618,9 @@ hs_bindgen_ef1106e5ea955a41 =
 
 {-| __C declaration:__ @wuffs_base__make_table_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1848:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1843:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u32 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word32
@@ -9177,9 +9667,9 @@ hs_bindgen_bcaa30e92f7be541 =
 
 {-| __C declaration:__ @wuffs_base__make_table_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1861:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1856:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_table_u64 ::
      BG.Ptr HsBindgen.Runtime.LibC.Word64
@@ -9214,9 +9704,9 @@ hs_bindgen_0bc4c9e96575519a =
 
 {-| __C declaration:__ @wuffs_base__empty_table_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1874:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1869:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u8 :: IO Wuffs_base__table_u8
 wuffs_base__empty_table_u8 =
@@ -9238,9 +9728,9 @@ hs_bindgen_c657b5e803cf2750 =
 
 {-| __C declaration:__ @wuffs_base__empty_table_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1884:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1879:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u16 :: IO Wuffs_base__table_u16
 wuffs_base__empty_table_u16 =
@@ -9262,9 +9752,9 @@ hs_bindgen_30d8ea031bcfbfea =
 
 {-| __C declaration:__ @wuffs_base__empty_table_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1894:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1889:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u32 :: IO Wuffs_base__table_u32
 wuffs_base__empty_table_u32 =
@@ -9286,9 +9776,9 @@ hs_bindgen_bcc5cb38b78e7c72 =
 
 {-| __C declaration:__ @wuffs_base__empty_table_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1904:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1899:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_table_u64 :: IO Wuffs_base__table_u64
 wuffs_base__empty_table_u64 =
@@ -9313,9 +9803,9 @@ hs_bindgen_30b15bc916e935a6 =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__overlaps@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1914:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1909:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__overlaps ::
      Wuffs_base__slice_u8
@@ -9351,9 +9841,9 @@ hs_bindgen_9b5fd9ccc5376ec9 =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_i@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1923:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1918:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_i ::
      Wuffs_base__slice_u8
@@ -9389,9 +9879,9 @@ hs_bindgen_36727b0f2b60b6be =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_j@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1934:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_j ::
      Wuffs_base__slice_u8
@@ -9430,9 +9920,9 @@ hs_bindgen_7fbcf8c408a1cabb =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__subslice_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1945:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1940:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__subslice_ij ::
      Wuffs_base__slice_u8
@@ -9480,9 +9970,9 @@ hs_bindgen_f1338e784ec076e4 =
 
 {-| __C declaration:__ @wuffs_base__table_u8__subtable_ij@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 1958:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__table_u8__subtable_ij ::
      Wuffs_base__table_u8
@@ -9527,9 +10017,9 @@ hs_bindgen_727e975864f067ac =
 
 {-| __C declaration:__ @wuffs_base__table__flattened_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2003:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 1998:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__table__flattened_length ::
      HsBindgen.Runtime.LibC.CSize
@@ -9560,9 +10050,9 @@ hs_bindgen_6f5117539f939edd =
 
 {-| __C declaration:__ @wuffs_base__magic_number_guess_fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2042:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__magic_number_guess_fourcc ::
      Wuffs_base__slice_u8
@@ -9576,265 +10066,291 @@ wuffs_base__magic_number_guess_fourcc =
       BG.with prefix_data0 (\prefix_data2 ->
                               hs_bindgen_6f5117539f939edd prefix_data2 prefix_closed1)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u32@
-foreign import ccall safe "hs_bindgen_6a107d441df31826" hs_bindgen_6a107d441df31826_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ie_i32@
+foreign import ccall safe "hs_bindgen_2b3ffd5a212388eb" hs_bindgen_2b3ffd5a212388eb_base ::
      BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u32@
-hs_bindgen_6a107d441df31826 ::
-     BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ie_i32@
+hs_bindgen_2b3ffd5a212388eb ::
+     BG.Ptr Wuffs_base__range_ie_i32
   -> IO ()
-hs_bindgen_6a107d441df31826 =
+hs_bindgen_2b3ffd5a212388eb =
   \x0 ->
-    hs_bindgen_6a107d441df31826_base (BG.toFFIType x0)
+    hs_bindgen_2b3ffd5a212388eb_base (BG.toFFIType x0)
 
-{-| __C declaration:__ @wuffs_base__empty_range_ii_u32@
+{-| __C declaration:__ @wuffs_base__empty_range_ie_i32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2081:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__empty_range_ii_u32 :: IO Wuffs_base__range_ii_u32
-wuffs_base__empty_range_ii_u32 =
+wuffs_base__empty_range_ie_i32 :: IO Wuffs_base__range_ie_i32
+wuffs_base__empty_range_ie_i32 =
   BG.allocaAndPeek (\res0 ->
-                      hs_bindgen_6a107d441df31826 res0)
+                      hs_bindgen_2b3ffd5a212388eb res0)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u32@
-foreign import ccall safe "hs_bindgen_9d0522901fa78bbd" hs_bindgen_9d0522901fa78bbd_base ::
-     HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ie_i32@
+foreign import ccall safe "hs_bindgen_d00407aceac20759" hs_bindgen_d00407aceac20759_base ::
+     HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u32@
-hs_bindgen_9d0522901fa78bbd ::
-     HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ie_i32@
+hs_bindgen_d00407aceac20759 ::
+     HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> BG.Ptr Wuffs_base__range_ie_i32
   -> IO ()
-hs_bindgen_9d0522901fa78bbd =
+hs_bindgen_d00407aceac20759 =
   \x0 ->
     \x1 ->
       \x2 ->
-        hs_bindgen_9d0522901fa78bbd_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+        hs_bindgen_d00407aceac20759_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
 
-{-| __C declaration:__ @wuffs_base__make_range_ii_u32@
+{-| __C declaration:__ @wuffs_base__make_range_ie_i32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2089:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2087:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__make_range_ii_u32 ::
-     HsBindgen.Runtime.LibC.Word32
+wuffs_base__make_range_ie_i32 ::
+     HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @min_incl@
-  -> HsBindgen.Runtime.LibC.Word32
-     -- ^ __C declaration:__ @max_incl@
-  -> IO Wuffs_base__range_ii_u32
-wuffs_base__make_range_ii_u32 =
+  -> HsBindgen.Runtime.LibC.Int32
+     -- ^ __C declaration:__ @max_excl@
+  -> IO Wuffs_base__range_ie_i32
+wuffs_base__make_range_ie_i32 =
   \min_incl0 ->
-    \max_incl1 ->
+    \max_excl1 ->
       BG.allocaAndPeek (\res2 ->
-                          hs_bindgen_9d0522901fa78bbd min_incl0 max_incl1 res2)
+                          hs_bindgen_d00407aceac20759 min_incl0 max_excl1 res2)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__is_empty@
-foreign import ccall safe "hs_bindgen_07fca97bd182b065" hs_bindgen_07fca97bd182b065_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__is_empty@
+foreign import ccall safe "hs_bindgen_2c893c779893cf1d" hs_bindgen_2c893c779893cf1d_base ::
      BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__is_empty@
-hs_bindgen_07fca97bd182b065 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__is_empty@
+hs_bindgen_2c893c779893cf1d ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
   -> IO BG.CBool
-hs_bindgen_07fca97bd182b065 =
+hs_bindgen_2c893c779893cf1d =
   \x0 ->
-    fmap BG.fromFFIType (hs_bindgen_07fca97bd182b065_base (BG.toFFIType x0))
+    fmap BG.fromFFIType (hs_bindgen_2c893c779893cf1d_base (BG.toFFIType x0))
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__is_empty@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2097:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2095:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__is_empty ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__is_empty ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
   -> IO BG.CBool
-wuffs_base__range_ii_u32__is_empty =
-  hs_bindgen_07fca97bd182b065
+wuffs_base__range_ie_i32__is_empty =
+  hs_bindgen_2c893c779893cf1d
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__equals@
-foreign import ccall safe "hs_bindgen_cca20af4761f9086" hs_bindgen_cca20af4761f9086_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__equals@
+foreign import ccall safe "hs_bindgen_b284cee049c7f4fa" hs_bindgen_b284cee049c7f4fa_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__equals@
-hs_bindgen_cca20af4761f9086 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__equals@
+hs_bindgen_b284cee049c7f4fa ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
   -> IO BG.CBool
-hs_bindgen_cca20af4761f9086 =
+hs_bindgen_b284cee049c7f4fa =
   \x0 ->
     \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_cca20af4761f9086_base (BG.toFFIType x0) (BG.toFFIType x1))
+      fmap BG.fromFFIType (hs_bindgen_b284cee049c7f4fa_base (BG.toFFIType x0) (BG.toFFIType x1))
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__equals@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2100:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__equals ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__equals ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u32
+  -> Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @s@
   -> IO BG.CBool
-wuffs_base__range_ii_u32__equals =
+wuffs_base__range_ie_i32__equals =
   \r0 ->
     \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_cca20af4761f9086 r0 s2)
+      BG.with s1 (\s2 -> hs_bindgen_b284cee049c7f4fa r0 s2)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__intersect@
-foreign import ccall safe "hs_bindgen_f7e7108736450774" hs_bindgen_f7e7108736450774_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__intersect@
+foreign import ccall safe "hs_bindgen_05b9e7d6b8cf0f68" hs_bindgen_05b9e7d6b8cf0f68_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__intersect@
-hs_bindgen_f7e7108736450774 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__intersect@
+hs_bindgen_05b9e7d6b8cf0f68 ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
   -> IO ()
-hs_bindgen_f7e7108736450774 =
+hs_bindgen_05b9e7d6b8cf0f68 =
   \x0 ->
     \x1 ->
       \x2 ->
-        hs_bindgen_f7e7108736450774_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+        hs_bindgen_05b9e7d6b8cf0f68_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__intersect@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2110:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2108:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__intersect ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__intersect ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u32
+  -> Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__range_ii_u32
-wuffs_base__range_ii_u32__intersect =
+  -> IO Wuffs_base__range_ie_i32
+wuffs_base__range_ie_i32__intersect =
   \r0 ->
     \s1 ->
       BG.with s1 (\s2 ->
                     BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_f7e7108736450774 r0 s2 res3))
+                                        hs_bindgen_05b9e7d6b8cf0f68 r0 s2 res3))
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__unite@
-foreign import ccall safe "hs_bindgen_3954ddb6c233e7f2" hs_bindgen_3954ddb6c233e7f2_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__unite@
+foreign import ccall safe "hs_bindgen_f57cd888f0158f81" hs_bindgen_f57cd888f0158f81_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__unite@
-hs_bindgen_3954ddb6c233e7f2 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__unite@
+hs_bindgen_f57cd888f0158f81 ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
   -> IO ()
-hs_bindgen_3954ddb6c233e7f2 =
+hs_bindgen_f57cd888f0158f81 =
   \x0 ->
     \x1 ->
       \x2 ->
-        hs_bindgen_3954ddb6c233e7f2_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+        hs_bindgen_f57cd888f0158f81_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__unite@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2119:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2117:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__unite ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__unite ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u32
+  -> Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__range_ii_u32
-wuffs_base__range_ii_u32__unite =
+  -> IO Wuffs_base__range_ie_i32
+wuffs_base__range_ie_i32__unite =
   \r0 ->
     \s1 ->
       BG.with s1 (\s2 ->
                     BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_3954ddb6c233e7f2 r0 s2 res3))
+                                        hs_bindgen_f57cd888f0158f81 r0 s2 res3))
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains@
-foreign import ccall safe "hs_bindgen_5134855fd6d706aa" hs_bindgen_5134855fd6d706aa_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__contains@
+foreign import ccall safe "hs_bindgen_49b51490988f7307" hs_bindgen_49b51490988f7307_base ::
      BG.Ptr BG.Void
-  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Int32
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains@
-hs_bindgen_5134855fd6d706aa ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
-  -> HsBindgen.Runtime.LibC.Word32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__contains@
+hs_bindgen_49b51490988f7307 ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> HsBindgen.Runtime.LibC.Int32
   -> IO BG.CBool
-hs_bindgen_5134855fd6d706aa =
+hs_bindgen_49b51490988f7307 =
   \x0 ->
     \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_5134855fd6d706aa_base (BG.toFFIType x0) (BG.toFFIType x1))
+      fmap BG.fromFFIType (hs_bindgen_49b51490988f7307_base (BG.toFFIType x0) (BG.toFFIType x1))
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__contains@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2132:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__contains ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__contains ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
-  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @x@
   -> IO BG.CBool
-wuffs_base__range_ii_u32__contains =
-  hs_bindgen_5134855fd6d706aa
+wuffs_base__range_ie_i32__contains =
+  hs_bindgen_49b51490988f7307
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains_range@
-foreign import ccall safe "hs_bindgen_84a80e331ec45457" hs_bindgen_84a80e331ec45457_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__contains_range@
+foreign import ccall safe "hs_bindgen_89e2dece4467f734" hs_bindgen_89e2dece4467f734_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains_range@
-hs_bindgen_84a80e331ec45457 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
-  -> BG.Ptr Wuffs_base__range_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__contains_range@
+hs_bindgen_89e2dece4467f734 ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> BG.Ptr Wuffs_base__range_ie_i32
   -> IO BG.CBool
-hs_bindgen_84a80e331ec45457 =
+hs_bindgen_89e2dece4467f734 =
   \x0 ->
     \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_84a80e331ec45457_base (BG.toFFIType x0) (BG.toFFIType x1))
+      fmap BG.fromFFIType (hs_bindgen_89e2dece4467f734_base (BG.toFFIType x0) (BG.toFFIType x1))
 
-{-| __C declaration:__ @wuffs_base__range_ii_u32__contains_range@
+{-| __C declaration:__ @wuffs_base__range_ie_i32__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2140:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2138:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__range_ii_u32__contains_range ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u32
+wuffs_base__range_ie_i32__contains_range ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u32
+  -> Wuffs_base__range_ie_i32
      -- ^ __C declaration:__ @s@
   -> IO BG.CBool
-wuffs_base__range_ii_u32__contains_range =
+wuffs_base__range_ie_i32__contains_range =
   \r0 ->
     \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_84a80e331ec45457 r0 s2)
+      BG.with s1 (\s2 -> hs_bindgen_89e2dece4467f734 r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__length@
+foreign import ccall safe "hs_bindgen_eec42d14fe851efa" hs_bindgen_eec42d14fe851efa_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ie_i32__length@
+hs_bindgen_eec42d14fe851efa ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_eec42d14fe851efa =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_eec42d14fe851efa_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__range_ie_i32__length@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2145:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ie_i32__length ::
+     PtrConst.PtrConst Wuffs_base__range_ie_i32
+     -- ^ __C declaration:__ @r@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__range_ie_i32__length =
+  hs_bindgen_eec42d14fe851efa
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ie_u32@
 foreign import ccall safe "hs_bindgen_7a61474ba710893d" hs_bindgen_7a61474ba710893d_base ::
@@ -9851,9 +10367,9 @@ hs_bindgen_7a61474ba710893d =
 
 {-| __C declaration:__ @wuffs_base__empty_range_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2201:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2211:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_range_ie_u32 :: IO Wuffs_base__range_ie_u32
 wuffs_base__empty_range_ie_u32 =
@@ -9881,9 +10397,9 @@ hs_bindgen_933ab320e34fee11 =
 
 {-| __C declaration:__ @wuffs_base__make_range_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2209:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2219:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_range_ie_u32 ::
      HsBindgen.Runtime.LibC.Word32
@@ -9912,9 +10428,9 @@ hs_bindgen_dcac8df092ac7e1d =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2217:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2227:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__is_empty ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -9941,9 +10457,9 @@ hs_bindgen_c4aa1b90b63a575d =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2222:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2232:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__equals ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -9977,9 +10493,9 @@ hs_bindgen_24542f92e4b5a38b =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2230:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2240:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__intersect ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -10015,9 +10531,9 @@ hs_bindgen_9ee43e1522873ea2 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2239:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2249:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__unite ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -10050,9 +10566,9 @@ hs_bindgen_3f45e1dc21e8b558 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2254:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2264:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__contains ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -10081,9 +10597,9 @@ hs_bindgen_5002ffc4444abac3 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2260:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2270:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__contains_range ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -10111,9 +10627,9 @@ hs_bindgen_bad579f50a5c9000 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u32__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2267:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2277:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u32__length ::
      PtrConst.PtrConst Wuffs_base__range_ie_u32
@@ -10121,266 +10637,6 @@ wuffs_base__range_ie_u32__length ::
   -> IO HsBindgen.Runtime.LibC.Word32
 wuffs_base__range_ie_u32__length =
   hs_bindgen_bad579f50a5c9000
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u64@
-foreign import ccall safe "hs_bindgen_975d8c204c433477" hs_bindgen_975d8c204c433477_base ::
-     BG.Ptr BG.Void
-  -> IO ()
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u64@
-hs_bindgen_975d8c204c433477 ::
-     BG.Ptr Wuffs_base__range_ii_u64
-  -> IO ()
-hs_bindgen_975d8c204c433477 =
-  \x0 ->
-    hs_bindgen_975d8c204c433477_base (BG.toFFIType x0)
-
-{-| __C declaration:__ @wuffs_base__empty_range_ii_u64@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2330:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__empty_range_ii_u64 :: IO Wuffs_base__range_ii_u64
-wuffs_base__empty_range_ii_u64 =
-  BG.allocaAndPeek (\res0 ->
-                      hs_bindgen_975d8c204c433477 res0)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u64@
-foreign import ccall safe "hs_bindgen_93b8128b9dd3ab9b" hs_bindgen_93b8128b9dd3ab9b_base ::
-     HsBindgen.Runtime.LibC.Word64
-  -> HsBindgen.Runtime.LibC.Word64
-  -> BG.Ptr BG.Void
-  -> IO ()
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u64@
-hs_bindgen_93b8128b9dd3ab9b ::
-     HsBindgen.Runtime.LibC.Word64
-  -> HsBindgen.Runtime.LibC.Word64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> IO ()
-hs_bindgen_93b8128b9dd3ab9b =
-  \x0 ->
-    \x1 ->
-      \x2 ->
-        hs_bindgen_93b8128b9dd3ab9b_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
-
-{-| __C declaration:__ @wuffs_base__make_range_ii_u64@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2338:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__make_range_ii_u64 ::
-     HsBindgen.Runtime.LibC.Word64
-     -- ^ __C declaration:__ @min_incl@
-  -> HsBindgen.Runtime.LibC.Word64
-     -- ^ __C declaration:__ @max_incl@
-  -> IO Wuffs_base__range_ii_u64
-wuffs_base__make_range_ii_u64 =
-  \min_incl0 ->
-    \max_incl1 ->
-      BG.allocaAndPeek (\res2 ->
-                          hs_bindgen_93b8128b9dd3ab9b min_incl0 max_incl1 res2)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__is_empty@
-foreign import ccall safe "hs_bindgen_37d074598c22a733" hs_bindgen_37d074598c22a733_base ::
-     BG.Ptr BG.Void
-  -> IO BG.CBool
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__is_empty@
-hs_bindgen_37d074598c22a733 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> IO BG.CBool
-hs_bindgen_37d074598c22a733 =
-  \x0 ->
-    fmap BG.fromFFIType (hs_bindgen_37d074598c22a733_base (BG.toFFIType x0))
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__is_empty@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2346:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__is_empty ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> IO BG.CBool
-wuffs_base__range_ii_u64__is_empty =
-  hs_bindgen_37d074598c22a733
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__equals@
-foreign import ccall safe "hs_bindgen_b3fa331bf747c18a" hs_bindgen_b3fa331bf747c18a_base ::
-     BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> IO BG.CBool
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__equals@
-hs_bindgen_b3fa331bf747c18a ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> IO BG.CBool
-hs_bindgen_b3fa331bf747c18a =
-  \x0 ->
-    \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_b3fa331bf747c18a_base (BG.toFFIType x0) (BG.toFFIType x1))
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__equals@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2351:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__equals ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @s@
-  -> IO BG.CBool
-wuffs_base__range_ii_u64__equals =
-  \r0 ->
-    \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_b3fa331bf747c18a r0 s2)
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__intersect@
-foreign import ccall safe "hs_bindgen_a9f8fe16ca14c857" hs_bindgen_a9f8fe16ca14c857_base ::
-     BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> IO ()
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__intersect@
-hs_bindgen_a9f8fe16ca14c857 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> IO ()
-hs_bindgen_a9f8fe16ca14c857 =
-  \x0 ->
-    \x1 ->
-      \x2 ->
-        hs_bindgen_a9f8fe16ca14c857_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__intersect@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2359:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__intersect ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__range_ii_u64
-wuffs_base__range_ii_u64__intersect =
-  \r0 ->
-    \s1 ->
-      BG.with s1 (\s2 ->
-                    BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_a9f8fe16ca14c857 r0 s2 res3))
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__unite@
-foreign import ccall safe "hs_bindgen_f4e594c8354645c6" hs_bindgen_f4e594c8354645c6_base ::
-     BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> IO ()
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__unite@
-hs_bindgen_f4e594c8354645c6 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> IO ()
-hs_bindgen_f4e594c8354645c6 =
-  \x0 ->
-    \x1 ->
-      \x2 ->
-        hs_bindgen_f4e594c8354645c6_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__unite@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2368:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__unite ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__range_ii_u64
-wuffs_base__range_ii_u64__unite =
-  \r0 ->
-    \s1 ->
-      BG.with s1 (\s2 ->
-                    BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_f4e594c8354645c6 r0 s2 res3))
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains@
-foreign import ccall safe "hs_bindgen_36b75c7ca543aac1" hs_bindgen_36b75c7ca543aac1_base ::
-     BG.Ptr BG.Void
-  -> HsBindgen.Runtime.LibC.Word64
-  -> IO BG.CBool
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains@
-hs_bindgen_36b75c7ca543aac1 ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> HsBindgen.Runtime.LibC.Word64
-  -> IO BG.CBool
-hs_bindgen_36b75c7ca543aac1 =
-  \x0 ->
-    \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_36b75c7ca543aac1_base (BG.toFFIType x0) (BG.toFFIType x1))
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__contains@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2383:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__contains ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> HsBindgen.Runtime.LibC.Word64
-     -- ^ __C declaration:__ @x@
-  -> IO BG.CBool
-wuffs_base__range_ii_u64__contains =
-  hs_bindgen_36b75c7ca543aac1
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains_range@
-foreign import ccall safe "hs_bindgen_d664c8a74892d48b" hs_bindgen_d664c8a74892d48b_base ::
-     BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> IO BG.CBool
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains_range@
-hs_bindgen_d664c8a74892d48b ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-  -> BG.Ptr Wuffs_base__range_ii_u64
-  -> IO BG.CBool
-hs_bindgen_d664c8a74892d48b =
-  \x0 ->
-    \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_d664c8a74892d48b_base (BG.toFFIType x0) (BG.toFFIType x1))
-
-{-| __C declaration:__ @wuffs_base__range_ii_u64__contains_range@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2389:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__range_ii_u64__contains_range ::
-     PtrConst.PtrConst Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @r@
-  -> Wuffs_base__range_ii_u64
-     -- ^ __C declaration:__ @s@
-  -> IO BG.CBool
-wuffs_base__range_ii_u64__contains_range =
-  \r0 ->
-    \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_d664c8a74892d48b r0 s2)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ie_u64@
 foreign import ccall safe "hs_bindgen_3884e8296b8406cd" hs_bindgen_3884e8296b8406cd_base ::
@@ -10397,9 +10653,9 @@ hs_bindgen_3884e8296b8406cd =
 
 {-| __C declaration:__ @wuffs_base__empty_range_ie_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2450:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2341:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_range_ie_u64 :: IO Wuffs_base__range_ie_u64
 wuffs_base__empty_range_ie_u64 =
@@ -10427,9 +10683,9 @@ hs_bindgen_a1325d63f3b95d23 =
 
 {-| __C declaration:__ @wuffs_base__make_range_ie_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2458:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2349:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_range_ie_u64 ::
      HsBindgen.Runtime.LibC.Word64
@@ -10458,9 +10714,9 @@ hs_bindgen_e641168d5778d7a6 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2357:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__is_empty ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10487,9 +10743,9 @@ hs_bindgen_3fe3ad4dfcc0e756 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2471:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2362:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__equals ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10523,9 +10779,9 @@ hs_bindgen_09101aeba184454a =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2479:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2370:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__intersect ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10561,9 +10817,9 @@ hs_bindgen_44b15dfeacaa28a8 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2488:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2379:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__unite ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10596,9 +10852,9 @@ hs_bindgen_df0fd6db287686dc =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2503:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__contains ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10627,9 +10883,9 @@ hs_bindgen_6280064dc52dbf23 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__contains_range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2509:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2400:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__contains_range ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10657,9 +10913,9 @@ hs_bindgen_682b327057076482 =
 
 {-| __C declaration:__ @wuffs_base__range_ie_u64__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2407:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__range_ie_u64__length ::
      PtrConst.PtrConst Wuffs_base__range_ie_u64
@@ -10668,282 +10924,854 @@ wuffs_base__range_ie_u64__length ::
 wuffs_base__range_ie_u64__length =
   hs_bindgen_682b327057076482
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ii_u32@
-foreign import ccall safe "hs_bindgen_42264fddd0967274" hs_bindgen_42264fddd0967274_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u32@
+foreign import ccall safe "hs_bindgen_6a107d441df31826" hs_bindgen_6a107d441df31826_base ::
      BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ii_u32@
-hs_bindgen_42264fddd0967274 ::
-     BG.Ptr Wuffs_base__rect_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u32@
+hs_bindgen_6a107d441df31826 ::
+     BG.Ptr Wuffs_base__range_ii_u32
   -> IO ()
-hs_bindgen_42264fddd0967274 =
+hs_bindgen_6a107d441df31826 =
   \x0 ->
-    hs_bindgen_42264fddd0967274_base (BG.toFFIType x0)
+    hs_bindgen_6a107d441df31826_base (BG.toFFIType x0)
 
-{-| __C declaration:__ @wuffs_base__empty_rect_ii_u32@
+{-| __C declaration:__ @wuffs_base__empty_range_ii_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2581:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__empty_rect_ii_u32 :: IO Wuffs_base__rect_ii_u32
-wuffs_base__empty_rect_ii_u32 =
+wuffs_base__empty_range_ii_u32 :: IO Wuffs_base__range_ii_u32
+wuffs_base__empty_range_ii_u32 =
   BG.allocaAndPeek (\res0 ->
-                      hs_bindgen_42264fddd0967274 res0)
+                      hs_bindgen_6a107d441df31826 res0)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ii_u32@
-foreign import ccall safe "hs_bindgen_c215b42b3ebeada7" hs_bindgen_c215b42b3ebeada7_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u32@
+foreign import ccall safe "hs_bindgen_9d0522901fa78bbd" hs_bindgen_9d0522901fa78bbd_base ::
      HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
   -> HsBindgen.Runtime.LibC.Word32
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ii_u32@
-hs_bindgen_c215b42b3ebeada7 ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u32@
+hs_bindgen_9d0522901fa78bbd ::
      HsBindgen.Runtime.LibC.Word32
   -> HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
   -> IO ()
-hs_bindgen_c215b42b3ebeada7 =
+hs_bindgen_9d0522901fa78bbd =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_9d0522901fa78bbd_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__make_range_ii_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2478:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_range_ii_u32 ::
+     HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @min_incl@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @max_incl@
+  -> IO Wuffs_base__range_ii_u32
+wuffs_base__make_range_ii_u32 =
+  \min_incl0 ->
+    \max_incl1 ->
+      BG.allocaAndPeek (\res2 ->
+                          hs_bindgen_9d0522901fa78bbd min_incl0 max_incl1 res2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__is_empty@
+foreign import ccall safe "hs_bindgen_07fca97bd182b065" hs_bindgen_07fca97bd182b065_base ::
+     BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__is_empty@
+hs_bindgen_07fca97bd182b065 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> IO BG.CBool
+hs_bindgen_07fca97bd182b065 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_07fca97bd182b065_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2486:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__is_empty ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> IO BG.CBool
+wuffs_base__range_ii_u32__is_empty =
+  hs_bindgen_07fca97bd182b065
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__equals@
+foreign import ccall safe "hs_bindgen_cca20af4761f9086" hs_bindgen_cca20af4761f9086_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__equals@
+hs_bindgen_cca20af4761f9086 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> IO BG.CBool
+hs_bindgen_cca20af4761f9086 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_cca20af4761f9086_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2491:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__equals ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__range_ii_u32__equals =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_cca20af4761f9086 r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__intersect@
+foreign import ccall safe "hs_bindgen_f7e7108736450774" hs_bindgen_f7e7108736450774_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__intersect@
+hs_bindgen_f7e7108736450774 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> IO ()
+hs_bindgen_f7e7108736450774 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_f7e7108736450774_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2499:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__intersect ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__range_ii_u32
+wuffs_base__range_ii_u32__intersect =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_f7e7108736450774 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__unite@
+foreign import ccall safe "hs_bindgen_3954ddb6c233e7f2" hs_bindgen_3954ddb6c233e7f2_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__unite@
+hs_bindgen_3954ddb6c233e7f2 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> IO ()
+hs_bindgen_3954ddb6c233e7f2 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_3954ddb6c233e7f2_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2508:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__unite ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__range_ii_u32
+wuffs_base__range_ii_u32__unite =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_3954ddb6c233e7f2 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains@
+foreign import ccall safe "hs_bindgen_5134855fd6d706aa" hs_bindgen_5134855fd6d706aa_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains@
+hs_bindgen_5134855fd6d706aa ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO BG.CBool
+hs_bindgen_5134855fd6d706aa =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_5134855fd6d706aa_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2523:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__contains ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @x@
+  -> IO BG.CBool
+wuffs_base__range_ii_u32__contains =
+  hs_bindgen_5134855fd6d706aa
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains_range@
+foreign import ccall safe "hs_bindgen_84a80e331ec45457" hs_bindgen_84a80e331ec45457_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u32__contains_range@
+hs_bindgen_84a80e331ec45457 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+  -> BG.Ptr Wuffs_base__range_ii_u32
+  -> IO BG.CBool
+hs_bindgen_84a80e331ec45457 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_84a80e331ec45457_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u32__contains_range@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2529:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u32__contains_range ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__range_ii_u32__contains_range =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_84a80e331ec45457 r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u64@
+foreign import ccall safe "hs_bindgen_975d8c204c433477" hs_bindgen_975d8c204c433477_base ::
+     BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_range_ii_u64@
+hs_bindgen_975d8c204c433477 ::
+     BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_975d8c204c433477 =
+  \x0 ->
+    hs_bindgen_975d8c204c433477_base (BG.toFFIType x0)
+
+{-| __C declaration:__ @wuffs_base__empty_range_ii_u64@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2589:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_range_ii_u64 :: IO Wuffs_base__range_ii_u64
+wuffs_base__empty_range_ii_u64 =
+  BG.allocaAndPeek (\res0 ->
+                      hs_bindgen_975d8c204c433477 res0)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u64@
+foreign import ccall safe "hs_bindgen_93b8128b9dd3ab9b" hs_bindgen_93b8128b9dd3ab9b_base ::
+     HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_range_ii_u64@
+hs_bindgen_93b8128b9dd3ab9b ::
+     HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_93b8128b9dd3ab9b =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_93b8128b9dd3ab9b_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__make_range_ii_u64@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2597:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_range_ii_u64 ::
+     HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @min_incl@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @max_incl@
+  -> IO Wuffs_base__range_ii_u64
+wuffs_base__make_range_ii_u64 =
+  \min_incl0 ->
+    \max_incl1 ->
+      BG.allocaAndPeek (\res2 ->
+                          hs_bindgen_93b8128b9dd3ab9b min_incl0 max_incl1 res2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__is_empty@
+foreign import ccall safe "hs_bindgen_37d074598c22a733" hs_bindgen_37d074598c22a733_base ::
+     BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__is_empty@
+hs_bindgen_37d074598c22a733 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> IO BG.CBool
+hs_bindgen_37d074598c22a733 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_37d074598c22a733_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2605:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__is_empty ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> IO BG.CBool
+wuffs_base__range_ii_u64__is_empty =
+  hs_bindgen_37d074598c22a733
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__equals@
+foreign import ccall safe "hs_bindgen_b3fa331bf747c18a" hs_bindgen_b3fa331bf747c18a_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__equals@
+hs_bindgen_b3fa331bf747c18a ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO BG.CBool
+hs_bindgen_b3fa331bf747c18a =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_b3fa331bf747c18a_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2610:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__equals ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__range_ii_u64__equals =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_b3fa331bf747c18a r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__intersect@
+foreign import ccall safe "hs_bindgen_a9f8fe16ca14c857" hs_bindgen_a9f8fe16ca14c857_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__intersect@
+hs_bindgen_a9f8fe16ca14c857 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_a9f8fe16ca14c857 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_a9f8fe16ca14c857_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2618:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__intersect ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__range_ii_u64
+wuffs_base__range_ii_u64__intersect =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_a9f8fe16ca14c857 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__unite@
+foreign import ccall safe "hs_bindgen_f4e594c8354645c6" hs_bindgen_f4e594c8354645c6_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__unite@
+hs_bindgen_f4e594c8354645c6 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_f4e594c8354645c6 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_f4e594c8354645c6_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2627:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__unite ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__range_ii_u64
+wuffs_base__range_ii_u64__unite =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_f4e594c8354645c6 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains@
+foreign import ccall safe "hs_bindgen_36b75c7ca543aac1" hs_bindgen_36b75c7ca543aac1_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word64
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains@
+hs_bindgen_36b75c7ca543aac1 ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> IO BG.CBool
+hs_bindgen_36b75c7ca543aac1 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_36b75c7ca543aac1_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2642:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__contains ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @x@
+  -> IO BG.CBool
+wuffs_base__range_ii_u64__contains =
+  hs_bindgen_36b75c7ca543aac1
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains_range@
+foreign import ccall safe "hs_bindgen_d664c8a74892d48b" hs_bindgen_d664c8a74892d48b_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__range_ii_u64__contains_range@
+hs_bindgen_d664c8a74892d48b ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO BG.CBool
+hs_bindgen_d664c8a74892d48b =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_d664c8a74892d48b_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__range_ii_u64__contains_range@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2648:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__range_ii_u64__contains_range ::
+     PtrConst.PtrConst Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__range_ii_u64
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__range_ii_u64__contains_range =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_d664c8a74892d48b r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ie_i32@
+foreign import ccall safe "hs_bindgen_91cdbedfa0e13e01" hs_bindgen_91cdbedfa0e13e01_base ::
+     BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ie_i32@
+hs_bindgen_91cdbedfa0e13e01 ::
+     BG.Ptr Wuffs_base__rect_ie_i32
+  -> IO ()
+hs_bindgen_91cdbedfa0e13e01 =
+  \x0 ->
+    hs_bindgen_91cdbedfa0e13e01_base (BG.toFFIType x0)
+
+{-| __C declaration:__ @wuffs_base__empty_rect_ie_i32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2712:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_rect_ie_i32 :: IO Wuffs_base__rect_ie_i32
+wuffs_base__empty_rect_ie_i32 =
+  BG.allocaAndPeek (\res0 ->
+                      hs_bindgen_91cdbedfa0e13e01 res0)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ie_i32@
+foreign import ccall safe "hs_bindgen_ec46e8f68a7d42b8" hs_bindgen_ec46e8f68a7d42b8_base ::
+     HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ie_i32@
+hs_bindgen_ec46e8f68a7d42b8 ::
+     HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
+  -> IO ()
+hs_bindgen_ec46e8f68a7d42b8 =
   \x0 ->
     \x1 ->
       \x2 ->
         \x3 ->
           \x4 ->
-            hs_bindgen_c215b42b3ebeada7_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+            hs_bindgen_ec46e8f68a7d42b8_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
 
-{-| __C declaration:__ @wuffs_base__make_rect_ii_u32@
+{-| __C declaration:__ @wuffs_base__make_rect_ie_i32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2591:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2722:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__make_rect_ii_u32 ::
-     HsBindgen.Runtime.LibC.Word32
+wuffs_base__make_rect_ie_i32 ::
+     HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @min_incl_x@
-  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @min_incl_y@
-  -> HsBindgen.Runtime.LibC.Word32
-     -- ^ __C declaration:__ @max_incl_x@
-  -> HsBindgen.Runtime.LibC.Word32
-     -- ^ __C declaration:__ @max_incl_y@
-  -> IO Wuffs_base__rect_ii_u32
-wuffs_base__make_rect_ii_u32 =
+  -> HsBindgen.Runtime.LibC.Int32
+     -- ^ __C declaration:__ @max_excl_x@
+  -> HsBindgen.Runtime.LibC.Int32
+     -- ^ __C declaration:__ @max_excl_y@
+  -> IO Wuffs_base__rect_ie_i32
+wuffs_base__make_rect_ie_i32 =
   \min_incl_x0 ->
     \min_incl_y1 ->
-      \max_incl_x2 ->
-        \max_incl_y3 ->
+      \max_excl_x2 ->
+        \max_excl_y3 ->
           BG.allocaAndPeek (\res4 ->
-                              hs_bindgen_c215b42b3ebeada7 min_incl_x0 min_incl_y1 max_incl_x2 max_incl_y3 res4)
+                              hs_bindgen_ec46e8f68a7d42b8 min_incl_x0 min_incl_y1 max_excl_x2 max_excl_y3 res4)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__is_empty@
-foreign import ccall safe "hs_bindgen_5b97561c6c2e9b51" hs_bindgen_5b97561c6c2e9b51_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__is_empty@
+foreign import ccall safe "hs_bindgen_68e270deff79e350" hs_bindgen_68e270deff79e350_base ::
      BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__is_empty@
-hs_bindgen_5b97561c6c2e9b51 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__is_empty@
+hs_bindgen_68e270deff79e350 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
   -> IO BG.CBool
-hs_bindgen_5b97561c6c2e9b51 =
+hs_bindgen_68e270deff79e350 =
   \x0 ->
-    fmap BG.fromFFIType (hs_bindgen_5b97561c6c2e9b51_base (BG.toFFIType x0))
+    fmap BG.fromFFIType (hs_bindgen_68e270deff79e350_base (BG.toFFIType x0))
 
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__is_empty@
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2604:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2735:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__is_empty ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+wuffs_base__rect_ie_i32__is_empty ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @r@
   -> IO BG.CBool
-wuffs_base__rect_ii_u32__is_empty =
-  hs_bindgen_5b97561c6c2e9b51
+wuffs_base__rect_ie_i32__is_empty =
+  hs_bindgen_68e270deff79e350
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__equals@
-foreign import ccall safe "hs_bindgen_53466b5f8d99d765" hs_bindgen_53466b5f8d99d765_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__equals@
+foreign import ccall safe "hs_bindgen_56da9232784fc0a4" hs_bindgen_56da9232784fc0a4_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__equals@
-hs_bindgen_53466b5f8d99d765 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__equals@
+hs_bindgen_56da9232784fc0a4 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
   -> IO BG.CBool
-hs_bindgen_53466b5f8d99d765 =
+hs_bindgen_56da9232784fc0a4 =
   \x0 ->
     \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_53466b5f8d99d765_base (BG.toFFIType x0) (BG.toFFIType x1))
+      fmap BG.fromFFIType (hs_bindgen_56da9232784fc0a4_base (BG.toFFIType x0) (BG.toFFIType x1))
 
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__equals@
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2609:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__equals ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+wuffs_base__rect_ie_i32__equals ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__rect_ii_u32
+  -> Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @s@
   -> IO BG.CBool
-wuffs_base__rect_ii_u32__equals =
+wuffs_base__rect_ie_i32__equals =
   \r0 ->
     \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_53466b5f8d99d765 r0 s2)
+      BG.with s1 (\s2 -> hs_bindgen_56da9232784fc0a4 r0 s2)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__intersect@
-foreign import ccall safe "hs_bindgen_faf2a0cd57ee6f02" hs_bindgen_faf2a0cd57ee6f02_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__intersect@
+foreign import ccall safe "hs_bindgen_c811b54213112a17" hs_bindgen_c811b54213112a17_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__intersect@
-hs_bindgen_faf2a0cd57ee6f02 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__intersect@
+hs_bindgen_c811b54213112a17 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
   -> IO ()
-hs_bindgen_faf2a0cd57ee6f02 =
+hs_bindgen_c811b54213112a17 =
   \x0 ->
     \x1 ->
       \x2 ->
-        hs_bindgen_faf2a0cd57ee6f02_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+        hs_bindgen_c811b54213112a17_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
 
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__intersect@
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2618:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2749:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__intersect ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+wuffs_base__rect_ie_i32__intersect ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__rect_ii_u32
+  -> Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__rect_ii_u32
-wuffs_base__rect_ii_u32__intersect =
-  \r0 ->
-    \s1 ->
-      BG.with s1 (\s2 ->
-                    BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_faf2a0cd57ee6f02 r0 s2 res3))
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__unite@
-foreign import ccall safe "hs_bindgen_9a3e55381719a213" hs_bindgen_9a3e55381719a213_base ::
-     BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> BG.Ptr BG.Void
-  -> IO ()
-
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__unite@
-hs_bindgen_9a3e55381719a213 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
-  -> IO ()
-hs_bindgen_9a3e55381719a213 =
-  \x0 ->
-    \x1 ->
-      \x2 ->
-        hs_bindgen_9a3e55381719a213_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
-
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__unite@
-
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2629:1@
-
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
--}
-wuffs_base__rect_ii_u32__unite ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-     -- ^ __C declaration:__ @r@
-  -> Wuffs_base__rect_ii_u32
-     -- ^ __C declaration:__ @s@
-  -> IO Wuffs_base__rect_ii_u32
-wuffs_base__rect_ii_u32__unite =
+  -> IO Wuffs_base__rect_ie_i32
+wuffs_base__rect_ie_i32__intersect =
   \r0 ->
     \s1 ->
       BG.with s1 (\s2 ->
                     BG.allocaAndPeek (\res3 ->
-                                        hs_bindgen_9a3e55381719a213 r0 s2 res3))
+                                        hs_bindgen_c811b54213112a17 r0 s2 res3))
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains@
-foreign import ccall safe "hs_bindgen_217342a02762a2c3" hs_bindgen_217342a02762a2c3_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__unite@
+foreign import ccall safe "hs_bindgen_e5ddc046165247a6" hs_bindgen_e5ddc046165247a6_base ::
      BG.Ptr BG.Void
-  -> HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> IO BG.CBool
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains@
-hs_bindgen_217342a02762a2c3 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> HsBindgen.Runtime.LibC.Word32
-  -> IO BG.CBool
-hs_bindgen_217342a02762a2c3 =
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__unite@
+hs_bindgen_e5ddc046165247a6 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
+  -> IO ()
+hs_bindgen_e5ddc046165247a6 =
   \x0 ->
     \x1 ->
       \x2 ->
-        fmap BG.fromFFIType (hs_bindgen_217342a02762a2c3_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+        hs_bindgen_e5ddc046165247a6_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
 
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains@
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2760:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__contains ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+wuffs_base__rect_ie_i32__unite ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @r@
-  -> HsBindgen.Runtime.LibC.Word32
+  -> Wuffs_base__rect_ie_i32
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__rect_ie_i32
+wuffs_base__rect_ie_i32__unite =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_e5ddc046165247a6 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__contains@
+foreign import ccall safe "hs_bindgen_3e669826c469a0a5" hs_bindgen_3e669826c469a0a5_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__contains@
+hs_bindgen_3e669826c469a0a5 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> HsBindgen.Runtime.LibC.Int32
+  -> IO BG.CBool
+hs_bindgen_3e669826c469a0a5 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        fmap BG.fromFFIType (hs_bindgen_3e669826c469a0a5_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2777:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__contains ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+     -- ^ __C declaration:__ @r@
+  -> HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @x@
-  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Int32
      -- ^ __C declaration:__ @y@
   -> IO BG.CBool
-wuffs_base__rect_ii_u32__contains =
-  hs_bindgen_217342a02762a2c3
+wuffs_base__rect_ie_i32__contains =
+  hs_bindgen_3e669826c469a0a5
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains_rect@
-foreign import ccall safe "hs_bindgen_d408141a28bceab2" hs_bindgen_d408141a28bceab2_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__contains_rect@
+foreign import ccall safe "hs_bindgen_3d588ff27d4fc00b" hs_bindgen_3d588ff27d4fc00b_base ::
      BG.Ptr BG.Void
   -> BG.Ptr BG.Void
   -> IO BG.CBool
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains_rect@
-hs_bindgen_d408141a28bceab2 ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
-  -> BG.Ptr Wuffs_base__rect_ii_u32
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__contains_rect@
+hs_bindgen_3d588ff27d4fc00b ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> BG.Ptr Wuffs_base__rect_ie_i32
   -> IO BG.CBool
-hs_bindgen_d408141a28bceab2 =
+hs_bindgen_3d588ff27d4fc00b =
   \x0 ->
     \x1 ->
-      fmap BG.fromFFIType (hs_bindgen_d408141a28bceab2_base (BG.toFFIType x0) (BG.toFFIType x1))
+      fmap BG.fromFFIType (hs_bindgen_3d588ff27d4fc00b_base (BG.toFFIType x0) (BG.toFFIType x1))
 
-{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains_rect@
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__contains_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2654:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2785:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__rect_ii_u32__contains_rect ::
-     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+wuffs_base__rect_ie_i32__contains_rect ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @r@
-  -> Wuffs_base__rect_ii_u32
+  -> Wuffs_base__rect_ie_i32
      -- ^ __C declaration:__ @s@
   -> IO BG.CBool
-wuffs_base__rect_ii_u32__contains_rect =
+wuffs_base__rect_ie_i32__contains_rect =
   \r0 ->
     \s1 ->
-      BG.with s1 (\s2 -> hs_bindgen_d408141a28bceab2 r0 s2)
+      BG.with s1 (\s2 -> hs_bindgen_3d588ff27d4fc00b r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__width@
+foreign import ccall safe "hs_bindgen_de1f66520233d620" hs_bindgen_de1f66520233d620_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__width@
+hs_bindgen_de1f66520233d620 ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_de1f66520233d620 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_de1f66520233d620_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__width@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2792:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__width ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+     -- ^ __C declaration:__ @r@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__rect_ie_i32__width =
+  hs_bindgen_de1f66520233d620
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__height@
+foreign import ccall safe "hs_bindgen_29ed826bff7988bb" hs_bindgen_29ed826bff7988bb_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ie_i32__height@
+hs_bindgen_29ed826bff7988bb ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_29ed826bff7988bb =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_29ed826bff7988bb_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__rect_ie_i32__height@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2799:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ie_i32__height ::
+     PtrConst.PtrConst Wuffs_base__rect_ie_i32
+     -- ^ __C declaration:__ @r@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__rect_ie_i32__height =
+  hs_bindgen_29ed826bff7988bb
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ie_u32@
 foreign import ccall safe "hs_bindgen_875e773b5da50701" hs_bindgen_875e773b5da50701_base ::
@@ -10960,9 +11788,9 @@ hs_bindgen_875e773b5da50701 =
 
 {-| __C declaration:__ @wuffs_base__empty_rect_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2718:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2873:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_rect_ie_u32 :: IO Wuffs_base__rect_ie_u32
 wuffs_base__empty_rect_ie_u32 =
@@ -10996,9 +11824,9 @@ hs_bindgen_c60f06a13af10bd5 =
 
 {-| __C declaration:__ @wuffs_base__make_rect_ie_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2728:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2883:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_rect_ie_u32 ::
      HsBindgen.Runtime.LibC.Word32
@@ -11033,9 +11861,9 @@ hs_bindgen_3cd0cb494fc042b4 =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__is_empty@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2741:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2896:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__is_empty ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11062,9 +11890,9 @@ hs_bindgen_f12db42ea9fd68b0 =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__equals@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2746:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2901:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__equals ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11098,9 +11926,9 @@ hs_bindgen_38ed277ecd64c4b6 =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__intersect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2755:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2910:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__intersect ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11136,9 +11964,9 @@ hs_bindgen_829d0a8b2ba53c7d =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__unite@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2921:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__unite ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11174,9 +12002,9 @@ hs_bindgen_694b596bd863c71d =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__contains@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2783:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2938:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__contains ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11207,9 +12035,9 @@ hs_bindgen_10a5b6d09dcbfa72 =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__contains_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2946:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__contains_rect ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11237,9 +12065,9 @@ hs_bindgen_ad6731441c37f952 =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__width ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11263,9 +12091,9 @@ hs_bindgen_4c77e8568cd3ffec =
 
 {-| __C declaration:__ @wuffs_base__rect_ie_u32__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2803:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 2958:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__rect_ie_u32__height ::
      PtrConst.PtrConst Wuffs_base__rect_ie_u32
@@ -11273,6 +12101,283 @@ wuffs_base__rect_ie_u32__height ::
   -> IO HsBindgen.Runtime.LibC.Word32
 wuffs_base__rect_ie_u32__height =
   hs_bindgen_4c77e8568cd3ffec
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ii_u32@
+foreign import ccall safe "hs_bindgen_42264fddd0967274" hs_bindgen_42264fddd0967274_base ::
+     BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_rect_ii_u32@
+hs_bindgen_42264fddd0967274 ::
+     BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO ()
+hs_bindgen_42264fddd0967274 =
+  \x0 ->
+    hs_bindgen_42264fddd0967274_base (BG.toFFIType x0)
+
+{-| __C declaration:__ @wuffs_base__empty_rect_ii_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3028:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__empty_rect_ii_u32 :: IO Wuffs_base__rect_ii_u32
+wuffs_base__empty_rect_ii_u32 =
+  BG.allocaAndPeek (\res0 ->
+                      hs_bindgen_42264fddd0967274 res0)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ii_u32@
+foreign import ccall safe "hs_bindgen_c215b42b3ebeada7" hs_bindgen_c215b42b3ebeada7_base ::
+     HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_rect_ii_u32@
+hs_bindgen_c215b42b3ebeada7 ::
+     HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO ()
+hs_bindgen_c215b42b3ebeada7 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            hs_bindgen_c215b42b3ebeada7_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+
+{-| __C declaration:__ @wuffs_base__make_rect_ii_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3038:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__make_rect_ii_u32 ::
+     HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @min_incl_x@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @min_incl_y@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @max_incl_x@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @max_incl_y@
+  -> IO Wuffs_base__rect_ii_u32
+wuffs_base__make_rect_ii_u32 =
+  \min_incl_x0 ->
+    \min_incl_y1 ->
+      \max_incl_x2 ->
+        \max_incl_y3 ->
+          BG.allocaAndPeek (\res4 ->
+                              hs_bindgen_c215b42b3ebeada7 min_incl_x0 min_incl_y1 max_incl_x2 max_incl_y3 res4)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__is_empty@
+foreign import ccall safe "hs_bindgen_5b97561c6c2e9b51" hs_bindgen_5b97561c6c2e9b51_base ::
+     BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__is_empty@
+hs_bindgen_5b97561c6c2e9b51 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> IO BG.CBool
+hs_bindgen_5b97561c6c2e9b51 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_5b97561c6c2e9b51_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__is_empty@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3051:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__is_empty ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> IO BG.CBool
+wuffs_base__rect_ii_u32__is_empty =
+  hs_bindgen_5b97561c6c2e9b51
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__equals@
+foreign import ccall safe "hs_bindgen_53466b5f8d99d765" hs_bindgen_53466b5f8d99d765_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__equals@
+hs_bindgen_53466b5f8d99d765 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO BG.CBool
+hs_bindgen_53466b5f8d99d765 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_53466b5f8d99d765_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__equals@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3056:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__equals ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__rect_ii_u32__equals =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_53466b5f8d99d765 r0 s2)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__intersect@
+foreign import ccall safe "hs_bindgen_faf2a0cd57ee6f02" hs_bindgen_faf2a0cd57ee6f02_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__intersect@
+hs_bindgen_faf2a0cd57ee6f02 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO ()
+hs_bindgen_faf2a0cd57ee6f02 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_faf2a0cd57ee6f02_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__intersect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3065:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__intersect ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__rect_ii_u32
+wuffs_base__rect_ii_u32__intersect =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_faf2a0cd57ee6f02 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__unite@
+foreign import ccall safe "hs_bindgen_9a3e55381719a213" hs_bindgen_9a3e55381719a213_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__unite@
+hs_bindgen_9a3e55381719a213 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO ()
+hs_bindgen_9a3e55381719a213 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        hs_bindgen_9a3e55381719a213_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2)
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__unite@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3076:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__unite ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO Wuffs_base__rect_ii_u32
+wuffs_base__rect_ii_u32__unite =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 ->
+                    BG.allocaAndPeek (\res3 ->
+                                        hs_bindgen_9a3e55381719a213 r0 s2 res3))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains@
+foreign import ccall safe "hs_bindgen_217342a02762a2c3" hs_bindgen_217342a02762a2c3_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains@
+hs_bindgen_217342a02762a2c3 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO BG.CBool
+hs_bindgen_217342a02762a2c3 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        fmap BG.fromFFIType (hs_bindgen_217342a02762a2c3_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3093:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__contains ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @x@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @y@
+  -> IO BG.CBool
+wuffs_base__rect_ii_u32__contains =
+  hs_bindgen_217342a02762a2c3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains_rect@
+foreign import ccall safe "hs_bindgen_d408141a28bceab2" hs_bindgen_d408141a28bceab2_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__rect_ii_u32__contains_rect@
+hs_bindgen_d408141a28bceab2 ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+  -> BG.Ptr Wuffs_base__rect_ii_u32
+  -> IO BG.CBool
+hs_bindgen_d408141a28bceab2 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_d408141a28bceab2_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_base__rect_ii_u32__contains_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3101:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__rect_ii_u32__contains_rect ::
+     PtrConst.PtrConst Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @r@
+  -> Wuffs_base__rect_ii_u32
+     -- ^ __C declaration:__ @s@
+  -> IO BG.CBool
+wuffs_base__rect_ii_u32__contains_rect =
+  \r0 ->
+    \s1 ->
+      BG.with s1 (\s2 -> hs_bindgen_d408141a28bceab2 r0 s2)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__empty_more_information@
 foreign import ccall safe "hs_bindgen_bc723da2622fcc63" hs_bindgen_bc723da2622fcc63_base ::
@@ -11289,9 +12394,9 @@ hs_bindgen_bc723da2622fcc63 =
 
 {-| __C declaration:__ @wuffs_base__empty_more_information@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2891:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3181:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_more_information :: IO Wuffs_base__more_information
 wuffs_base__empty_more_information =
@@ -11328,9 +12433,9 @@ hs_bindgen_a3cd61886197d1a3 =
 
 {-| __C declaration:__ @wuffs_base__more_information__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2902:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3192:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__set ::
      BG.Ptr Wuffs_base__more_information
@@ -11364,9 +12469,9 @@ hs_bindgen_954db6c0d71a4225 =
 
 {-| __C declaration:__ @wuffs_base__more_information__io_redirect__fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2919:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3209:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_redirect__fourcc ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11393,9 +12498,9 @@ hs_bindgen_21b6ee5d5fe39eb2 =
 
 {-| __C declaration:__ @wuffs_base__more_information__io_redirect__range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2925:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3215:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_redirect__range ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11421,9 +12526,9 @@ hs_bindgen_c552e65b3e13d8d1 =
 
 {-| __C declaration:__ @wuffs_base__more_information__io_seek__position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2934:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__io_seek__position ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11447,9 +12552,9 @@ hs_bindgen_3633398cf2621d09 =
 
 {-| __C declaration:__ @wuffs_base__more_information__metadata__fourcc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2940:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3230:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata__fourcc ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11476,9 +12581,9 @@ hs_bindgen_e87cd3875a043c0e =
 
 {-| __C declaration:__ @wuffs_base__more_information__metadata_raw_passthrough__range@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2946:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3236:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_raw_passthrough__range ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11507,9 +12612,9 @@ hs_bindgen_02f2e12e70c4eb52 =
 
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__chrm@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 2978:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3268:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__chrm ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11535,9 +12640,9 @@ hs_bindgen_5cd338758baab684 =
 
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__gama@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3024:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3314:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__gama ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11561,9 +12666,9 @@ hs_bindgen_02fc908ab7ea4c58 =
 
 {-| __C declaration:__ @wuffs_base__more_information__metadata_parsed__srgb@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3037:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3327:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__more_information__metadata_parsed__srgb ::
      PtrConst.PtrConst Wuffs_base__more_information
@@ -11593,9 +12698,9 @@ hs_bindgen_55a9b9b5e2be7b34 =
 
 {-| __C declaration:__ @wuffs_base__make_io_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3424:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_io_buffer ::
      Wuffs_base__slice_u8
@@ -11638,9 +12743,9 @@ hs_bindgen_00b82eb14c9b8815 =
 
 {-| __C declaration:__ @wuffs_base__make_io_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3143:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3433:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_io_buffer_meta ::
      HsBindgen.Runtime.LibC.CSize
@@ -11684,9 +12789,9 @@ hs_bindgen_7a6122e3bcf2652e =
 
 {-| __C declaration:__ @wuffs_base__ptr_u8__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3156:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3446:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ptr_u8__reader ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -11724,9 +12829,9 @@ hs_bindgen_19ca417b0509a01e =
 
 {-| __C declaration:__ @wuffs_base__ptr_u8__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3168:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3458:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ptr_u8__writer ::
      BG.Ptr HsBindgen.Runtime.LibC.Word8
@@ -11761,9 +12866,9 @@ hs_bindgen_98cf2195b8f6e8bc =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3180:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__reader ::
      Wuffs_base__slice_u8
@@ -11796,9 +12901,9 @@ hs_bindgen_a780cc62452119c9 =
 
 {-| __C declaration:__ @wuffs_base__slice_u8__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3192:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3482:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_u8__writer ::
      Wuffs_base__slice_u8
@@ -11825,9 +12930,9 @@ hs_bindgen_bb114f7bed83c683 =
 
 {-| __C declaration:__ @wuffs_base__empty_io_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3204:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_io_buffer :: IO Wuffs_base__io_buffer
 wuffs_base__empty_io_buffer =
@@ -11849,9 +12954,9 @@ hs_bindgen_3e5fd60ea1e7e039 =
 
 {-| __C declaration:__ @wuffs_base__empty_io_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3216:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3506:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_io_buffer_meta :: IO Wuffs_base__io_buffer_meta
 wuffs_base__empty_io_buffer_meta =
@@ -11873,9 +12978,9 @@ hs_bindgen_05cdd467af5fa8f4 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3226:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3516:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__is_valid ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -11887,26 +12992,26 @@ wuffs_base__io_buffer__is_valid =
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__io_buffer__compact@
 foreign import ccall safe "hs_bindgen_e228ebab6c97c92b" hs_bindgen_e228ebab6c97c92b_base ::
      BG.Ptr BG.Void
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__io_buffer__compact@
 hs_bindgen_e228ebab6c97c92b ::
      BG.Ptr Wuffs_base__io_buffer
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 hs_bindgen_e228ebab6c97c92b =
   \x0 ->
-    hs_bindgen_e228ebab6c97c92b_base (BG.toFFIType x0)
+    fmap BG.fromFFIType (hs_bindgen_e228ebab6c97c92b_base (BG.toFFIType x0))
 
 {-| __C declaration:__ @wuffs_base__io_buffer__compact@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3240:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3532:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__compact ::
      BG.Ptr Wuffs_base__io_buffer
      -- ^ __C declaration:__ @buf@
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 wuffs_base__io_buffer__compact =
   hs_bindgen_e228ebab6c97c92b
 
@@ -11914,30 +13019,30 @@ wuffs_base__io_buffer__compact =
 foreign import ccall safe "hs_bindgen_283f3a232f5f39ca" hs_bindgen_283f3a232f5f39ca_base ::
      BG.Ptr BG.Void
   -> HsBindgen.Runtime.LibC.Word64
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__io_buffer__compact_retaining@
 hs_bindgen_283f3a232f5f39ca ::
      BG.Ptr Wuffs_base__io_buffer
   -> HsBindgen.Runtime.LibC.Word64
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 hs_bindgen_283f3a232f5f39ca =
   \x0 ->
     \x1 ->
-      hs_bindgen_283f3a232f5f39ca_base (BG.toFFIType x0) (BG.toFFIType x1)
+      fmap BG.fromFFIType (hs_bindgen_283f3a232f5f39ca_base (BG.toFFIType x0) (BG.toFFIType x1))
 
 {-| __C declaration:__ @wuffs_base__io_buffer__compact_retaining@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3278:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3574:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__compact_retaining ::
      BG.Ptr Wuffs_base__io_buffer
      -- ^ __C declaration:__ @buf@
   -> HsBindgen.Runtime.LibC.Word64
      -- ^ __C declaration:__ @history_retain_length@
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 wuffs_base__io_buffer__compact_retaining =
   hs_bindgen_283f3a232f5f39ca
 
@@ -11956,9 +13061,9 @@ hs_bindgen_67d213f1d0ea3eec =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3296:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3593:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_length ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -11982,9 +13087,9 @@ hs_bindgen_5c43a3916ab0b2a7 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3598:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_pointer ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12008,9 +13113,9 @@ hs_bindgen_fc85194e1b4301a3 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3306:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3603:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_position ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12037,9 +13142,9 @@ hs_bindgen_f55c7c6719a8fe96 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__reader_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3608:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__reader_slice ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12065,9 +13170,9 @@ hs_bindgen_cfccd70539c1bf72 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3616:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_length ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12091,9 +13196,9 @@ hs_bindgen_badaf152994fce28 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3324:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3621:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_pointer ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12117,9 +13222,9 @@ hs_bindgen_790813fc22d7fbb1 =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3329:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_position ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12146,9 +13251,9 @@ hs_bindgen_6791cfdb8d20153d =
 
 {-| __C declaration:__ @wuffs_base__io_buffer__writer_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3334:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_buffer__writer_slice ::
      PtrConst.PtrConst Wuffs_base__io_buffer
@@ -12177,9 +13282,9 @@ hs_bindgen_63203de23b308c3a =
 
 {-| __C declaration:__ @wuffs_base__make_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3423:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3720:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token ::
      HsBindgen.Runtime.LibC.Word64
@@ -12205,9 +13310,9 @@ hs_bindgen_fb5497b22848092e =
 
 {-| __C declaration:__ @wuffs_base__token__value@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3572:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3869:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12231,9 +13336,9 @@ hs_bindgen_622d83b22ea7cf07 =
 
 {-| __C declaration:__ @wuffs_base__token__value_extension@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3579:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3876:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_extension ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12257,9 +13362,9 @@ hs_bindgen_66186ffcfd8f1f4c =
 
 {-| __C declaration:__ @wuffs_base__token__value_major@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3586:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3883:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_major ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12283,9 +13388,9 @@ hs_bindgen_665d344479e35f49 =
 
 {-| __C declaration:__ @wuffs_base__token__value_base_category@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3593:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3890:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_category ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12309,9 +13414,9 @@ hs_bindgen_8bbdac35a09521b2 =
 
 {-| __C declaration:__ @wuffs_base__token__value_minor@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3895:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_minor ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12335,9 +13440,9 @@ hs_bindgen_a6094c857e7ae348 =
 
 {-| __C declaration:__ @wuffs_base__token__value_base_detail@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3900:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_detail ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12361,9 +13466,9 @@ hs_bindgen_aed1480b422567df =
 
 {-| __C declaration:__ @wuffs_base__token__value_base_detail__sign_extended@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3608:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3905:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__value_base_detail__sign_extended ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12387,9 +13492,9 @@ hs_bindgen_f7dbbbae22298ba4 =
 
 {-| __C declaration:__ @wuffs_base__token__continued@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3617:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3914:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__continued ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12413,9 +13518,9 @@ hs_bindgen_9b19522dcdbfc516 =
 
 {-| __C declaration:__ @wuffs_base__token__length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3622:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3919:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token__length ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12439,9 +13544,9 @@ hs_bindgen_7b7ae3a5a3200cc2 =
 
 {-| __C declaration:__ @wuffs_base__strip_const_from_token_ptr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3683:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3980:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__strip_const_from_token_ptr ::
      PtrConst.PtrConst Wuffs_base__token
@@ -12471,9 +13576,9 @@ hs_bindgen_d70263ed6b80156c =
 
 {-| __C declaration:__ @wuffs_base__make_slice_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3696:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 3993:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_slice_token ::
      BG.Ptr Wuffs_base__token
@@ -12502,9 +13607,9 @@ hs_bindgen_4e98d82c2bb55197 =
 
 {-| __C declaration:__ @wuffs_base__empty_slice_token@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3704:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4001:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_slice_token :: IO Wuffs_base__slice_token
 wuffs_base__empty_slice_token =
@@ -12532,9 +13637,9 @@ hs_bindgen_8064441fdd58d3b8 =
 
 {-| __C declaration:__ @wuffs_base__make_token_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3747:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4044:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token_buffer ::
      Wuffs_base__slice_token
@@ -12577,9 +13682,9 @@ hs_bindgen_e75597de305d562b =
 
 {-| __C declaration:__ @wuffs_base__make_token_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3756:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4053:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_token_buffer_meta ::
      HsBindgen.Runtime.LibC.CSize
@@ -12620,9 +13725,9 @@ hs_bindgen_42b46d35916ccf15 =
 
 {-| __C declaration:__ @wuffs_base__slice_token__reader@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4066:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_token__reader ::
      Wuffs_base__slice_token
@@ -12655,9 +13760,9 @@ hs_bindgen_93678621dd109dee =
 
 {-| __C declaration:__ @wuffs_base__slice_token__writer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4078:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__slice_token__writer ::
      Wuffs_base__slice_token
@@ -12684,9 +13789,9 @@ hs_bindgen_29aa183804b48e89 =
 
 {-| __C declaration:__ @wuffs_base__empty_token_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3793:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4090:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_token_buffer :: IO Wuffs_base__token_buffer
 wuffs_base__empty_token_buffer =
@@ -12708,9 +13813,9 @@ hs_bindgen_a49e0f47222c9194 =
 
 {-| __C declaration:__ @wuffs_base__empty_token_buffer_meta@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4102:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__empty_token_buffer_meta :: IO Wuffs_base__token_buffer_meta
 wuffs_base__empty_token_buffer_meta =
@@ -12732,9 +13837,9 @@ hs_bindgen_0c0602d7209d28d8 =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3815:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4112:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__is_valid ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12746,26 +13851,26 @@ wuffs_base__token_buffer__is_valid =
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__token_buffer__compact@
 foreign import ccall safe "hs_bindgen_b2103d296a7afbda" hs_bindgen_b2103d296a7afbda_base ::
      BG.Ptr BG.Void
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__token_buffer__compact@
 hs_bindgen_b2103d296a7afbda ::
      BG.Ptr Wuffs_base__token_buffer
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 hs_bindgen_b2103d296a7afbda =
   \x0 ->
-    hs_bindgen_b2103d296a7afbda_base (BG.toFFIType x0)
+    fmap BG.fromFFIType (hs_bindgen_b2103d296a7afbda_base (BG.toFFIType x0))
 
 {-| __C declaration:__ @wuffs_base__token_buffer__compact@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3829:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4128:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__compact ::
      BG.Ptr Wuffs_base__token_buffer
      -- ^ __C declaration:__ @buf@
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 wuffs_base__token_buffer__compact =
   hs_bindgen_b2103d296a7afbda
 
@@ -12773,30 +13878,30 @@ wuffs_base__token_buffer__compact =
 foreign import ccall safe "hs_bindgen_0e086a20d6c0e7a8" hs_bindgen_0e086a20d6c0e7a8_base ::
      BG.Ptr BG.Void
   -> HsBindgen.Runtime.LibC.Word64
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__token_buffer__compact_retaining@
 hs_bindgen_0e086a20d6c0e7a8 ::
      BG.Ptr Wuffs_base__token_buffer
   -> HsBindgen.Runtime.LibC.Word64
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 hs_bindgen_0e086a20d6c0e7a8 =
   \x0 ->
     \x1 ->
-      hs_bindgen_0e086a20d6c0e7a8_base (BG.toFFIType x0) (BG.toFFIType x1)
+      fmap BG.fromFFIType (hs_bindgen_0e086a20d6c0e7a8_base (BG.toFFIType x0) (BG.toFFIType x1))
 
 {-| __C declaration:__ @wuffs_base__token_buffer__compact_retaining@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3868:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4171:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__compact_retaining ::
      BG.Ptr Wuffs_base__token_buffer
      -- ^ __C declaration:__ @buf@
   -> HsBindgen.Runtime.LibC.Word64
      -- ^ __C declaration:__ @history_retain_length@
-  -> IO ()
+  -> IO HsBindgen.Runtime.LibC.CSize
 wuffs_base__token_buffer__compact_retaining =
   hs_bindgen_0e086a20d6c0e7a8
 
@@ -12815,9 +13920,9 @@ hs_bindgen_62b5023038471a7d =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3887:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_length ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12841,9 +13946,9 @@ hs_bindgen_31aca54e57b80052 =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3892:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4196:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_pointer ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12870,9 +13975,9 @@ hs_bindgen_ebe5a7423853b5d6 =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3897:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_slice ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12898,9 +14003,9 @@ hs_bindgen_77058cebd1ad4f3e =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__reader_token_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3904:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4208:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__reader_token_position ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12924,9 +14029,9 @@ hs_bindgen_546eb36bb3b710e4 =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3910:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4214:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_length ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12950,9 +14055,9 @@ hs_bindgen_5045e05b72146cfa =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_pointer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3915:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4219:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_pointer ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -12979,9 +14084,9 @@ hs_bindgen_34e7e2117d5a0688 =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3920:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_slice ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -13007,9 +14112,9 @@ hs_bindgen_b305ca6c6d2a6fae =
 
 {-| __C declaration:__ @wuffs_base__token_buffer__writer_token_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 3927:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4231:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_buffer__writer_token_position ::
      PtrConst.PtrConst Wuffs_base__token_buffer
@@ -13039,9 +14144,9 @@ hs_bindgen_e767944226b77365 =
 
 {-| __C declaration:__ @wuffs_base__malloc_slice_u8@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4312:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u8 ::
      BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void))
@@ -13076,9 +14181,9 @@ hs_bindgen_b314c72952ef7686 =
 
 {-| __C declaration:__ @wuffs_base__malloc_slice_u16@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4018:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4323:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u16 ::
      BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void))
@@ -13113,9 +14218,9 @@ hs_bindgen_5ce5be8ee18d50bc =
 
 {-| __C declaration:__ @wuffs_base__malloc_slice_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4029:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4334:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u32 ::
      BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void))
@@ -13150,9 +14255,9 @@ hs_bindgen_65a5dbb2979185f1 =
 
 {-| __C declaration:__ @wuffs_base__malloc_slice_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4040:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__malloc_slice_u64 ::
      BG.FunPtr (HsBindgen.Runtime.LibC.CSize -> IO (BG.Ptr BG.Void))
@@ -13181,9 +14286,9 @@ hs_bindgen_106698ab57c6611f =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4064:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4384:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__is_valid ::
      Wuffs_base__color_u32_argb_premul
@@ -13207,9 +14312,9 @@ hs_bindgen_aad186970081d0f6 =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4074:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_rgb_565 ::
      Wuffs_base__color_u32_argb_premul
@@ -13233,9 +14338,9 @@ hs_bindgen_85f02be7097370f0 =
 
 {-| __C declaration:__ @wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4083:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4403:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u16_rgb_565__as__color_u32_argb_premul ::
      HsBindgen.Runtime.LibC.Word16
@@ -13259,9 +14364,9 @@ hs_bindgen_a13e836982d3e5b1 =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4094:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4414:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u8_gray ::
      Wuffs_base__color_u32_argb_premul
@@ -13285,9 +14390,9 @@ hs_bindgen_e854e0ace5bc4bbe =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4432:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_alpha_gray_nonpremul ::
      Wuffs_base__color_u32_argb_premul
@@ -13311,9 +14416,9 @@ hs_bindgen_e3ca894aebec1f52 =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u16_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4132:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4452:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u16_gray ::
      Wuffs_base__color_u32_argb_premul
@@ -13337,9 +14442,9 @@ hs_bindgen_e7df0e08eecdace7 =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4150:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_nonpremul__as__color_u32_argb_premul ::
      HsBindgen.Runtime.LibC.Word32
@@ -13363,9 +14468,9 @@ hs_bindgen_f0e3833faff2a7f5 =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4177:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4497:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u32_argb_nonpremul ::
      Wuffs_base__color_u32_argb_premul
@@ -13389,9 +14494,9 @@ hs_bindgen_5a0d4ce63a6a279f =
 
 {-| __C declaration:__ @wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4520:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_nonpremul__as__color_u32_argb_premul ::
      HsBindgen.Runtime.LibC.Word64
@@ -13415,9 +14520,9 @@ hs_bindgen_2ac1f99b6362633b =
 
 {-| __C declaration:__ @wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4218:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4538:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32_argb_premul__as__color_u64_argb_nonpremul ::
      Wuffs_base__color_u32_argb_premul
@@ -13441,9 +14546,9 @@ hs_bindgen_ef5f1628ee4c2d23 =
 
 {-| __C declaration:__ @wuffs_base__color_u64_argb_premul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4562:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_premul__as__color_u8_gray ::
      HsBindgen.Runtime.LibC.Word64
@@ -13451,6 +14556,32 @@ wuffs_base__color_u64_argb_premul__as__color_u8_gray ::
   -> IO HsBindgen.Runtime.LibC.Word8
 wuffs_base__color_u64_argb_premul__as__color_u8_gray =
   hs_bindgen_ef5f1628ee4c2d23
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+foreign import ccall safe "hs_bindgen_f7b9728495b251d3" hs_bindgen_f7b9728495b251d3_base ::
+     HsBindgen.Runtime.LibC.Word64
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+hs_bindgen_f7b9728495b251d3 ::
+     HsBindgen.Runtime.LibC.Word64
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_f7b9728495b251d3 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_f7b9728495b251d3_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4579:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul ::
+     HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @argb_premul@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_base__color_u64_argb_premul__as__color_u64_argb_nonpremul =
+  hs_bindgen_f7b9728495b251d3
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray@
 foreign import ccall safe "hs_bindgen_0802a11f9fe9798c" hs_bindgen_0802a11f9fe9798c_base ::
@@ -13467,9 +14598,9 @@ hs_bindgen_0802a11f9fe9798c =
 
 {-| __C declaration:__ @wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4259:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4599:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64_argb_nonpremul__as__color_u8_gray ::
      HsBindgen.Runtime.LibC.Word64
@@ -13493,9 +14624,9 @@ hs_bindgen_781d59ccd18d7a46 =
 
 {-| __C declaration:__ @wuffs_base__color_u32__as__color_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4282:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4622:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u32__as__color_u64 ::
      HsBindgen.Runtime.LibC.Word32
@@ -13519,9 +14650,9 @@ hs_bindgen_a5ff1c6c5185dc58 =
 
 {-| __C declaration:__ @wuffs_base__color_u64__as__color_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4291:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__color_u64__as__color_u32 ::
      HsBindgen.Runtime.LibC.Word64
@@ -13530,32 +14661,32 @@ wuffs_base__color_u64__as__color_u32 ::
 wuffs_base__color_u64__as__color_u32 =
   hs_bindgen_a5ff1c6c5185dc58
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc__as__color_u32@
-foreign import ccall safe "hs_bindgen_a7afa09d86151e87" hs_bindgen_a7afa09d86151e87_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601fr__as__color_u32@
+foreign import ccall safe "hs_bindgen_c12351b2d61798e1" hs_bindgen_c12351b2d61798e1_base ::
      HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> IO HsBindgen.Runtime.LibC.Word32
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc__as__color_u32@
-hs_bindgen_a7afa09d86151e87 ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601fr__as__color_u32@
+hs_bindgen_c12351b2d61798e1 ::
      HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> IO Wuffs_base__color_u32_argb_premul
-hs_bindgen_a7afa09d86151e87 =
+hs_bindgen_c12351b2d61798e1 =
   \x0 ->
     \x1 ->
       \x2 ->
-        fmap BG.fromFFIType (hs_bindgen_a7afa09d86151e87_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+        fmap BG.fromFFIType (hs_bindgen_c12351b2d61798e1_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
 
-{-| __C declaration:__ @wuffs_base__color_ycc__as__color_u32@
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601fr__as__color_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4302:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__color_ycc__as__color_u32 ::
+wuffs_base__color_ycc_bt601fr__as__color_u32 ::
      HsBindgen.Runtime.LibC.Word8
      -- ^ __C declaration:__ @yy@
   -> HsBindgen.Runtime.LibC.Word8
@@ -13563,35 +14694,35 @@ wuffs_base__color_ycc__as__color_u32 ::
   -> HsBindgen.Runtime.LibC.Word8
      -- ^ __C declaration:__ @cr@
   -> IO Wuffs_base__color_u32_argb_premul
-wuffs_base__color_ycc__as__color_u32 =
-  hs_bindgen_a7afa09d86151e87
+wuffs_base__color_ycc_bt601fr__as__color_u32 =
+  hs_bindgen_c12351b2d61798e1
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc__as__color_u32_abgr@
-foreign import ccall safe "hs_bindgen_941d1c4af1dfe310" hs_bindgen_941d1c4af1dfe310_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
+foreign import ccall safe "hs_bindgen_36650b96cf9ee9bd" hs_bindgen_36650b96cf9ee9bd_base ::
      HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> IO HsBindgen.Runtime.LibC.Word32
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc__as__color_u32_abgr@
-hs_bindgen_941d1c4af1dfe310 ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
+hs_bindgen_36650b96cf9ee9bd ::
      HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> HsBindgen.Runtime.LibC.Word8
   -> IO HsBindgen.Runtime.LibC.Word32
-hs_bindgen_941d1c4af1dfe310 =
+hs_bindgen_36650b96cf9ee9bd =
   \x0 ->
     \x1 ->
       \x2 ->
-        fmap BG.fromFFIType (hs_bindgen_941d1c4af1dfe310_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+        fmap BG.fromFFIType (hs_bindgen_36650b96cf9ee9bd_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
 
-{-| __C declaration:__ @wuffs_base__color_ycc__as__color_u32_abgr@
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601fr__as__color_u32_abgr@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4355:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4715:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_base__color_ycc__as__color_u32_abgr ::
+wuffs_base__color_ycc_bt601fr__as__color_u32_abgr ::
      HsBindgen.Runtime.LibC.Word8
      -- ^ __C declaration:__ @yy@
   -> HsBindgen.Runtime.LibC.Word8
@@ -13599,8 +14730,132 @@ wuffs_base__color_ycc__as__color_u32_abgr ::
   -> HsBindgen.Runtime.LibC.Word8
      -- ^ __C declaration:__ @cr@
   -> IO HsBindgen.Runtime.LibC.Word32
-wuffs_base__color_ycc__as__color_u32_abgr =
-  hs_bindgen_941d1c4af1dfe310
+wuffs_base__color_ycc_bt601fr__as__color_u32_abgr =
+  hs_bindgen_36650b96cf9ee9bd
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601sr__as__color_u32@
+foreign import ccall safe "hs_bindgen_23302fe8b752ce0d" hs_bindgen_23302fe8b752ce0d_base ::
+     HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601sr__as__color_u32@
+hs_bindgen_23302fe8b752ce0d ::
+     HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> IO Wuffs_base__color_u32_argb_premul
+hs_bindgen_23302fe8b752ce0d =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        fmap BG.fromFFIType (hs_bindgen_23302fe8b752ce0d_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601sr__as__color_u32@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4743:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_ycc_bt601sr__as__color_u32 ::
+     HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @yy@
+  -> HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @cb@
+  -> HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @cr@
+  -> IO Wuffs_base__color_u32_argb_premul
+wuffs_base__color_ycc_bt601sr__as__color_u32 =
+  hs_bindgen_23302fe8b752ce0d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+foreign import ccall safe "hs_bindgen_b708e4426f8d5447" hs_bindgen_b708e4426f8d5447_base ::
+     HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+hs_bindgen_b708e4426f8d5447 ::
+     HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> HsBindgen.Runtime.LibC.Word8
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_b708e4426f8d5447 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        fmap BG.fromFFIType (hs_bindgen_b708e4426f8d5447_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2))
+
+{-| __C declaration:__ @wuffs_base__color_ycc_bt601sr__as__color_u32_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4779:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_ycc_bt601sr__as__color_u32_abgr ::
+     HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @yy@
+  -> HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @cb@
+  -> HsBindgen.Runtime.LibC.Word8
+     -- ^ __C declaration:__ @cr@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__color_ycc_bt601sr__as__color_u32_abgr =
+  hs_bindgen_b708e4426f8d5447
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_swap_u32_argb_abgr@
+foreign import ccall safe "hs_bindgen_14636b8532ae3863" hs_bindgen_14636b8532ae3863_base ::
+     HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_swap_u32_argb_abgr@
+hs_bindgen_14636b8532ae3863 ::
+     HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_14636b8532ae3863 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_14636b8532ae3863_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__color_swap_u32_argb_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4800:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_swap_u32_argb_abgr ::
+     HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @u@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__color_swap_u32_argb_abgr =
+  hs_bindgen_14636b8532ae3863
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_swap_u64_argb_abgr@
+foreign import ccall safe "hs_bindgen_ca9446ccad139df9" hs_bindgen_ca9446ccad139df9_base ::
+     HsBindgen.Runtime.LibC.Word64
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__color_swap_u64_argb_abgr@
+hs_bindgen_ca9446ccad139df9 ::
+     HsBindgen.Runtime.LibC.Word64
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_ca9446ccad139df9 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_ca9446ccad139df9_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__color_swap_u64_argb_abgr@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4810:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__color_swap_u64_argb_abgr ::
+     HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @u@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_base__color_swap_u64_argb_abgr =
+  hs_bindgen_ca9446ccad139df9
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__make_pixel_format@
 foreign import ccall safe "hs_bindgen_2ac8b8ca496ee30d" hs_bindgen_2ac8b8ca496ee30d_base ::
@@ -13620,9 +14875,9 @@ hs_bindgen_2ac8b8ca496ee30d =
 
 {-| __C declaration:__ @wuffs_base__make_pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4453:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4894:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_pixel_format ::
      HsBindgen.Runtime.LibC.Word32
@@ -13648,9 +14903,9 @@ hs_bindgen_5218ecda8f94ebed =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_valid ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13674,9 +14929,9 @@ hs_bindgen_a2e81a354e613c5b =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__bits_per_pixel@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4518:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4960:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__bits_per_pixel ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13684,6 +14939,32 @@ wuffs_base__pixel_format__bits_per_pixel ::
   -> IO HsBindgen.Runtime.LibC.Word32
 wuffs_base__pixel_format__bits_per_pixel =
   hs_bindgen_a2e81a354e613c5b
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_format__default_background_color@
+foreign import ccall safe "hs_bindgen_dd3f640967b998b6" hs_bindgen_dd3f640967b998b6_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_format__default_background_color@
+hs_bindgen_dd3f640967b998b6 ::
+     PtrConst.PtrConst Wuffs_base__pixel_format
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_dd3f640967b998b6 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_dd3f640967b998b6_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__pixel_format__default_background_color@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4975:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__pixel_format__default_background_color ::
+     PtrConst.PtrConst Wuffs_base__pixel_format
+     -- ^ __C declaration:__ @f@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_base__pixel_format__default_background_color =
+  hs_bindgen_dd3f640967b998b6
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_format__is_direct@
 foreign import ccall safe "hs_bindgen_eb033cb3900bbcef" hs_bindgen_eb033cb3900bbcef_base ::
@@ -13700,9 +14981,9 @@ hs_bindgen_eb033cb3900bbcef =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__is_direct@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4533:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4982:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_direct ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13726,9 +15007,9 @@ hs_bindgen_a5b8b1e2eafaf417 =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__is_indexed@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4538:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_indexed ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13752,9 +15033,9 @@ hs_bindgen_101b04a670a4a5f2 =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__is_interleaved@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4992:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_interleaved ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13778,9 +15059,9 @@ hs_bindgen_1a00dd25eb5451b4 =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__is_planar@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 4997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__is_planar ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13804,9 +15085,9 @@ hs_bindgen_72a6f287a53b334c =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__coloration@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4553:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__coloration ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13830,9 +15111,9 @@ hs_bindgen_9d8f4717c81d5cf9 =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__num_planes@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4559:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__num_planes ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13856,9 +15137,9 @@ hs_bindgen_3f8da7b5b65d26a0 =
 
 {-| __C declaration:__ @wuffs_base__pixel_format__transparency@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4564:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5013:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_format__transparency ::
      PtrConst.PtrConst Wuffs_base__pixel_format
@@ -13885,9 +15166,9 @@ hs_bindgen_651c11ae93b6c100 =
 
 {-| __C declaration:__ @wuffs_base__make_pixel_subsampling@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4639:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5093:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_pixel_subsampling ::
      HsBindgen.Runtime.LibC.Word32
@@ -13916,9 +15197,9 @@ hs_bindgen_c51d61b332d873fd =
 
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__bias_x@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4655:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5109:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__bias_x ::
      PtrConst.PtrConst Wuffs_base__pixel_subsampling
@@ -13947,9 +15228,9 @@ hs_bindgen_2c602ae14de6e228 =
 
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__denominator_x@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4662:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5116:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__denominator_x ::
      PtrConst.PtrConst Wuffs_base__pixel_subsampling
@@ -13978,9 +15259,9 @@ hs_bindgen_7c3bbbc6908345aa =
 
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__bias_y@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4670:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__bias_y ::
      PtrConst.PtrConst Wuffs_base__pixel_subsampling
@@ -14009,9 +15290,9 @@ hs_bindgen_7b16bd865f6b6381 =
 
 {-| __C declaration:__ @wuffs_base__pixel_subsampling__denominator_y@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4677:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5131:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_subsampling__denominator_y ::
      PtrConst.PtrConst Wuffs_base__pixel_subsampling
@@ -14037,9 +15318,9 @@ hs_bindgen_4b256a8adeae28df =
 
 {-| __C declaration:__ @wuffs_base__null_pixel_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4738:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5250:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_pixel_config :: IO Wuffs_base__pixel_config
 wuffs_base__null_pixel_config =
@@ -14073,9 +15354,9 @@ hs_bindgen_43acbbaf7066e89b =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4749:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5261:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__set ::
      BG.Ptr Wuffs_base__pixel_config
@@ -14107,9 +15388,9 @@ hs_bindgen_e78ee237d98aece3 =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__invalidate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5293:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__invalidate ::
      BG.Ptr Wuffs_base__pixel_config
@@ -14133,9 +15414,9 @@ hs_bindgen_5fcdc5589a13847a =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5303:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__is_valid ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14162,9 +15443,9 @@ hs_bindgen_2a50e15f32f91baa =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4796:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixel_format ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14193,9 +15474,9 @@ hs_bindgen_bbe7268854738983 =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__pixel_subsampling@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5313:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixel_subsampling ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14224,9 +15505,9 @@ hs_bindgen_9d168f7b674b30ad =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5318:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__bounds ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14252,9 +15533,9 @@ hs_bindgen_c57a5b90f471985e =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4825:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5337:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__width ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14278,9 +15559,9 @@ hs_bindgen_ee44743a80495066 =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4830:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5342:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__height ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14304,9 +15585,9 @@ hs_bindgen_73eea67fd10947a1 =
 
 {-| __C declaration:__ @wuffs_base__pixel_config__pixbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4838:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5350:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_config__pixbuf_len ::
      PtrConst.PtrConst Wuffs_base__pixel_config
@@ -14330,9 +15611,9 @@ hs_bindgen_2a0a201e258edafd =
 
 {-| __C declaration:__ @wuffs_base__null_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4952:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5464:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_image_config :: IO Wuffs_base__image_config
 wuffs_base__null_image_config =
@@ -14372,9 +15653,9 @@ hs_bindgen_b0f66cc9aa22229a =
 
 {-| __C declaration:__ @wuffs_base__image_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4962:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5474:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__set ::
      BG.Ptr Wuffs_base__image_config
@@ -14410,9 +15691,9 @@ hs_bindgen_d15ad772b45436b1 =
 
 {-| __C declaration:__ @wuffs_base__image_config__invalidate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 4991:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5503:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__invalidate ::
      BG.Ptr Wuffs_base__image_config
@@ -14436,9 +15717,9 @@ hs_bindgen_10cb53e17585c36d =
 
 {-| __C declaration:__ @wuffs_base__image_config__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5003:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5515:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__is_valid ::
      PtrConst.PtrConst Wuffs_base__image_config
@@ -14462,9 +15743,9 @@ hs_bindgen_289d67f78e57e35a =
 
 {-| __C declaration:__ @wuffs_base__image_config__first_frame_io_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5008:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5520:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__first_frame_io_position ::
      PtrConst.PtrConst Wuffs_base__image_config
@@ -14488,9 +15769,9 @@ hs_bindgen_f685e63ecf3cdb63 =
 
 {-| __C declaration:__ @wuffs_base__image_config__first_frame_is_opaque@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5014:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5526:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_config__first_frame_is_opaque ::
      PtrConst.PtrConst Wuffs_base__image_config
@@ -14514,9 +15795,9 @@ hs_bindgen_4f737eb2ed5c66bf =
 
 {-| __C declaration:__ @wuffs_base__null_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5624:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_frame_config :: IO Wuffs_base__frame_config
 wuffs_base__null_frame_config =
@@ -14562,9 +15843,9 @@ hs_bindgen_ae77b3703895794b =
 
 {-| __C declaration:__ @wuffs_base__frame_config__set@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5125:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5637:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__set ::
      BG.Ptr Wuffs_base__frame_config
@@ -14617,9 +15898,9 @@ hs_bindgen_7d753cde356c4ce1 =
 
 {-| __C declaration:__ @wuffs_base__frame_config__bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5150:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5662:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__bounds ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14645,9 +15926,9 @@ hs_bindgen_e19dc0a32879a048 =
 
 {-| __C declaration:__ @wuffs_base__frame_config__width@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5164:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5676:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__width ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14671,9 +15952,9 @@ hs_bindgen_c542959731f192ee =
 
 {-| __C declaration:__ @wuffs_base__frame_config__height@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5169:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5681:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__height ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14697,9 +15978,9 @@ hs_bindgen_0357141bf982acf2 =
 
 {-| __C declaration:__ @wuffs_base__frame_config__duration@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5176:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5688:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__duration ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14723,9 +16004,9 @@ hs_bindgen_72ec5bf572627a7e =
 
 {-| __C declaration:__ @wuffs_base__frame_config__index@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5183:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5695:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__index ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14749,9 +16030,9 @@ hs_bindgen_d887dcfe5911733c =
 
 {-| __C declaration:__ @wuffs_base__frame_config__io_position@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5190:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5702:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__io_position ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14775,9 +16056,9 @@ hs_bindgen_f63fc3e29c112099 =
 
 {-| __C declaration:__ @wuffs_base__frame_config__disposal@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5197:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5709:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__disposal ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14801,9 +16082,9 @@ hs_bindgen_a90fa896126e425a =
 
 {-| __C declaration:__ @wuffs_base__frame_config__opaque_within_bounds@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5725:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__opaque_within_bounds ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14827,9 +16108,9 @@ hs_bindgen_e0fdedcc9085dc18 =
 
 {-| __C declaration:__ @wuffs_base__frame_config__overwrite_instead_of_blend@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5227:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5739:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__overwrite_instead_of_blend ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14853,9 +16134,9 @@ hs_bindgen_de76a1608348f20f =
 
 {-| __C declaration:__ @wuffs_base__frame_config__background_color@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5233:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5745:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__frame_config__background_color ::
      PtrConst.PtrConst Wuffs_base__frame_config
@@ -14879,9 +16160,9 @@ hs_bindgen_12b6c926c6a941c0 =
 
 {-| __C declaration:__ @wuffs_base__null_pixel_buffer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5344:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5857:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__null_pixel_buffer :: IO Wuffs_base__pixel_buffer
 wuffs_base__null_pixel_buffer =
@@ -14915,9 +16196,9 @@ hs_bindgen_2ca8864db7cfa331 =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_interleaved@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5355:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5868:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_interleaved ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -14963,9 +16244,9 @@ hs_bindgen_d8fe84f61a8be22e =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_from_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5404:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5917:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_from_slice ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15001,9 +16282,9 @@ hs_bindgen_29bb9acf95f2d1fe =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__palette@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5476:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 5989:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__palette ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15035,9 +16316,9 @@ hs_bindgen_c6421ed4e556467b =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__palette_or_else@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5493:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6006:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__palette_or_else ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15070,9 +16351,9 @@ hs_bindgen_42de269a4511bc1e =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__pixel_format@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5511:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6024:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__pixel_format ::
      PtrConst.PtrConst Wuffs_base__pixel_buffer
@@ -15104,9 +16385,9 @@ hs_bindgen_46f9c820da8d9b98 =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__plane@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5519:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6032:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__plane ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15141,9 +16422,9 @@ hs_bindgen_2c0b0014810484fa =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__color_u32_at@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5533:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6046:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__color_u32_at ::
      PtrConst.PtrConst Wuffs_base__pixel_buffer
@@ -15183,9 +16464,9 @@ hs_bindgen_2a85fa76c5e5af62 =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_color_u32_at@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5538:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6051:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_color_u32_at ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15229,9 +16510,9 @@ hs_bindgen_7593f26471f90704 =
 
 {-| __C declaration:__ @wuffs_base__pixel_buffer__set_color_u32_fill_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5545:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6058:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_buffer__set_color_u32_fill_rect ::
      BG.Ptr Wuffs_base__pixel_buffer
@@ -15248,6 +16529,32 @@ wuffs_base__pixel_buffer__set_color_u32_fill_rect =
         BG.with rect1 (\rect3 ->
                          BG.allocaAndPeek (\res4 ->
                                              hs_bindgen_7593f26471f90704 pb0 rect3 color2 res4))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_buffer__is_opaque@
+foreign import ccall safe "hs_bindgen_377bc6f6b098c4a9" hs_bindgen_377bc6f6b098c4a9_base ::
+     BG.Ptr BG.Void
+  -> IO BG.CBool
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_buffer__is_opaque@
+hs_bindgen_377bc6f6b098c4a9 ::
+     PtrConst.PtrConst Wuffs_base__pixel_buffer
+  -> IO BG.CBool
+hs_bindgen_377bc6f6b098c4a9 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_377bc6f6b098c4a9_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_base__pixel_buffer__is_opaque@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6064:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_base__pixel_buffer__is_opaque ::
+     PtrConst.PtrConst Wuffs_base__pixel_buffer
+     -- ^ __C declaration:__ @pb@
+  -> IO BG.CBool
+wuffs_base__pixel_buffer__is_opaque =
+  hs_bindgen_377bc6f6b098c4a9
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_base__pixel_palette__closest_element@
 foreign import ccall safe "hs_bindgen_3e3d0392e2b8e067" hs_bindgen_3e3d0392e2b8e067_base ::
@@ -15270,9 +16577,9 @@ hs_bindgen_3e3d0392e2b8e067 =
 
 {-| __C declaration:__ @wuffs_base__pixel_palette__closest_element@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5641:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_palette__closest_element ::
      Wuffs_base__slice_u8
@@ -15323,9 +16630,9 @@ hs_bindgen_2fe7ee476c6cb73e =
 
 {-| __C declaration:__ @wuffs_base__pixel_swizzler__prepare@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5695:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6216:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_swizzler__prepare ::
      BG.Ptr Wuffs_base__pixel_swizzler
@@ -15379,9 +16686,9 @@ hs_bindgen_74228ae21c9eca97 =
 
 {-| __C declaration:__ @wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5709:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6230:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__pixel_swizzler__swizzle_interleaved_from_slice ::
      PtrConst.PtrConst Wuffs_base__pixel_swizzler
@@ -15421,9 +16728,9 @@ hs_bindgen_2f0693385c747fdd =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5858:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6379:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u16_truncate ::
      BG.CDouble
@@ -15452,9 +16759,9 @@ hs_bindgen_785de3d96e09c25f =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5861:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6382:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u32_truncate ::
      BG.CDouble
@@ -15480,9 +16787,9 @@ hs_bindgen_f74606d8dddc0c94 =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_f64_to_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5864:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6385:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_f64_to_u64 ::
      BG.CDouble
@@ -15506,9 +16813,9 @@ hs_bindgen_75279c58f6924cae =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u16_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5873:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6394:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u16_to_f64 ::
      HsBindgen.Runtime.LibC.Word16
@@ -15532,9 +16839,9 @@ hs_bindgen_c95b5bd464d6f73c =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u32_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5901:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6422:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u32_to_f64 ::
      HsBindgen.Runtime.LibC.Word32
@@ -15558,9 +16865,9 @@ hs_bindgen_c8070411256ef0bd =
 
 {-| __C declaration:__ @wuffs_base__ieee_754_bit_representation__from_u64_to_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5910:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6431:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ieee_754_bit_representation__from_u64_to_f64 ::
      HsBindgen.Runtime.LibC.Word64
@@ -15590,9 +16897,9 @@ hs_bindgen_11349fdee4f8b84d =
 
 {-| __C declaration:__ @wuffs_base__parse_number_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6475:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_f64 ::
      Wuffs_base__slice_u8
@@ -15628,9 +16935,9 @@ hs_bindgen_1ce1eb834c3352de =
 
 {-| __C declaration:__ @wuffs_base__parse_number_i64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 5969:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6490:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_i64 ::
      Wuffs_base__slice_u8
@@ -15666,9 +16973,9 @@ hs_bindgen_f2104ac2784fd156 =
 
 {-| __C declaration:__ @wuffs_base__parse_number_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6523:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__parse_number_u64 ::
      Wuffs_base__slice_u8
@@ -15707,9 +17014,9 @@ hs_bindgen_61a2bc3876fcf4c2 =
 
 {-| __C declaration:__ @wuffs_base__render_number_f64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6045:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6566:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_f64 ::
      Wuffs_base__slice_u8
@@ -15750,9 +17057,9 @@ hs_bindgen_11e1be40b3d2b7b4 =
 
 {-| __C declaration:__ @wuffs_base__render_number_i64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6061:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6582:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_i64 ::
      Wuffs_base__slice_u8
@@ -15790,9 +17097,9 @@ hs_bindgen_00819c7cf5f2c03f =
 
 {-| __C declaration:__ @wuffs_base__render_number_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6076:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__render_number_u64 ::
      Wuffs_base__slice_u8
@@ -15836,9 +17143,9 @@ hs_bindgen_938d2ad1645e7327 =
 
 {-| __C declaration:__ @wuffs_base__base_16__decode2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6097:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6618:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__decode2 ::
      Wuffs_base__slice_u8
@@ -15887,9 +17194,9 @@ hs_bindgen_6d48d20a489d9d5a =
 
 {-| __C declaration:__ @wuffs_base__base_16__decode4@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6113:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6634:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__decode4 ::
      Wuffs_base__slice_u8
@@ -15938,9 +17245,9 @@ hs_bindgen_fe853cfe11d4e98c =
 
 {-| __C declaration:__ @wuffs_base__base_16__encode2@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6125:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__encode2 ::
      Wuffs_base__slice_u8
@@ -15989,9 +17296,9 @@ hs_bindgen_7b263c76e18a4edc =
 
 {-| __C declaration:__ @wuffs_base__base_16__encode4@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6137:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6658:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_16__encode4 ::
      Wuffs_base__slice_u8
@@ -16040,9 +17347,9 @@ hs_bindgen_4b701602090f586d =
 
 {-| __C declaration:__ @wuffs_base__base_64__decode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6176:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6697:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_64__decode ::
      Wuffs_base__slice_u8
@@ -16091,9 +17398,9 @@ hs_bindgen_f2aaba29390211ea =
 
 {-| __C declaration:__ @wuffs_base__base_64__encode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6188:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6709:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__base_64__encode ::
      Wuffs_base__slice_u8
@@ -16136,9 +17443,9 @@ hs_bindgen_fcf93579d7ad2dc6 =
 
 {-| __C declaration:__ @wuffs_base__make_utf_8__next__output@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6233:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6754:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__make_utf_8__next__output ::
      HsBindgen.Runtime.LibC.Word32
@@ -16167,9 +17474,9 @@ hs_bindgen_1dba6b320a8425b4 =
 
 {-| __C declaration:__ @wuffs_base__utf_8__next__output__is_valid@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6763:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next__output__is_valid ::
      PtrConst.PtrConst Wuffs_base__utf_8__next__output
@@ -16196,9 +17503,9 @@ hs_bindgen_aade98c6f684a630 =
 
 {-| __C declaration:__ @wuffs_base__utf_8__encode@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6284:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6805:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__encode ::
      Wuffs_base__slice_u8
@@ -16233,9 +17540,9 @@ hs_bindgen_9fafa6e8ba0f5298 =
 
 {-| __C declaration:__ @wuffs_base__utf_8__next@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6832:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -16270,9 +17577,9 @@ hs_bindgen_fbd070a5c07ebc2f =
 
 {-| __C declaration:__ @wuffs_base__utf_8__next_from_end@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6320:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6841:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__next_from_end ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -16304,9 +17611,9 @@ hs_bindgen_0b993bda93dcd760 =
 
 {-| __C declaration:__ @wuffs_base__utf_8__longest_valid_prefix@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6337:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6858:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__utf_8__longest_valid_prefix ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -16335,9 +17642,9 @@ hs_bindgen_e5338fdd02eeae9f =
 
 {-| __C declaration:__ @wuffs_base__ascii__longest_valid_prefix@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6350:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6871:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__ascii__longest_valid_prefix ::
      PtrConst.PtrConst HsBindgen.Runtime.LibC.Word8
@@ -16363,9 +17670,9 @@ hs_bindgen_c4e8c1f6b3f20854 =
 
 {-| __C declaration:__ @wuffs_base__hasher_u32__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6384:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6905:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__checksum_u32 ::
      PtrConst.PtrConst Wuffs_base__hasher_u32
@@ -16392,9 +17699,9 @@ hs_bindgen_3053fc948ba229a4 =
 
 {-| __C declaration:__ @wuffs_base__hasher_u32__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6389:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6910:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__get_quirk ::
      PtrConst.PtrConst Wuffs_base__hasher_u32
@@ -16429,9 +17736,9 @@ hs_bindgen_3842cc93a1482e0f =
 
 {-| __C declaration:__ @wuffs_base__hasher_u32__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6395:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6916:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__set_quirk ::
      BG.Ptr Wuffs_base__hasher_u32
@@ -16469,9 +17776,9 @@ hs_bindgen_4268a06eda8c5976 =
 
 {-| __C declaration:__ @wuffs_base__hasher_u32__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6402:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__update ::
      BG.Ptr Wuffs_base__hasher_u32
@@ -16504,9 +17811,9 @@ hs_bindgen_e89a863c0f25f8ba =
 
 {-| __C declaration:__ @wuffs_base__hasher_u32__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6408:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 6929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u32__update_u32 ::
      BG.Ptr Wuffs_base__hasher_u32
@@ -16535,9 +17842,9 @@ hs_bindgen_f7c0ce6767367dbe =
 
 {-| __C declaration:__ @wuffs_base__hasher_u64__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6491:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7012:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__checksum_u64 ::
      PtrConst.PtrConst Wuffs_base__hasher_u64
@@ -16564,9 +17871,9 @@ hs_bindgen_a0451d5587d7da6f =
 
 {-| __C declaration:__ @wuffs_base__hasher_u64__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6496:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7017:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__get_quirk ::
      PtrConst.PtrConst Wuffs_base__hasher_u64
@@ -16601,9 +17908,9 @@ hs_bindgen_d9381b7708e4d6de =
 
 {-| __C declaration:__ @wuffs_base__hasher_u64__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6502:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7023:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__set_quirk ::
      BG.Ptr Wuffs_base__hasher_u64
@@ -16641,9 +17948,9 @@ hs_bindgen_f4b3d1acfca0dfb4 =
 
 {-| __C declaration:__ @wuffs_base__hasher_u64__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6509:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7030:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__update ::
      BG.Ptr Wuffs_base__hasher_u64
@@ -16676,9 +17983,9 @@ hs_bindgen_2ecd07edcdd0b1d2 =
 
 {-| __C declaration:__ @wuffs_base__hasher_u64__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6515:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7036:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_u64__update_u64 ::
      BG.Ptr Wuffs_base__hasher_u64
@@ -16710,9 +18017,9 @@ hs_bindgen_dfee2f205371b4c7 =
 
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__checksum_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6598:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7119:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__checksum_bitvec256 ::
      PtrConst.PtrConst Wuffs_base__hasher_bitvec256
@@ -16741,9 +18048,9 @@ hs_bindgen_1069c027c1a6f45a =
 
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__get_quirk ::
      PtrConst.PtrConst Wuffs_base__hasher_bitvec256
@@ -16778,9 +18085,9 @@ hs_bindgen_68aab52150e5fb6b =
 
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6609:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7130:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__set_quirk ::
      BG.Ptr Wuffs_base__hasher_bitvec256
@@ -16818,9 +18125,9 @@ hs_bindgen_67b445e7c970411f =
 
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6616:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7137:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__update ::
      BG.Ptr Wuffs_base__hasher_bitvec256
@@ -16856,9 +18163,9 @@ hs_bindgen_fb4c01dcc5a4031e =
 
 {-| __C declaration:__ @wuffs_base__hasher_bitvec256__update_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6622:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7143:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__hasher_bitvec256__update_bitvec256 ::
      BG.Ptr Wuffs_base__hasher_bitvec256
@@ -16906,9 +18213,9 @@ hs_bindgen_b72033808d482ec3 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6735:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7256:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_frame ::
      BG.Ptr Wuffs_base__image_decoder
@@ -16959,9 +18266,9 @@ hs_bindgen_cd123fbee698c796 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6745:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7266:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_frame_config ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17002,9 +18309,9 @@ hs_bindgen_f61eddb552b2f72d =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6752:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7273:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__decode_image_config ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17039,9 +18346,9 @@ hs_bindgen_b3e8a29ad3c76fb3 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6759:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7280:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17070,9 +18377,9 @@ hs_bindgen_dd9c4ca019716dea =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6764:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7285:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17098,9 +18405,9 @@ hs_bindgen_559799006cc9dedc =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6770:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7291:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17124,9 +18431,9 @@ hs_bindgen_1c4ceb4d526be969 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6775:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7296:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17150,9 +18457,9 @@ hs_bindgen_5603c43f9cc1bd05 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17185,9 +18492,9 @@ hs_bindgen_8b18ff784c640d0d =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6785:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7306:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__restart_frame ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17228,9 +18535,9 @@ hs_bindgen_37b0827de4d10eae =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6792:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7313:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__set_quirk ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17271,9 +18578,9 @@ hs_bindgen_efba8ecab0987411 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7320:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__set_report_metadata ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17317,9 +18624,9 @@ hs_bindgen_31069355a4b415f2 =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6806:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7327:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__tell_me_more ::
      BG.Ptr Wuffs_base__image_decoder
@@ -17357,9 +18664,9 @@ hs_bindgen_b86e291af6d1f90f =
 
 {-| __C declaration:__ @wuffs_base__image_decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7335:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__image_decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_base__image_decoder
@@ -17388,9 +18695,9 @@ hs_bindgen_fc106936dc44a69d =
 
 {-| __C declaration:__ @wuffs_base__io_transformer__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6955:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7476:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_base__io_transformer
@@ -17419,9 +18726,9 @@ hs_bindgen_c5638f0d39c81f0e =
 
 {-| __C declaration:__ @wuffs_base__io_transformer__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6960:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7481:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__get_quirk ::
      PtrConst.PtrConst Wuffs_base__io_transformer
@@ -17456,9 +18763,9 @@ hs_bindgen_d18722a97f7fac5a =
 
 {-| __C declaration:__ @wuffs_base__io_transformer__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6966:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7487:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__set_quirk ::
      BG.Ptr Wuffs_base__io_transformer
@@ -17502,9 +18809,9 @@ hs_bindgen_16d8bf2d3c20327d =
 
 {-| __C declaration:__ @wuffs_base__io_transformer__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6973:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__transform_io ::
      BG.Ptr Wuffs_base__io_transformer
@@ -17543,9 +18850,9 @@ hs_bindgen_b012586a28186bd7 =
 
 {-| __C declaration:__ @wuffs_base__io_transformer__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 6981:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7502:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__io_transformer__workbuf_len ::
      PtrConst.PtrConst Wuffs_base__io_transformer
@@ -17583,9 +18890,9 @@ hs_bindgen_59c546d40d9c5238 =
 
 {-| __C declaration:__ @wuffs_base__token_decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7062:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7583:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__decode_tokens ::
      BG.Ptr Wuffs_base__token_decoder
@@ -17624,9 +18931,9 @@ hs_bindgen_8eb3aa324aa6d4c5 =
 
 {-| __C declaration:__ @wuffs_base__token_decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7070:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7591:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_base__token_decoder
@@ -17661,9 +18968,9 @@ hs_bindgen_cd679bb02007b902 =
 
 {-| __C declaration:__ @wuffs_base__token_decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7076:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__set_quirk ::
      BG.Ptr Wuffs_base__token_decoder
@@ -17698,9 +19005,9 @@ hs_bindgen_f75a28019d6b4066 =
 
 {-| __C declaration:__ @wuffs_base__token_decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7083:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7604:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_base__token_decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_base__token_decoder
@@ -17738,9 +19045,9 @@ hs_bindgen_c64b3d9cedf0a377 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7163:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7684:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__initialize ::
      BG.Ptr Wuffs_adler32__hasher
@@ -17771,9 +19078,9 @@ hs_bindgen_ced6b54763251b98 =
 
 {-| __C declaration:__ @sizeof__wuffs_adler32__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7170:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7691:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_adler32__hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_adler32__hasher =
@@ -17790,9 +19097,9 @@ hs_bindgen_5788bb9455791e43 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7181:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7702:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__alloc :: IO (BG.Ptr Wuffs_adler32__hasher)
 wuffs_adler32__hasher__alloc =
@@ -17809,9 +19116,9 @@ hs_bindgen_25977106f0a406b3 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7184:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7705:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32 :: IO (BG.Ptr Wuffs_base__hasher_u32)
 wuffs_adler32__hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -17832,9 +19139,9 @@ hs_bindgen_eff033beb4919898 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7191:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7712:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__upcast_as__wuffs_base__hasher_u32 ::
      BG.Ptr Wuffs_adler32__hasher
@@ -17861,9 +19168,9 @@ hs_bindgen_109274e075617199 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7721:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_adler32__hasher
@@ -17898,9 +19205,9 @@ hs_bindgen_7c23f06a00d97864 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7727:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__set_quirk ::
      BG.Ptr Wuffs_adler32__hasher
@@ -17938,9 +19245,9 @@ hs_bindgen_86609aaa36e2b063 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7734:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__update ::
      BG.Ptr Wuffs_adler32__hasher
@@ -17973,9 +19280,9 @@ hs_bindgen_30c604135112397b =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7219:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__update_u32 ::
      BG.Ptr Wuffs_adler32__hasher
@@ -18004,9 +19311,9 @@ hs_bindgen_602e5abc89622d56 =
 
 {-| __C declaration:__ @wuffs_adler32__hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7225:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7746:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_adler32__hasher__checksum_u32 ::
      PtrConst.PtrConst Wuffs_adler32__hasher
@@ -18042,9 +19349,9 @@ hs_bindgen_f588e6062fff29d7 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7392:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7913:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__initialize ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18075,9 +19382,9 @@ hs_bindgen_2620c2679362b503 =
 
 {-| __C declaration:__ @sizeof__wuffs_bmp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7399:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7920:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_bmp__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_bmp__decoder =
@@ -18094,9 +19401,9 @@ hs_bindgen_3418ae053ccf2ad6 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7410:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7931:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__alloc :: IO (BG.Ptr Wuffs_bmp__decoder)
 wuffs_bmp__decoder__alloc =
@@ -18113,9 +19420,9 @@ hs_bindgen_62ab2399129e89d6 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7413:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7934:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_bmp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -18136,9 +19443,9 @@ hs_bindgen_4f4565f5420d2bda =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7420:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7941:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18165,9 +19472,9 @@ hs_bindgen_13babdae30e87874 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7429:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7950:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18202,9 +19509,9 @@ hs_bindgen_990deb7dd76df651 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7435:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7956:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__set_quirk ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18245,9 +19552,9 @@ hs_bindgen_40149eca23f4808d =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7442:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7963:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_image_config ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18288,9 +19595,9 @@ hs_bindgen_9e46e643c9d23a17 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7449:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7970:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_frame_config ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18340,9 +19647,9 @@ hs_bindgen_a0dd612877060137 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7456:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7977:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__decode_frame ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18387,9 +19694,9 @@ hs_bindgen_7f44f2708177acef =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18415,9 +19722,9 @@ hs_bindgen_07a33593519af0e9 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7471:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7992:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18441,9 +19748,9 @@ hs_bindgen_3d60c0a72b81c683 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7476:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 7997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18467,9 +19774,9 @@ hs_bindgen_ce2980ec0c9b5ab1 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7481:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18502,9 +19809,9 @@ hs_bindgen_70ca8994a6ae65a2 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7486:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8007:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__restart_frame ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18545,9 +19852,9 @@ hs_bindgen_728626dc26363708 =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7493:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8014:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__set_report_metadata ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18591,9 +19898,9 @@ hs_bindgen_2531a03ff351f77d =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7500:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8021:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__tell_me_more ::
      BG.Ptr Wuffs_bmp__decoder
@@ -18631,9 +19938,9 @@ hs_bindgen_856422a1bb68173c =
 
 {-| __C declaration:__ @wuffs_bmp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8029:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bmp__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_bmp__decoder
@@ -18671,9 +19978,9 @@ hs_bindgen_8897be6b9e55057c =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__initialize ::
      BG.Ptr Wuffs_bzip2__decoder
@@ -18704,9 +20011,9 @@ hs_bindgen_244b4586f81d4876 =
 
 {-| __C declaration:__ @sizeof__wuffs_bzip2__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7787:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_bzip2__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_bzip2__decoder =
@@ -18723,9 +20030,9 @@ hs_bindgen_7cf9e5b0829b707d =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8319:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__alloc :: IO (BG.Ptr Wuffs_bzip2__decoder)
 wuffs_bzip2__decoder__alloc =
@@ -18742,9 +20049,9 @@ hs_bindgen_191a452b8332e28d =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8322:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_bzip2__decoder__alloc_as__wuffs_base__io_transformer =
@@ -18765,9 +20072,9 @@ hs_bindgen_bc49868afb4f2747 =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7808:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8329:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_bzip2__decoder
@@ -18794,9 +20101,9 @@ hs_bindgen_752ba0b9a36e6fae =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7817:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8338:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_bzip2__decoder
@@ -18831,9 +20138,9 @@ hs_bindgen_5720d1d06c884db5 =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7823:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8344:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__set_quirk ::
      BG.Ptr Wuffs_bzip2__decoder
@@ -18868,9 +20175,9 @@ hs_bindgen_48069ce6d37b2b96 =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7830:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8351:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_bzip2__decoder
@@ -18899,9 +20206,9 @@ hs_bindgen_3da7cccd21b2f50c =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7835:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8356:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_bzip2__decoder
@@ -18939,9 +20246,9 @@ hs_bindgen_e82ca2bc7b2f1087 =
 
 {-| __C declaration:__ @wuffs_bzip2__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 7840:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8361:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_bzip2__decoder__transform_io ::
      BG.Ptr Wuffs_bzip2__decoder
@@ -18989,9 +20296,9 @@ hs_bindgen_05ba34e0735fd45b =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8084:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8605:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__initialize ::
      BG.Ptr Wuffs_cbor__decoder
@@ -19022,9 +20329,9 @@ hs_bindgen_4eb836b4cc01a612 =
 
 {-| __C declaration:__ @sizeof__wuffs_cbor__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8091:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8612:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_cbor__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_cbor__decoder =
@@ -19041,9 +20348,9 @@ hs_bindgen_6064e4320e540454 =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8623:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__alloc :: IO (BG.Ptr Wuffs_cbor__decoder)
 wuffs_cbor__decoder__alloc =
@@ -19060,9 +20367,9 @@ hs_bindgen_6c1d4787bf8a75bb =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8105:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder :: IO (BG.Ptr Wuffs_base__token_decoder)
 wuffs_cbor__decoder__alloc_as__wuffs_base__token_decoder =
@@ -19083,9 +20390,9 @@ hs_bindgen_0a18d6bcfea4051f =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8112:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8633:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__upcast_as__wuffs_base__token_decoder ::
      BG.Ptr Wuffs_cbor__decoder
@@ -19112,9 +20419,9 @@ hs_bindgen_5c345714d6626c14 =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8121:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8642:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_cbor__decoder
@@ -19149,9 +20456,9 @@ hs_bindgen_ac0f4e09492826a9 =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8127:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8648:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__set_quirk ::
      BG.Ptr Wuffs_cbor__decoder
@@ -19186,9 +20493,9 @@ hs_bindgen_b9d1ac3c72a6415e =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8134:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8655:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_cbor__decoder
@@ -19226,9 +20533,9 @@ hs_bindgen_4610d5b4b741f008 =
 
 {-| __C declaration:__ @wuffs_cbor__decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8139:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_cbor__decoder__decode_tokens ::
      BG.Ptr Wuffs_cbor__decoder
@@ -19276,9 +20583,9 @@ hs_bindgen_4d4f21eae5e5a6f2 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8307:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8828:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__initialize ::
      BG.Ptr Wuffs_crc32__ieee_hasher
@@ -19309,9 +20616,9 @@ hs_bindgen_ca0b3ca80d00d10d =
 
 {-| __C declaration:__ @sizeof__wuffs_crc32__ieee_hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8314:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8835:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_crc32__ieee_hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_crc32__ieee_hasher =
@@ -19328,9 +20635,9 @@ hs_bindgen_8e01993c99367be8 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8325:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8846:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__alloc :: IO (BG.Ptr Wuffs_crc32__ieee_hasher)
 wuffs_crc32__ieee_hasher__alloc =
@@ -19347,9 +20654,9 @@ hs_bindgen_a6eb7656ef257803 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8328:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8849:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32 :: IO (BG.Ptr Wuffs_base__hasher_u32)
 wuffs_crc32__ieee_hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -19370,9 +20677,9 @@ hs_bindgen_c5a7895f191a9655 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8335:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8856:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__upcast_as__wuffs_base__hasher_u32 ::
      BG.Ptr Wuffs_crc32__ieee_hasher
@@ -19399,9 +20706,9 @@ hs_bindgen_9a8a9811bf1b9a12 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8344:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8865:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_crc32__ieee_hasher
@@ -19436,9 +20743,9 @@ hs_bindgen_64b4512b903fb290 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8350:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8871:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__set_quirk ::
      BG.Ptr Wuffs_crc32__ieee_hasher
@@ -19476,9 +20783,9 @@ hs_bindgen_4fb6086a783086d2 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8357:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8878:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__update ::
      BG.Ptr Wuffs_crc32__ieee_hasher
@@ -19511,9 +20818,9 @@ hs_bindgen_4d272fe3c073cba7 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8363:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8884:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__update_u32 ::
      BG.Ptr Wuffs_crc32__ieee_hasher
@@ -19542,9 +20849,9 @@ hs_bindgen_80c9a09c11889d81 =
 
 {-| __C declaration:__ @wuffs_crc32__ieee_hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8369:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 8890:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc32__ieee_hasher__checksum_u32 ::
      PtrConst.PtrConst Wuffs_crc32__ieee_hasher
@@ -19580,9 +20887,9 @@ hs_bindgen_f03c93ea7804e48a =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8528:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9049:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__initialize ::
      BG.Ptr Wuffs_crc64__ecma_hasher
@@ -19613,9 +20920,9 @@ hs_bindgen_e89acc904b4096c2 =
 
 {-| __C declaration:__ @sizeof__wuffs_crc64__ecma_hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8535:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9056:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_crc64__ecma_hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_crc64__ecma_hasher =
@@ -19632,9 +20939,9 @@ hs_bindgen_fbe665904ac1c543 =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8546:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9067:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__alloc :: IO (BG.Ptr Wuffs_crc64__ecma_hasher)
 wuffs_crc64__ecma_hasher__alloc =
@@ -19651,9 +20958,9 @@ hs_bindgen_d289cbd86d136579 =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8549:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9070:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64 :: IO (BG.Ptr Wuffs_base__hasher_u64)
 wuffs_crc64__ecma_hasher__alloc_as__wuffs_base__hasher_u64 =
@@ -19674,9 +20981,9 @@ hs_bindgen_7f961fc3b2368a0f =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8556:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9077:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__upcast_as__wuffs_base__hasher_u64 ::
      BG.Ptr Wuffs_crc64__ecma_hasher
@@ -19703,9 +21010,9 @@ hs_bindgen_5ae8584cc7893e51 =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8565:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9086:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_crc64__ecma_hasher
@@ -19740,9 +21047,9 @@ hs_bindgen_614780e0d5630951 =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8571:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9092:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__set_quirk ::
      BG.Ptr Wuffs_crc64__ecma_hasher
@@ -19780,9 +21087,9 @@ hs_bindgen_78f0fcf6c55cb51e =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8578:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9099:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__update ::
      BG.Ptr Wuffs_crc64__ecma_hasher
@@ -19815,9 +21122,9 @@ hs_bindgen_4c183a3e753c320c =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8584:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9105:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__update_u64 ::
      BG.Ptr Wuffs_crc64__ecma_hasher
@@ -19846,9 +21153,9 @@ hs_bindgen_10ae122b40e8d9e9 =
 
 {-| __C declaration:__ @wuffs_crc64__ecma_hasher__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8590:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9111:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_crc64__ecma_hasher__checksum_u64 ::
      PtrConst.PtrConst Wuffs_crc64__ecma_hasher
@@ -19884,9 +21191,9 @@ hs_bindgen_815f5b2926e434e4 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8768:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9289:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__initialize ::
      BG.Ptr Wuffs_deflate__decoder
@@ -19917,9 +21224,9 @@ hs_bindgen_36d728721b20175c =
 
 {-| __C declaration:__ @sizeof__wuffs_deflate__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8775:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9296:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_deflate__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_deflate__decoder =
@@ -19936,9 +21243,9 @@ hs_bindgen_4535d4d1fb0b7e82 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8786:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9307:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__alloc :: IO (BG.Ptr Wuffs_deflate__decoder)
 wuffs_deflate__decoder__alloc =
@@ -19955,9 +21262,9 @@ hs_bindgen_36388ced7c24202c =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8789:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9310:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_deflate__decoder__alloc_as__wuffs_base__io_transformer =
@@ -19978,9 +21285,9 @@ hs_bindgen_88684df191535c22 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8796:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9317:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_deflate__decoder
@@ -20010,9 +21317,9 @@ hs_bindgen_e4cd8a2e552b08af =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__add_history@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9326:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__add_history ::
      BG.Ptr Wuffs_deflate__decoder
@@ -20045,9 +21352,9 @@ hs_bindgen_ab2de829fe2b8161 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8811:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9332:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_deflate__decoder
@@ -20082,9 +21389,9 @@ hs_bindgen_c4ed80410772809f =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8817:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9338:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__set_quirk ::
      BG.Ptr Wuffs_deflate__decoder
@@ -20119,9 +21426,9 @@ hs_bindgen_1d9bd3e46aa830af =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8824:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_deflate__decoder
@@ -20150,9 +21457,9 @@ hs_bindgen_0789e4396169b5f6 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8829:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9350:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_deflate__decoder
@@ -20190,9 +21497,9 @@ hs_bindgen_af135247e78af7d5 =
 
 {-| __C declaration:__ @wuffs_deflate__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 8834:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9355:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_deflate__decoder__transform_io ::
      BG.Ptr Wuffs_deflate__decoder
@@ -20240,9 +21547,9 @@ hs_bindgen_0171a52501a81aef =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9059:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9579:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__initialize ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20273,9 +21580,9 @@ hs_bindgen_1eab9d189850177e =
 
 {-| __C declaration:__ @sizeof__wuffs_etc2__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9066:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9586:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_etc2__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_etc2__decoder =
@@ -20292,9 +21599,9 @@ hs_bindgen_aab569b5d06c3dc4 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9077:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__alloc :: IO (BG.Ptr Wuffs_etc2__decoder)
 wuffs_etc2__decoder__alloc =
@@ -20311,9 +21618,9 @@ hs_bindgen_439a5cab4f67b49f =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9080:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9600:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_etc2__decoder__alloc_as__wuffs_base__image_decoder =
@@ -20334,9 +21641,9 @@ hs_bindgen_4a27c0333ebe9fdb =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9087:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9607:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20363,9 +21670,9 @@ hs_bindgen_965d63eb82d1317e =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9096:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9616:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20400,9 +21707,9 @@ hs_bindgen_c8abebec6d0128d5 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9102:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9622:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__set_quirk ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20443,9 +21750,9 @@ hs_bindgen_30e1267145b8f4c2 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9109:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9629:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_image_config ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20486,9 +21793,9 @@ hs_bindgen_b0b9ca8ccbfc7423 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9116:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9636:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_frame_config ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20538,9 +21845,9 @@ hs_bindgen_bf8af9714aaa229c =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9123:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9643:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__decode_frame ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20585,9 +21892,9 @@ hs_bindgen_a4afece40e594387 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9133:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9653:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20613,9 +21920,9 @@ hs_bindgen_adcba802dfeb0bee =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9138:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9658:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20639,9 +21946,9 @@ hs_bindgen_373f4f4909689cfc =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9143:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9663:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20665,9 +21972,9 @@ hs_bindgen_26226cd121e39ef1 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9148:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9668:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20700,9 +22007,9 @@ hs_bindgen_2ef79f44d2802476 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9153:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9673:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__restart_frame ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20743,9 +22050,9 @@ hs_bindgen_189ad23594953b4f =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9160:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9680:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__set_report_metadata ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20789,9 +22096,9 @@ hs_bindgen_3ca41a295d0f7ff4 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9167:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9687:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__tell_me_more ::
      BG.Ptr Wuffs_etc2__decoder
@@ -20829,9 +22136,9 @@ hs_bindgen_90fb3ae89cf76b89 =
 
 {-| __C declaration:__ @wuffs_etc2__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9175:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9695:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_etc2__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_etc2__decoder
@@ -20869,9 +22176,9 @@ hs_bindgen_fdbba9dca7d60437 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9444:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9965:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__initialize ::
      BG.Ptr Wuffs_gif__decoder
@@ -20902,9 +22209,9 @@ hs_bindgen_463711931e402f77 =
 
 {-| __C declaration:__ @sizeof__wuffs_gif__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9451:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9972:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_gif__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_gif__decoder =
@@ -20921,9 +22228,9 @@ hs_bindgen_25d8fe2f1489a240 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9462:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9983:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__alloc :: IO (BG.Ptr Wuffs_gif__decoder)
 wuffs_gif__decoder__alloc =
@@ -20940,9 +22247,9 @@ hs_bindgen_4d0b6e2cc5ee0292 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9465:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9986:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_gif__decoder__alloc_as__wuffs_base__image_decoder =
@@ -20963,9 +22270,9 @@ hs_bindgen_e5a3d21c3ac9b7e7 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9472:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 9993:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_gif__decoder
@@ -20992,9 +22299,9 @@ hs_bindgen_5f755ab7d8fd2153 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9481:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21029,9 +22336,9 @@ hs_bindgen_428f9c63b8054772 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9487:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__set_quirk ::
      BG.Ptr Wuffs_gif__decoder
@@ -21072,9 +22379,9 @@ hs_bindgen_92e92527c6dd6af5 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10015:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_image_config ::
      BG.Ptr Wuffs_gif__decoder
@@ -21115,9 +22422,9 @@ hs_bindgen_e88d097c54d62e64 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9501:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10022:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__set_report_metadata ::
      BG.Ptr Wuffs_gif__decoder
@@ -21161,9 +22468,9 @@ hs_bindgen_8b1ba3aef2f8ba20 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10029:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__tell_me_more ::
      BG.Ptr Wuffs_gif__decoder
@@ -21198,9 +22505,9 @@ hs_bindgen_139f921c0c74b168 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9516:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10037:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21224,9 +22531,9 @@ hs_bindgen_30864b9a14669b8f =
 
 {-| __C declaration:__ @wuffs_gif__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9521:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10042:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21250,9 +22557,9 @@ hs_bindgen_6b631ac824b6cb53 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9526:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21279,9 +22586,9 @@ hs_bindgen_21a7b63c3ad069c7 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9531:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10052:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21310,9 +22617,9 @@ hs_bindgen_d576a6cebb2d3e29 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9536:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10057:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_gif__decoder
@@ -21347,9 +22654,9 @@ hs_bindgen_322b820167d37e1f =
 
 {-| __C declaration:__ @wuffs_gif__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9541:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10062:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__restart_frame ::
      BG.Ptr Wuffs_gif__decoder
@@ -21390,9 +22697,9 @@ hs_bindgen_72e9c04cbfc09059 =
 
 {-| __C declaration:__ @wuffs_gif__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9548:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10069:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_frame_config ::
      BG.Ptr Wuffs_gif__decoder
@@ -21442,9 +22749,9 @@ hs_bindgen_6e9ee34d9c87ba7d =
 
 {-| __C declaration:__ @wuffs_gif__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9555:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10076:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gif__decoder__decode_frame ::
      BG.Ptr Wuffs_gif__decoder
@@ -21498,9 +22805,9 @@ hs_bindgen_dfda05011f5012b2 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9899:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10420:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__initialize ::
      BG.Ptr Wuffs_gzip__decoder
@@ -21531,9 +22838,9 @@ hs_bindgen_b0d20abc8ecf4532 =
 
 {-| __C declaration:__ @sizeof__wuffs_gzip__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9906:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10427:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_gzip__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_gzip__decoder =
@@ -21550,9 +22857,9 @@ hs_bindgen_36e580f747673d09 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9917:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10438:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__alloc :: IO (BG.Ptr Wuffs_gzip__decoder)
 wuffs_gzip__decoder__alloc =
@@ -21569,9 +22876,9 @@ hs_bindgen_89211279a965f94a =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9920:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10441:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_gzip__decoder__alloc_as__wuffs_base__io_transformer =
@@ -21592,9 +22899,9 @@ hs_bindgen_258788dc33d38cc2 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9927:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10448:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_gzip__decoder
@@ -21621,9 +22928,9 @@ hs_bindgen_7a3731f28cac382f =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9936:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10457:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_gzip__decoder
@@ -21658,9 +22965,9 @@ hs_bindgen_a2ade51091adaa43 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9942:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10463:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__set_quirk ::
      BG.Ptr Wuffs_gzip__decoder
@@ -21695,9 +23002,9 @@ hs_bindgen_33f583a6319a760c =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9949:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10470:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_gzip__decoder
@@ -21726,9 +23033,9 @@ hs_bindgen_789cf75df8f4a411 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10475:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_gzip__decoder
@@ -21766,9 +23073,9 @@ hs_bindgen_d134545f9eb33e10 =
 
 {-| __C declaration:__ @wuffs_gzip__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 9959:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10480:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_gzip__decoder__transform_io ::
      BG.Ptr Wuffs_gzip__decoder
@@ -21788,6 +23095,635 @@ wuffs_gzip__decoder__transform_io =
           BG.with a_workbuf3 (\a_workbuf4 ->
                                 BG.allocaAndPeek (\res5 ->
                                                     hs_bindgen_d134545f9eb33e10 self0 a_dst1 a_src2 a_workbuf4 res5))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__initialize@
+foreign import ccall safe "hs_bindgen_5bfb5a193afb13f4" hs_bindgen_5bfb5a193afb13f4_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.CSize
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__initialize@
+hs_bindgen_5bfb5a193afb13f4 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> HsBindgen.Runtime.LibC.CSize
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_5bfb5a193afb13f4 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            hs_bindgen_5bfb5a193afb13f4_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__initialize@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10660:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__initialize ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.CSize
+     -- ^ __C declaration:__ @sizeof_star_self@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @wuffs_version@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @options@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__initialize =
+  \self0 ->
+    \sizeof_star_self1 ->
+      \wuffs_version2 ->
+        \options3 ->
+          BG.allocaAndPeek (\res4 ->
+                              hs_bindgen_5bfb5a193afb13f4 self0 sizeof_star_self1 wuffs_version2 options3 res4)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_handsum__decoder@
+foreign import ccall safe "hs_bindgen_cf580cc017086cab" hs_bindgen_cf580cc017086cab_base ::
+     IO HsBindgen.Runtime.LibC.CSize
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_handsum__decoder@
+hs_bindgen_cf580cc017086cab :: IO HsBindgen.Runtime.LibC.CSize
+hs_bindgen_cf580cc017086cab =
+  fmap BG.fromFFIType hs_bindgen_cf580cc017086cab_base
+
+{-| __C declaration:__ @sizeof__wuffs_handsum__decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10667:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+sizeof__wuffs_handsum__decoder :: IO HsBindgen.Runtime.LibC.CSize
+sizeof__wuffs_handsum__decoder =
+  hs_bindgen_cf580cc017086cab
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__alloc@
+foreign import ccall safe "hs_bindgen_f98915c22a2d1349" hs_bindgen_f98915c22a2d1349_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__alloc@
+hs_bindgen_f98915c22a2d1349 :: IO (BG.Ptr Wuffs_handsum__decoder)
+hs_bindgen_f98915c22a2d1349 =
+  fmap BG.fromFFIType hs_bindgen_f98915c22a2d1349_base
+
+{-| __C declaration:__ @wuffs_handsum__decoder__alloc@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10678:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__alloc :: IO (BG.Ptr Wuffs_handsum__decoder)
+wuffs_handsum__decoder__alloc =
+  hs_bindgen_f98915c22a2d1349
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+foreign import ccall safe "hs_bindgen_9499fc74850e5c61" hs_bindgen_9499fc74850e5c61_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+hs_bindgen_9499fc74850e5c61 :: IO (BG.Ptr Wuffs_base__image_decoder)
+hs_bindgen_9499fc74850e5c61 =
+  fmap BG.fromFFIType hs_bindgen_9499fc74850e5c61_base
+
+{-| __C declaration:__ @wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10681:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
+wuffs_handsum__decoder__alloc_as__wuffs_base__image_decoder =
+  hs_bindgen_9499fc74850e5c61
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+foreign import ccall safe "hs_bindgen_90c2d55494a03a3d" hs_bindgen_90c2d55494a03a3d_base ::
+     BG.Ptr BG.Void
+  -> IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+hs_bindgen_90c2d55494a03a3d ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> IO (BG.Ptr Wuffs_base__image_decoder)
+hs_bindgen_90c2d55494a03a3d =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_90c2d55494a03a3d_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10688:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @p@
+  -> IO (BG.Ptr Wuffs_base__image_decoder)
+wuffs_handsum__decoder__upcast_as__wuffs_base__image_decoder =
+  hs_bindgen_90c2d55494a03a3d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__get_quirk@
+foreign import ccall safe "hs_bindgen_ac6ba95c5ba596fd" hs_bindgen_ac6ba95c5ba596fd_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__get_quirk@
+hs_bindgen_ac6ba95c5ba596fd ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_ac6ba95c5ba596fd =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_ac6ba95c5ba596fd_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_handsum__decoder__get_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10697:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__get_quirk ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_key@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_handsum__decoder__get_quirk =
+  hs_bindgen_ac6ba95c5ba596fd
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__set_quirk@
+foreign import ccall safe "hs_bindgen_07a07a8cf8f36805" hs_bindgen_07a07a8cf8f36805_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__set_quirk@
+hs_bindgen_07a07a8cf8f36805 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_07a07a8cf8f36805 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_07a07a8cf8f36805_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__set_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10703:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__set_quirk ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_key@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_value@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__set_quirk =
+  \self0 ->
+    \a_key1 ->
+      \a_value2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_07a07a8cf8f36805 self0 a_key1 a_value2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_image_config@
+foreign import ccall safe "hs_bindgen_839b48026ea70022" hs_bindgen_839b48026ea70022_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_image_config@
+hs_bindgen_839b48026ea70022 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__image_config
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_839b48026ea70022 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_839b48026ea70022_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_image_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10710:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_image_config ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__image_config
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__decode_image_config =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_839b48026ea70022 self0 a_dst1 a_src2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_frame_config@
+foreign import ccall safe "hs_bindgen_3f4e5f49ba3bace6" hs_bindgen_3f4e5f49ba3bace6_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_frame_config@
+hs_bindgen_3f4e5f49ba3bace6 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__frame_config
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_3f4e5f49ba3bace6 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_3f4e5f49ba3bace6_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_frame_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10717:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_frame_config ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__frame_config
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__decode_frame_config =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_3f4e5f49ba3bace6 self0 a_dst1 a_src2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_frame@
+foreign import ccall safe "hs_bindgen_bd17f5f96bb26a9f" hs_bindgen_bd17f5f96bb26a9f_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word8
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__decode_frame@
+hs_bindgen_bd17f5f96bb26a9f ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__pixel_buffer
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> Wuffs_base__pixel_blend
+  -> BG.Ptr Wuffs_base__slice_u8
+  -> BG.Ptr Wuffs_base__decode_frame_options
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_bd17f5f96bb26a9f =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            \x5 ->
+              \x6 ->
+                hs_bindgen_bd17f5f96bb26a9f_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4) (BG.toFFIType x5) (BG.toFFIType x6)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__decode_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10724:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__decode_frame ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__pixel_buffer
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> Wuffs_base__pixel_blend
+     -- ^ __C declaration:__ @a_blend@
+  -> Wuffs_base__slice_u8
+     -- ^ __C declaration:__ @a_workbuf@
+  -> BG.Ptr Wuffs_base__decode_frame_options
+     -- ^ __C declaration:__ @a_opts@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__decode_frame =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        \a_blend3 ->
+          \a_workbuf4 ->
+            \a_opts5 ->
+              BG.with a_workbuf4 (\a_workbuf6 ->
+                                    BG.allocaAndPeek (\res7 ->
+                                                        hs_bindgen_bd17f5f96bb26a9f self0 a_dst1 a_src2 a_blend3 a_workbuf6 a_opts5 res7))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__frame_dirty_rect@
+foreign import ccall safe "hs_bindgen_31df57fb07019223" hs_bindgen_31df57fb07019223_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__frame_dirty_rect@
+hs_bindgen_31df57fb07019223 ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__rect_ie_u32
+  -> IO ()
+hs_bindgen_31df57fb07019223 =
+  \x0 ->
+    \x1 ->
+      hs_bindgen_31df57fb07019223_base (BG.toFFIType x0) (BG.toFFIType x1)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__frame_dirty_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10734:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__frame_dirty_rect ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO Wuffs_base__rect_ie_u32
+wuffs_handsum__decoder__frame_dirty_rect =
+  \self0 ->
+    BG.allocaAndPeek (\res1 ->
+                        hs_bindgen_31df57fb07019223 self0 res1)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_animation_loops@
+foreign import ccall safe "hs_bindgen_0138f97cb2154a6e" hs_bindgen_0138f97cb2154a6e_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_animation_loops@
+hs_bindgen_0138f97cb2154a6e ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_0138f97cb2154a6e =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_0138f97cb2154a6e_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_handsum__decoder__num_animation_loops@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10739:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_animation_loops ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_handsum__decoder__num_animation_loops =
+  hs_bindgen_0138f97cb2154a6e
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_decoded_frame_configs@
+foreign import ccall safe "hs_bindgen_0416a4b316353e08" hs_bindgen_0416a4b316353e08_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_decoded_frame_configs@
+hs_bindgen_0416a4b316353e08 ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_0416a4b316353e08 =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_0416a4b316353e08_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_handsum__decoder__num_decoded_frame_configs@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10744:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_decoded_frame_configs ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_handsum__decoder__num_decoded_frame_configs =
+  hs_bindgen_0416a4b316353e08
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_decoded_frames@
+foreign import ccall safe "hs_bindgen_16314b639955049d" hs_bindgen_16314b639955049d_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__num_decoded_frames@
+hs_bindgen_16314b639955049d ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_16314b639955049d =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_16314b639955049d_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_handsum__decoder__num_decoded_frames@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10749:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__num_decoded_frames ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_handsum__decoder__num_decoded_frames =
+  hs_bindgen_16314b639955049d
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__restart_frame@
+foreign import ccall safe "hs_bindgen_09623633244e0803" hs_bindgen_09623633244e0803_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__restart_frame@
+hs_bindgen_09623633244e0803 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_09623633244e0803 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_09623633244e0803_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__restart_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10754:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__restart_frame ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_index@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_io_position@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__restart_frame =
+  \self0 ->
+    \a_index1 ->
+      \a_io_position2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_09623633244e0803 self0 a_index1 a_io_position2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__set_report_metadata@
+foreign import ccall safe "hs_bindgen_50dd9b9482b5ccb1" hs_bindgen_50dd9b9482b5ccb1_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.CBool
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__set_report_metadata@
+hs_bindgen_50dd9b9482b5ccb1 ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.CBool
+  -> BG.Ptr Wuffs_base__empty_struct
+  -> IO ()
+hs_bindgen_50dd9b9482b5ccb1 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_50dd9b9482b5ccb1_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__set_report_metadata@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10761:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__set_report_metadata ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_fourcc@
+  -> BG.CBool
+     -- ^ __C declaration:__ @a_report@
+  -> IO Wuffs_base__empty_struct
+wuffs_handsum__decoder__set_report_metadata =
+  \self0 ->
+    \a_fourcc1 ->
+      \a_report2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_50dd9b9482b5ccb1 self0 a_fourcc1 a_report2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__tell_me_more@
+foreign import ccall safe "hs_bindgen_290d624e37355d9a" hs_bindgen_290d624e37355d9a_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__tell_me_more@
+hs_bindgen_290d624e37355d9a ::
+     BG.Ptr Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__more_information
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_290d624e37355d9a =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            hs_bindgen_290d624e37355d9a_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__tell_me_more@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10768:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__tell_me_more ::
+     BG.Ptr Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__more_information
+     -- ^ __C declaration:__ @a_minfo@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_handsum__decoder__tell_me_more =
+  \self0 ->
+    \a_dst1 ->
+      \a_minfo2 ->
+        \a_src3 ->
+          BG.allocaAndPeek (\res4 ->
+                              hs_bindgen_290d624e37355d9a self0 a_dst1 a_minfo2 a_src3 res4)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__workbuf_len@
+foreign import ccall safe "hs_bindgen_d11ddd818b67c8e3" hs_bindgen_d11ddd818b67c8e3_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_handsum__decoder__workbuf_len@
+hs_bindgen_d11ddd818b67c8e3 ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_d11ddd818b67c8e3 =
+  \x0 ->
+    \x1 ->
+      hs_bindgen_d11ddd818b67c8e3_base (BG.toFFIType x0) (BG.toFFIType x1)
+
+{-| __C declaration:__ @wuffs_handsum__decoder__workbuf_len@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 10776:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_handsum__decoder__workbuf_len ::
+     PtrConst.PtrConst Wuffs_handsum__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO Wuffs_base__range_ii_u64
+wuffs_handsum__decoder__workbuf_len =
+  \self0 ->
+    BG.allocaAndPeek (\res1 ->
+                        hs_bindgen_d11ddd818b67c8e3 self0 res1)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_jpeg__decoder__initialize@
 foreign import ccall safe "hs_bindgen_41a81e902d65dff4" hs_bindgen_41a81e902d65dff4_base ::
@@ -21816,9 +23752,9 @@ hs_bindgen_41a81e902d65dff4 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10163:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11040:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__initialize ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -21849,9 +23785,9 @@ hs_bindgen_cdb10591514ac533 =
 
 {-| __C declaration:__ @sizeof__wuffs_jpeg__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10170:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_jpeg__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_jpeg__decoder =
@@ -21868,9 +23804,9 @@ hs_bindgen_073b35160b9d778d =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10181:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11058:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__alloc :: IO (BG.Ptr Wuffs_jpeg__decoder)
 wuffs_jpeg__decoder__alloc =
@@ -21887,9 +23823,9 @@ hs_bindgen_e311cbef7f448896 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10184:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11061:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_jpeg__decoder__alloc_as__wuffs_base__image_decoder =
@@ -21910,9 +23846,9 @@ hs_bindgen_3b298f9dbd67f32c =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10191:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11068:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -21939,9 +23875,9 @@ hs_bindgen_09869b707bec94ab =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10200:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11077:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -21976,9 +23912,9 @@ hs_bindgen_c0e31e2f7830b585 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10206:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11083:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__set_quirk ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22019,9 +23955,9 @@ hs_bindgen_b6262842a1b18060 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10213:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11090:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_image_config ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22062,9 +23998,9 @@ hs_bindgen_284ca602434b2ec4 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10220:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11097:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_frame_config ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22114,9 +24050,9 @@ hs_bindgen_896026310cf235cf =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10227:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11104:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__decode_frame ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22161,9 +24097,9 @@ hs_bindgen_07d3605a39e761ce =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10237:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11114:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -22189,9 +24125,9 @@ hs_bindgen_0d272ac2f56900fc =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10242:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11119:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -22215,9 +24151,9 @@ hs_bindgen_b57cb78c698474f9 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10247:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11124:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -22241,9 +24177,9 @@ hs_bindgen_faf56cc0e77a4321 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10252:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11129:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -22276,9 +24212,9 @@ hs_bindgen_1320ddb15b0f94a8 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10257:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11134:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__restart_frame ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22319,9 +24255,9 @@ hs_bindgen_3ac58563d0b0af13 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10264:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__set_report_metadata ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22365,9 +24301,9 @@ hs_bindgen_5ed72fd110cb5336 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10271:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11148:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__tell_me_more ::
      BG.Ptr Wuffs_jpeg__decoder
@@ -22405,9 +24341,9 @@ hs_bindgen_6572bb3e74a9d404 =
 
 {-| __C declaration:__ @wuffs_jpeg__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10279:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11156:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_jpeg__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_jpeg__decoder
@@ -22445,9 +24381,9 @@ hs_bindgen_b124569d13ccbc8e =
 
 {-| __C declaration:__ @wuffs_json__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10699:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11576:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__initialize ::
      BG.Ptr Wuffs_json__decoder
@@ -22478,9 +24414,9 @@ hs_bindgen_db83fdc2a0b44bb3 =
 
 {-| __C declaration:__ @sizeof__wuffs_json__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10706:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11583:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_json__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_json__decoder =
@@ -22497,9 +24433,9 @@ hs_bindgen_51efa606d87fcf4e =
 
 {-| __C declaration:__ @wuffs_json__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10717:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11594:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__alloc :: IO (BG.Ptr Wuffs_json__decoder)
 wuffs_json__decoder__alloc =
@@ -22516,9 +24452,9 @@ hs_bindgen_016417cd3a5d9bb5 =
 
 {-| __C declaration:__ @wuffs_json__decoder__alloc_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10720:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11597:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__alloc_as__wuffs_base__token_decoder :: IO (BG.Ptr Wuffs_base__token_decoder)
 wuffs_json__decoder__alloc_as__wuffs_base__token_decoder =
@@ -22539,9 +24475,9 @@ hs_bindgen_3c8df7d3fcc68cff =
 
 {-| __C declaration:__ @wuffs_json__decoder__upcast_as__wuffs_base__token_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10727:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11604:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__upcast_as__wuffs_base__token_decoder ::
      BG.Ptr Wuffs_json__decoder
@@ -22568,9 +24504,9 @@ hs_bindgen_97bb72161eda138c =
 
 {-| __C declaration:__ @wuffs_json__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10736:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11613:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_json__decoder
@@ -22605,9 +24541,9 @@ hs_bindgen_07bd3c3d66225e95 =
 
 {-| __C declaration:__ @wuffs_json__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10742:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11619:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__set_quirk ::
      BG.Ptr Wuffs_json__decoder
@@ -22642,9 +24578,9 @@ hs_bindgen_21f8f0981270c0ac =
 
 {-| __C declaration:__ @wuffs_json__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10749:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11626:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_json__decoder
@@ -22682,9 +24618,9 @@ hs_bindgen_83ca9b6cced76753 =
 
 {-| __C declaration:__ @wuffs_json__decoder__decode_tokens@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10754:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11631:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_json__decoder__decode_tokens ::
      BG.Ptr Wuffs_json__decoder
@@ -22732,9 +24668,9 @@ hs_bindgen_4286f187664f8e66 =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10947:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11824:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__initialize ::
      BG.Ptr Wuffs_lzma__decoder
@@ -22765,9 +24701,9 @@ hs_bindgen_3e9eaf706e84c2fd =
 
 {-| __C declaration:__ @sizeof__wuffs_lzma__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10954:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11831:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzma__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_lzma__decoder =
@@ -22784,9 +24720,9 @@ hs_bindgen_dce96cb42991680c =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10965:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11842:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__alloc :: IO (BG.Ptr Wuffs_lzma__decoder)
 wuffs_lzma__decoder__alloc =
@@ -22803,9 +24739,9 @@ hs_bindgen_40b936e3568daf8b =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10968:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11845:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_lzma__decoder__alloc_as__wuffs_base__io_transformer =
@@ -22826,9 +24762,9 @@ hs_bindgen_4a6d59d948d3a709 =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10975:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11852:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_lzma__decoder
@@ -22855,9 +24791,9 @@ hs_bindgen_87204cf5e783e5f7 =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10984:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11861:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_lzma__decoder
@@ -22892,9 +24828,9 @@ hs_bindgen_620fd72e8c1aaa8f =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10990:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11867:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__set_quirk ::
      BG.Ptr Wuffs_lzma__decoder
@@ -22929,9 +24865,9 @@ hs_bindgen_a85b56d03e7d6570 =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 10997:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11874:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_lzma__decoder
@@ -22960,9 +24896,9 @@ hs_bindgen_7b118a990d077a0c =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11879:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_lzma__decoder
@@ -23000,9 +24936,9 @@ hs_bindgen_0fb5e8451c39df0d =
 
 {-| __C declaration:__ @wuffs_lzma__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11007:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 11884:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzma__decoder__transform_io ::
      BG.Ptr Wuffs_lzma__decoder
@@ -23050,9 +24986,9 @@ hs_bindgen_fe84c3bfe9ecbc4b =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11264:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__initialize ::
      BG.Ptr Wuffs_lzip__decoder
@@ -23083,9 +25019,9 @@ hs_bindgen_958c94ff1069843b =
 
 {-| __C declaration:__ @sizeof__wuffs_lzip__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11271:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12148:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzip__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_lzip__decoder =
@@ -23102,9 +25038,9 @@ hs_bindgen_89624045b14a2426 =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11282:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12159:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__alloc :: IO (BG.Ptr Wuffs_lzip__decoder)
 wuffs_lzip__decoder__alloc =
@@ -23121,9 +25057,9 @@ hs_bindgen_8288c87e5f9671c3 =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11285:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_lzip__decoder__alloc_as__wuffs_base__io_transformer =
@@ -23144,9 +25080,9 @@ hs_bindgen_4ffe78d3efc2611b =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11292:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12169:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_lzip__decoder
@@ -23173,9 +25109,9 @@ hs_bindgen_2f2a466feb79d98c =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12178:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_lzip__decoder
@@ -23210,9 +25146,9 @@ hs_bindgen_8c3641248edb683a =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11307:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__set_quirk ::
      BG.Ptr Wuffs_lzip__decoder
@@ -23247,9 +25183,9 @@ hs_bindgen_6247214b9f086df8 =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11314:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_lzip__decoder
@@ -23278,9 +25214,9 @@ hs_bindgen_4a37848df2ae5298 =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12196:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_lzip__decoder
@@ -23318,9 +25254,9 @@ hs_bindgen_2cdc2c5138986dfd =
 
 {-| __C declaration:__ @wuffs_lzip__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11324:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12201:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzip__decoder__transform_io ::
      BG.Ptr Wuffs_lzip__decoder
@@ -23368,9 +25304,9 @@ hs_bindgen_5598fea2fe8afe68 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11506:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12383:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__initialize ::
      BG.Ptr Wuffs_lzw__decoder
@@ -23401,9 +25337,9 @@ hs_bindgen_97b18c12a4b1dc4a =
 
 {-| __C declaration:__ @sizeof__wuffs_lzw__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11513:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12390:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_lzw__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_lzw__decoder =
@@ -23420,9 +25356,9 @@ hs_bindgen_d67ff4c4a1624c66 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11524:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12401:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__alloc :: IO (BG.Ptr Wuffs_lzw__decoder)
 wuffs_lzw__decoder__alloc =
@@ -23439,9 +25375,9 @@ hs_bindgen_18375fbbf89de057 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11527:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12404:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_lzw__decoder__alloc_as__wuffs_base__io_transformer =
@@ -23462,9 +25398,9 @@ hs_bindgen_6dfffb713c4993d3 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11534:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12411:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_lzw__decoder
@@ -23491,9 +25427,9 @@ hs_bindgen_6631be222acff76e =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12420:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_lzw__decoder
@@ -23528,9 +25464,9 @@ hs_bindgen_09f45dcc588cf103 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11549:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12426:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__set_quirk ::
      BG.Ptr Wuffs_lzw__decoder
@@ -23565,9 +25501,9 @@ hs_bindgen_dbf2c250a9503b47 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11556:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12433:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_lzw__decoder
@@ -23596,9 +25532,9 @@ hs_bindgen_b94a17a4adeb0613 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11561:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12438:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_lzw__decoder
@@ -23636,9 +25572,9 @@ hs_bindgen_26b3d6b32ce7d581 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11566:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12443:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__transform_io ::
      BG.Ptr Wuffs_lzw__decoder
@@ -23677,9 +25613,9 @@ hs_bindgen_a3b9c2699bc19b01 =
 
 {-| __C declaration:__ @wuffs_lzw__decoder__flush@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11574:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12451:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_lzw__decoder__flush ::
      BG.Ptr Wuffs_lzw__decoder
@@ -23717,9 +25653,9 @@ hs_bindgen_751955d4cabcf370 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11762:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12639:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__initialize ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -23750,9 +25686,9 @@ hs_bindgen_6503babeb6e7c1bc =
 
 {-| __C declaration:__ @sizeof__wuffs_netpbm__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12646:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_netpbm__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_netpbm__decoder =
@@ -23769,9 +25705,9 @@ hs_bindgen_037109b9c14902aa =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11780:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12657:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__alloc :: IO (BG.Ptr Wuffs_netpbm__decoder)
 wuffs_netpbm__decoder__alloc =
@@ -23788,9 +25724,9 @@ hs_bindgen_a0273fc3ad0d3b5f =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11783:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12660:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_netpbm__decoder__alloc_as__wuffs_base__image_decoder =
@@ -23811,9 +25747,9 @@ hs_bindgen_ea0afc5926ac78f6 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11790:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12667:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -23840,9 +25776,9 @@ hs_bindgen_0eea4d71dccb2b23 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12676:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -23877,9 +25813,9 @@ hs_bindgen_0bd154325172e885 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11805:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12682:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__set_quirk ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -23920,9 +25856,9 @@ hs_bindgen_ac46a69332e52004 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11812:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12689:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_image_config ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -23963,9 +25899,9 @@ hs_bindgen_acadee20a839f4a0 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11819:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12696:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_frame_config ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -24015,9 +25951,9 @@ hs_bindgen_032db9dd4b51c87b =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11826:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12703:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__decode_frame ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -24062,9 +25998,9 @@ hs_bindgen_fad8cb625466056a =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11836:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12713:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -24090,9 +26026,9 @@ hs_bindgen_cf985261288de5cf =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11841:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12718:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -24116,9 +26052,9 @@ hs_bindgen_e42b84fe4448e942 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11846:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12723:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -24142,9 +26078,9 @@ hs_bindgen_58cf8ad88c2b24bd =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11851:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12728:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -24177,9 +26113,9 @@ hs_bindgen_681b8cb58146513f =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11856:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12733:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__restart_frame ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -24220,9 +26156,9 @@ hs_bindgen_ff99ba4fbca5eaf3 =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11863:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__set_report_metadata ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -24266,9 +26202,9 @@ hs_bindgen_de39f4b601c5ce7f =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11870:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12747:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__tell_me_more ::
      BG.Ptr Wuffs_netpbm__decoder
@@ -24306,9 +26242,9 @@ hs_bindgen_df52b580bf0ffe3b =
 
 {-| __C declaration:__ @wuffs_netpbm__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 11878:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12755:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_netpbm__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_netpbm__decoder
@@ -24346,9 +26282,9 @@ hs_bindgen_b2bde7bfade3c1f6 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12108:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12990:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__initialize ::
      BG.Ptr Wuffs_nie__decoder
@@ -24379,9 +26315,9 @@ hs_bindgen_31a0e8764f610385 =
 
 {-| __C declaration:__ @sizeof__wuffs_nie__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12115:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 12997:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_nie__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_nie__decoder =
@@ -24398,9 +26334,9 @@ hs_bindgen_a375340309996c9a =
 
 {-| __C declaration:__ @wuffs_nie__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12126:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13008:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__alloc :: IO (BG.Ptr Wuffs_nie__decoder)
 wuffs_nie__decoder__alloc =
@@ -24417,9 +26353,9 @@ hs_bindgen_76ae9d51071d38a9 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12129:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13011:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_nie__decoder__alloc_as__wuffs_base__image_decoder =
@@ -24440,9 +26376,9 @@ hs_bindgen_3a608467305d6d69 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12136:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13018:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_nie__decoder
@@ -24469,9 +26405,9 @@ hs_bindgen_316cffe6ca2d65c6 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12145:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13027:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24506,9 +26442,9 @@ hs_bindgen_601320ffbcb39b1a =
 
 {-| __C declaration:__ @wuffs_nie__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12151:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13033:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__set_quirk ::
      BG.Ptr Wuffs_nie__decoder
@@ -24549,9 +26485,9 @@ hs_bindgen_943d4aa4e9e13e8b =
 
 {-| __C declaration:__ @wuffs_nie__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12158:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13040:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_image_config ::
      BG.Ptr Wuffs_nie__decoder
@@ -24592,9 +26528,9 @@ hs_bindgen_e51cd19fbc5d5982 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12165:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13047:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_frame_config ::
      BG.Ptr Wuffs_nie__decoder
@@ -24644,9 +26580,9 @@ hs_bindgen_fd9b017af4331ebe =
 
 {-| __C declaration:__ @wuffs_nie__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12172:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13054:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__decode_frame ::
      BG.Ptr Wuffs_nie__decoder
@@ -24691,9 +26627,9 @@ hs_bindgen_2fdc7eebed9b6da0 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12182:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13064:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24719,9 +26655,9 @@ hs_bindgen_ed613e5f8810158f =
 
 {-| __C declaration:__ @wuffs_nie__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12187:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13069:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24745,9 +26681,9 @@ hs_bindgen_c3671efefbc595db =
 
 {-| __C declaration:__ @wuffs_nie__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12192:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13074:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24771,9 +26707,9 @@ hs_bindgen_d5a3340fec618a4d =
 
 {-| __C declaration:__ @wuffs_nie__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12197:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13079:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24806,9 +26742,9 @@ hs_bindgen_fc5113d587162725 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12202:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13084:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__restart_frame ::
      BG.Ptr Wuffs_nie__decoder
@@ -24849,9 +26785,9 @@ hs_bindgen_44093b9f3567d240 =
 
 {-| __C declaration:__ @wuffs_nie__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12209:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13091:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__set_report_metadata ::
      BG.Ptr Wuffs_nie__decoder
@@ -24895,9 +26831,9 @@ hs_bindgen_f4fcffa8e110f07e =
 
 {-| __C declaration:__ @wuffs_nie__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12216:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13098:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__tell_me_more ::
      BG.Ptr Wuffs_nie__decoder
@@ -24935,9 +26871,9 @@ hs_bindgen_6f1e78155705b87d =
 
 {-| __C declaration:__ @wuffs_nie__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12224:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13106:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_nie__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_nie__decoder
@@ -24975,9 +26911,9 @@ hs_bindgen_42eb819ca0e6779e =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12466:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13363:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__initialize ::
      BG.Ptr Wuffs_zlib__decoder
@@ -25008,9 +26944,9 @@ hs_bindgen_2cf2c4566884fce0 =
 
 {-| __C declaration:__ @sizeof__wuffs_zlib__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12473:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13370:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_zlib__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_zlib__decoder =
@@ -25027,9 +26963,9 @@ hs_bindgen_c082c643776fa387 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12484:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13381:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__alloc :: IO (BG.Ptr Wuffs_zlib__decoder)
 wuffs_zlib__decoder__alloc =
@@ -25046,9 +26982,9 @@ hs_bindgen_31ff52d5dc008141 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12487:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13384:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_zlib__decoder__alloc_as__wuffs_base__io_transformer =
@@ -25069,9 +27005,9 @@ hs_bindgen_ebd201cd1d420456 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12494:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13391:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_zlib__decoder
@@ -25095,9 +27031,9 @@ hs_bindgen_cecc65359a2c8432 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__dictionary_id@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12503:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13400:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__dictionary_id ::
      PtrConst.PtrConst Wuffs_zlib__decoder
@@ -25127,9 +27063,9 @@ hs_bindgen_0cc2b51b6486ade5 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__add_dictionary@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12508:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13405:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__add_dictionary ::
      BG.Ptr Wuffs_zlib__decoder
@@ -25162,9 +27098,9 @@ hs_bindgen_a9bfa9d2f7d508e2 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12514:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13411:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_zlib__decoder
@@ -25199,9 +27135,9 @@ hs_bindgen_d033902102ff4320 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12520:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13417:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__set_quirk ::
      BG.Ptr Wuffs_zlib__decoder
@@ -25236,9 +27172,9 @@ hs_bindgen_9f78317c723f81e4 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12527:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13424:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_zlib__decoder
@@ -25267,9 +27203,9 @@ hs_bindgen_2b7d3ae0e5bcbee3 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12532:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13429:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_zlib__decoder
@@ -25307,9 +27243,9 @@ hs_bindgen_97610d58b97cc323 =
 
 {-| __C declaration:__ @wuffs_zlib__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12537:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13434:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_zlib__decoder__transform_io ::
      BG.Ptr Wuffs_zlib__decoder
@@ -25357,9 +27293,9 @@ hs_bindgen_9f5c49e0c8a06a60 =
 
 {-| __C declaration:__ @wuffs_png__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12744:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13641:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__initialize ::
      BG.Ptr Wuffs_png__decoder
@@ -25390,9 +27326,9 @@ hs_bindgen_83c26d6b3c8f62ab =
 
 {-| __C declaration:__ @sizeof__wuffs_png__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12751:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13648:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_png__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_png__decoder =
@@ -25409,9 +27345,9 @@ hs_bindgen_5166e58e9061f2d1 =
 
 {-| __C declaration:__ @wuffs_png__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12762:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13659:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__alloc :: IO (BG.Ptr Wuffs_png__decoder)
 wuffs_png__decoder__alloc =
@@ -25428,9 +27364,9 @@ hs_bindgen_8ea61a8c1cd4abdc =
 
 {-| __C declaration:__ @wuffs_png__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12765:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13662:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_png__decoder__alloc_as__wuffs_base__image_decoder =
@@ -25451,9 +27387,9 @@ hs_bindgen_5db3127f45385415 =
 
 {-| __C declaration:__ @wuffs_png__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12772:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13669:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_png__decoder
@@ -25480,9 +27416,9 @@ hs_bindgen_9239009ed7c81d1f =
 
 {-| __C declaration:__ @wuffs_png__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12781:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13678:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25517,9 +27453,9 @@ hs_bindgen_6b2330ef591c110a =
 
 {-| __C declaration:__ @wuffs_png__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12787:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13684:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__set_quirk ::
      BG.Ptr Wuffs_png__decoder
@@ -25560,9 +27496,9 @@ hs_bindgen_1c8666af95ffa05d =
 
 {-| __C declaration:__ @wuffs_png__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12794:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13691:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_image_config ::
      BG.Ptr Wuffs_png__decoder
@@ -25603,9 +27539,9 @@ hs_bindgen_eec952066c4b0423 =
 
 {-| __C declaration:__ @wuffs_png__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12801:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13698:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_frame_config ::
      BG.Ptr Wuffs_png__decoder
@@ -25655,9 +27591,9 @@ hs_bindgen_030942424c5d7949 =
 
 {-| __C declaration:__ @wuffs_png__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12808:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13705:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__decode_frame ::
      BG.Ptr Wuffs_png__decoder
@@ -25702,9 +27638,9 @@ hs_bindgen_65306033a7b33956 =
 
 {-| __C declaration:__ @wuffs_png__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12818:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13715:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25730,9 +27666,9 @@ hs_bindgen_04739aaea94c5467 =
 
 {-| __C declaration:__ @wuffs_png__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12823:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13720:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25756,9 +27692,9 @@ hs_bindgen_ade70976a6e90d7a =
 
 {-| __C declaration:__ @wuffs_png__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12828:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13725:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25782,9 +27718,9 @@ hs_bindgen_067f205451a8b1ff =
 
 {-| __C declaration:__ @wuffs_png__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12833:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13730:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25817,9 +27753,9 @@ hs_bindgen_613aea31d78ae9bc =
 
 {-| __C declaration:__ @wuffs_png__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12838:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13735:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__restart_frame ::
      BG.Ptr Wuffs_png__decoder
@@ -25860,9 +27796,9 @@ hs_bindgen_8d0b6edae09283d6 =
 
 {-| __C declaration:__ @wuffs_png__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12845:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13742:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__set_report_metadata ::
      BG.Ptr Wuffs_png__decoder
@@ -25906,9 +27842,9 @@ hs_bindgen_6d817f1cf01ba901 =
 
 {-| __C declaration:__ @wuffs_png__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12852:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13749:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__tell_me_more ::
      BG.Ptr Wuffs_png__decoder
@@ -25946,9 +27882,9 @@ hs_bindgen_e785e46763598afc =
 
 {-| __C declaration:__ @wuffs_png__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 12860:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 13757:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_png__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_png__decoder
@@ -25986,9 +27922,9 @@ hs_bindgen_686f888ed28f22fa =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13237:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14134:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__initialize ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26019,9 +27955,9 @@ hs_bindgen_42677f882c2c3361 =
 
 {-| __C declaration:__ @sizeof__wuffs_qoi__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13244:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14141:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_qoi__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_qoi__decoder =
@@ -26038,9 +27974,9 @@ hs_bindgen_7e4d3b2156b69978 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13255:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14152:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__alloc :: IO (BG.Ptr Wuffs_qoi__decoder)
 wuffs_qoi__decoder__alloc =
@@ -26057,9 +27993,9 @@ hs_bindgen_fd4cd9dc29d5c106 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13258:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14155:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_qoi__decoder__alloc_as__wuffs_base__image_decoder =
@@ -26080,9 +28016,9 @@ hs_bindgen_8b2ffd9a0f60f1c8 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13265:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14162:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26109,9 +28045,9 @@ hs_bindgen_ae8512e10c282b79 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13274:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14171:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26146,9 +28082,9 @@ hs_bindgen_acb2201a9df26892 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13280:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14177:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__set_quirk ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26189,9 +28125,9 @@ hs_bindgen_6c51f783bdd7cc2c =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13287:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_image_config ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26232,9 +28168,9 @@ hs_bindgen_99f56c0520e8f423 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13294:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_frame_config ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26284,9 +28220,9 @@ hs_bindgen_9c558e9927a6d08f =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13301:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14198:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__decode_frame ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26331,9 +28267,9 @@ hs_bindgen_0f53decc9babf76e =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13311:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14208:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26359,9 +28295,9 @@ hs_bindgen_1c952cd68d019a15 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13316:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14213:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26385,9 +28321,9 @@ hs_bindgen_74704649d222e429 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13321:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14218:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26411,9 +28347,9 @@ hs_bindgen_40740c499c883d46 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13326:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14223:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26446,9 +28382,9 @@ hs_bindgen_3ea8f5736f007838 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13331:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14228:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__restart_frame ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26489,9 +28425,9 @@ hs_bindgen_888f58c73197f975 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13338:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14235:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__set_report_metadata ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26535,9 +28471,9 @@ hs_bindgen_aa9dc1e1ab705914 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13345:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14242:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__tell_me_more ::
      BG.Ptr Wuffs_qoi__decoder
@@ -26575,9 +28511,9 @@ hs_bindgen_3f166f40ffe48fd5 =
 
 {-| __C declaration:__ @wuffs_qoi__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13353:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14250:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_qoi__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_qoi__decoder
@@ -26615,9 +28551,9 @@ hs_bindgen_1c7a753b02e3bdd9 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13596:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14493:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__initialize ::
      BG.Ptr Wuffs_sha256__hasher
@@ -26648,9 +28584,9 @@ hs_bindgen_714d4816e7fe8a84 =
 
 {-| __C declaration:__ @sizeof__wuffs_sha256__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13603:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14500:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_sha256__hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_sha256__hasher =
@@ -26667,9 +28603,9 @@ hs_bindgen_efa43446ee1eb3c1 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13614:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14511:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__alloc :: IO (BG.Ptr Wuffs_sha256__hasher)
 wuffs_sha256__hasher__alloc =
@@ -26686,9 +28622,9 @@ hs_bindgen_4b90ef7eb5a94759 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13617:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14514:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256 :: IO (BG.Ptr Wuffs_base__hasher_bitvec256)
 wuffs_sha256__hasher__alloc_as__wuffs_base__hasher_bitvec256 =
@@ -26709,9 +28645,9 @@ hs_bindgen_3bc20e37ae4eb160 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13624:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14521:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__upcast_as__wuffs_base__hasher_bitvec256 ::
      BG.Ptr Wuffs_sha256__hasher
@@ -26738,9 +28674,9 @@ hs_bindgen_f041685a498457fa =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13633:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14530:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_sha256__hasher
@@ -26775,9 +28711,9 @@ hs_bindgen_d3c4dbaaabf61694 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13639:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14536:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__set_quirk ::
      BG.Ptr Wuffs_sha256__hasher
@@ -26815,9 +28751,9 @@ hs_bindgen_af069345a5bcafd1 =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13646:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14543:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__update ::
      BG.Ptr Wuffs_sha256__hasher
@@ -26853,9 +28789,9 @@ hs_bindgen_7bb6746a542bacfa =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__update_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13652:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14549:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__update_bitvec256 ::
      BG.Ptr Wuffs_sha256__hasher
@@ -26888,9 +28824,9 @@ hs_bindgen_a36a6a273cfa444e =
 
 {-| __C declaration:__ @wuffs_sha256__hasher__checksum_bitvec256@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13658:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14555:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_sha256__hasher__checksum_bitvec256 ::
      PtrConst.PtrConst Wuffs_sha256__hasher
@@ -26928,9 +28864,9 @@ hs_bindgen_0d62383f0490eb8e =
 
 {-| __C declaration:__ @wuffs_targa__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13834:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14731:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__initialize ::
      BG.Ptr Wuffs_targa__decoder
@@ -26961,9 +28897,9 @@ hs_bindgen_3f6f7df5bbf8eec5 =
 
 {-| __C declaration:__ @sizeof__wuffs_targa__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13841:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14738:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_targa__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_targa__decoder =
@@ -26980,9 +28916,9 @@ hs_bindgen_ebce594e714a2864 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13852:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14749:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__alloc :: IO (BG.Ptr Wuffs_targa__decoder)
 wuffs_targa__decoder__alloc =
@@ -26999,9 +28935,9 @@ hs_bindgen_feee66d8491597a2 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13855:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14752:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_targa__decoder__alloc_as__wuffs_base__image_decoder =
@@ -27022,9 +28958,9 @@ hs_bindgen_27908e025f3d9cc1 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13862:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14759:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_targa__decoder
@@ -27051,9 +28987,9 @@ hs_bindgen_4c031cc7a0d77172 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13871:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14768:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27088,9 +29024,9 @@ hs_bindgen_8b562d3884459e73 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13877:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14774:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__set_quirk ::
      BG.Ptr Wuffs_targa__decoder
@@ -27131,9 +29067,9 @@ hs_bindgen_ffab3056caec1fea =
 
 {-| __C declaration:__ @wuffs_targa__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13884:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14781:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_image_config ::
      BG.Ptr Wuffs_targa__decoder
@@ -27174,9 +29110,9 @@ hs_bindgen_a7c7740a0a53227d =
 
 {-| __C declaration:__ @wuffs_targa__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13891:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14788:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_frame_config ::
      BG.Ptr Wuffs_targa__decoder
@@ -27226,9 +29162,9 @@ hs_bindgen_0309b398a5d1e4dc =
 
 {-| __C declaration:__ @wuffs_targa__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13898:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14795:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__decode_frame ::
      BG.Ptr Wuffs_targa__decoder
@@ -27273,9 +29209,9 @@ hs_bindgen_93b25591efb13459 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13908:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14805:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27301,9 +29237,9 @@ hs_bindgen_e9ecc5686b86ff57 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13913:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14810:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27327,9 +29263,9 @@ hs_bindgen_2f52673283a9b6db =
 
 {-| __C declaration:__ @wuffs_targa__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13918:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14815:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27353,9 +29289,9 @@ hs_bindgen_04681056b9b1080d =
 
 {-| __C declaration:__ @wuffs_targa__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13923:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14820:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27388,9 +29324,9 @@ hs_bindgen_f2a62f63f46b7af7 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13928:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14825:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__restart_frame ::
      BG.Ptr Wuffs_targa__decoder
@@ -27431,9 +29367,9 @@ hs_bindgen_a3984f83dbbb88a3 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13935:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14832:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__set_report_metadata ::
      BG.Ptr Wuffs_targa__decoder
@@ -27477,9 +29413,9 @@ hs_bindgen_6a000f9967f23a17 =
 
 {-| __C declaration:__ @wuffs_targa__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13942:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14839:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__tell_me_more ::
      BG.Ptr Wuffs_targa__decoder
@@ -27517,9 +29453,9 @@ hs_bindgen_b9974d1afe6841fd =
 
 {-| __C declaration:__ @wuffs_targa__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 13950:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 14847:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_targa__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_targa__decoder
@@ -27557,9 +29493,9 @@ hs_bindgen_020093710da13a74 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14211:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15108:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__initialize ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27590,9 +29526,9 @@ hs_bindgen_5fd7119b31118a91 =
 
 {-| __C declaration:__ @sizeof__wuffs_thumbhash__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14218:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15115:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_thumbhash__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_thumbhash__decoder =
@@ -27609,9 +29545,9 @@ hs_bindgen_02c4770b46479c90 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14229:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15126:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__alloc :: IO (BG.Ptr Wuffs_thumbhash__decoder)
 wuffs_thumbhash__decoder__alloc =
@@ -27628,9 +29564,9 @@ hs_bindgen_308944be2df1918a =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14232:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15129:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_thumbhash__decoder__alloc_as__wuffs_base__image_decoder =
@@ -27651,9 +29587,9 @@ hs_bindgen_2e1a74d42f407514 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14239:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15136:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27680,9 +29616,9 @@ hs_bindgen_51b3a51dc625d342 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14248:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15145:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -27717,9 +29653,9 @@ hs_bindgen_40498270fdc01f25 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14254:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15151:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__set_quirk ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27760,9 +29696,9 @@ hs_bindgen_08e6d3e99a7a45c6 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14261:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15158:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_image_config ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27803,9 +29739,9 @@ hs_bindgen_c998f14f6125ea58 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14268:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15165:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_frame_config ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27855,9 +29791,9 @@ hs_bindgen_5a73a2821652c615 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14275:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15172:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__decode_frame ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -27902,9 +29838,9 @@ hs_bindgen_0c678950facc9c4b =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14285:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15182:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -27930,9 +29866,9 @@ hs_bindgen_1c4675ff4e97db61 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14290:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15187:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -27956,9 +29892,9 @@ hs_bindgen_58d8e04bbe6b2784 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14295:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15192:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -27982,9 +29918,9 @@ hs_bindgen_7f13a3a8771e9a65 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14300:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15197:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -28017,9 +29953,9 @@ hs_bindgen_3ae603f02f8ce610 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14305:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15202:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__restart_frame ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -28060,9 +29996,9 @@ hs_bindgen_57c4e88aa1c2c9ed =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14312:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15209:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__set_report_metadata ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -28106,9 +30042,9 @@ hs_bindgen_9de37bdc9aec6234 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14319:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15216:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__tell_me_more ::
      BG.Ptr Wuffs_thumbhash__decoder
@@ -28146,9 +30082,9 @@ hs_bindgen_59eda42526adcfa1 =
 
 {-| __C declaration:__ @wuffs_thumbhash__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14327:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15224:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_thumbhash__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_thumbhash__decoder
@@ -28159,8 +30095,8 @@ wuffs_thumbhash__decoder__workbuf_len =
     BG.allocaAndPeek (\res1 ->
                         hs_bindgen_59eda42526adcfa1 self0 res1)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__placeholder__initialize@
-foreign import ccall safe "hs_bindgen_caa7f32449e09ced" hs_bindgen_caa7f32449e09ced_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__initialize@
+foreign import ccall safe "hs_bindgen_fa98b200fbc783ae" hs_bindgen_fa98b200fbc783ae_base ::
      BG.Ptr BG.Void
   -> HsBindgen.Runtime.LibC.CSize
   -> HsBindgen.Runtime.LibC.Word64
@@ -28168,30 +30104,30 @@ foreign import ccall safe "hs_bindgen_caa7f32449e09ced" hs_bindgen_caa7f32449e09
   -> BG.Ptr BG.Void
   -> IO ()
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__placeholder__initialize@
-hs_bindgen_caa7f32449e09ced ::
-     BG.Ptr Wuffs_vp8__placeholder
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__initialize@
+hs_bindgen_fa98b200fbc783ae ::
+     BG.Ptr Wuffs_vp8__decoder
   -> HsBindgen.Runtime.LibC.CSize
   -> HsBindgen.Runtime.LibC.Word64
   -> HsBindgen.Runtime.LibC.Word32
   -> BG.Ptr Wuffs_base__status
   -> IO ()
-hs_bindgen_caa7f32449e09ced =
+hs_bindgen_fa98b200fbc783ae =
   \x0 ->
     \x1 ->
       \x2 ->
         \x3 ->
           \x4 ->
-            hs_bindgen_caa7f32449e09ced_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+            hs_bindgen_fa98b200fbc783ae_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
 
-{-| __C declaration:__ @wuffs_vp8__placeholder__initialize@
+{-| __C declaration:__ @wuffs_vp8__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14581:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15487:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_vp8__placeholder__initialize ::
-     BG.Ptr Wuffs_vp8__placeholder
+wuffs_vp8__decoder__initialize ::
+     BG.Ptr Wuffs_vp8__decoder
      -- ^ __C declaration:__ @self@
   -> HsBindgen.Runtime.LibC.CSize
      -- ^ __C declaration:__ @sizeof_star_self@
@@ -28200,51 +30136,593 @@ wuffs_vp8__placeholder__initialize ::
   -> HsBindgen.Runtime.LibC.Word32
      -- ^ __C declaration:__ @options@
   -> IO Wuffs_base__status
-wuffs_vp8__placeholder__initialize =
+wuffs_vp8__decoder__initialize =
   \self0 ->
     \sizeof_star_self1 ->
       \wuffs_version2 ->
         \options3 ->
           BG.allocaAndPeek (\res4 ->
-                              hs_bindgen_caa7f32449e09ced self0 sizeof_star_self1 wuffs_version2 options3 res4)
+                              hs_bindgen_fa98b200fbc783ae self0 sizeof_star_self1 wuffs_version2 options3 res4)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_vp8__placeholder@
-foreign import ccall safe "hs_bindgen_291b85017040750a" hs_bindgen_291b85017040750a_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_vp8__decoder@
+foreign import ccall safe "hs_bindgen_dff53c4da321b1bc" hs_bindgen_dff53c4da321b1bc_base ::
      IO HsBindgen.Runtime.LibC.CSize
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_vp8__placeholder@
-hs_bindgen_291b85017040750a :: IO HsBindgen.Runtime.LibC.CSize
-hs_bindgen_291b85017040750a =
-  fmap BG.fromFFIType hs_bindgen_291b85017040750a_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_sizeof__wuffs_vp8__decoder@
+hs_bindgen_dff53c4da321b1bc :: IO HsBindgen.Runtime.LibC.CSize
+hs_bindgen_dff53c4da321b1bc =
+  fmap BG.fromFFIType hs_bindgen_dff53c4da321b1bc_base
 
-{-| __C declaration:__ @sizeof__wuffs_vp8__placeholder@
+{-| __C declaration:__ @sizeof__wuffs_vp8__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14588:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15494:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-sizeof__wuffs_vp8__placeholder :: IO HsBindgen.Runtime.LibC.CSize
-sizeof__wuffs_vp8__placeholder =
-  hs_bindgen_291b85017040750a
+sizeof__wuffs_vp8__decoder :: IO HsBindgen.Runtime.LibC.CSize
+sizeof__wuffs_vp8__decoder =
+  hs_bindgen_dff53c4da321b1bc
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__placeholder__alloc@
-foreign import ccall safe "hs_bindgen_19510a304182ff26" hs_bindgen_19510a304182ff26_base ::
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__alloc@
+foreign import ccall safe "hs_bindgen_3c4ebab5ede6bdd2" hs_bindgen_3c4ebab5ede6bdd2_base ::
      IO (BG.Ptr BG.Void)
 
--- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__placeholder__alloc@
-hs_bindgen_19510a304182ff26 :: IO (BG.Ptr Wuffs_vp8__placeholder)
-hs_bindgen_19510a304182ff26 =
-  fmap BG.fromFFIType hs_bindgen_19510a304182ff26_base
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__alloc@
+hs_bindgen_3c4ebab5ede6bdd2 :: IO (BG.Ptr Wuffs_vp8__decoder)
+hs_bindgen_3c4ebab5ede6bdd2 =
+  fmap BG.fromFFIType hs_bindgen_3c4ebab5ede6bdd2_base
 
-{-| __C declaration:__ @wuffs_vp8__placeholder__alloc@
+{-| __C declaration:__ @wuffs_vp8__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14599:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15505:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
-wuffs_vp8__placeholder__alloc :: IO (BG.Ptr Wuffs_vp8__placeholder)
-wuffs_vp8__placeholder__alloc =
-  hs_bindgen_19510a304182ff26
+wuffs_vp8__decoder__alloc :: IO (BG.Ptr Wuffs_vp8__decoder)
+wuffs_vp8__decoder__alloc =
+  hs_bindgen_3c4ebab5ede6bdd2
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+foreign import ccall safe "hs_bindgen_8a6cdbf4e497f83c" hs_bindgen_8a6cdbf4e497f83c_base ::
+     IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+hs_bindgen_8a6cdbf4e497f83c :: IO (BG.Ptr Wuffs_base__image_decoder)
+hs_bindgen_8a6cdbf4e497f83c =
+  fmap BG.fromFFIType hs_bindgen_8a6cdbf4e497f83c_base
+
+{-| __C declaration:__ @wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15508:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
+wuffs_vp8__decoder__alloc_as__wuffs_base__image_decoder =
+  hs_bindgen_8a6cdbf4e497f83c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+foreign import ccall safe "hs_bindgen_92e9ae431b0f445c" hs_bindgen_92e9ae431b0f445c_base ::
+     BG.Ptr BG.Void
+  -> IO (BG.Ptr BG.Void)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+hs_bindgen_92e9ae431b0f445c ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> IO (BG.Ptr Wuffs_base__image_decoder)
+hs_bindgen_92e9ae431b0f445c =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_92e9ae431b0f445c_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15515:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @p@
+  -> IO (BG.Ptr Wuffs_base__image_decoder)
+wuffs_vp8__decoder__upcast_as__wuffs_base__image_decoder =
+  hs_bindgen_92e9ae431b0f445c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__get_quirk@
+foreign import ccall safe "hs_bindgen_5ab76efc543d6ca3" hs_bindgen_5ab76efc543d6ca3_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__get_quirk@
+hs_bindgen_5ab76efc543d6ca3 ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_5ab76efc543d6ca3 =
+  \x0 ->
+    \x1 ->
+      fmap BG.fromFFIType (hs_bindgen_5ab76efc543d6ca3_base (BG.toFFIType x0) (BG.toFFIType x1))
+
+{-| __C declaration:__ @wuffs_vp8__decoder__get_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15524:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__get_quirk ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_key@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_vp8__decoder__get_quirk =
+  hs_bindgen_5ab76efc543d6ca3
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__set_quirk@
+foreign import ccall safe "hs_bindgen_cc7c1eea4c94fe53" hs_bindgen_cc7c1eea4c94fe53_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__set_quirk@
+hs_bindgen_cc7c1eea4c94fe53 ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_cc7c1eea4c94fe53 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_cc7c1eea4c94fe53_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__set_quirk@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15530:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__set_quirk ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_key@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_value@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__set_quirk =
+  \self0 ->
+    \a_key1 ->
+      \a_value2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_cc7c1eea4c94fe53 self0 a_key1 a_value2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_image_config@
+foreign import ccall safe "hs_bindgen_51424a15e35e59c5" hs_bindgen_51424a15e35e59c5_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_image_config@
+hs_bindgen_51424a15e35e59c5 ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__image_config
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_51424a15e35e59c5 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_51424a15e35e59c5_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_image_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15537:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_image_config ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__image_config
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__decode_image_config =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_51424a15e35e59c5 self0 a_dst1 a_src2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_frame_config@
+foreign import ccall safe "hs_bindgen_fb35ab24d73ba484" hs_bindgen_fb35ab24d73ba484_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_frame_config@
+hs_bindgen_fb35ab24d73ba484 ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__frame_config
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_fb35ab24d73ba484 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_fb35ab24d73ba484_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_frame_config@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15544:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_frame_config ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__frame_config
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__decode_frame_config =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_fb35ab24d73ba484 self0 a_dst1 a_src2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_frame@
+foreign import ccall safe "hs_bindgen_f60ee8b800390bb4" hs_bindgen_f60ee8b800390bb4_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word8
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__decode_frame@
+hs_bindgen_f60ee8b800390bb4 ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__pixel_buffer
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> Wuffs_base__pixel_blend
+  -> BG.Ptr Wuffs_base__slice_u8
+  -> BG.Ptr Wuffs_base__decode_frame_options
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_f60ee8b800390bb4 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            \x5 ->
+              \x6 ->
+                hs_bindgen_f60ee8b800390bb4_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4) (BG.toFFIType x5) (BG.toFFIType x6)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__decode_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15551:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__decode_frame ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__pixel_buffer
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> Wuffs_base__pixel_blend
+     -- ^ __C declaration:__ @a_blend@
+  -> Wuffs_base__slice_u8
+     -- ^ __C declaration:__ @a_workbuf@
+  -> BG.Ptr Wuffs_base__decode_frame_options
+     -- ^ __C declaration:__ @a_opts@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__decode_frame =
+  \self0 ->
+    \a_dst1 ->
+      \a_src2 ->
+        \a_blend3 ->
+          \a_workbuf4 ->
+            \a_opts5 ->
+              BG.with a_workbuf4 (\a_workbuf6 ->
+                                    BG.allocaAndPeek (\res7 ->
+                                                        hs_bindgen_f60ee8b800390bb4 self0 a_dst1 a_src2 a_blend3 a_workbuf6 a_opts5 res7))
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__frame_dirty_rect@
+foreign import ccall safe "hs_bindgen_4126497719ef8ffb" hs_bindgen_4126497719ef8ffb_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__frame_dirty_rect@
+hs_bindgen_4126497719ef8ffb ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__rect_ie_u32
+  -> IO ()
+hs_bindgen_4126497719ef8ffb =
+  \x0 ->
+    \x1 ->
+      hs_bindgen_4126497719ef8ffb_base (BG.toFFIType x0) (BG.toFFIType x1)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__frame_dirty_rect@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15561:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__frame_dirty_rect ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO Wuffs_base__rect_ie_u32
+wuffs_vp8__decoder__frame_dirty_rect =
+  \self0 ->
+    BG.allocaAndPeek (\res1 ->
+                        hs_bindgen_4126497719ef8ffb self0 res1)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_animation_loops@
+foreign import ccall safe "hs_bindgen_f649c114edcac44f" hs_bindgen_f649c114edcac44f_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word32
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_animation_loops@
+hs_bindgen_f649c114edcac44f ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> IO HsBindgen.Runtime.LibC.Word32
+hs_bindgen_f649c114edcac44f =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_f649c114edcac44f_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_vp8__decoder__num_animation_loops@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15566:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_animation_loops ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word32
+wuffs_vp8__decoder__num_animation_loops =
+  hs_bindgen_f649c114edcac44f
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_decoded_frame_configs@
+foreign import ccall safe "hs_bindgen_db85d34b90bbd06c" hs_bindgen_db85d34b90bbd06c_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_decoded_frame_configs@
+hs_bindgen_db85d34b90bbd06c ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_db85d34b90bbd06c =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_db85d34b90bbd06c_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_vp8__decoder__num_decoded_frame_configs@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15571:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_decoded_frame_configs ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_vp8__decoder__num_decoded_frame_configs =
+  hs_bindgen_db85d34b90bbd06c
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_decoded_frames@
+foreign import ccall safe "hs_bindgen_4fa66b8114a6726b" hs_bindgen_4fa66b8114a6726b_base ::
+     BG.Ptr BG.Void
+  -> IO HsBindgen.Runtime.LibC.Word64
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__num_decoded_frames@
+hs_bindgen_4fa66b8114a6726b ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> IO HsBindgen.Runtime.LibC.Word64
+hs_bindgen_4fa66b8114a6726b =
+  \x0 ->
+    fmap BG.fromFFIType (hs_bindgen_4fa66b8114a6726b_base (BG.toFFIType x0))
+
+{-| __C declaration:__ @wuffs_vp8__decoder__num_decoded_frames@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15576:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__num_decoded_frames ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO HsBindgen.Runtime.LibC.Word64
+wuffs_vp8__decoder__num_decoded_frames =
+  hs_bindgen_4fa66b8114a6726b
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__restart_frame@
+foreign import ccall safe "hs_bindgen_2c89cb2813275b6c" hs_bindgen_2c89cb2813275b6c_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__restart_frame@
+hs_bindgen_2c89cb2813275b6c ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> HsBindgen.Runtime.LibC.Word64
+  -> HsBindgen.Runtime.LibC.Word64
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_2c89cb2813275b6c =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_2c89cb2813275b6c_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__restart_frame@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15581:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__restart_frame ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_index@
+  -> HsBindgen.Runtime.LibC.Word64
+     -- ^ __C declaration:__ @a_io_position@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__restart_frame =
+  \self0 ->
+    \a_index1 ->
+      \a_io_position2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_2c89cb2813275b6c self0 a_index1 a_io_position2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__set_report_metadata@
+foreign import ccall safe "hs_bindgen_430df8fc4c149c4f" hs_bindgen_430df8fc4c149c4f_base ::
+     BG.Ptr BG.Void
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.CBool
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__set_report_metadata@
+hs_bindgen_430df8fc4c149c4f ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> HsBindgen.Runtime.LibC.Word32
+  -> BG.CBool
+  -> BG.Ptr Wuffs_base__empty_struct
+  -> IO ()
+hs_bindgen_430df8fc4c149c4f =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          hs_bindgen_430df8fc4c149c4f_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__set_report_metadata@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15588:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__set_report_metadata ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> HsBindgen.Runtime.LibC.Word32
+     -- ^ __C declaration:__ @a_fourcc@
+  -> BG.CBool
+     -- ^ __C declaration:__ @a_report@
+  -> IO Wuffs_base__empty_struct
+wuffs_vp8__decoder__set_report_metadata =
+  \self0 ->
+    \a_fourcc1 ->
+      \a_report2 ->
+        BG.allocaAndPeek (\res3 ->
+                            hs_bindgen_430df8fc4c149c4f self0 a_fourcc1 a_report2 res3)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__tell_me_more@
+foreign import ccall safe "hs_bindgen_e94f885b4d325402" hs_bindgen_e94f885b4d325402_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__tell_me_more@
+hs_bindgen_e94f885b4d325402 ::
+     BG.Ptr Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__more_information
+  -> BG.Ptr Wuffs_base__io_buffer
+  -> BG.Ptr Wuffs_base__status
+  -> IO ()
+hs_bindgen_e94f885b4d325402 =
+  \x0 ->
+    \x1 ->
+      \x2 ->
+        \x3 ->
+          \x4 ->
+            hs_bindgen_e94f885b4d325402_base (BG.toFFIType x0) (BG.toFFIType x1) (BG.toFFIType x2) (BG.toFFIType x3) (BG.toFFIType x4)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__tell_me_more@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15595:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__tell_me_more ::
+     BG.Ptr Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_dst@
+  -> BG.Ptr Wuffs_base__more_information
+     -- ^ __C declaration:__ @a_minfo@
+  -> BG.Ptr Wuffs_base__io_buffer
+     -- ^ __C declaration:__ @a_src@
+  -> IO Wuffs_base__status
+wuffs_vp8__decoder__tell_me_more =
+  \self0 ->
+    \a_dst1 ->
+      \a_minfo2 ->
+        \a_src3 ->
+          BG.allocaAndPeek (\res4 ->
+                              hs_bindgen_e94f885b4d325402 self0 a_dst1 a_minfo2 a_src3 res4)
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__workbuf_len@
+foreign import ccall safe "hs_bindgen_7d28695e6822166e" hs_bindgen_7d28695e6822166e_base ::
+     BG.Ptr BG.Void
+  -> BG.Ptr BG.Void
+  -> IO ()
+
+-- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_vp8__decoder__workbuf_len@
+hs_bindgen_7d28695e6822166e ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+  -> BG.Ptr Wuffs_base__range_ii_u64
+  -> IO ()
+hs_bindgen_7d28695e6822166e =
+  \x0 ->
+    \x1 ->
+      hs_bindgen_7d28695e6822166e_base (BG.toFFIType x0) (BG.toFFIType x1)
+
+{-| __C declaration:__ @wuffs_vp8__decoder__workbuf_len@
+
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15603:1@
+
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
+-}
+wuffs_vp8__decoder__workbuf_len ::
+     PtrConst.PtrConst Wuffs_vp8__decoder
+     -- ^ __C declaration:__ @self@
+  -> IO Wuffs_base__range_ii_u64
+wuffs_vp8__decoder__workbuf_len =
+  \self0 ->
+    BG.allocaAndPeek (\res1 ->
+                        hs_bindgen_7d28695e6822166e self0 res1)
 
 -- __unique:__ @org_wuffshs_Codec.Wuffs.Bindings.Generated_Safe_wuffs_wbmp__decoder__initialize@
 foreign import ccall safe "hs_bindgen_99677468e460d52c" hs_bindgen_99677468e460d52c_base ::
@@ -28273,9 +30751,9 @@ hs_bindgen_99677468e460d52c =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14720:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15886:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__initialize ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28306,9 +30784,9 @@ hs_bindgen_9b4f1d3ff509adaa =
 
 {-| __C declaration:__ @sizeof__wuffs_wbmp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14727:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15893:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_wbmp__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_wbmp__decoder =
@@ -28325,9 +30803,9 @@ hs_bindgen_0758eff668059889 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14738:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15904:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__alloc :: IO (BG.Ptr Wuffs_wbmp__decoder)
 wuffs_wbmp__decoder__alloc =
@@ -28344,9 +30822,9 @@ hs_bindgen_3cf5f63ed247ab90 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14741:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15907:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_wbmp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -28367,9 +30845,9 @@ hs_bindgen_77fb30b57de141d8 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14748:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15914:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28396,9 +30874,9 @@ hs_bindgen_207e7e49c562ef9b =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14757:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28433,9 +30911,9 @@ hs_bindgen_0ec6b04202af747c =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14763:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15929:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__set_quirk ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28476,9 +30954,9 @@ hs_bindgen_469a207a586fabb4 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14770:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15936:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_image_config ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28519,9 +30997,9 @@ hs_bindgen_7ae7a9f717cb70b9 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14777:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15943:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_frame_config ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28571,9 +31049,9 @@ hs_bindgen_148ff454838b71e1 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14784:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15950:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__decode_frame ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28618,9 +31096,9 @@ hs_bindgen_b32a3ae674850e06 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14794:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15960:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28646,9 +31124,9 @@ hs_bindgen_184b9202d58d371b =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14799:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15965:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28672,9 +31150,9 @@ hs_bindgen_1599cd2aa547f992 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14804:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15970:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28698,9 +31176,9 @@ hs_bindgen_a41f65f0b69d1c99 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14809:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15975:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28733,9 +31211,9 @@ hs_bindgen_e4d625181ed18f27 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14814:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15980:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__restart_frame ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28776,9 +31254,9 @@ hs_bindgen_ea8ad0b504186a1a =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14821:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15987:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__set_report_metadata ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28822,9 +31300,9 @@ hs_bindgen_6c3059552c2d5453 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14828:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 15994:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__tell_me_more ::
      BG.Ptr Wuffs_wbmp__decoder
@@ -28862,9 +31340,9 @@ hs_bindgen_97626ae208de8899 =
 
 {-| __C declaration:__ @wuffs_wbmp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 14836:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16002:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_wbmp__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_wbmp__decoder
@@ -28902,9 +31380,9 @@ hs_bindgen_4153145942b953ee =
 
 {-| __C declaration:__ @wuffs_webp__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15085:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16251:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__initialize ::
      BG.Ptr Wuffs_webp__decoder
@@ -28935,9 +31413,9 @@ hs_bindgen_b7043305b688a4c0 =
 
 {-| __C declaration:__ @sizeof__wuffs_webp__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15092:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16258:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_webp__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_webp__decoder =
@@ -28954,9 +31432,9 @@ hs_bindgen_4f22b7d6c7303fa0 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15103:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16269:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__alloc :: IO (BG.Ptr Wuffs_webp__decoder)
 wuffs_webp__decoder__alloc =
@@ -28973,9 +31451,9 @@ hs_bindgen_13949e1c368eb82a =
 
 {-| __C declaration:__ @wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15106:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16272:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder :: IO (BG.Ptr Wuffs_base__image_decoder)
 wuffs_webp__decoder__alloc_as__wuffs_base__image_decoder =
@@ -28996,9 +31474,9 @@ hs_bindgen_f770e34945b008d3 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15113:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16279:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__upcast_as__wuffs_base__image_decoder ::
      BG.Ptr Wuffs_webp__decoder
@@ -29025,9 +31503,9 @@ hs_bindgen_b68f89c51b58a069 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15122:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16288:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29062,9 +31540,9 @@ hs_bindgen_4da4ddb56e288701 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15128:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16294:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__set_quirk ::
      BG.Ptr Wuffs_webp__decoder
@@ -29105,9 +31583,9 @@ hs_bindgen_8ba2455c3482e9ea =
 
 {-| __C declaration:__ @wuffs_webp__decoder__decode_image_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15135:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16301:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_image_config ::
      BG.Ptr Wuffs_webp__decoder
@@ -29148,9 +31626,9 @@ hs_bindgen_0ed2ba0b30370256 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__decode_frame_config@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15142:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16308:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_frame_config ::
      BG.Ptr Wuffs_webp__decoder
@@ -29200,9 +31678,9 @@ hs_bindgen_a2c5b86700796f8c =
 
 {-| __C declaration:__ @wuffs_webp__decoder__decode_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15149:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16315:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__decode_frame ::
      BG.Ptr Wuffs_webp__decoder
@@ -29247,9 +31725,9 @@ hs_bindgen_4b46421d6086a783 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__frame_dirty_rect@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15159:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16325:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__frame_dirty_rect ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29275,9 +31753,9 @@ hs_bindgen_0662df84321af5a1 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__num_animation_loops@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15164:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16330:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_animation_loops ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29301,9 +31779,9 @@ hs_bindgen_4f7949e7f75672e4 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__num_decoded_frame_configs@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15169:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16335:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_decoded_frame_configs ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29327,9 +31805,9 @@ hs_bindgen_0f86838b96249bf6 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__num_decoded_frames@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15174:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16340:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__num_decoded_frames ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29362,9 +31840,9 @@ hs_bindgen_92c57e3c3bef27bd =
 
 {-| __C declaration:__ @wuffs_webp__decoder__restart_frame@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15179:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16345:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__restart_frame ::
      BG.Ptr Wuffs_webp__decoder
@@ -29405,9 +31883,9 @@ hs_bindgen_9d34f59ab6948096 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__set_report_metadata@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15186:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16352:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__set_report_metadata ::
      BG.Ptr Wuffs_webp__decoder
@@ -29451,9 +31929,9 @@ hs_bindgen_9f063b97c4623e72 =
 
 {-| __C declaration:__ @wuffs_webp__decoder__tell_me_more@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15193:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16359:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__tell_me_more ::
      BG.Ptr Wuffs_webp__decoder
@@ -29491,9 +31969,9 @@ hs_bindgen_d770120e378f9e3d =
 
 {-| __C declaration:__ @wuffs_webp__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15201:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16367:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_webp__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_webp__decoder
@@ -29531,9 +32009,9 @@ hs_bindgen_148d200b23f34fd3 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15522:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16690:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__initialize ::
      BG.Ptr Wuffs_xxhash32__hasher
@@ -29564,9 +32042,9 @@ hs_bindgen_1f7a8c9bbe290110 =
 
 {-| __C declaration:__ @sizeof__wuffs_xxhash32__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15529:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16697:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xxhash32__hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_xxhash32__hasher =
@@ -29583,9 +32061,9 @@ hs_bindgen_d810d35d692a0e4f =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15540:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16708:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__alloc :: IO (BG.Ptr Wuffs_xxhash32__hasher)
 wuffs_xxhash32__hasher__alloc =
@@ -29602,9 +32080,9 @@ hs_bindgen_7c7a0d9cdf214bdd =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15543:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16711:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32 :: IO (BG.Ptr Wuffs_base__hasher_u32)
 wuffs_xxhash32__hasher__alloc_as__wuffs_base__hasher_u32 =
@@ -29625,9 +32103,9 @@ hs_bindgen_758402dca0193f82 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15550:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16718:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__upcast_as__wuffs_base__hasher_u32 ::
      BG.Ptr Wuffs_xxhash32__hasher
@@ -29654,9 +32132,9 @@ hs_bindgen_872ce319a9d65463 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15559:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16727:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_xxhash32__hasher
@@ -29691,9 +32169,9 @@ hs_bindgen_c81f0d55b318ffb0 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15565:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16733:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__set_quirk ::
      BG.Ptr Wuffs_xxhash32__hasher
@@ -29731,9 +32209,9 @@ hs_bindgen_ad52771b3b702d75 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15572:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16740:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__update ::
      BG.Ptr Wuffs_xxhash32__hasher
@@ -29766,9 +32244,9 @@ hs_bindgen_cd874823553c558e =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__update_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15578:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16746:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__update_u32 ::
      BG.Ptr Wuffs_xxhash32__hasher
@@ -29797,9 +32275,9 @@ hs_bindgen_293d84828a743d26 =
 
 {-| __C declaration:__ @wuffs_xxhash32__hasher__checksum_u32@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15584:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16752:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash32__hasher__checksum_u32 ::
      PtrConst.PtrConst Wuffs_xxhash32__hasher
@@ -29835,9 +32313,9 @@ hs_bindgen_17660dc3e9d0e767 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15748:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16916:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__initialize ::
      BG.Ptr Wuffs_xxhash64__hasher
@@ -29868,9 +32346,9 @@ hs_bindgen_f05508866cf1154d =
 
 {-| __C declaration:__ @sizeof__wuffs_xxhash64__hasher@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15755:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16923:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xxhash64__hasher :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_xxhash64__hasher =
@@ -29887,9 +32365,9 @@ hs_bindgen_3570251031362db3 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15766:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16934:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__alloc :: IO (BG.Ptr Wuffs_xxhash64__hasher)
 wuffs_xxhash64__hasher__alloc =
@@ -29906,9 +32384,9 @@ hs_bindgen_a63c5b76ce48fb46 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15769:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16937:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64 :: IO (BG.Ptr Wuffs_base__hasher_u64)
 wuffs_xxhash64__hasher__alloc_as__wuffs_base__hasher_u64 =
@@ -29929,9 +32407,9 @@ hs_bindgen_8f56c2f18c423214 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15776:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16944:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__upcast_as__wuffs_base__hasher_u64 ::
      BG.Ptr Wuffs_xxhash64__hasher
@@ -29958,9 +32436,9 @@ hs_bindgen_a7118622c95f11d1 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15785:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16953:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__get_quirk ::
      PtrConst.PtrConst Wuffs_xxhash64__hasher
@@ -29995,9 +32473,9 @@ hs_bindgen_b741833915a78775 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15791:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16959:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__set_quirk ::
      BG.Ptr Wuffs_xxhash64__hasher
@@ -30035,9 +32513,9 @@ hs_bindgen_ad6aabd6308e2df5 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__update@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15798:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16966:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__update ::
      BG.Ptr Wuffs_xxhash64__hasher
@@ -30070,9 +32548,9 @@ hs_bindgen_a106527bb92bb7d5 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__update_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15804:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16972:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__update_u64 ::
      BG.Ptr Wuffs_xxhash64__hasher
@@ -30101,9 +32579,9 @@ hs_bindgen_72da9c4b40cb7963 =
 
 {-| __C declaration:__ @wuffs_xxhash64__hasher__checksum_u64@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15810:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 16978:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xxhash64__hasher__checksum_u64 ::
      PtrConst.PtrConst Wuffs_xxhash64__hasher
@@ -30139,9 +32617,9 @@ hs_bindgen_babbbaf8e6c4fbb4 =
 
 {-| __C declaration:__ @wuffs_xz__decoder__initialize@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 15995:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17163:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__initialize ::
      BG.Ptr Wuffs_xz__decoder
@@ -30172,9 +32650,9 @@ hs_bindgen_e184717aa0ba3ddc =
 
 {-| __C declaration:__ @sizeof__wuffs_xz__decoder@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16002:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17170:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 sizeof__wuffs_xz__decoder :: IO HsBindgen.Runtime.LibC.CSize
 sizeof__wuffs_xz__decoder =
@@ -30191,9 +32669,9 @@ hs_bindgen_95daa8f5ecb66108 =
 
 {-| __C declaration:__ @wuffs_xz__decoder__alloc@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16013:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17181:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__alloc :: IO (BG.Ptr Wuffs_xz__decoder)
 wuffs_xz__decoder__alloc =
@@ -30210,9 +32688,9 @@ hs_bindgen_f40493b66abb1d9c =
 
 {-| __C declaration:__ @wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16016:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17184:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer :: IO (BG.Ptr Wuffs_base__io_transformer)
 wuffs_xz__decoder__alloc_as__wuffs_base__io_transformer =
@@ -30233,9 +32711,9 @@ hs_bindgen_22efb00cd795c86e =
 
 {-| __C declaration:__ @wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16023:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17191:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__upcast_as__wuffs_base__io_transformer ::
      BG.Ptr Wuffs_xz__decoder
@@ -30262,9 +32740,9 @@ hs_bindgen_20bdffdb6b04c6e7 =
 
 {-| __C declaration:__ @wuffs_xz__decoder__get_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16032:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17200:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__get_quirk ::
      PtrConst.PtrConst Wuffs_xz__decoder
@@ -30299,9 +32777,9 @@ hs_bindgen_dc8f2dec135ebe6d =
 
 {-| __C declaration:__ @wuffs_xz__decoder__set_quirk@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16038:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17206:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__set_quirk ::
      BG.Ptr Wuffs_xz__decoder
@@ -30336,9 +32814,9 @@ hs_bindgen_67f669121dcf3ffc =
 
 {-| __C declaration:__ @wuffs_xz__decoder__dst_history_retain_length@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16045:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17213:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__dst_history_retain_length ::
      PtrConst.PtrConst Wuffs_xz__decoder
@@ -30367,9 +32845,9 @@ hs_bindgen_905e7c55e52f7a8c =
 
 {-| __C declaration:__ @wuffs_xz__decoder__workbuf_len@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16050:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17218:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__workbuf_len ::
      PtrConst.PtrConst Wuffs_xz__decoder
@@ -30407,9 +32885,9 @@ hs_bindgen_8d12be8495d51f8a =
 
 {-| __C declaration:__ @wuffs_xz__decoder__transform_io@
 
-    __defined at:__ @wuffs\/wuffs-v0.4.c 16055:1@
+    __defined at:__ @wuffs\/wuffs-unsupported-snapshot.c 17223:1@
 
-    __exported by:__ @wuffs\/wuffs-v0.4.c@
+    __exported by:__ @wuffs\/wuffs-unsupported-snapshot.c@
 -}
 wuffs_xz__decoder__transform_io ::
      BG.Ptr Wuffs_xz__decoder
