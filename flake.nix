@@ -132,11 +132,7 @@
       in {
         packages = {
           default = wuffsHS;
-          wasm = wasmPkgs.lib.pipe wasmWuffsHS [
-            # hl.enableStaticLibraries
-            hl.disableSharedLibraries
-            hl.disableSharedExecutables
-          ];
+          wasm = wasmWuffsHS;
         };
 
         checks = {

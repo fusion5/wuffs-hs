@@ -43,7 +43,7 @@ in
     buildPhase = ''
       runHook preBuild
       WUFFS_C="release/c/${wuffsLibFile}"
-      $CC -O3 -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
+      $CC -O3 -fPIC -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
       $AR rcs libwuffs.a wuffs.o
       runHook postBuild
     '';
