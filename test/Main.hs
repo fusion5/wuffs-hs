@@ -7,21 +7,24 @@ module Main (main) where
 
 import Codec.Picture hiding (decodeImageWithMetadata, readImageWithMetadata)
 import Codec.Wuffs
+import Control.Exception
 import System.Directory (doesFileExist)
 import Test.Hspec
 import Prelude
-import Control.Exception
 
 main :: IO ()
 main = hspec spec
 
-describeImage :: DynamicImage -> String
-describeImage dimg = case dimg of
-  ImageY8 img -> "8-bit Greyscale image: " ++ show (imageWidth img) ++ "x" ++ show (imageHeight img)
-  ImageRGB8 img -> "24-bit Truecolor RGB image: " ++ show (imageWidth img) ++ "x" ++ show (imageHeight img)
-  ImageRGBA8 img -> "32-bit Truecolor RGBA image (with alpha): " ++ show (imageWidth img) ++ "x" ++ show (imageHeight img)
-  ImageYCbCr8 img -> "JPEG YCbCr image: " ++ show (imageWidth img) ++ "x" ++ show (imageHeight img)
-  _ -> "Another supported JuicyPixels format"
+isImageRGBA8 :: DynamicImage -> Bool
+isImageRGBA8 (ImageRGBA8 _) = True
+isImageRGBA8 _ = False
+
+data MetadataBlockType = TEXIF | TXMP | TICCP deriving (Show, Eq)
+
+typeOfMetadata :: MetadataBlock -> MetadataBlockType
+typeOfMetadata EXIF {} = TEXIF
+typeOfMetadata XMP {} = TXMP
+typeOfMetadata ICCP {} = TICCP
 
 spec :: Spec
 spec = describe "wuffs-hs" $ do
@@ -35,8 +38,8 @@ spec = describe "wuffs-hs" $ do
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
-          putStrLn $ describeImage $ fst decoded
-          print $ snd decoded
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          snd decoded `shouldBe` Metadata []
         Left err -> throw err
     it "Can decode a png file with EXIF metadata" $ do
       let sampleFile = "samples/liquid-crystal-phase-transition.png"
@@ -44,8 +47,12 @@ spec = describe "wuffs-hs" $ do
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
-          putStrLn $ describeImage $ fst decoded
-          print $ snd decoded
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          case snd decoded of
+            Metadata [m1, m2] -> do
+              typeOfMetadata m1 `shouldBe` TEXIF
+              typeOfMetadata m2 `shouldBe` TICCP
+            _ -> expectationFailure "Expected two metadata entries"
         Left err -> throw err
     it "Can decode a jpeg file" $ do
       let sampleFile = "samples/test.jpg"
@@ -53,8 +60,8 @@ spec = describe "wuffs-hs" $ do
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
-          putStrLn $ describeImage $ fst decoded
-          print $ snd decoded
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          snd decoded `shouldBe` Metadata []
         Left err -> throw err
     it "Can decode an animated gif file" $ do
       let sampleFile = "samples/sample-animated.gif"
@@ -62,8 +69,11 @@ spec = describe "wuffs-hs" $ do
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
-          putStrLn $ describeImage $ fst decoded
-          print $ snd decoded
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          case snd decoded of
+            Metadata [m1] -> do
+              typeOfMetadata m1 `shouldBe` TXMP
+            _ -> expectationFailure "Expected two metadata entries"
         Left err -> throw err
     it "Can decode a webp file" $ do
       let sampleFile = "samples/lego.webp"
@@ -71,6 +81,6 @@ spec = describe "wuffs-hs" $ do
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
-          putStrLn $ describeImage $ fst decoded
-          print $ snd decoded
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          snd decoded `shouldBe` Metadata []
         Left err -> throw err

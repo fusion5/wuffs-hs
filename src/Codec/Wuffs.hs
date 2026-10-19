@@ -2,12 +2,13 @@ module Codec.Wuffs
   ( readImageWithMetadata,
     decodeImageWithMetadata,
     wuffsVersion,
+    Metadata (..),
+    MetadataBlock (..),
   )
 where
 
 import Codec.Decoders
 import Codec.Picture hiding (decodeImageWithMetadata, readImageWithMetadata)
-import Codec.Picture.Metadata qualified as Meta
 import Codec.Types
 import Codec.Wuffs.Bindings.Generated qualified as C
 import Codec.Wuffs.Bindings.Generated.Safe qualified as C
@@ -25,10 +26,10 @@ import Foreign.C.String qualified as Foreign
 import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
 
-readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Meta.Metadatas))
+readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Metadata))
 readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
 
-readImageWithMetadataT :: FilePath -> Err (DynamicImage, Meta.Metadatas)
+readImageWithMetadataT :: FilePath -> Err (DynamicImage, Metadata)
 readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeImageWithMetadataT
 
 withMVSUnsafeT :: (Bindgen.Storable a) => MVS.IOVector a -> (Bindgen.Ptr a -> Err b) -> Err b
@@ -107,7 +108,7 @@ withRGBAPixelBufferT pixCfgPtr width height rawPixels action = do
     action pixBufPtr
 
 -- TODO: Implement streaming version as well.
-decodeImageWithMetadata :: BS.ByteString -> IO (Either WuffsError (DynamicImage, Meta.Metadatas))
+decodeImageWithMetadata :: BS.ByteString -> IO (Either WuffsError (DynamicImage, Metadata))
 decodeImageWithMetadata imageBytes = runExceptT $ decodeImageWithMetadataT imageBytes
 
 guessImageType :: C.Wuffs_base__io_buffer -> Err Bindgen.Int32
@@ -119,7 +120,7 @@ guessImageType imageFileBuffer =
   where
     autodetectBufferBytes = 64
 
-decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Meta.Metadatas)
+decodeImageWithMetadataT :: BS.ByteString -> Err (DynamicImage, Metadata)
 decodeImageWithMetadataT imageFileBS =
   withIOBufferFromByteStringT imageFileBS $ \imageFileBuffer -> do
     imageType <- guessImageType imageFileBuffer
@@ -194,12 +195,12 @@ decodeConfigAndMetadata ::
   Decoder ->
   Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
-  Err Meta.Metadatas
+  Err Metadata
 decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
   void $
     liftIO $
       traverse (\fourcc -> setReportMetadata decoder fourcc 1) [fourccICCP, fourccXMP, fourccEXIF]
-  readConfigLoop Meta.empty
+  readConfigLoop $ Metadata mempty
   where
     fourccICCP = fromIntegral C.wUFFS_BASE__FOURCC__ICCP
     fourccEXIF = fromIntegral C.wUFFS_BASE__FOURCC__EXIF
@@ -214,33 +215,33 @@ decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
 
     metadataBufferBytes = 256 * 1024
 
-    extractMetadataChunk :: Meta.Metadatas -> Err Meta.Metadatas
-    extractMetadataChunk accMeta = allocaBytesT metadataBufferBytes $ \metadataBuffer -> do
-      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
-      metadataIOBuffer <-
-        liftIO $ C.wuffs_base__ptr_u8__writer metadataBuffer (fromIntegral metadataBufferBytes)
-      withT metadataIOBuffer $ \metadataIOBufferPtr ->
-        withT nullMoreInfo $ \moreInfoPtr -> do
-          uncompressedMetadata <- exhaustTellMeMore metadataIOBufferPtr moreInfoPtr BS.empty
-          metadataType <-
-            liftIO $
-              C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
-          -- If uncompressedMetadata is empty, it was a compressed chunk. Read the Wuffs buffer.
-          finalMetadataBytes <-
-            if BS.null uncompressedMetadata
-              then readIOBuffer metadataIOBufferPtr
-              else pure uncompressedMetadata
-          pure $ case metadataType of
-            _
-              | metadataType == fourccICCP ->
-                  Meta.insert Meta.ColorSpace (Meta.ICCProfile finalMetadataBytes) accMeta
-            _
-              | metadataType == fourccEXIF ->
-                  Meta.insert (Meta.Unknown "EXIF") (Meta.String $ show finalMetadataBytes) accMeta
-            _
-              | metadataType == fourccXMP ->
-                  Meta.insert (Meta.Unknown "XMP") (Meta.String $ show finalMetadataBytes) accMeta
-            _ -> accMeta
+    extractMetadataChunk :: Metadata -> Err Metadata
+    extractMetadataChunk (Metadata accMeta) = allocaBytesT metadataBufferBytes $ \metadataBuffer ->
+      do
+        nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+        metadataIOBuffer <-
+          liftIO $ C.wuffs_base__ptr_u8__writer metadataBuffer (fromIntegral metadataBufferBytes)
+        withT metadataIOBuffer $ \metadataIOBufferPtr ->
+          withT nullMoreInfo $ \moreInfoPtr -> do
+            uncompressedMetadata <- exhaustTellMeMore metadataIOBufferPtr moreInfoPtr BS.empty
+            metadataType <-
+              liftIO $
+                C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+            -- If uncompressedMetadata is empty, it was a compressed chunk. Read the Wuffs buffer.
+            finalMetadataBytes <-
+              if BS.null uncompressedMetadata
+                then readIOBuffer metadataIOBufferPtr
+                else pure uncompressedMetadata
+            pure $ case metadataType of
+              _
+                | metadataType == fourccICCP ->
+                    Metadata $ ICCP finalMetadataBytes : accMeta
+              _
+                | metadataType == fourccEXIF ->
+                    Metadata $ EXIF finalMetadataBytes : accMeta
+              _
+                | metadataType == fourccXMP -> Metadata $ XMP finalMetadataBytes : accMeta
+              _ -> Metadata accMeta
 
     exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr accumulatedBytes = do
       (_isNote, isSuspension) <-

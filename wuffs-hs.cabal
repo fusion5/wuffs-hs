@@ -35,10 +35,10 @@ common shared-properties
     TypeApplications
 
   ghc-options:
-    -Werr -Wall -Wcompat -Widentities -Wincomplete-record-updates
+    -Werror -Wall -Wcompat -Widentities -Wincomplete-record-updates
     -Wincomplete-uni-patterns -Wmissing-export-lists
     -Wmissing-home-modules -Wno-orphans -Wpartial-fields
-    -Wredundant-constraints -Wunused-packages
+    -Wredundant-constraints -Wunused-packages -Wunused-top-binds
     -Wno-pattern-namespace-specifier -Wno-unrecognised-warning-flags
 
 library
@@ -82,7 +82,6 @@ library
 
 test-suite wuffs-hs-test
   import:            shared-properties
-  default-language:  GHC2024
   other-modules:
     PackageInfo_wuffs_hs
     Paths_wuffs_hs
