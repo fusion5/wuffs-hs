@@ -227,9 +227,14 @@ extractPassthroughSlice ioBufferPtr startIndex chunkSize = do
   ioBuffer <- Bindgen.peek ioBufferPtr
   let meta = C.wuffs_base__io_buffer_meta ioBuffer
       metaPos = C.wuffs_base__io_buffer_meta_pos meta
+      metaRi = C.wuffs_base__io_buffer_meta_ri meta
       dataPtr = C.wuffs_base__slice_u8_ptr (C.wuffs_base__io_buffer_data ioBuffer)
       bufferIndex = startIndex - fromIntegral metaPos
       metadataPtr = dataPtr `Bindgen.plusPtr` bufferIndex
+      -- Advance the read index (meta.ri) to signal to Wuffs that these bytes were consumed!
+      newRi = metaRi + fromIntegral chunkSize
+  Foreign.poke ioBufferPtr $
+    ioBuffer {C.wuffs_base__io_buffer_meta = meta {C.wuffs_base__io_buffer_meta_ri = newRi}}
   BS.packCStringLen (Foreign.castPtr metadataPtr, chunkSize)
 
 wuffsVersion :: IO BS.ByteString
