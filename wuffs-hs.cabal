@@ -95,11 +95,15 @@ test-suite wuffs-hs-test
   hs-source-dirs:    test
   main-is:           Main.hs
   build-depends:
-    , base
-    , directory    >=1.3.9   && <2
-    , hspec        >=2.11.17 && <2.12
     , JuicyPixels
+    , base
+    , bytestring
+    , containers
+    , directory    >=1.3.9   && <2
+    , hsexif
+    , hspec        >=2.11.17 && <2.12
     , wuffs-hs
+    , time
 
   -- , bytestring
   -- , temporary    >=1.3     && <2
