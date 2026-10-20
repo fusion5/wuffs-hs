@@ -6,6 +6,7 @@ module Codec.Decoders
     setReportMetadata,
     decodeImageConfig,
     tellMeMore,
+    baseDecoder,
   )
 where
 
@@ -93,6 +94,12 @@ data AbstractDecoder a = AbstractDecoder
       Bindgen.Ptr C.Wuffs_base__io_buffer ->
       IO C.Wuffs_base__status
   }
+
+baseDecoder :: Decoder -> Bindgen.Ptr C.Wuffs_base__image_decoder
+baseDecoder (DecoderPNG ptr _) = Foreign.castPtr ptr
+baseDecoder (DecoderWEBP ptr _) = Foreign.castPtr ptr
+baseDecoder (DecoderJPEG ptr _) = Foreign.castPtr ptr
+baseDecoder (DecoderGIF ptr _) = Foreign.castPtr ptr
 
 data Decoder
   = DecoderPNG (Bindgen.Ptr C.Wuffs_png__decoder) (AbstractDecoder C.Wuffs_png__decoder)

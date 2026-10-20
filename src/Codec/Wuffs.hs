@@ -18,16 +18,14 @@ import Control.Monad.Trans.Except
 import Data.ByteString qualified as BS
 import Data.ByteString.Unsafe qualified as BSU (unsafeUseAsCStringLen)
 import Data.Foldable (traverse_)
-import Data.Vector.Storable qualified as VS ()
-import Data.Vector.Storable.Mutable qualified as MVS ()
-import Data.Word ()
+import Data.Vector.Storable qualified as VS (unsafeFreeze)
+import Data.Vector.Storable.Mutable qualified as MVS (new, unsafeWith)
+import Data.Word
 import Foreign qualified
 import Foreign.C.ConstPtr (ConstPtr (..))
 import Foreign.C.String qualified as Foreign
 import HsBindgen.Runtime.Support qualified as Bindgen
 import Prelude
-
--- import Numeric (showHex)
 
 readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Metadata))
 readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
@@ -66,7 +64,7 @@ withIOBufferFromByteStringT bs = liftWith $ withIOBufferFromByteString bs
 withT :: (Bindgen.Storable a) => a -> (Bindgen.Ptr a -> Err b) -> Err b
 withT ptr = liftWith (Bindgen.with ptr)
 
--- TODO: Implement streaming version as well.
+-- TODO: Implement streaming as well.
 decodeImageWithMetadata :: BS.ByteString -> IO (Either WuffsError (DynamicImage, Metadata))
 decodeImageWithMetadata imageBytes = runExceptT $ decodeT imageBytes
 
@@ -112,8 +110,8 @@ decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
       (newMetadata, metadataType) <- extractMetadataChunkT decoder imageBufferPtr
       decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr $
         appendMetadata metadataType newMetadata metadata
-    Status {isSuspension = True} -> do
-      error "Streaming not implemented yet"
+    Status {isSuspension = True} ->
+      throwE $ ImageConfigDecodeError (Just "Streaming not implemented yet")
     Status {} ->
       error "Unexpected status"
 
@@ -203,8 +201,122 @@ decodeFrameConfigLoopT ::
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Metadata ->
   Err (DynamicImage, Metadata)
-decodeFrameConfigLoopT _decoder _imageConfigPtr _imageBuffer _metadata = do
-  error "TODO: define and implement decodeFrameConfigLoopT"
+decodeFrameConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
+  nullFrameConfig <- liftIO C.wuffs_base__null_frame_config
+  withT nullFrameConfig $ \frameConfigPtr ->
+    readFrameConfigLoop decoder imageConfigPtr frameConfigPtr imageBufferPtr metadata
+  where
+    readFrameConfigLoop dec imgCfgPtr frameCfgPtr imgBufPtr accMeta = do
+      status <- decodeFrameConfigT dec frameCfgPtr imgBufPtr
+      case status of
+        Status {isError = True, message = message} -> throwE $ FrameConfigDecodeError message
+        Status {isOk = True} -> decodeFrameDataT dec imgCfgPtr frameCfgPtr imgBufPtr accMeta
+        Status {isNote = True} ->
+          readFrameConfigLoop dec imgCfgPtr frameCfgPtr imgBufPtr accMeta
+        Status {isSuspension = True} ->
+          throwE $ FrameConfigDecodeError (Just "Streaming frame config decode not supported yet")
+        Status {} ->
+          error "Unexpected status during frame config decode"
+
+decodeFrameDataT ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
+  Bindgen.Ptr C.Wuffs_base__frame_config ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Metadata ->
+  Err (DynamicImage, Metadata)
+decodeFrameDataT decoder imageConfigPtr _frameConfigPtr imageBufferPtr metadata = do
+  width <- fromIntegral <$> liftIO (C.wuffs_base__pixel_config__width (ConstPtr pixelConfigPtr))
+  height <- fromIntegral <$> liftIO (C.wuffs_base__pixel_config__height (ConstPtr pixelConfigPtr))
+  mutableVector <- liftIO $ MVS.new $ width * height * 4
+  liftWith (MVS.unsafeWith mutableVector) $ \rawPixels ->
+    withRGBAPixelBufferT pixelConfigPtr width height rawPixels $ \pixelBufferPtr ->
+      withWorkbufferT decoder $ \sliceWork -> do
+        decodeFrameT decoder pixelBufferPtr imageBufferPtr sliceWork >>= \case
+          Status {isError = True, message = message} ->
+            throwE $ FrameDecodeError message
+          Status {isOk = True} -> do
+            frozenVector <- liftIO $ VS.unsafeFreeze mutableVector
+            pure (ImageRGBA8 $ Image width height frozenVector, metadata)
+          Status {isNote = True} ->
+            -- Here it might be needed to call tellMeMoreLoopT
+            throwE $ FrameDecodeError (Just "Unexpected note during pixel decode")
+          Status {isSuspension = True} ->
+            throwE $ FrameDecodeError (Just "Streaming frame decode not supported yet")
+          Status {} ->
+            error "Unexpected status during frame decode"
+  where
+    pixelConfigPtr = Foreign.castPtr imageConfigPtr
+
+decodeFrameT ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__pixel_buffer ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  C.Wuffs_base__slice_u8 ->
+  Err Status
+decodeFrameT decoder pixelBufferPtr imageBufferPtr sliceWork =
+  liftIO (decodeFrame decoder pixelBufferPtr imageBufferPtr 0 sliceWork Foreign.nullPtr)
+    >>= getStatus
+
+withRGBAPixelBufferT ::
+  Bindgen.Ptr C.Wuffs_base__pixel_config ->
+  Int ->
+  Int ->
+  Bindgen.Ptr Word8 ->
+  (Bindgen.Ptr C.Wuffs_base__pixel_buffer -> Err a) ->
+  Err a
+withRGBAPixelBufferT pixelConfigPtr width height rawPixels action = do
+  pixelBuffer <- liftIO C.wuffs_base__null_pixel_buffer
+  withT pixelBuffer $ \pixelBufferPtr -> do
+    let rgbaFormat = C.wUFFS_BASE__PIXEL_FORMAT__RGBA_NONPREMUL
+        capacity = width * height * 4
+    liftIO $
+      C.wuffs_base__pixel_config__set
+        pixelConfigPtr
+        (fromIntegral rgbaFormat)
+        0
+        (fromIntegral width)
+        (fromIntegral height)
+    slice <- liftIO $ C.wuffs_base__make_slice_u8 rawPixels (fromIntegral capacity)
+    setPixelStatus <- pixelBufferSetFromSliceT pixelBufferPtr pixelConfigPtr slice
+    case setPixelStatus of
+      Status {isError = True, message = msg} -> throwE $ PixelBufferSetFromSliceError msg
+      _ -> action pixelBufferPtr
+
+pixelBufferSetFromSliceT ::
+  Bindgen.Ptr C.Wuffs_base__pixel_buffer ->
+  Bindgen.Ptr C.Wuffs_base__pixel_config ->
+  C.Wuffs_base__slice_u8 ->
+  Err Status
+pixelBufferSetFromSliceT pixelBufferPtr pixelConfigPtr slice =
+  getStatus
+    =<< liftIO
+      (C.wuffs_base__pixel_buffer__set_from_slice pixelBufferPtr (ConstPtr pixelConfigPtr) slice)
+
+withWorkbufferT :: Decoder -> (C.Wuffs_base__slice_u8 -> Err a) -> Err a
+withWorkbufferT decoder action = do
+  workbufRange <- liftIO $ workbufferLength decoder
+  let maxWorkbuf = fromIntegral (C.wuffs_base__range_ii_u64_max_incl workbufRange)
+  liftWith (Foreign.allocaBytes maxWorkbuf) $ \workBufRaw -> do
+    sliceWork <-
+      liftIO $
+        C.wuffs_base__make_slice_u8 (Foreign.castPtr workBufRaw) (fromIntegral maxWorkbuf)
+    action sliceWork
+
+-- | Invokes wuffs_base__image_decoder__decode_frame_config
+decodeFrameConfigT ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__frame_config ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Err Status
+decodeFrameConfigT decoder frameConfigPtr imageBufferPtr =
+  liftIO
+    ( C.wuffs_base__image_decoder__decode_frame_config
+        (baseDecoder decoder)
+        frameConfigPtr
+        imageBufferPtr
+    )
+    >>= getStatus
 
 -- | Helper: Extracts the passthrough range from the more_information struct
 getPassthroughRange :: Bindgen.Ptr C.Wuffs_base__more_information -> Err (Int, Int)
