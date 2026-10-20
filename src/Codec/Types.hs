@@ -37,7 +37,7 @@ data Status = Status
 data WuffsError
   = FrameDecodeError String
   | ImageConfigDecodeError (Maybe String)
-  | ImageTellMeMoreError String
+  | TellMeMoreError (Maybe String)
   | PixelBufferSetFromSliceError String
   | TryingToAdvanceAfterBuffer
   | UnsupportedImageType Bindgen.Int32

@@ -109,23 +109,30 @@ decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
     Status {isOk = True} ->
       decodeFrameConfigLoopT decoder imageConfigPtr imageBufferPtr metadata
     Status {isNote = True} -> do
-      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
-      (newMetadata, metadataType) <- withT nullMoreInfo $ \moreInfoPtr -> do
-        metadataBytes <- liftWith (Foreign.allocaBytes metadataBufferBytes) $ \metadataBufferRaw ->
-          do
-            metadataIOBuffer <-
-              liftIO $
-                C.wuffs_base__ptr_u8__writer metadataBufferRaw (fromIntegral metadataBufferBytes)
-            withT metadataIOBuffer $ \metadataIOBufferPtr -> do
-              tellMeMoreLoopT decoder metadataIOBufferPtr moreInfoPtr imageBufferPtr BS.empty
-        metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
-        pure (metadataBytes, metadataType)
+      (newMetadata, metadataType) <- extractMetadataChunkT decoder imageBufferPtr
       decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr $
         appendMetadata metadataType newMetadata metadata
     Status {isSuspension = True} -> do
       error "Streaming not implemented yet"
     Status {} ->
       error "Unexpected status"
+
+extractMetadataChunkT ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Err (BS.ByteString, Bindgen.Word32)
+extractMetadataChunkT decoder imageBufferPtr = do
+  nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+  withT nullMoreInfo $ \moreInfoPtr -> do
+    metadataBytes <- liftWith (Foreign.allocaBytes metadataBufferBytes) $ \metadataBufferRaw -> do
+      metadataIOBuffer <- liftIO $ C.wuffs_base__ptr_u8__writer metadataBufferRaw (fromIntegral metadataBufferBytes)
+      withT metadataIOBuffer $ \metadataIOBufferPtr -> do
+        uncompressed <- tellMeMoreLoopT decoder metadataIOBufferPtr moreInfoPtr imageBufferPtr BS.empty
+        if BS.null uncompressed
+          then readIOBuffer metadataIOBufferPtr
+          else pure uncompressed
+    metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+    pure (metadataBytes, metadataType)
   where
     metadataBufferBytes = 256 * 1024
 
@@ -154,7 +161,10 @@ tellMeMoreLoopT ::
   Err BS.ByteString
 tellMeMoreLoopT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr accumulatedBytes = do
   tellMeMoreT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr >>= \case
+    Status {isError = True, message = message} -> throwE $ TellMeMoreError message
     Status {isSuspension = True} -> do
+      -- NOTE: suspension could also mean Wuffs ran out of source bytes and needs you to refill
+      -- imageBufferPtr
       (metadataStartIndex, metadataEndIndex) <- getPassthroughRange moreInfoPtr
       let chunkSize = metadataEndIndex - metadataStartIndex
       newAccumulatedBytes <-
@@ -205,34 +215,22 @@ getPassthroughRange moreInfoPtr = liftIO $ do
       fromIntegral $ C.wuffs_base__range_ie_u64_max_excl range
     )
 
+readIOBuffer :: Bindgen.Ptr C.Wuffs_base__io_buffer -> Err BS.ByteString
+readIOBuffer bufferPtr = liftIO $ do
+  bufferLength <- C.wuffs_base__io_buffer__writer_length (ConstPtr bufferPtr)
+  pointer <- C.wuffs_base__io_buffer__writer_pointer (ConstPtr bufferPtr)
+  BS.packCStringLen (Foreign.castPtr pointer, fromIntegral bufferLength)
+
 extractPassthroughSlice ::
   Bindgen.Ptr C.Wuffs_base__io_buffer -> Int -> Int -> IO Bindgen.ByteString
 extractPassthroughSlice ioBufferPtr startIndex chunkSize = do
-  -- Dereference the pointer to get the actual struct value
   ioBuffer <- Bindgen.peek ioBufferPtr
-
-  -- Now apply the pure accessors to the struct, not the pointer
   let meta = C.wuffs_base__io_buffer_meta ioBuffer
       metaPos = C.wuffs_base__io_buffer_meta_pos meta
-      metaRi = C.wuffs_base__io_buffer_meta_ri meta
       dataPtr = C.wuffs_base__slice_u8_ptr (C.wuffs_base__io_buffer_data ioBuffer)
-
-      bufferIndex = metaRi + (fromIntegral startIndex - fromIntegral metaPos)
-      metadataPtr = dataPtr `Bindgen.plusPtr` fromIntegral bufferIndex
-
-  putStrLn $
-    "[DEBUG] metaRi: "
-      ++ show metaRi
-      ++ " | metaPos: "
-      ++ show metaPos
-      ++ " | startIndex: "
-      ++ show startIndex
-      ++ " | calculated bufferIndex: "
-      ++ show bufferIndex
-
-  bs <- BS.packCStringLen (Foreign.castPtr metadataPtr, chunkSize)
-  putStrLn $ "[DEBUG] Extracted raw bytes: " ++ show (BS.take 20 bs)
-  pure bs
+      bufferIndex = startIndex - fromIntegral metaPos
+      metadataPtr = dataPtr `Bindgen.plusPtr` bufferIndex
+  BS.packCStringLen (Foreign.castPtr metadataPtr, chunkSize)
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING
