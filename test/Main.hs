@@ -54,14 +54,17 @@ spec = describe "wuffs-hs" $ do
               typeOfMetadata m2 `shouldBe` TICCP
             _ -> expectationFailure "Expected two metadata entries"
         Left err -> throw err
-    it "Can decode a jpeg file" $ do
+    fit "Can decode a jpeg file with EXIF metadata" $ do
       let sampleFile = "samples/test.jpg"
       doesFileExist sampleFile >>= (`shouldBe` True)
       decodedEither <- readImageWithMetadata sampleFile
       case decodedEither of
         Right decoded -> do
           isImageRGBA8 (fst decoded) `shouldBe` True
-          snd decoded `shouldBe` Metadata []
+          case snd decoded of
+            Metadata [m] -> do
+              typeOfMetadata m `shouldBe` TEXIF
+            _ -> expectationFailure "Expected a metadata entry"
         Left err -> throw err
     it "Can decode an animated gif file" $ do
       let sampleFile = "samples/sample-animated.gif"

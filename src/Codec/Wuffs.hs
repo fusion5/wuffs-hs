@@ -24,6 +24,7 @@ import Foreign qualified
 import Foreign.C.ConstPtr (ConstPtr (..))
 import Foreign.C.String qualified as Foreign
 import HsBindgen.Runtime.Support qualified as Bindgen
+import Numeric (showHex)
 import Prelude
 
 readImageWithMetadata :: FilePath -> IO (Either WuffsError (DynamicImage, Metadata))
@@ -190,13 +191,125 @@ readIOBuffer bufPtr = liftIO $ do
   pointer <- C.wuffs_base__io_buffer__reader_pointer (ConstPtr bufPtr)
   BS.packCStringLen (Foreign.castPtr pointer, fromIntegral bufferLength)
 
--- | Note: https://github.com/google/wuffs/blob/main/doc/std/image-decoders-call-sequence.md
 decodeConfigAndMetadata ::
   Decoder ->
   Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Err Metadata
 decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
+  void $
+    liftIO $
+      traverse (\fourcc -> setReportMetadata decoder fourcc 1) [fourccICCP, fourccXMP, fourccEXIF]
+
+  liftIO $
+    putStrLn $
+      "[DEBUG] Reporting enabled for FourCCs: EXIF=0x"
+        ++ showHex fourccEXIF ""
+        ++ ", ICCP=0x"
+        ++ showHex fourccICCP ""
+        ++ ", XMP=0x"
+        ++ showHex fourccXMP ""
+
+  readConfigLoop $ Metadata mempty
+  where
+    fourccICCP = fromIntegral C.wUFFS_BASE__FOURCC__ICCP
+    fourccEXIF = fromIntegral C.wUFFS_BASE__FOURCC__EXIF
+    fourccXMP = fromIntegral C.wUFFS_BASE__FOURCC__XMP
+
+    readConfigLoop accMeta = do
+      status <- liftIO $ decodeImageConfig decoder configPtr imageBufferPtr
+      (isNote, isSuspension) <- checkWuffsStatus ImageConfigDecodeError $ pure status
+
+      liftIO $
+        putStrLn $
+          "[DEBUG] decodeImageConfig loop -> isNote: "
+            ++ show isNote
+            ++ ", isSuspension: "
+            ++ show isSuspension
+
+      if isNote
+        then extractMetadataChunk accMeta >>= readConfigLoop
+        else pure accMeta
+
+    metadataBufferBytes = 256 * 1024
+
+    extractMetadataChunk :: Metadata -> Err Metadata
+    extractMetadataChunk (Metadata accMeta) = allocaBytesT metadataBufferBytes $ \metadataBuffer -> do
+      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+      metadataIOBuffer <-
+        liftIO $ C.wuffs_base__ptr_u8__writer metadataBuffer (fromIntegral metadataBufferBytes)
+
+      withT metadataIOBuffer $ \metadataIOBufferPtr ->
+        withT nullMoreInfo $ \moreInfoPtr -> do
+          uncompressedMetadata <- exhaustTellMeMore metadataIOBufferPtr moreInfoPtr BS.empty
+          metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+
+          -- Read compressed output buffer if uncompressed passthrough was empty
+          finalMetadataBytes <-
+            if BS.null uncompressedMetadata
+              then do
+                bs <- readIOBuffer metadataIOBufferPtr
+                liftIO $ putStrLn $ "[DEBUG] Metadata source: Wuffs Compressed Buffer (length: " ++ show (BS.length bs) ++ ")"
+                pure bs
+              else do
+                liftIO $ putStrLn $ "[DEBUG] Metadata source: Passthrough Buffer (length: " ++ show (BS.length uncompressedMetadata) ++ ")"
+                pure uncompressedMetadata
+
+          liftIO $
+            putStrLn $
+              "[DEBUG] Detected metadataFourCC: 0x"
+                ++ showHex metadataType ""
+                ++ " | First 16 bytes: "
+                ++ show (BS.take 16 finalMetadataBytes)
+
+          pure $ case metadataType of
+            _ | metadataType == fourccICCP -> Metadata $ ICCP finalMetadataBytes : accMeta
+            _ | metadataType == fourccEXIF -> Metadata $ EXIF finalMetadataBytes : accMeta
+            _ | metadataType == fourccXMP -> Metadata $ XMP finalMetadataBytes : accMeta
+            _ -> do
+              -- Debug warning if fourcc didn't match any target
+              Metadata accMeta
+
+    exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr accumulatedBytes = do
+      (_isNote, isSuspension) <-
+        checkWuffsStatus ImageTellMeMoreError $
+          tellMeMore decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr
+
+      (metadataStartIndex, metadataEndIndex) <- getPassthroughRange moreInfoPtr
+      let chunkSize = metadataEndIndex - metadataStartIndex
+
+      liftIO $
+        putStrLn $
+          "[DEBUG] exhaustTellMeMore -> range: ["
+            ++ show metadataStartIndex
+            ++ ".."
+            ++ show metadataEndIndex
+            ++ "] | chunkSize: "
+            ++ show chunkSize
+            ++ " | isSuspension: "
+            ++ show isSuspension
+
+      newAccumulatedBytes <-
+        if chunkSize > 0
+          then do
+            -- NOTE: Watch out for Int type truncation if indices exceed maxBound :: Int
+            chunkBytes <-
+              liftIO $
+                extractPassthroughSlice imageBufferPtr metadataStartIndex chunkSize
+            pure $ accumulatedBytes <> chunkBytes
+          else pure accumulatedBytes
+
+      if isSuspension
+        then exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr newAccumulatedBytes
+        else pure newAccumulatedBytes
+
+-- | Note: https://github.com/google/wuffs/blob/main/doc/std/image-decoders-call-sequence.md
+_decodeConfigAndMetadata' ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Err Metadata
+_decodeConfigAndMetadata' decoder configPtr imageBufferPtr = do
   void $
     liftIO $
       traverse (\fourcc -> setReportMetadata decoder fourcc 1) [fourccICCP, fourccXMP, fourccEXIF]
@@ -209,6 +322,7 @@ decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
     readConfigLoop accMeta = do
       status <- liftIO $ decodeImageConfig decoder configPtr imageBufferPtr
       (isNote, _isSuspension) <- checkWuffsStatus ImageConfigDecodeError $ pure status
+      liftIO $ print $ "Wuffs status is note?" <> show isNote
       if isNote
         then extractMetadataChunk accMeta >>= readConfigLoop
         else pure accMeta
@@ -263,6 +377,35 @@ decodeConfigAndMetadata decoder configPtr imageBufferPtr = do
       if isSuspension
         then exhaustTellMeMore metadataCompressedIOBufferPtr moreInfoPtr newAccumulatedBytes
         else pure newAccumulatedBytes
+
+extractPassthroughSlice ::
+  Bindgen.Ptr C.Wuffs_base__io_buffer -> Int -> Int -> IO Bindgen.ByteString
+extractPassthroughSlice ioBufferPtr startIndex chunkSize = do
+  -- Dereference the pointer to get the actual struct value
+  ioBuffer <- Bindgen.peek ioBufferPtr
+
+  -- Now apply the pure accessors to the struct, not the pointer
+  let meta = C.wuffs_base__io_buffer_meta ioBuffer
+      metaPos = C.wuffs_base__io_buffer_meta_pos meta
+      metaRi = C.wuffs_base__io_buffer_meta_ri meta
+      dataPtr = C.wuffs_base__slice_u8_ptr (C.wuffs_base__io_buffer_data ioBuffer)
+
+      bufferIndex = metaRi + (fromIntegral startIndex - fromIntegral metaPos)
+      metadataPtr = dataPtr `Bindgen.plusPtr` fromIntegral bufferIndex
+
+  putStrLn $
+    "[DEBUG] metaRi: "
+      ++ show metaRi
+      ++ " | metaPos: "
+      ++ show metaPos
+      ++ " | startIndex: "
+      ++ show startIndex
+      ++ " | calculated bufferIndex: "
+      ++ show bufferIndex
+
+  bs <- BS.packCStringLen (Foreign.castPtr metadataPtr, chunkSize)
+  putStrLn $ "[DEBUG] Extracted raw bytes: " ++ show (BS.take 20 bs)
+  pure bs
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING

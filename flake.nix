@@ -175,6 +175,7 @@
             pkgs.hsBindgenHook
             pkgs.pkg-config # IMPORTANT: must be only in the native shell
             # pkgs.wuffs
+            pkgs.exiftool
           ];
           buildInputs = [wuffs];
           # make hls happy about missing .so files
