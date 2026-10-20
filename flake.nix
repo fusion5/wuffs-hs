@@ -1,5 +1,5 @@
 {
-  description = "Haskell bindings for wuffs";
+  description = "Haskell bindings for wuffs.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
@@ -29,7 +29,6 @@
         "aarch64-darwin"
       ];
       perSystem = {system, ...}: let
-        hl = pkgs.haskell.lib.compose;
         pkgs = import inputs.nixpkgs {
           inherit system;
           overlays = [hs-bindgen.overlays.default];

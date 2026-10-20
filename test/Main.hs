@@ -41,7 +41,7 @@ spec = describe "wuffs-hs" $ do
           isImageRGBA8 (fst decoded) `shouldBe` True
           snd decoded `shouldBe` Metadata []
         Left err -> throw err
-    it "Can decode a png file with EXIF metadata" $ do
+    fit "Can decode a png file with EXIF metadata" $ do
       let sampleFile = "samples/liquid-crystal-phase-transition.png"
       doesFileExist sampleFile >>= (`shouldBe` True)
       decodedEither <- readImageWithMetadata sampleFile

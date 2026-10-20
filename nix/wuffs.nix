@@ -7,6 +7,7 @@
 }: let
   wuffsVersion = "0.4.0-alpha.10";
   wuffsLibFile = "wuffs-unsupported-snapshot.c";
+  sharedExt = pkgs.stdenv.hostPlatform.extensions.sharedLibrary;
   wuffsPcTemplate = pkgs.writeText "wuffs.pc.in" ''
     prefix=@out@
     exec_prefix=''${prefix}
@@ -45,6 +46,10 @@ in
       WUFFS_C="release/c/${wuffsLibFile}"
       $CC -O3 -fPIC -c "$WUFFS_C" -o wuffs.o -DWUFFS_IMPLEMENTATION
       $AR rcs libwuffs.a wuffs.o
+
+      # shared library (.so / .dylib) if we are not targeting WASM, for haskell language server
+      ${pkgs.lib.optionalString (!isWASM) "$CC -shared -o libwuffs${sharedExt} wuffs.o"}
+
       runHook postBuild
     '';
 
@@ -52,6 +57,9 @@ in
       runHook preInstall
       mkdir -p "$out/lib/pkgconfig" "$out/include/wuffs"
       cp libwuffs.a "$out/lib/"
+      ${pkgs.lib.optionalString (!isWASM) ''
+        cp libwuffs${sharedExt} "$out/lib/"
+      ''}
       cp release/c/${wuffsLibFile} "$out/include/wuffs/"
       substituteAll ${wuffsPcTemplate} "$out/lib/pkgconfig/wuffs.pc"
       runHook postInstall

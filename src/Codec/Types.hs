@@ -1,4 +1,12 @@
-module Codec.Types (Err, WuffsError (..), liftWith, Metadata (..), MetadataBlock (..)) where
+module Codec.Types
+  ( Err,
+    WuffsError (..),
+    liftWith,
+    Metadata (..),
+    MetadataBlock (..),
+    Status (..),
+  )
+where
 
 import Control.Exception
 import Control.Monad.Trans.Except
@@ -15,13 +23,25 @@ data MetadataBlock
 newtype Metadata = Metadata [MetadataBlock]
   deriving (Show, Eq)
 
+data Status = Status
+  { isComplete :: Bool,
+    isError :: Bool,
+    isNote :: Bool,
+    isOk :: Bool,
+    isSuspension :: Bool,
+    isTruncatedInputError :: Bool,
+    message :: Maybe String
+  }
+  deriving (Show)
+
 data WuffsError
   = FrameDecodeError String
-  | ImageConfigDecodeError String
+  | ImageConfigDecodeError (Maybe String)
   | ImageTellMeMoreError String
   | PixelBufferSetFromSliceError String
   | TryingToAdvanceAfterBuffer
   | UnsupportedImageType Bindgen.Int32
+  | UnexpectedStatus
   deriving (Show)
 
 instance Exception WuffsError
