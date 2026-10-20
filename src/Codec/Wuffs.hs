@@ -33,23 +33,6 @@ readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
 readImageWithMetadataT :: FilePath -> Err (DynamicImage, Metadata)
 readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeT
 
-getStatus :: C.Wuffs_base__status -> Err Status
-getStatus status = withT status $ \statusPtr ->
-  let constStatusPtr = ConstPtr statusPtr
-      toBool = (/=) 0
-   in liftIO $ do
-        isComplete <- toBool <$> C.wuffs_base__status__is_complete constStatusPtr
-        isError <- toBool <$> C.wuffs_base__status__is_error constStatusPtr
-        isNote <- toBool <$> C.wuffs_base__status__is_note constStatusPtr
-        isSuspension <- toBool <$> C.wuffs_base__status__is_suspension constStatusPtr
-        isOk <- toBool <$> C.wuffs_base__status__is_ok constStatusPtr
-        isTruncatedInputError <-
-          toBool
-            <$> C.wuffs_base__status__is_truncated_input_error constStatusPtr
-        messageCString <- C.wuffs_base__status__message constStatusPtr
-        message <- Foreign.maybePeek Foreign.peekCString $ case messageCString of ConstPtr p -> p
-        pure Status {..}
-
 -- | Creates a Wuffs io_buffer reader directly from a Haskell ByteString.
 withIOBufferFromByteString ::
   BS.ByteString -> (Bindgen.Ptr C.Wuffs_base__io_buffer -> IO a) -> IO a
@@ -104,8 +87,10 @@ decodeImageConfigLoopT ::
 decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
   decodeImageConfigT decoder imageConfigPtr imageBufferPtr >>= \case
     Status {isError = True, message = message} -> throwE $ ImageConfigDecodeError message
-    Status {isOk = True} ->
-      decodeFrameConfigLoopT decoder imageConfigPtr imageBufferPtr metadata
+    Status {isOk = True} -> do
+      frameConfig <- liftIO C.wuffs_base__null_frame_config
+      withT frameConfig $ \frameConfigPtr ->
+        decodeFrameConfigLoopT decoder frameConfigPtr imageConfigPtr imageBufferPtr metadata
     Status {isNote = True} -> do
       (newMetadata, metadataType) <- extractMetadataChunkT decoder imageBufferPtr
       decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr $
@@ -197,26 +182,25 @@ tellMeMoreT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr =
 
 decodeFrameConfigLoopT ::
   Decoder ->
+  Bindgen.Ptr C.Wuffs_base__frame_config ->
   Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Metadata ->
   Err (DynamicImage, Metadata)
-decodeFrameConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
-  nullFrameConfig <- liftIO C.wuffs_base__null_frame_config
-  withT nullFrameConfig $ \frameConfigPtr ->
-    readFrameConfigLoop decoder imageConfigPtr frameConfigPtr imageBufferPtr metadata
-  where
-    readFrameConfigLoop dec imgCfgPtr frameCfgPtr imgBufPtr accMeta = do
-      status <- decodeFrameConfigT dec frameCfgPtr imgBufPtr
-      case status of
-        Status {isError = True, message = message} -> throwE $ FrameConfigDecodeError message
-        Status {isOk = True} -> decodeFrameDataT dec imgCfgPtr frameCfgPtr imgBufPtr accMeta
-        Status {isNote = True} ->
-          readFrameConfigLoop dec imgCfgPtr frameCfgPtr imgBufPtr accMeta
-        Status {isSuspension = True} ->
-          throwE $ FrameConfigDecodeError (Just "Streaming frame config decode not supported yet")
-        Status {} ->
-          error "Unexpected status during frame config decode"
+decodeFrameConfigLoopT decoder frameConfigPtr imageConfigPtr imageBufferPtr metadata = do
+  status <- decodeFrameConfigT decoder frameConfigPtr imageBufferPtr
+  case status of
+    Status {isError = True, message = message} -> throwE $ FrameConfigDecodeError message
+    Status {isOk = True} ->
+      decodeFrameDataT decoder imageConfigPtr frameConfigPtr imageBufferPtr metadata
+      -- This is where we would call decodeFrameConfigLoopT again if more than the first frame
+      -- is wanted.
+    Status {isNote = True} ->
+      decodeFrameConfigLoopT decoder frameConfigPtr imageConfigPtr imageBufferPtr metadata
+    Status {isSuspension = True} ->
+      throwE $ FrameConfigDecodeError (Just "Streaming frame config decode not supported yet")
+    Status {} ->
+      error "Unexpected status during frame config decode"
 
 decodeFrameDataT ::
   Decoder ->
@@ -351,3 +335,20 @@ extractPassthroughSlice ioBufferPtr startIndex chunkSize = do
 
 wuffsVersion :: IO BS.ByteString
 wuffsVersion = pure C.wUFFS_VERSION_STRING
+
+getStatus :: C.Wuffs_base__status -> Err Status
+getStatus status = withT status $ \statusPtr ->
+  let constStatusPtr = ConstPtr statusPtr
+      toBool = (/=) 0
+   in liftIO $ do
+        isComplete <- toBool <$> C.wuffs_base__status__is_complete constStatusPtr
+        isError <- toBool <$> C.wuffs_base__status__is_error constStatusPtr
+        isNote <- toBool <$> C.wuffs_base__status__is_note constStatusPtr
+        isSuspension <- toBool <$> C.wuffs_base__status__is_suspension constStatusPtr
+        isOk <- toBool <$> C.wuffs_base__status__is_ok constStatusPtr
+        isTruncatedInputError <-
+          toBool
+            <$> C.wuffs_base__status__is_truncated_input_error constStatusPtr
+        messageCString <- C.wuffs_base__status__message constStatusPtr
+        message <- Foreign.maybePeek Foreign.peekCString $ case messageCString of ConstPtr p -> p
+        pure Status {..}
