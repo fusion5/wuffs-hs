@@ -35,9 +35,6 @@ readImageWithMetadata filePath = runExceptT $ readImageWithMetadataT filePath
 readImageWithMetadataT :: FilePath -> Err (DynamicImage, Metadata)
 readImageWithMetadataT filePath = liftIO (BS.readFile filePath) >>= decodeT
 
--- withMVSUnsafeT :: (Bindgen.Storable a) => MVS.IOVector a -> (Bindgen.Ptr a -> Err b) -> Err b
--- withMVSUnsafeT mutableVector = liftWith (MVS.unsafeWith mutableVector)
-
 getStatus :: C.Wuffs_base__status -> Err Status
 getStatus status = withT status $ \statusPtr ->
   let constStatusPtr = ConstPtr statusPtr
@@ -83,37 +80,70 @@ guessImageType imageFileBufferPtr = do
 
 decodeT :: BS.ByteString -> Err (DynamicImage, Metadata)
 decodeT imageFileByteString = do
-  _ <- withIOBufferFromByteStringT imageFileByteString $ \imageFileBuffer -> do
+  withIOBufferFromByteStringT imageFileByteString $ \imageFileBuffer -> do
     imageType <- guessImageType imageFileBuffer
     withDecoderByImageType imageType $ \decoder -> do
       liftIO $ configureDecoder decoder
-      decodeImageConfigLoopT decoder imageFileBuffer (Metadata mempty)
-  error "TODO"
+      imageConfig <- liftIO C.wuffs_base__null_image_config
+      withT imageConfig $ \imageConfigPtr ->
+        decodeImageConfigLoopT decoder imageConfigPtr imageFileBuffer (Metadata mempty)
+
+fourccICCP, fourccEXIF, fourccXMP :: Bindgen.Word32
+fourccICCP = fromIntegral C.wUFFS_BASE__FOURCC__ICCP
+fourccEXIF = fromIntegral C.wUFFS_BASE__FOURCC__EXIF
+fourccXMP = fromIntegral C.wUFFS_BASE__FOURCC__XMP
 
 configureDecoder :: Decoder -> IO ()
 configureDecoder decoder = do
   traverse_ (\fourcc -> setReportMetadata decoder fourcc 1) [fourccICCP, fourccXMP, fourccEXIF]
-  where
-    fourccICCP = fromIntegral C.wUFFS_BASE__FOURCC__ICCP
-    fourccEXIF = fromIntegral C.wUFFS_BASE__FOURCC__EXIF
-    fourccXMP = fromIntegral C.wUFFS_BASE__FOURCC__XMP
 
 decodeImageConfigLoopT ::
   Decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Metadata ->
   Err (DynamicImage, Metadata)
-decodeImageConfigLoopT decoder imageBuffer metadata = do
-  decodeImageConfigT decoder imageBuffer >>= \case
+decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr metadata = do
+  decodeImageConfigT decoder imageConfigPtr imageBufferPtr >>= \case
     Status {isError = True, message = message} -> throwE $ ImageConfigDecodeError message
-    Status {isOk = True} -> error "TODO: define and implement decodeFrameConfigLoopT"
+    Status {isOk = True} ->
+      decodeFrameConfigLoopT decoder imageConfigPtr imageBufferPtr metadata
     Status {isNote = True} -> do
-      newMetadata <- tellMeMoreLoopT decoder _ _ _
-      decodeFrameConfigLoopT decoder imageBuffer metadata
+      nullMoreInfo <- liftIO C.wuffs_base__empty_more_information
+      (newMetadata, metadataType) <- withT nullMoreInfo $ \moreInfoPtr -> do
+        metadataBytes <- liftWith (Foreign.allocaBytes metadataBufferBytes) $ \metadataBufferRaw ->
+          do
+            metadataIOBuffer <-
+              liftIO $
+                C.wuffs_base__ptr_u8__writer metadataBufferRaw (fromIntegral metadataBufferBytes)
+            withT metadataIOBuffer $ \metadataIOBufferPtr -> do
+              tellMeMoreLoopT decoder metadataIOBufferPtr moreInfoPtr imageBufferPtr BS.empty
+        metadataType <- liftIO $ C.wuffs_base__more_information__metadata__fourcc (ConstPtr moreInfoPtr)
+        pure (metadataBytes, metadataType)
+      decodeImageConfigLoopT decoder imageConfigPtr imageBufferPtr $
+        appendMetadata metadataType newMetadata metadata
     Status {isSuspension = True} -> do
       error "Streaming not implemented yet"
     Status {} ->
       error "Unexpected status"
+  where
+    metadataBufferBytes = 256 * 1024
+
+appendMetadata :: Bindgen.Word32 -> Bindgen.ByteString -> Metadata -> Metadata
+appendMetadata metadataType metadataBytes (Metadata accMetadata) = case metadataType of
+  _ | metadataType == fourccICCP -> Metadata $ ICCP metadataBytes : accMetadata
+  _ | metadataType == fourccEXIF -> Metadata $ EXIF metadataBytes : accMetadata
+  _ | metadataType == fourccXMP -> Metadata $ XMP metadataBytes : accMetadata
+  _ -> Metadata accMetadata
+
+-- Image config transition function
+decodeImageConfigT ::
+  Decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
+  Bindgen.Ptr C.Wuffs_base__io_buffer ->
+  Err Status
+decodeImageConfigT decoder imageConfigPtr imageBufferPtr =
+  liftIO (decodeImageConfig decoder imageConfigPtr imageBufferPtr) >>= getStatus
 
 tellMeMoreLoopT ::
   Decoder ->
@@ -122,23 +152,26 @@ tellMeMoreLoopT ::
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   BS.ByteString ->
   Err BS.ByteString
-tellMeMoreLoopT decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr accumulatedBytes = do
-  tellMeMoreT decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr >>= \case
+tellMeMoreLoopT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr accumulatedBytes = do
+  tellMeMoreT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr >>= \case
     Status {isSuspension = True} -> do
       (metadataStartIndex, metadataEndIndex) <- getPassthroughRange moreInfoPtr
       let chunkSize = metadataEndIndex - metadataStartIndex
       newAccumulatedBytes <-
         if chunkSize > 0
           then do
+            -- The metadata is a range from imageBufferPtr.
             -- NOTE: Watch out for Int type truncation if indices exceed maxBound :: Int
             chunkBytes <-
               liftIO $ extractPassthroughSlice imageBufferPtr metadataStartIndex chunkSize
             pure $ accumulatedBytes <> chunkBytes
-          else pure accumulatedBytes
+          else
+            -- The metadata was decompressed into metadataDecompressedIOBufferPtr
+            pure accumulatedBytes
 
       tellMeMoreLoopT
         decoder
-        metadataCompressedIOBufferPtr
+        metadataDecompressedIOBufferPtr
         moreInfoPtr
         imageBufferPtr
         newAccumulatedBytes
@@ -150,25 +183,18 @@ tellMeMoreT ::
   Bindgen.Ptr C.Wuffs_base__more_information ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
   Err Status
-tellMeMoreT decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr =
-  liftIO (tellMeMore decoder metadataCompressedIOBufferPtr moreInfoPtr imageBufferPtr)
+tellMeMoreT decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr =
+  liftIO (tellMeMore decoder metadataDecompressedIOBufferPtr moreInfoPtr imageBufferPtr)
     >>= getStatus
 
--- Image config transition function
-decodeImageConfigT ::
+decodeFrameConfigLoopT ::
   Decoder ->
+  Bindgen.Ptr C.Wuffs_base__image_config ->
   Bindgen.Ptr C.Wuffs_base__io_buffer ->
-  Err (C.Wuffs_base__image_config, Status)
-decodeImageConfigT decoder imageBuffer = do
-  imageConfig <- liftIO C.wuffs_base__null_image_config
-  status <-
-    getStatus
-      =<< withT
-        imageConfig
-        ( \imageConfigPtr -> do
-            liftIO $ decodeImageConfig decoder imageConfigPtr imageBuffer
-        )
-  pure (imageConfig, status)
+  Metadata ->
+  Err (DynamicImage, Metadata)
+decodeFrameConfigLoopT _decoder _imageConfigPtr _imageBuffer _metadata = do
+  error "TODO: define and implement decodeFrameConfigLoopT"
 
 -- | Helper: Extracts the passthrough range from the more_information struct
 getPassthroughRange :: Bindgen.Ptr C.Wuffs_base__more_information -> Err (Int, Int)
