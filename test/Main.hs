@@ -97,6 +97,16 @@ spec = describe "wuffs-hs" $ do
           isImageRGBA8 (fst decoded) `shouldBe` True
           snd decoded `shouldBe` Metadata []
         Left err -> throw err
+    it "Can decode a webp file with rotation" $ do
+      pending
+      let sampleFile = "samples/lego-rotation-6.webp"
+      doesFileExist sampleFile >>= (`shouldBe` True)
+      decodedEither <- readImageWithMetadata sampleFile
+      case decodedEither of
+        Right decoded -> do
+          isImageRGBA8 (fst decoded) `shouldBe` True
+          snd decoded `shouldBe` Metadata []
+        Left err -> throw err
 
 parseRawExif :: BS.ByteString -> Either String (Map HsExif.ExifTag HsExif.ExifValue)
 parseRawExif rawExif =
