@@ -41,6 +41,10 @@ common shared-properties
     -Wredundant-constraints -Wunused-packages -Wunused-top-binds
     -Wno-pattern-namespace-specifier -Wno-unrecognised-warning-flags
 
+  autogen-modules:
+    Paths_wuffs_hs
+    PackageInfo_wuffs_hs
+
 library
   import:            shared-properties
   exposed-modules:   Codec.Wuffs
@@ -55,9 +59,6 @@ library
     PackageInfo_wuffs_hs
     Paths_wuffs_hs
 
-  autogen-modules:
-    Paths_wuffs_hs
-    PackageInfo_wuffs_hs
 
   -- other-extensions:
   build-depends:
@@ -78,17 +79,8 @@ library
   else
     hs-source-dirs: src-native
 
-  default-language:  GHC2024
-
 test-suite wuffs-hs-test
   import:            shared-properties
-  other-modules:
-    PackageInfo_wuffs_hs
-    Paths_wuffs_hs
-
-  autogen-modules:
-    Paths_wuffs_hs
-    PackageInfo_wuffs_hs
 
   -- other-extensions:
   type:              exitcode-stdio-1.0
