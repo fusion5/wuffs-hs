@@ -1,9 +1,10 @@
 module Codec.Wuffs
-  ( readImageWithMetadata,
+  ( Metadata (..),
+    MetadataBlock (..),
+    WuffsError (..),
+    readImageWithMetadata,
     decodeImageWithMetadata,
     wuffsVersion,
-    Metadata (..),
-    MetadataBlock (..),
   )
 where
 
@@ -193,8 +194,8 @@ decodeFrameConfigLoopT decoder frameConfigPtr imageConfigPtr imageBufferPtr meta
     Status {isError = True, message = message} -> throwE $ FrameConfigDecodeError message
     Status {isOk = True} ->
       decodeFrameDataT decoder imageConfigPtr frameConfigPtr imageBufferPtr metadata
-      -- This is where we would call decodeFrameConfigLoopT again if more than the first frame
-      -- is wanted.
+    -- This is where we would call decodeFrameConfigLoopT again if more than the first frame
+    -- is wanted.
     Status {isNote = True} ->
       decodeFrameConfigLoopT decoder frameConfigPtr imageConfigPtr imageBufferPtr metadata
     Status {isSuspension = True} ->
